@@ -1,0 +1,6 @@
+«IMPORT org::xtext::workshop::webGui»
+
+«DEFINE main FOR Model-»
+   «EXPAND Entity::entity FOREACH domain.entities»
+   «EXPAND Page::page FOREACH web.pages»
+«ENDDEFINE»

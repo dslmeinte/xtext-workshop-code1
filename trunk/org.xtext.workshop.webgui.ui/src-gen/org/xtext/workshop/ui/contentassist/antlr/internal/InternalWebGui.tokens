@@ -1,0 +1,24 @@
+RULE_ID=4
+RULE_STRING=5
+RULE_ANY_OTHER=10
+RULE_INT=6
+RULE_WS=9
+RULE_SL_COMMENT=8
+RULE_ML_COMMENT=7
+'web'=18
+'input for'=25
+'}'=13
+'model'=11
+'repeat for'=26
+'type'=17
+'{'=12
+'page'=19
+'action'=23
+'(s)'=27
+'show'=24
+'domain'=14
+'entity'=15
+'title'=20
+'='=21
+':'=16
+'content for'=22

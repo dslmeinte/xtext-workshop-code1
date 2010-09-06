@@ -1,0 +1,56 @@
+«IMPORT org::xtext::workshop::webGui»
+
+«EXTENSION templates::html»
+
+«DEFINE page FOR Page-»
+«FILE fileName()-»
+<html>
+	<head>
+	  <title>«name»</title>  
+	</head>
+	<body>
+	<form>
+	  <table>
+«EXPAND element FOREACH contents»
+     </table> 
+   </form>	  
+	</body>
+</html>
+«ENDFILE-»
+«ENDDEFINE»
+
+«DEFINE element FOR PageElement»
+   // no implemention for «eClass().name»
+«ENDDEFINE»
+
+«DEFINE element FOR ActionElement»
+   <tr> <td></td> <td><input type="submit" value="«name»"/> </td> </tr>
+«ENDDEFINE»
+
+«DEFINE element FOR DisplayElement»
+   <tr> <td span="2"> <i>«reference.name»</i> </td></tr>
+«ENDDEFINE»
+
+«DEFINE element FOR InputElement»
+   <tr><td>«reference.name»:</td> <td><input type="text" name="«reference.name»"/> </td>
+«ENDDEFINE»
+
+«DEFINE element FOR RepeatElement»
+   «IF reference.multivalued»
+   <td></td>
+   <td>
+   <table>
+   «EXPAND element FOREACH contents»
+   <tr> <td>&nbsp;<td> </tr>
+   «EXPAND element FOREACH contents»
+   <tr> <td>&nbsp;</td> </tr>
+   «EXPAND element FOREACH contents»
+  </table>
+  </td>
+   «ELSE»
+   «EXPAND element FOREACH contents»
+   «ENDIF»
+«ENDDEFINE»
+
+
+    

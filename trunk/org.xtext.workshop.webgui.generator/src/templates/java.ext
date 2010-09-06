@@ -1,0 +1,32 @@
+import org::xtext::workshop::webGui;
+
+
+DomainModel domain(Entity this) :
+    eContainer();
+
+String fileName(Entity this) :
+    packageName() + "/" + name + ".java";
+
+String packageName(Entity this) :
+    domain().name;	
+    
+    
+    
+String toJavaType(Type this) :
+    "unknown"; // super 
+  
+String toJavaType(DataType this) :
+    switch(name) {
+        case "string" : "String"
+        case "date"   : "java.util.Date"
+        default  : "unknown"
+    };
+    
+String toJavaType(Entity this) :
+    name;
+    
+String toJavaType(Feature this) :
+    multivalued 
+        ? "List<" + type.toJavaType() + ">"
+        : type.toJavaType();
+            

@@ -1,0 +1,32 @@
+«IMPORT org::xtext::workshop::webGui»
+
+«EXTENSION templates::java»
+
+«DEFINE entity FOR Entity-»
+«FILE fileName()-»
+package «packageName()»;
+
+import java.util.List;
+
+public class «name» {
+
+   public «name»() {
+   }
+
+«EXPAND feature FOREACH features»
+}
+«ENDFILE-»
+«ENDDEFINE»
+
+
+«DEFINE feature FOR Feature»
+   private «toJavaType()» «name»;
+
+   public «toJavaType()» get«name.toFirstUpper()»() {
+      return «name»;
+   }
+   
+   public void set«name.toFirstUpper()»(«toJavaType()» «name») {
+      this.«name» = «name»;
+   }      
+«ENDDEFINE»

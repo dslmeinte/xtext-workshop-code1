@@ -1,0 +1,84 @@
+grammar org.xtext.workshop.WebGui with org.eclipse.xtext.common.Terminals
+
+generate webGui "http://www.xtext.org/workshop/WebGui"
+
+Model:
+    'model' name=ID
+    '{'
+        domain=DomainModel
+        web=WebModel
+    '}';
+
+DomainModel:
+    'domain' name=ID
+    '{'
+        (entities+=Entity)*
+        (dataTypes+=DataType)*
+    '}';
+
+        
+Entity:
+    'entity' name=ID 
+    '{'
+        (features+=Feature)*
+    '}';
+            
+Feature:
+    name=ID ':' type=[Type]  multivalued?='(s)'?;
+    
+Type:
+    Entity | DataType;    
+    
+DataType:
+    'type' name=ID;
+    
+    
+WebModel:
+    'web' name=ID
+    '{'
+        (pages+=Page)*
+    '}';
+
+Page:
+    'page' name=ID
+    '{'
+        'title' '=' title=STRING
+        'content for' entity=[Entity]
+        '{'
+            (contents+=PageElement)*
+            
+        '}'
+    '}';
+    
+PageElement:
+    SingleElement | RepeatElement;
+
+SingleElement:
+    ActionElement | DisplayElement | InputElement;
+    
+ActionElement:
+    'action' name=ID;
+
+DisplayElement:
+    'show' reference=[Feature];    
+    
+InputElement:
+    'input for' reference=[Feature];    
+    
+RepeatElement:
+    'repeat for' reference=[Feature] 
+    '{'
+        (contents+=SingleElement)*
+    '}';    
+
+/*  
+DomainPath:
+    head=DomainPathHead;
+    
+DomainPathHead:
+    reference=[Feature]  tail=DomainPathTail;
+    
+DomainPathTail:
+    '.' reference=[Feature] (tail=DomainPathTail)?;
+*/        
+    
