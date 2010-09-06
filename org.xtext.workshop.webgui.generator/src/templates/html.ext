@@ -1,0 +1,30 @@
+import org::xtext::workshop::webGui;
+
+
+WebModel web(Page this) :
+    eContainer();
+
+String fileName(Page this) :
+    web().name + "/" + name + ".html";
+
+    
+    
+/*    
+String toJavaType(Type this) :
+    "unknown"; // super 
+  
+String toJavaType(DataType this) :
+    switch(name) {
+        case "string" : "String"
+        case "date"   : "java.util.Date"
+        default  : "unknown"
+    };
+    
+String toJavaType(Entity this) :
+    name;
+    
+String toJavaType(Feature this) :
+    multivalued 
+        ? "List<" + type.toJavaType() + ">"
+        : type.toJavaType();
+*/            
