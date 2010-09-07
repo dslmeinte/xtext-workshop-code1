@@ -781,16 +781,6 @@ ruleSingleElement returns [EObject current=null]
         $current = $this_DisplayElement_1.current; 
         currentNode = currentNode.getParent();
     }
-
-    |
-    { 
-        currentNode=createCompositeNode(grammarAccess.getSingleElementAccess().getInputElementParserRuleCall_2(), currentNode); 
-    }
-    this_InputElement_2=ruleInputElement
-    { 
-        $current = $this_InputElement_2.current; 
-        currentNode = currentNode.getParent();
-    }
 )
 ;
 
@@ -880,47 +870,6 @@ ruleDisplayElement returns [EObject current=null]
 	RULE_ID
 	{
 		createLeafNode(grammarAccess.getDisplayElementAccess().getReferenceFeatureCrossReference_1_0(), "reference"); 
-	}
-
-)
-))
-;
-
-
-
-
-
-// Entry rule entryRuleInputElement
-entryRuleInputElement returns [EObject current=null] 
-	:
-	{ currentNode = createCompositeNode(grammarAccess.getInputElementRule(), currentNode); }
-	 iv_ruleInputElement=ruleInputElement 
-	 { $current=$iv_ruleInputElement.current; } 
-	 EOF 
-;
-
-// Rule InputElement
-ruleInputElement returns [EObject current=null] 
-    @init { EObject temp=null; setCurrentLookahead(); resetLookahead(); 
-    }
-    @after { resetLookahead(); 
-    	lastConsumedNode = currentNode;
-    }:
-(	'input for' 
-    {
-        createLeafNode(grammarAccess.getInputElementAccess().getInputForKeyword_0(), null); 
-    }
-(
-(
-		{
-			if ($current==null) {
-	            $current = factory.create(grammarAccess.getInputElementRule().getType().getClassifier());
-	            associateNodeWithAstElement(currentNode, $current);
-	        }
-        }
-	RULE_ID
-	{
-		createLeafNode(grammarAccess.getInputElementAccess().getReferenceFeatureCrossReference_1_0(), "reference"); 
 	}
 
 )

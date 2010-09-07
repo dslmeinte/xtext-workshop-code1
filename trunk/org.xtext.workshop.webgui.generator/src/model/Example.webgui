@@ -2,52 +2,49 @@ model IYou
 
 domain:
 
-  entity Person {
-     name     : string
-     birth    : date
-     email    : string
-     address  : Address
-     recommends: Person(s) 
-  }
+   entity Person {
+      name : string
+      birth : date
+      email : string
+      address : Address
+      recommends : Person(s)
+   }
 
-  entity Address {
-     street : string
-     city   : string
-     zipcode: string
-  }
+   entity Address {
+      street : string
+      city : string
+      zipcode : string
+   }
 
-  type string
-  type date
-
+   type string
+   type date
 
 web:
 
-  page Search {
-     title = "Search for a person"
+   page Person {
+      title = "Person details"
+      content for Person {
+         show name
+         repeat for address {
+            show street
+            show city
+         }
 
-     content for Person {
-        input for name
-        repeat for address {
-           input for city
-        }
+         action recommends
+      }
 
-        action search
-     }
+   }
 
-  }
+   page Results {
+      title = "Person recommends"
+      content for Person {
+         show name
+         repeat for recommends {
+            show name
+            show birth
+         }
 
-  page Results {
-     title = "Search results"
+      }
 
-     content for Person {
-        show name
-        repeat for recommends {
-           show name
-           show birth
-        }
-
-        action back
-     }
-
-  }
+   }
 

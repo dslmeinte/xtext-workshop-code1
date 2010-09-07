@@ -186,15 +186,6 @@ public class WebGuiSwitch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case WebGuiPackage.INPUT_ELEMENT:
-      {
-        InputElement inputElement = (InputElement)theEObject;
-        T result = caseInputElement(inputElement);
-        if (result == null) result = caseSingleElement(inputElement);
-        if (result == null) result = casePageElement(inputElement);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
       case WebGuiPackage.REPEAT_ELEMENT:
       {
         RepeatElement repeatElement = (RepeatElement)theEObject;
@@ -395,22 +386,6 @@ public class WebGuiSwitch<T>
    * @generated
    */
   public T caseDisplayElement(DisplayElement object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Input Element</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Input Element</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseInputElement(InputElement object)
   {
     return null;
   }

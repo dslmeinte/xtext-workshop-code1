@@ -48,9 +48,6 @@
   <eClassifiers xsi:type="ecore:EClass" name="DisplayElement" eSuperTypes="#//SingleElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="reference" eType="#//Feature"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="InputElement" eSuperTypes="#//SingleElement">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="reference" eType="#//Feature"/>
-  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RepeatElement" eSuperTypes="#//PageElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="reference" eType="#//Feature"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="contents" upperBound="-1"

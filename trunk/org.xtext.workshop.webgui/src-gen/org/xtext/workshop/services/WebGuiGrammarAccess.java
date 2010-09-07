@@ -377,13 +377,12 @@ public class WebGuiGrammarAccess extends AbstractGrammarElementFinder {
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cActionElementParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cDisplayElementParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
-		private final RuleCall cInputElementParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
 		
 		//SingleElement:
-		//	ActionElement | DisplayElement | InputElement;
+		//	ActionElement | DisplayElement;
 		public ParserRule getRule() { return rule; }
 
-		//ActionElement | DisplayElement | InputElement
+		//ActionElement | DisplayElement
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//ActionElement
@@ -391,9 +390,6 @@ public class WebGuiGrammarAccess extends AbstractGrammarElementFinder {
 
 		//DisplayElement
 		public RuleCall getDisplayElementParserRuleCall_1() { return cDisplayElementParserRuleCall_1; }
-
-		//InputElement
-		public RuleCall getInputElementParserRuleCall_2() { return cInputElementParserRuleCall_2; }
 	}
 
 	public class ActionElementElements extends AbstractParserRuleElementFinder {
@@ -403,7 +399,7 @@ public class WebGuiGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		
-		//// ~ button
+		//// ~ link
 		//ActionElement:
 		//	"action" name=ID;
 		public ParserRule getRule() { return rule; }
@@ -439,36 +435,6 @@ public class WebGuiGrammarAccess extends AbstractGrammarElementFinder {
 
 		//"show"
 		public Keyword getShowKeyword_0() { return cShowKeyword_0; }
-
-		//reference=[Feature]
-		public Assignment getReferenceAssignment_1() { return cReferenceAssignment_1; }
-
-		//[Feature]
-		public CrossReference getReferenceFeatureCrossReference_1_0() { return cReferenceFeatureCrossReference_1_0; }
-
-		//ID
-		public RuleCall getReferenceFeatureIDTerminalRuleCall_1_0_1() { return cReferenceFeatureIDTerminalRuleCall_1_0_1; }
-	}
-
-	public class InputElementElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "InputElement");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cInputForKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cReferenceAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final CrossReference cReferenceFeatureCrossReference_1_0 = (CrossReference)cReferenceAssignment_1.eContents().get(0);
-		private final RuleCall cReferenceFeatureIDTerminalRuleCall_1_0_1 = (RuleCall)cReferenceFeatureCrossReference_1_0.eContents().get(1);
-		
-		//// scope is narrowed to referenced Feature
-		//// ~ input field
-		//InputElement:
-		//	"input for" reference=[Feature];
-		public ParserRule getRule() { return rule; }
-
-		//"input for" reference=[Feature]
-		public Group getGroup() { return cGroup; }
-
-		//"input for"
-		public Keyword getInputForKeyword_0() { return cInputForKeyword_0; }
 
 		//reference=[Feature]
 		public Assignment getReferenceAssignment_1() { return cReferenceAssignment_1; }
@@ -569,7 +535,6 @@ public class WebGuiGrammarAccess extends AbstractGrammarElementFinder {
 	private SingleElementElements pSingleElement;
 	private ActionElementElements pActionElement;
 	private DisplayElementElements pDisplayElement;
-	private InputElementElements pInputElement;
 	private RepeatElementElements pRepeatElement;
 	
 	private final GrammarProvider grammarProvider;
@@ -695,7 +660,7 @@ public class WebGuiGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//SingleElement:
-	//	ActionElement | DisplayElement | InputElement;
+	//	ActionElement | DisplayElement;
 	public SingleElementElements getSingleElementAccess() {
 		return (pSingleElement != null) ? pSingleElement : (pSingleElement = new SingleElementElements());
 	}
@@ -704,7 +669,7 @@ public class WebGuiGrammarAccess extends AbstractGrammarElementFinder {
 		return getSingleElementAccess().getRule();
 	}
 
-	//// ~ button
+	//// ~ link
 	//ActionElement:
 	//	"action" name=ID;
 	public ActionElementElements getActionElementAccess() {
@@ -724,18 +689,6 @@ public class WebGuiGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getDisplayElementRule() {
 		return getDisplayElementAccess().getRule();
-	}
-
-	//// scope is narrowed to referenced Feature
-	//// ~ input field
-	//InputElement:
-	//	"input for" reference=[Feature];
-	public InputElementElements getInputElementAccess() {
-		return (pInputElement != null) ? pInputElement : (pInputElement = new InputElementElements());
-	}
-	
-	public ParserRule getInputElementRule() {
-		return getInputElementAccess().getRule();
 	}
 
 	//// scope is narrowed to referenced Feature

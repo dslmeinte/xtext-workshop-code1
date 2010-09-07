@@ -50,7 +50,6 @@ public class WebGuiParser extends AbstractContentAssistParser {
 					put(grammarAccess.getPageAccess().getGroup(), "rule__Page__Group__0");
 					put(grammarAccess.getActionElementAccess().getGroup(), "rule__ActionElement__Group__0");
 					put(grammarAccess.getDisplayElementAccess().getGroup(), "rule__DisplayElement__Group__0");
-					put(grammarAccess.getInputElementAccess().getGroup(), "rule__InputElement__Group__0");
 					put(grammarAccess.getRepeatElementAccess().getGroup(), "rule__RepeatElement__Group__0");
 					put(grammarAccess.getModelAccess().getNameAssignment_1(), "rule__Model__NameAssignment_1");
 					put(grammarAccess.getModelAccess().getDomainAssignment_2(), "rule__Model__DomainAssignment_2");
@@ -70,7 +69,6 @@ public class WebGuiParser extends AbstractContentAssistParser {
 					put(grammarAccess.getPageAccess().getContentsAssignment_9(), "rule__Page__ContentsAssignment_9");
 					put(grammarAccess.getActionElementAccess().getNameAssignment_1(), "rule__ActionElement__NameAssignment_1");
 					put(grammarAccess.getDisplayElementAccess().getReferenceAssignment_1(), "rule__DisplayElement__ReferenceAssignment_1");
-					put(grammarAccess.getInputElementAccess().getReferenceAssignment_1(), "rule__InputElement__ReferenceAssignment_1");
 					put(grammarAccess.getRepeatElementAccess().getReferenceAssignment_1(), "rule__RepeatElement__ReferenceAssignment_1");
 					put(grammarAccess.getRepeatElementAccess().getContentsAssignment_3(), "rule__RepeatElement__ContentsAssignment_3");
 				}
