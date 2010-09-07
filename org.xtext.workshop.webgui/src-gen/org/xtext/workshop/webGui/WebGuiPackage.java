@@ -459,34 +459,6 @@ public interface WebGuiPackage extends EPackage
   int DISPLAY_ELEMENT_FEATURE_COUNT = SINGLE_ELEMENT_FEATURE_COUNT + 1;
 
   /**
-   * The meta object id for the '{@link org.xtext.workshop.webGui.impl.InputElementImpl <em>Input Element</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.workshop.webGui.impl.InputElementImpl
-   * @see org.xtext.workshop.webGui.impl.WebGuiPackageImpl#getInputElement()
-   * @generated
-   */
-  int INPUT_ELEMENT = 12;
-
-  /**
-   * The feature id for the '<em><b>Reference</b></em>' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int INPUT_ELEMENT__REFERENCE = SINGLE_ELEMENT_FEATURE_COUNT + 0;
-
-  /**
-   * The number of structural features of the '<em>Input Element</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int INPUT_ELEMENT_FEATURE_COUNT = SINGLE_ELEMENT_FEATURE_COUNT + 1;
-
-  /**
    * The meta object id for the '{@link org.xtext.workshop.webGui.impl.RepeatElementImpl <em>Repeat Element</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -494,7 +466,7 @@ public interface WebGuiPackage extends EPackage
    * @see org.xtext.workshop.webGui.impl.WebGuiPackageImpl#getRepeatElement()
    * @generated
    */
-  int REPEAT_ELEMENT = 13;
+  int REPEAT_ELEMENT = 12;
 
   /**
    * The feature id for the '<em><b>Reference</b></em>' reference.
@@ -832,27 +804,6 @@ public interface WebGuiPackage extends EPackage
   EReference getDisplayElement_Reference();
 
   /**
-   * Returns the meta object for class '{@link org.xtext.workshop.webGui.InputElement <em>Input Element</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Input Element</em>'.
-   * @see org.xtext.workshop.webGui.InputElement
-   * @generated
-   */
-  EClass getInputElement();
-
-  /**
-   * Returns the meta object for the reference '{@link org.xtext.workshop.webGui.InputElement#getReference <em>Reference</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Reference</em>'.
-   * @see org.xtext.workshop.webGui.InputElement#getReference()
-   * @see #getInputElement()
-   * @generated
-   */
-  EReference getInputElement_Reference();
-
-  /**
    * Returns the meta object for class '{@link org.xtext.workshop.webGui.RepeatElement <em>Repeat Element</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1162,24 +1113,6 @@ public interface WebGuiPackage extends EPackage
      * @generated
      */
     EReference DISPLAY_ELEMENT__REFERENCE = eINSTANCE.getDisplayElement_Reference();
-
-    /**
-     * The meta object literal for the '{@link org.xtext.workshop.webGui.impl.InputElementImpl <em>Input Element</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.xtext.workshop.webGui.impl.InputElementImpl
-     * @see org.xtext.workshop.webGui.impl.WebGuiPackageImpl#getInputElement()
-     * @generated
-     */
-    EClass INPUT_ELEMENT = eINSTANCE.getInputElement();
-
-    /**
-     * The meta object literal for the '<em><b>Reference</b></em>' reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference INPUT_ELEMENT__REFERENCE = eINSTANCE.getInputElement_Reference();
 
     /**
      * The meta object literal for the '{@link org.xtext.workshop.webGui.impl.RepeatElementImpl <em>Repeat Element</em>}' class.

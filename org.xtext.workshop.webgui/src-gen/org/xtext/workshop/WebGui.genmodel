@@ -47,9 +47,6 @@
     <genClasses ecoreClass="WebGui.ecore#//DisplayElement">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference WebGui.ecore#//DisplayElement/reference"/>
     </genClasses>
-    <genClasses ecoreClass="WebGui.ecore#//InputElement">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference WebGui.ecore#//InputElement/reference"/>
-    </genClasses>
     <genClasses ecoreClass="WebGui.ecore#//RepeatElement">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference WebGui.ecore#//RepeatElement/reference"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference WebGui.ecore#//RepeatElement/contents"/>

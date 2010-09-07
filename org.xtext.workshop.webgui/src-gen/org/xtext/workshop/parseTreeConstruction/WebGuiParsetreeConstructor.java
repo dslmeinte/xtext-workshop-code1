@@ -43,8 +43,7 @@ protected class ThisRootNode extends RootToken {
 			case 9: return new SingleElement_Alternatives(this, this, 9, inst);
 			case 10: return new ActionElement_Group(this, this, 10, inst);
 			case 11: return new DisplayElement_Group(this, this, 11, inst);
-			case 12: return new InputElement_Group(this, this, 12, inst);
-			case 13: return new RepeatElement_Group(this, this, 13, inst);
+			case 12: return new RepeatElement_Group(this, this, 12, inst);
 			default: return null;
 		}	
 	}	
@@ -1542,7 +1541,6 @@ protected class PageElement_Alternatives extends AlternativesToken {
 	public IEObjectConsumer tryConsume() {
 		if(getEObject().eClass() != grammarAccess.getActionElementRule().getType().getClassifier() && 
 		   getEObject().eClass() != grammarAccess.getDisplayElementRule().getType().getClassifier() && 
-		   getEObject().eClass() != grammarAccess.getInputElementRule().getType().getClassifier() && 
 		   getEObject().eClass() != grammarAccess.getRepeatElementRule().getType().getClassifier())
 			return null;
 		return eObjectConsumer;
@@ -1573,8 +1571,7 @@ protected class PageElement_SingleElementParserRuleCall_0 extends RuleCallToken 
     @Override
 	public IEObjectConsumer tryConsume() {
 		if(getEObject().eClass() != grammarAccess.getActionElementRule().getType().getClassifier() && 
-		   getEObject().eClass() != grammarAccess.getDisplayElementRule().getType().getClassifier() && 
-		   getEObject().eClass() != grammarAccess.getInputElementRule().getType().getClassifier())
+		   getEObject().eClass() != grammarAccess.getDisplayElementRule().getType().getClassifier())
 			return null;
 		if(checkForRecursion(SingleElement_Alternatives.class, eObjectConsumer)) return null;
 		return eObjectConsumer;
@@ -1631,11 +1628,11 @@ protected class PageElement_RepeatElementParserRuleCall_1 extends RuleCallToken 
 /************ begin Rule SingleElement ****************
  *
  * SingleElement:
- * 	ActionElement | DisplayElement | InputElement;
+ * 	ActionElement | DisplayElement;
  *
  **/
 
-// ActionElement | DisplayElement | InputElement
+// ActionElement | DisplayElement
 protected class SingleElement_Alternatives extends AlternativesToken {
 
 	public SingleElement_Alternatives(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -1652,7 +1649,6 @@ protected class SingleElement_Alternatives extends AlternativesToken {
 		switch(index) {
 			case 0: return new SingleElement_ActionElementParserRuleCall_0(lastRuleCallOrigin, this, 0, inst);
 			case 1: return new SingleElement_DisplayElementParserRuleCall_1(lastRuleCallOrigin, this, 1, inst);
-			case 2: return new SingleElement_InputElementParserRuleCall_2(lastRuleCallOrigin, this, 2, inst);
 			default: return null;
 		}	
 	}
@@ -1660,8 +1656,7 @@ protected class SingleElement_Alternatives extends AlternativesToken {
     @Override
 	public IEObjectConsumer tryConsume() {
 		if(getEObject().eClass() != grammarAccess.getActionElementRule().getType().getClassifier() && 
-		   getEObject().eClass() != grammarAccess.getDisplayElementRule().getType().getClassifier() && 
-		   getEObject().eClass() != grammarAccess.getInputElementRule().getType().getClassifier())
+		   getEObject().eClass() != grammarAccess.getDisplayElementRule().getType().getClassifier())
 			return null;
 		return eObjectConsumer;
 	}
@@ -1740,49 +1735,13 @@ protected class SingleElement_DisplayElementParserRuleCall_1 extends RuleCallTok
 	}	
 }
 
-// InputElement
-protected class SingleElement_InputElementParserRuleCall_2 extends RuleCallToken {
-	
-	public SingleElement_InputElementParserRuleCall_2(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
-		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
-	}
-	
-	@Override
-	public RuleCall getGrammarElement() {
-		return grammarAccess.getSingleElementAccess().getInputElementParserRuleCall_2();
-	}
-
-    @Override
-	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
-		switch(index) {
-			case 0: return new InputElement_Group(this, this, 0, inst);
-			default: return null;
-		}	
-	}
-
-    @Override
-	public IEObjectConsumer tryConsume() {
-		if(getEObject().eClass() != grammarAccess.getInputElementRule().getType().getClassifier())
-			return null;
-		if(checkForRecursion(InputElement_Group.class, eObjectConsumer)) return null;
-		return eObjectConsumer;
-	}
-	
-    @Override
-	public AbstractToken createFollowerAfterReturn(AbstractToken next,	int actIndex, int index, IEObjectConsumer inst) {
-		switch(index) {
-			default: return lastRuleCallOrigin.createFollowerAfterReturn(next, actIndex , index, inst);
-		}	
-	}	
-}
-
 
 /************ end Rule SingleElement ****************/
 
 
 /************ begin Rule ActionElement ****************
  *
- * // ~ button
+ * // ~ link
  * ActionElement:
  * 	"action" name=ID;
  *
@@ -1973,106 +1932,6 @@ protected class DisplayElement_ReferenceAssignment_1 extends AssignmentToken  {
 
 
 /************ end Rule DisplayElement ****************/
-
-
-/************ begin Rule InputElement ****************
- *
- * // scope is narrowed to referenced Feature
- * // ~ input field
- * InputElement:
- * 	"input for" reference=[Feature];
- *
- **/
-
-// "input for" reference=[Feature]
-protected class InputElement_Group extends GroupToken {
-	
-	public InputElement_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
-		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
-	}
-	
-	@Override
-	public Group getGrammarElement() {
-		return grammarAccess.getInputElementAccess().getGroup();
-	}
-
-    @Override
-	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
-		switch(index) {
-			case 0: return new InputElement_ReferenceAssignment_1(lastRuleCallOrigin, this, 0, inst);
-			default: return null;
-		}	
-	}
-
-    @Override
-	public IEObjectConsumer tryConsume() {
-		if(getEObject().eClass() != grammarAccess.getInputElementRule().getType().getClassifier())
-			return null;
-		return eObjectConsumer;
-	}
-
-}
-
-// "input for"
-protected class InputElement_InputForKeyword_0 extends KeywordToken  {
-	
-	public InputElement_InputForKeyword_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
-		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
-	}
-	
-	@Override
-	public Keyword getGrammarElement() {
-		return grammarAccess.getInputElementAccess().getInputForKeyword_0();
-	}
-
-    @Override
-	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
-		switch(index) {
-			default: return lastRuleCallOrigin.createFollowerAfterReturn(this, index, index, inst);
-		}	
-	}
-
-}
-
-// reference=[Feature]
-protected class InputElement_ReferenceAssignment_1 extends AssignmentToken  {
-	
-	public InputElement_ReferenceAssignment_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
-		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
-	}
-	
-	@Override
-	public Assignment getGrammarElement() {
-		return grammarAccess.getInputElementAccess().getReferenceAssignment_1();
-	}
-
-    @Override
-	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
-		switch(index) {
-			case 0: return new InputElement_InputForKeyword_0(lastRuleCallOrigin, this, 0, inst);
-			default: return null;
-		}	
-	}
-
-    @Override	
-	public IEObjectConsumer tryConsume() {
-		if((value = eObjectConsumer.getConsumable("reference",true)) == null) return null;
-		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("reference");
-		if(value instanceof EObject) { // org::eclipse::xtext::impl::CrossReferenceImpl
-			IEObjectConsumer param = createEObjectConsumer((EObject)value);
-			if(param.isInstanceOf(grammarAccess.getInputElementAccess().getReferenceFeatureCrossReference_1_0().getType().getClassifier())) {
-				type = AssignmentType.CROSS_REFERENCE;
-				element = grammarAccess.getInputElementAccess().getReferenceFeatureCrossReference_1_0(); 
-				return obj;
-			}
-		}
-		return null;
-	}
-
-}
-
-
-/************ end Rule InputElement ****************/
 
 
 /************ begin Rule RepeatElement ****************

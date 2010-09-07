@@ -11,7 +11,6 @@ import org.xtext.workshop.webGui.DisplayElement;
 import org.xtext.workshop.webGui.DomainModel;
 import org.xtext.workshop.webGui.Entity;
 import org.xtext.workshop.webGui.Feature;
-import org.xtext.workshop.webGui.InputElement;
 import org.xtext.workshop.webGui.Model;
 import org.xtext.workshop.webGui.Page;
 import org.xtext.workshop.webGui.PageElement;
@@ -56,10 +55,6 @@ public class WebGuiLabelProvider extends DefaultEObjectLabelProvider {
 	
 	String text(DisplayElement elm) {
 		return "show: " + elm.getReference().getName();
-	}
-
-	String text(InputElement elm) {
-		return "input for: " + elm.getReference().getName();
 	}
 
 	String text(RepeatElement elm) {

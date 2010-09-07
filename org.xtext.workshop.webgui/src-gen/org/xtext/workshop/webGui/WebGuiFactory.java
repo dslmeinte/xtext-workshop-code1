@@ -134,15 +134,6 @@ public interface WebGuiFactory extends EFactory
   DisplayElement createDisplayElement();
 
   /**
-   * Returns a new object of class '<em>Input Element</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Input Element</em>'.
-   * @generated
-   */
-  InputElement createInputElement();
-
-  /**
    * Returns a new object of class '<em>Repeat Element</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

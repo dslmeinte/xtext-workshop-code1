@@ -69,17 +69,13 @@ PageElement:
     SingleElement | RepeatElement;
 
 SingleElement:
-    ActionElement | DisplayElement | InputElement;
+    ActionElement | DisplayElement;
 
-ActionElement:	// ~ button
+ActionElement:	// ~ link
     'action' name=ID;
 
 DisplayElement:	// ~ display field
     'show' reference=[Feature];
-    // scope is narrowed to referenced Feature
-
-InputElement:	// ~ input field
-    'input for' reference=[Feature];
     // scope is narrowed to referenced Feature
 
 RepeatElement:	// ~ for loop
