@@ -1,0 +1,16 @@
+domain:
+
+   entity Person {
+      name 
+      birth 
+      email
+      address
+      recommends 
+   }
+
+   entity Address {
+      street 
+      city 
+      zipcode 
+   }
+
