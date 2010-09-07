@@ -5,14 +5,17 @@ package org.xtext.workshop.ui.labeling;
 
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryLabelProvider;
 import org.eclipse.xtext.ui.label.DefaultEObjectLabelProvider;
+import org.xtext.workshop.webGui.ActionElement;
 import org.xtext.workshop.webGui.DataType;
+import org.xtext.workshop.webGui.DisplayElement;
 import org.xtext.workshop.webGui.DomainModel;
 import org.xtext.workshop.webGui.Entity;
 import org.xtext.workshop.webGui.Feature;
+import org.xtext.workshop.webGui.InputElement;
 import org.xtext.workshop.webGui.Model;
 import org.xtext.workshop.webGui.Page;
 import org.xtext.workshop.webGui.PageElement;
-import org.xtext.workshop.webGui.SingleElement;
+import org.xtext.workshop.webGui.RepeatElement;
 import org.xtext.workshop.webGui.WebModel;
 
 import com.google.inject.Inject;
@@ -43,6 +46,23 @@ public class WebGuiLabelProvider extends DefaultEObjectLabelProvider {
     }
 */
 
+
+	String text(ActionElement elm) {
+		return "action: " + elm.getName();
+	}
+	
+	String text(DisplayElement elm) {
+		return "show: " + elm.getReference().getName();
+	}
+
+	String text(InputElement elm) {
+		return "input for: " + elm.getReference().getName();
+	}
+	
+	String text(RepeatElement elm) {
+		return "repeat for: " + elm.getReference().getName();
+	}
+	
     String image(Model ele) {
         return "globe.png";
       }
