@@ -253,19 +253,9 @@ public class WebGuiPackageImpl extends EPackageImpl implements WebGuiPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getDomainModel_Name()
-  {
-    return (EAttribute)domainModelEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EReference getDomainModel_Entities()
   {
-    return (EReference)domainModelEClass.getEStructuralFeatures().get(1);
+    return (EReference)domainModelEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -275,7 +265,7 @@ public class WebGuiPackageImpl extends EPackageImpl implements WebGuiPackage
    */
   public EReference getDomainModel_DataTypes()
   {
-    return (EReference)domainModelEClass.getEStructuralFeatures().get(2);
+    return (EReference)domainModelEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -383,19 +373,9 @@ public class WebGuiPackageImpl extends EPackageImpl implements WebGuiPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getWebModel_Name()
-  {
-    return (EAttribute)webModelEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EReference getWebModel_Pages()
   {
-    return (EReference)webModelEClass.getEStructuralFeatures().get(1);
+    return (EReference)webModelEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -594,7 +574,6 @@ public class WebGuiPackageImpl extends EPackageImpl implements WebGuiPackage
     createEReference(modelEClass, MODEL__WEB);
 
     domainModelEClass = createEClass(DOMAIN_MODEL);
-    createEAttribute(domainModelEClass, DOMAIN_MODEL__NAME);
     createEReference(domainModelEClass, DOMAIN_MODEL__ENTITIES);
     createEReference(domainModelEClass, DOMAIN_MODEL__DATA_TYPES);
 
@@ -612,7 +591,6 @@ public class WebGuiPackageImpl extends EPackageImpl implements WebGuiPackage
     dataTypeEClass = createEClass(DATA_TYPE);
 
     webModelEClass = createEClass(WEB_MODEL);
-    createEAttribute(webModelEClass, WEB_MODEL__NAME);
     createEReference(webModelEClass, WEB_MODEL__PAGES);
 
     pageEClass = createEClass(PAGE);
@@ -683,7 +661,6 @@ public class WebGuiPackageImpl extends EPackageImpl implements WebGuiPackage
     initEReference(getModel_Web(), this.getWebModel(), null, "web", null, 0, 1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(domainModelEClass, DomainModel.class, "DomainModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getDomainModel_Name(), ecorePackage.getEString(), "name", null, 0, 1, DomainModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getDomainModel_Entities(), this.getEntity(), null, "entities", null, 0, -1, DomainModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getDomainModel_DataTypes(), this.getDataType(), null, "dataTypes", null, 0, -1, DomainModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -701,7 +678,6 @@ public class WebGuiPackageImpl extends EPackageImpl implements WebGuiPackage
     initEClass(dataTypeEClass, DataType.class, "DataType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(webModelEClass, WebModel.class, "WebModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getWebModel_Name(), ecorePackage.getEString(), "name", null, 0, 1, WebModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getWebModel_Pages(), this.getPage(), null, "pages", null, 0, -1, WebModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(pageEClass, Page.class, "Page", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

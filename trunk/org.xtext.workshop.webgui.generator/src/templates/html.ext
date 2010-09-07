@@ -1,14 +1,11 @@
 import org::xtext::workshop::webGui;
 
-
-WebModel web(Page this) :
-    eContainer();
+Model model(Page this) :
+	eContainer().eContainer();
 
 String fileName(Page this) :
-    web().name + "/" + name + ".html";
+    model().name + "/" + name + ".html";
 
-    
-    
 /*    
 String toJavaType(Type this) :
     "unknown"; // super 
@@ -27,4 +24,5 @@ String toJavaType(Feature this) :
     multivalued 
         ? "List<" + type.toJavaType() + ">"
         : type.toJavaType();
-*/            
+*/
+

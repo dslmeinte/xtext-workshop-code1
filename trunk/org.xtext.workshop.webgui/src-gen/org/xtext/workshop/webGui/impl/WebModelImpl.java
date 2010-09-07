@@ -7,7 +7,6 @@ package org.xtext.workshop.webGui.impl;
 
 import java.util.Collection;
 
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
@@ -15,7 +14,6 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
@@ -32,7 +30,6 @@ import org.xtext.workshop.webGui.WebModel;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.xtext.workshop.webGui.impl.WebModelImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.xtext.workshop.webGui.impl.WebModelImpl#getPages <em>Pages</em>}</li>
  * </ul>
  * </p>
@@ -41,26 +38,6 @@ import org.xtext.workshop.webGui.WebModel;
  */
 public class WebModelImpl extends MinimalEObjectImpl.Container implements WebModel
 {
-  /**
-   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
-  protected static final String NAME_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
-  protected String name = NAME_EDEFAULT;
-
   /**
    * The cached value of the '{@link #getPages() <em>Pages</em>}' containment reference list.
    * <!-- begin-user-doc -->
@@ -90,29 +67,6 @@ public class WebModelImpl extends MinimalEObjectImpl.Container implements WebMod
   protected EClass eStaticClass()
   {
     return WebGuiPackage.Literals.WEB_MODEL;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public String getName()
-  {
-    return name;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setName(String newName)
-  {
-    String oldName = name;
-    name = newName;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, WebGuiPackage.WEB_MODEL__NAME, oldName, name));
   }
 
   /**
@@ -155,8 +109,6 @@ public class WebModelImpl extends MinimalEObjectImpl.Container implements WebMod
   {
     switch (featureID)
     {
-      case WebGuiPackage.WEB_MODEL__NAME:
-        return getName();
       case WebGuiPackage.WEB_MODEL__PAGES:
         return getPages();
     }
@@ -174,9 +126,6 @@ public class WebModelImpl extends MinimalEObjectImpl.Container implements WebMod
   {
     switch (featureID)
     {
-      case WebGuiPackage.WEB_MODEL__NAME:
-        setName((String)newValue);
-        return;
       case WebGuiPackage.WEB_MODEL__PAGES:
         getPages().clear();
         getPages().addAll((Collection<? extends Page>)newValue);
@@ -195,9 +144,6 @@ public class WebModelImpl extends MinimalEObjectImpl.Container implements WebMod
   {
     switch (featureID)
     {
-      case WebGuiPackage.WEB_MODEL__NAME:
-        setName(NAME_EDEFAULT);
-        return;
       case WebGuiPackage.WEB_MODEL__PAGES:
         getPages().clear();
         return;
@@ -215,29 +161,10 @@ public class WebModelImpl extends MinimalEObjectImpl.Container implements WebMod
   {
     switch (featureID)
     {
-      case WebGuiPackage.WEB_MODEL__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case WebGuiPackage.WEB_MODEL__PAGES:
         return pages != null && !pages.isEmpty();
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (name: ");
-    result.append(name);
-    result.append(')');
-    return result.toString();
   }
 
 } //WebModelImpl

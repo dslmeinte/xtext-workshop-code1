@@ -34,18 +34,21 @@ public class WebGuiLabelProvider extends DefaultEObjectLabelProvider {
 		super(delegate);
 	}
 
-/*
-	//Labels and icons can be computed like this:
-	
-	String text(MyModel ele) {
-	  return "my "+ele.getName();
+	String text(DomainModel elm) {
+		return "domain model";
 	}
-	 
-    String image(MyModel ele) {
-      return "MyModel.gif";
-    }
-*/
 
+    String image(DomainModel elm) {
+        return "folder-documents.png";
+    }
+
+    String text(WebModel elm) {
+    	return "web model";
+    }
+
+    String image(WebModel elm) {
+        return "folder-html.png";
+    }
 
 	String text(ActionElement elm) {
 		return "action: " + elm.getName();
@@ -58,42 +61,33 @@ public class WebGuiLabelProvider extends DefaultEObjectLabelProvider {
 	String text(InputElement elm) {
 		return "input for: " + elm.getReference().getName();
 	}
-	
+
 	String text(RepeatElement elm) {
 		return "repeat for: " + elm.getReference().getName();
 	}
-	
-    String image(Model ele) {
+
+    String image(Model elm) {
         return "globe.png";
-      }
-	
-    String image(DomainModel ele) {
-        return "folder-documents.png";
-      }
-    
-    String image(Entity ele) {
+    }
+
+    String image(Entity elm) {
         return "blockdevice.png";
-      }
+    }
 
-    String image(DataType ele) {
+    String image(DataType elm) {
         return "database.png";
-      }
+    }
 
-    String image(Feature ele) {
+    String image(Feature elm) {
         return "arrow-right-3.png";
-      }
-    
-    
-    String image(WebModel ele) {
-        return "folder-html.png";
-      }
-    
-    String image(Page ele) {
-        return "www.png";
-      }
+    }
 
-    String image(PageElement ele) {
+    String image(Page elm) {
+        return "www.png";
+    }
+
+    String image(PageElement elm) {
         return "arrow-right-2.png";
-      }
-    
+    }
+
 }

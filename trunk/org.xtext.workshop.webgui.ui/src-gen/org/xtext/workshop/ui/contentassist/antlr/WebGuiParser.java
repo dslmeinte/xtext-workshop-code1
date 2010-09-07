@@ -37,6 +37,7 @@ public class WebGuiParser extends AbstractContentAssistParser {
 			nameMappings = new HashMap<AbstractElement, String>() {
 				private static final long serialVersionUID = 1L;
 				{
+					put(grammarAccess.getFeatureAccess().getMultivaluedAlternatives_3_0(), "rule__Feature__MultivaluedAlternatives_3_0");
 					put(grammarAccess.getTypeAccess().getAlternatives(), "rule__Type__Alternatives");
 					put(grammarAccess.getPageElementAccess().getAlternatives(), "rule__PageElement__Alternatives");
 					put(grammarAccess.getSingleElementAccess().getAlternatives(), "rule__SingleElement__Alternatives");
@@ -52,19 +53,17 @@ public class WebGuiParser extends AbstractContentAssistParser {
 					put(grammarAccess.getInputElementAccess().getGroup(), "rule__InputElement__Group__0");
 					put(grammarAccess.getRepeatElementAccess().getGroup(), "rule__RepeatElement__Group__0");
 					put(grammarAccess.getModelAccess().getNameAssignment_1(), "rule__Model__NameAssignment_1");
-					put(grammarAccess.getModelAccess().getDomainAssignment_3(), "rule__Model__DomainAssignment_3");
-					put(grammarAccess.getModelAccess().getWebAssignment_4(), "rule__Model__WebAssignment_4");
-					put(grammarAccess.getDomainModelAccess().getNameAssignment_1(), "rule__DomainModel__NameAssignment_1");
-					put(grammarAccess.getDomainModelAccess().getEntitiesAssignment_3(), "rule__DomainModel__EntitiesAssignment_3");
-					put(grammarAccess.getDomainModelAccess().getDataTypesAssignment_4(), "rule__DomainModel__DataTypesAssignment_4");
+					put(grammarAccess.getModelAccess().getDomainAssignment_2(), "rule__Model__DomainAssignment_2");
+					put(grammarAccess.getModelAccess().getWebAssignment_3(), "rule__Model__WebAssignment_3");
+					put(grammarAccess.getDomainModelAccess().getEntitiesAssignment_2(), "rule__DomainModel__EntitiesAssignment_2");
+					put(grammarAccess.getDomainModelAccess().getDataTypesAssignment_3(), "rule__DomainModel__DataTypesAssignment_3");
 					put(grammarAccess.getEntityAccess().getNameAssignment_1(), "rule__Entity__NameAssignment_1");
 					put(grammarAccess.getEntityAccess().getFeaturesAssignment_3(), "rule__Entity__FeaturesAssignment_3");
 					put(grammarAccess.getFeatureAccess().getNameAssignment_0(), "rule__Feature__NameAssignment_0");
 					put(grammarAccess.getFeatureAccess().getTypeAssignment_2(), "rule__Feature__TypeAssignment_2");
 					put(grammarAccess.getFeatureAccess().getMultivaluedAssignment_3(), "rule__Feature__MultivaluedAssignment_3");
 					put(grammarAccess.getDataTypeAccess().getNameAssignment_1(), "rule__DataType__NameAssignment_1");
-					put(grammarAccess.getWebModelAccess().getNameAssignment_1(), "rule__WebModel__NameAssignment_1");
-					put(grammarAccess.getWebModelAccess().getPagesAssignment_3(), "rule__WebModel__PagesAssignment_3");
+					put(grammarAccess.getWebModelAccess().getPagesAssignment_2(), "rule__WebModel__PagesAssignment_2");
 					put(grammarAccess.getPageAccess().getNameAssignment_1(), "rule__Page__NameAssignment_1");
 					put(grammarAccess.getPageAccess().getTitleAssignment_5(), "rule__Page__TitleAssignment_5");
 					put(grammarAccess.getPageAccess().getEntityAssignment_7(), "rule__Page__EntityAssignment_7");

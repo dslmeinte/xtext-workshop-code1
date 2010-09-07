@@ -13,14 +13,12 @@
         <elements xsi:type="xtext:Assignment" feature="name" operator="=">
           <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
         </elements>
-        <elements xsi:type="xtext:Keyword" value="{"/>
         <elements xsi:type="xtext:Assignment" feature="domain" operator="=">
           <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.1"/>
         </elements>
         <elements xsi:type="xtext:Assignment" feature="web" operator="=">
           <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.6"/>
         </elements>
-        <elements xsi:type="xtext:Keyword" value="}"/>
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="DomainModel">
@@ -28,18 +26,18 @@
         <classifier xsi:type="ecore:EClass" href="http://www.xtext.org/workshop/WebGui#//DomainModel"/>
       </type>
       <alternatives xsi:type="xtext:Group">
-        <elements xsi:type="xtext:Keyword" value="domain"/>
-        <elements xsi:type="xtext:Assignment" feature="name" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+        <elements xsi:type="xtext:Action">
+          <type metamodel="/0/@metamodelDeclarations.0">
+            <classifier xsi:type="ecore:EClass" href="http://www.xtext.org/workshop/WebGui#//DomainModel"/>
+          </type>
         </elements>
-        <elements xsi:type="xtext:Keyword" value="{"/>
+        <elements xsi:type="xtext:Keyword" value="domain:"/>
         <elements xsi:type="xtext:Assignment" cardinality="*" feature="entities" operator="+=">
           <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.2"/>
         </elements>
         <elements xsi:type="xtext:Assignment" cardinality="*" feature="dataTypes" operator="+=">
           <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.5"/>
         </elements>
-        <elements xsi:type="xtext:Keyword" value="}"/>
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="Entity">
@@ -76,7 +74,10 @@
           </terminal>
         </elements>
         <elements xsi:type="xtext:Assignment" cardinality="?" feature="multivalued" operator="?=">
-          <terminal xsi:type="xtext:Keyword" value="(s)"/>
+          <terminal xsi:type="xtext:Alternatives">
+            <elements xsi:type="xtext:Keyword" value="(s)"/>
+            <elements xsi:type="xtext:Keyword" value="(es)"/>
+          </terminal>
         </elements>
       </alternatives>
     </rules>
@@ -105,15 +106,15 @@
         <classifier xsi:type="ecore:EClass" href="http://www.xtext.org/workshop/WebGui#//WebModel"/>
       </type>
       <alternatives xsi:type="xtext:Group">
-        <elements xsi:type="xtext:Keyword" value="web"/>
-        <elements xsi:type="xtext:Assignment" feature="name" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+        <elements xsi:type="xtext:Action">
+          <type metamodel="/0/@metamodelDeclarations.0">
+            <classifier xsi:type="ecore:EClass" href="http://www.xtext.org/workshop/WebGui#//WebModel"/>
+          </type>
         </elements>
-        <elements xsi:type="xtext:Keyword" value="{"/>
+        <elements xsi:type="xtext:Keyword" value="web:"/>
         <elements xsi:type="xtext:Assignment" cardinality="*" feature="pages" operator="+=">
           <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.7"/>
         </elements>
-        <elements xsi:type="xtext:Keyword" value="}"/>
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="Page">

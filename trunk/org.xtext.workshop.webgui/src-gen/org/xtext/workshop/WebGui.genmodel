@@ -15,7 +15,6 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference WebGui.ecore#//Model/web"/>
     </genClasses>
     <genClasses ecoreClass="WebGui.ecore#//DomainModel">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute WebGui.ecore#//DomainModel/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference WebGui.ecore#//DomainModel/entities"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference WebGui.ecore#//DomainModel/dataTypes"/>
     </genClasses>
@@ -32,7 +31,6 @@
     </genClasses>
     <genClasses ecoreClass="WebGui.ecore#//DataType"/>
     <genClasses ecoreClass="WebGui.ecore#//WebModel">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute WebGui.ecore#//WebModel/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference WebGui.ecore#//WebModel/pages"/>
     </genClasses>
     <genClasses ecoreClass="WebGui.ecore#//Page">

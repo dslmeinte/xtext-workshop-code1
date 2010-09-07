@@ -1,54 +1,53 @@
-model IYou {
+model IYou
 
-   domain IYouDomain {
-      
-      entity Person {
-         name     : string
-         birth    : date
-         email    : string
-         address  : Address
-         recommends: Person(s) 
-      }
-      
-      entity Address {
-         street : string
-         city   : string
-         zipcode: string
-      }
-      
-      type string
-      type date
-   }
-   
-   web IYouPresentation {
-      
-      page Search {
-         title = "Search for a person"
-          
-         content for Person {
-            input for name
-            repeat for address {
-               input for city
-            }
-            
-            action search
-         } 
-            
-      }
-      
-      page Results {
-         title = "Search results"
-         
-         content for Person {
-            show name
-            repeat for recommends {
-               show name
-               show birth
-            }
-            
-            action back
-         } 
-            
-      }
-   }  
-}
+domain:
+
+  entity Person {
+     name     : string
+     birth    : date
+     email    : string
+     address  : Address
+     recommends: Person(s) 
+  }
+
+  entity Address {
+     street : string
+     city   : string
+     zipcode: string
+  }
+
+  type string
+  type date
+
+
+web:
+
+  page Search {
+     title = "Search for a person"
+
+     content for Person {
+        input for name
+        repeat for address {
+           input for city
+        }
+
+        action search
+     }
+
+  }
+
+  page Results {
+     title = "Search results"
+
+     content for Person {
+        show name
+        repeat for recommends {
+           show name
+           show birth
+        }
+
+        action back
+     }
+
+  }
+
