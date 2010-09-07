@@ -1,0 +1,183 @@
+=============================== DAY 1 ==================================
+
+
+- Create Xtext project
+   - show Eclipse help
+
+- Structure of the project:
+   - dsl project
+      - xtext file describing dsl
+      - mwe2 workflow file to define the major features of the dsl
+      - formatting
+      - scoping
+      - validation
+   - ui project
+      - labels
+      - outline
+      - quickfix
+   - generator project
+      - templates are written with Xpand (and Xtend)
+
+- Xtext basics
+
+   DomainModel:
+      'domain' name=ID
+      (types+=Type)+;
+
+   Type:
+      Entity | DataType
+
+   Entity:
+      'entity'  name=ID '{'
+         (features+=Feature)* '}';
+
+   Feature:
+      name=ID ':' type=[Type];
+
+   DataType:
+      'type' name=ID;
+
+
+   
+
+- Run the DSL
+
+
+
+- Xtext more
+   EClass :
+      ;
+
+      groups:
+      |     or
+      &   unordered
+
+      EBNF expressions:
+         1. exactly one (the default, no operator)
+         2. one or none (operator ?)
+         3. any, zero or more (operator *)
+         4. one or more (operator +)
+
+      assignments:
+         =   simple assignment
+         += multi-valued feature, adds value to the right
+         ?= boolean assigment, expects a feature of type EBoolean
+         
+      cross reference:  [EClass]
+   
+   terminal NAME :  [returns ecore:EInt];
+      is er nog iets bijzonders aan terminal ID?
+
+   data type rules
+   enum rules
+
+   - de eerste element in je Xtext file is je top element
+   - vergeet name feature niet van je element waarover je later code wilt genereren.
+
+- Expand example
+     met schermen, en cross-reference naar domain model
+   - start with the plain domain text of your DSL instance
+
+- Code generation: Xpand
+   (explain best feature: power of runtime polymorphism)
+   (how to get the << and >>) 
+
+   IMPORT
+
+   DEFINE
+   
+   EXPAND
+   FOREACH
+
+   IF
+   
+- Example
+   genereer html voor een pagina + java voor entity.
+
+- More Xpand with Xtend
+   EXTENSION
+   
+   Extend syntax like OCL …
+
+   typeSelect()
+   select()
+   
+   expr ?  a : b
+
+   handy: org::eclipse::xtend::util::stdlib::io::info()
+   problems with enumeration literal values  
+
+   you can also flee to Java.
+
+- scoping
+   features beperken op basis van entities.
+
+- validation
+   unieke naam van entiteit, feature.
+   
+recap:
+
+- Xtext architecture (picture)
+   
+- when (not) to use Xtext
+   - not to make a GPL (General Purpose Language) (grammar is _not_ easy)
+      -> go for a lot of little languages (and interconnect)
+
+   - variation is limited, and instantiation is large enough, or repeatable.
+
+   - advantage over UML or internal DSL's: you start from scratch. (you do not need to restrict an existing model, or language)
+
+   - disadvantage of Xtext: no language libraries available, and you can only inherit from one other language
+
+
+- Where to find more?
+   - Eclipse help
+   - Xtext forum
+   - Blog's:
+   
+ 
+=============================== DAY 2 ==================================
+
+- expressions
+   unassigned rule calls, (un-/)assigned actions, terminals + demo & exercise
+   left-recursion, precedence
+   (web cast in Sven's blog)
+
+- outline
+   what is visible + changing icons
+
+- formatting
+
+
+- What is more?
+   - use an existing Ecore model
+      (or use a transformation)
+   - use of parsetree reconstructor
+         - jvmType
+   - run Xtext standalone (easy!)
+   - distribute Xtext editor (as rcp application)
+   - modularizing DSL
+   - refactoring support (later)
+   - add instance data via resource provider
+   
+   - UML reader
+   - transformations with Xtend
+
+
+
+- xText perfect?
+   - easier ways to specify grammars are possible, especially when dealing with expressions
+   - you need to restart Eclipse each time you change the grammar (or reload the plugins)
+   - Xpand, Xtend not bug free
+   - MWE2 is a separate language; very hard to mix transformations, code generations, etc.
+   - formatting is way too difficult
+   - graphical representation
+
+
+
+
+
+
+
+
+
