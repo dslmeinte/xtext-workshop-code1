@@ -188,27 +188,16 @@ ruleDomainModel returns [EObject current=null]
     @after { resetLookahead(); 
     	lastConsumedNode = currentNode;
     }:
-((
-    { 
-        temp=factory.create(grammarAccess.getDomainModelAccess().getDomainModelAction_0().getType().getClassifier());
-        $current = temp; 
-        temp = null;
-        CompositeNode newNode = createCompositeNode(grammarAccess.getDomainModelAccess().getDomainModelAction_0(), currentNode.getParent());
-    newNode.getChildren().add(currentNode);
-    moveLookaheadInfo(currentNode, newNode);
-    currentNode = newNode; 
-        associateNodeWithAstElement(currentNode, $current); 
-    }
-)	'domain:' 
+(	'domain:' 
     {
-        createLeafNode(grammarAccess.getDomainModelAccess().getDomainKeyword_1(), null); 
+        createLeafNode(grammarAccess.getDomainModelAccess().getDomainKeyword_0(), null); 
     }
 (
 (
 		{ 
-	        currentNode=createCompositeNode(grammarAccess.getDomainModelAccess().getEntitiesEntityParserRuleCall_2_0(), currentNode); 
+	        currentNode=createCompositeNode(grammarAccess.getDomainModelAccess().getTypesTypeParserRuleCall_1_0(), currentNode); 
 	    }
-		lv_entities_2_0=ruleEntity		{
+		lv_types_1_0=ruleType		{
 	        if ($current==null) {
 	            $current = factory.create(grammarAccess.getDomainModelRule().getType().getClassifier());
 	            associateNodeWithAstElement(currentNode.getParent(), $current);
@@ -216,9 +205,9 @@ ruleDomainModel returns [EObject current=null]
 	        try {
 	       		add(
 	       			$current, 
-	       			"entities",
-	        		lv_entities_2_0, 
-	        		"Entity", 
+	       			"types",
+	        		lv_types_1_0, 
+	        		"Type", 
 	        		currentNode);
 	        } catch (ValueConverterException vce) {
 				handleValueConverterException(vce);
@@ -227,31 +216,7 @@ ruleDomainModel returns [EObject current=null]
 	    }
 
 )
-)*(
-(
-		{ 
-	        currentNode=createCompositeNode(grammarAccess.getDomainModelAccess().getDataTypesDataTypeParserRuleCall_3_0(), currentNode); 
-	    }
-		lv_dataTypes_3_0=ruleDataType		{
-	        if ($current==null) {
-	            $current = factory.create(grammarAccess.getDomainModelRule().getType().getClassifier());
-	            associateNodeWithAstElement(currentNode.getParent(), $current);
-	        }
-	        try {
-	       		add(
-	       			$current, 
-	       			"dataTypes",
-	        		lv_dataTypes_3_0, 
-	        		"DataType", 
-	        		currentNode);
-	        } catch (ValueConverterException vce) {
-				handleValueConverterException(vce);
-	        }
-	        currentNode = currentNode.getParent();
-	    }
-
-)
-)*)
+)+)
 ;
 
 
@@ -448,6 +413,46 @@ ruleFeature returns [EObject current=null]
 
 
 
+// Entry rule entryRuleType
+entryRuleType returns [EObject current=null] 
+	:
+	{ currentNode = createCompositeNode(grammarAccess.getTypeRule(), currentNode); }
+	 iv_ruleType=ruleType 
+	 { $current=$iv_ruleType.current; } 
+	 EOF 
+;
+
+// Rule Type
+ruleType returns [EObject current=null] 
+    @init { EObject temp=null; setCurrentLookahead(); resetLookahead(); 
+    }
+    @after { resetLookahead(); 
+    	lastConsumedNode = currentNode;
+    }:
+(
+    { 
+        currentNode=createCompositeNode(grammarAccess.getTypeAccess().getEntityParserRuleCall_0(), currentNode); 
+    }
+    this_Entity_0=ruleEntity
+    { 
+        $current = $this_Entity_0.current; 
+        currentNode = currentNode.getParent();
+    }
+
+    |
+    { 
+        currentNode=createCompositeNode(grammarAccess.getTypeAccess().getDataTypeParserRuleCall_1(), currentNode); 
+    }
+    this_DataType_1=ruleDataType
+    { 
+        $current = $this_DataType_1.current; 
+        currentNode = currentNode.getParent();
+    }
+)
+;
+
+
+
 
 
 // Entry rule entryRuleDataType
@@ -517,27 +522,16 @@ ruleWebModel returns [EObject current=null]
     @after { resetLookahead(); 
     	lastConsumedNode = currentNode;
     }:
-((
-    { 
-        temp=factory.create(grammarAccess.getWebModelAccess().getWebModelAction_0().getType().getClassifier());
-        $current = temp; 
-        temp = null;
-        CompositeNode newNode = createCompositeNode(grammarAccess.getWebModelAccess().getWebModelAction_0(), currentNode.getParent());
-    newNode.getChildren().add(currentNode);
-    moveLookaheadInfo(currentNode, newNode);
-    currentNode = newNode; 
-        associateNodeWithAstElement(currentNode, $current); 
-    }
-)	'web:' 
+(	'web:' 
     {
-        createLeafNode(grammarAccess.getWebModelAccess().getWebKeyword_1(), null); 
+        createLeafNode(grammarAccess.getWebModelAccess().getWebKeyword_0(), null); 
     }
 (
 (
 		{ 
-	        currentNode=createCompositeNode(grammarAccess.getWebModelAccess().getPagesPageParserRuleCall_2_0(), currentNode); 
+	        currentNode=createCompositeNode(grammarAccess.getWebModelAccess().getPagesPageParserRuleCall_1_0(), currentNode); 
 	    }
-		lv_pages_2_0=rulePage		{
+		lv_pages_1_0=rulePage		{
 	        if ($current==null) {
 	            $current = factory.create(grammarAccess.getWebModelRule().getType().getClassifier());
 	            associateNodeWithAstElement(currentNode.getParent(), $current);
@@ -546,7 +540,7 @@ ruleWebModel returns [EObject current=null]
 	       		add(
 	       			$current, 
 	       			"pages",
-	        		lv_pages_2_0, 
+	        		lv_pages_1_0, 
 	        		"Page", 
 	        		currentNode);
 	        } catch (ValueConverterException vce) {
@@ -556,7 +550,7 @@ ruleWebModel returns [EObject current=null]
 	    }
 
 )
-)*)
+)+)
 ;
 
 

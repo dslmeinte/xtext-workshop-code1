@@ -54,15 +54,14 @@ public class WebGuiParser extends AbstractContentAssistParser {
 					put(grammarAccess.getModelAccess().getNameAssignment_1(), "rule__Model__NameAssignment_1");
 					put(grammarAccess.getModelAccess().getDomainAssignment_2(), "rule__Model__DomainAssignment_2");
 					put(grammarAccess.getModelAccess().getWebAssignment_3(), "rule__Model__WebAssignment_3");
-					put(grammarAccess.getDomainModelAccess().getEntitiesAssignment_2(), "rule__DomainModel__EntitiesAssignment_2");
-					put(grammarAccess.getDomainModelAccess().getDataTypesAssignment_3(), "rule__DomainModel__DataTypesAssignment_3");
+					put(grammarAccess.getDomainModelAccess().getTypesAssignment_1(), "rule__DomainModel__TypesAssignment_1");
 					put(grammarAccess.getEntityAccess().getNameAssignment_1(), "rule__Entity__NameAssignment_1");
 					put(grammarAccess.getEntityAccess().getFeaturesAssignment_3(), "rule__Entity__FeaturesAssignment_3");
 					put(grammarAccess.getFeatureAccess().getNameAssignment_0(), "rule__Feature__NameAssignment_0");
 					put(grammarAccess.getFeatureAccess().getTypeAssignment_2(), "rule__Feature__TypeAssignment_2");
 					put(grammarAccess.getFeatureAccess().getMultivaluedAssignment_3(), "rule__Feature__MultivaluedAssignment_3");
 					put(grammarAccess.getDataTypeAccess().getNameAssignment_1(), "rule__DataType__NameAssignment_1");
-					put(grammarAccess.getWebModelAccess().getPagesAssignment_2(), "rule__WebModel__PagesAssignment_2");
+					put(grammarAccess.getWebModelAccess().getPagesAssignment_1(), "rule__WebModel__PagesAssignment_1");
 					put(grammarAccess.getPageAccess().getNameAssignment_1(), "rule__Page__NameAssignment_1");
 					put(grammarAccess.getPageAccess().getTitleAssignment_5(), "rule__Page__TitleAssignment_5");
 					put(grammarAccess.getPageAccess().getEntityAssignment_7(), "rule__Page__EntityAssignment_7");

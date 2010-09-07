@@ -16,10 +16,8 @@ Model:
  */
 
 DomainModel:
-    {DomainModel}	// ensure model.domain != null
     'domain:'
-        (entities+=Entity)*
-        (dataTypes+=DataType)*
+    	(types+=Type)+
     ;
 
 Entity:
@@ -48,9 +46,8 @@ DataType:
  */
 
 WebModel:
-	{WebModel}	// ensure model.web != null
     'web:'
-    	(pages+=Page)*
+    	(pages+=Page)+
     ;
 
 Page:

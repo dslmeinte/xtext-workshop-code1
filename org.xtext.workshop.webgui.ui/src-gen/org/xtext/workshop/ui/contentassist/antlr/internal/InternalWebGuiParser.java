@@ -363,20 +363,95 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
     // $ANTLR end ruleFeature
 
 
+    // $ANTLR start entryRuleType
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:173:1: entryRuleType : ruleType EOF ;
+    public final void entryRuleType() throws RecognitionException {
+        try {
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:174:1: ( ruleType EOF )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:175:1: ruleType EOF
+            {
+             before(grammarAccess.getTypeRule()); 
+            pushFollow(FOLLOW_ruleType_in_entryRuleType301);
+            ruleType();
+            _fsp--;
+
+             after(grammarAccess.getTypeRule()); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleType308); 
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+        }
+        return ;
+    }
+    // $ANTLR end entryRuleType
+
+
+    // $ANTLR start ruleType
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:182:1: ruleType : ( ( rule__Type__Alternatives ) ) ;
+    public final void ruleType() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:186:2: ( ( ( rule__Type__Alternatives ) ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:187:1: ( ( rule__Type__Alternatives ) )
+            {
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:187:1: ( ( rule__Type__Alternatives ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:188:1: ( rule__Type__Alternatives )
+            {
+             before(grammarAccess.getTypeAccess().getAlternatives()); 
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:189:1: ( rule__Type__Alternatives )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:189:2: rule__Type__Alternatives
+            {
+            pushFollow(FOLLOW_rule__Type__Alternatives_in_ruleType334);
+            rule__Type__Alternatives();
+            _fsp--;
+
+
+            }
+
+             after(grammarAccess.getTypeAccess().getAlternatives()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end ruleType
+
+
     // $ANTLR start entryRuleDataType
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:175:1: entryRuleDataType : ruleDataType EOF ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:201:1: entryRuleDataType : ruleDataType EOF ;
     public final void entryRuleDataType() throws RecognitionException {
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:176:1: ( ruleDataType EOF )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:177:1: ruleDataType EOF
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:202:1: ( ruleDataType EOF )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:203:1: ruleDataType EOF
             {
              before(grammarAccess.getDataTypeRule()); 
-            pushFollow(FOLLOW_ruleDataType_in_entryRuleDataType303);
+            pushFollow(FOLLOW_ruleDataType_in_entryRuleDataType361);
             ruleDataType();
             _fsp--;
 
              after(grammarAccess.getDataTypeRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleDataType310); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleDataType368); 
 
             }
 
@@ -393,23 +468,23 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start ruleDataType
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:184:1: ruleDataType : ( ( rule__DataType__Group__0 ) ) ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:210:1: ruleDataType : ( ( rule__DataType__Group__0 ) ) ;
     public final void ruleDataType() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:188:2: ( ( ( rule__DataType__Group__0 ) ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:189:1: ( ( rule__DataType__Group__0 ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:214:2: ( ( ( rule__DataType__Group__0 ) ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:215:1: ( ( rule__DataType__Group__0 ) )
             {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:189:1: ( ( rule__DataType__Group__0 ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:190:1: ( rule__DataType__Group__0 )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:215:1: ( ( rule__DataType__Group__0 ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:216:1: ( rule__DataType__Group__0 )
             {
              before(grammarAccess.getDataTypeAccess().getGroup()); 
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:191:1: ( rule__DataType__Group__0 )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:191:2: rule__DataType__Group__0
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:217:1: ( rule__DataType__Group__0 )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:217:2: rule__DataType__Group__0
             {
-            pushFollow(FOLLOW_rule__DataType__Group__0_in_ruleDataType336);
+            pushFollow(FOLLOW_rule__DataType__Group__0_in_ruleDataType394);
             rule__DataType__Group__0();
             _fsp--;
 
@@ -439,19 +514,19 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start entryRuleWebModel
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:203:1: entryRuleWebModel : ruleWebModel EOF ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:229:1: entryRuleWebModel : ruleWebModel EOF ;
     public final void entryRuleWebModel() throws RecognitionException {
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:204:1: ( ruleWebModel EOF )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:205:1: ruleWebModel EOF
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:230:1: ( ruleWebModel EOF )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:231:1: ruleWebModel EOF
             {
              before(grammarAccess.getWebModelRule()); 
-            pushFollow(FOLLOW_ruleWebModel_in_entryRuleWebModel363);
+            pushFollow(FOLLOW_ruleWebModel_in_entryRuleWebModel421);
             ruleWebModel();
             _fsp--;
 
              after(grammarAccess.getWebModelRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleWebModel370); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleWebModel428); 
 
             }
 
@@ -468,23 +543,23 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start ruleWebModel
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:212:1: ruleWebModel : ( ( rule__WebModel__Group__0 ) ) ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:238:1: ruleWebModel : ( ( rule__WebModel__Group__0 ) ) ;
     public final void ruleWebModel() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:216:2: ( ( ( rule__WebModel__Group__0 ) ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:217:1: ( ( rule__WebModel__Group__0 ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:242:2: ( ( ( rule__WebModel__Group__0 ) ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:243:1: ( ( rule__WebModel__Group__0 ) )
             {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:217:1: ( ( rule__WebModel__Group__0 ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:218:1: ( rule__WebModel__Group__0 )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:243:1: ( ( rule__WebModel__Group__0 ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:244:1: ( rule__WebModel__Group__0 )
             {
              before(grammarAccess.getWebModelAccess().getGroup()); 
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:219:1: ( rule__WebModel__Group__0 )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:219:2: rule__WebModel__Group__0
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:245:1: ( rule__WebModel__Group__0 )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:245:2: rule__WebModel__Group__0
             {
-            pushFollow(FOLLOW_rule__WebModel__Group__0_in_ruleWebModel396);
+            pushFollow(FOLLOW_rule__WebModel__Group__0_in_ruleWebModel454);
             rule__WebModel__Group__0();
             _fsp--;
 
@@ -514,19 +589,19 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start entryRulePage
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:231:1: entryRulePage : rulePage EOF ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:257:1: entryRulePage : rulePage EOF ;
     public final void entryRulePage() throws RecognitionException {
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:232:1: ( rulePage EOF )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:233:1: rulePage EOF
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:258:1: ( rulePage EOF )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:259:1: rulePage EOF
             {
              before(grammarAccess.getPageRule()); 
-            pushFollow(FOLLOW_rulePage_in_entryRulePage423);
+            pushFollow(FOLLOW_rulePage_in_entryRulePage481);
             rulePage();
             _fsp--;
 
              after(grammarAccess.getPageRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRulePage430); 
+            match(input,EOF,FOLLOW_EOF_in_entryRulePage488); 
 
             }
 
@@ -543,23 +618,23 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rulePage
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:240:1: rulePage : ( ( rule__Page__Group__0 ) ) ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:266:1: rulePage : ( ( rule__Page__Group__0 ) ) ;
     public final void rulePage() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:244:2: ( ( ( rule__Page__Group__0 ) ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:245:1: ( ( rule__Page__Group__0 ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:270:2: ( ( ( rule__Page__Group__0 ) ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:271:1: ( ( rule__Page__Group__0 ) )
             {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:245:1: ( ( rule__Page__Group__0 ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:246:1: ( rule__Page__Group__0 )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:271:1: ( ( rule__Page__Group__0 ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:272:1: ( rule__Page__Group__0 )
             {
              before(grammarAccess.getPageAccess().getGroup()); 
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:247:1: ( rule__Page__Group__0 )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:247:2: rule__Page__Group__0
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:273:1: ( rule__Page__Group__0 )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:273:2: rule__Page__Group__0
             {
-            pushFollow(FOLLOW_rule__Page__Group__0_in_rulePage456);
+            pushFollow(FOLLOW_rule__Page__Group__0_in_rulePage514);
             rule__Page__Group__0();
             _fsp--;
 
@@ -589,19 +664,19 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start entryRulePageElement
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:259:1: entryRulePageElement : rulePageElement EOF ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:285:1: entryRulePageElement : rulePageElement EOF ;
     public final void entryRulePageElement() throws RecognitionException {
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:260:1: ( rulePageElement EOF )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:261:1: rulePageElement EOF
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:286:1: ( rulePageElement EOF )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:287:1: rulePageElement EOF
             {
              before(grammarAccess.getPageElementRule()); 
-            pushFollow(FOLLOW_rulePageElement_in_entryRulePageElement483);
+            pushFollow(FOLLOW_rulePageElement_in_entryRulePageElement541);
             rulePageElement();
             _fsp--;
 
              after(grammarAccess.getPageElementRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRulePageElement490); 
+            match(input,EOF,FOLLOW_EOF_in_entryRulePageElement548); 
 
             }
 
@@ -618,23 +693,23 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rulePageElement
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:268:1: rulePageElement : ( ( rule__PageElement__Alternatives ) ) ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:294:1: rulePageElement : ( ( rule__PageElement__Alternatives ) ) ;
     public final void rulePageElement() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:272:2: ( ( ( rule__PageElement__Alternatives ) ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:273:1: ( ( rule__PageElement__Alternatives ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:298:2: ( ( ( rule__PageElement__Alternatives ) ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:299:1: ( ( rule__PageElement__Alternatives ) )
             {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:273:1: ( ( rule__PageElement__Alternatives ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:274:1: ( rule__PageElement__Alternatives )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:299:1: ( ( rule__PageElement__Alternatives ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:300:1: ( rule__PageElement__Alternatives )
             {
              before(grammarAccess.getPageElementAccess().getAlternatives()); 
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:275:1: ( rule__PageElement__Alternatives )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:275:2: rule__PageElement__Alternatives
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:301:1: ( rule__PageElement__Alternatives )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:301:2: rule__PageElement__Alternatives
             {
-            pushFollow(FOLLOW_rule__PageElement__Alternatives_in_rulePageElement516);
+            pushFollow(FOLLOW_rule__PageElement__Alternatives_in_rulePageElement574);
             rule__PageElement__Alternatives();
             _fsp--;
 
@@ -664,19 +739,19 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start entryRuleSingleElement
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:287:1: entryRuleSingleElement : ruleSingleElement EOF ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:313:1: entryRuleSingleElement : ruleSingleElement EOF ;
     public final void entryRuleSingleElement() throws RecognitionException {
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:288:1: ( ruleSingleElement EOF )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:289:1: ruleSingleElement EOF
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:314:1: ( ruleSingleElement EOF )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:315:1: ruleSingleElement EOF
             {
              before(grammarAccess.getSingleElementRule()); 
-            pushFollow(FOLLOW_ruleSingleElement_in_entryRuleSingleElement543);
+            pushFollow(FOLLOW_ruleSingleElement_in_entryRuleSingleElement601);
             ruleSingleElement();
             _fsp--;
 
              after(grammarAccess.getSingleElementRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleSingleElement550); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleSingleElement608); 
 
             }
 
@@ -693,23 +768,23 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start ruleSingleElement
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:296:1: ruleSingleElement : ( ( rule__SingleElement__Alternatives ) ) ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:322:1: ruleSingleElement : ( ( rule__SingleElement__Alternatives ) ) ;
     public final void ruleSingleElement() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:300:2: ( ( ( rule__SingleElement__Alternatives ) ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:301:1: ( ( rule__SingleElement__Alternatives ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:326:2: ( ( ( rule__SingleElement__Alternatives ) ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:327:1: ( ( rule__SingleElement__Alternatives ) )
             {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:301:1: ( ( rule__SingleElement__Alternatives ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:302:1: ( rule__SingleElement__Alternatives )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:327:1: ( ( rule__SingleElement__Alternatives ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:328:1: ( rule__SingleElement__Alternatives )
             {
              before(grammarAccess.getSingleElementAccess().getAlternatives()); 
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:303:1: ( rule__SingleElement__Alternatives )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:303:2: rule__SingleElement__Alternatives
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:329:1: ( rule__SingleElement__Alternatives )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:329:2: rule__SingleElement__Alternatives
             {
-            pushFollow(FOLLOW_rule__SingleElement__Alternatives_in_ruleSingleElement576);
+            pushFollow(FOLLOW_rule__SingleElement__Alternatives_in_ruleSingleElement634);
             rule__SingleElement__Alternatives();
             _fsp--;
 
@@ -739,19 +814,19 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start entryRuleActionElement
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:315:1: entryRuleActionElement : ruleActionElement EOF ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:341:1: entryRuleActionElement : ruleActionElement EOF ;
     public final void entryRuleActionElement() throws RecognitionException {
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:316:1: ( ruleActionElement EOF )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:317:1: ruleActionElement EOF
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:342:1: ( ruleActionElement EOF )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:343:1: ruleActionElement EOF
             {
              before(grammarAccess.getActionElementRule()); 
-            pushFollow(FOLLOW_ruleActionElement_in_entryRuleActionElement603);
+            pushFollow(FOLLOW_ruleActionElement_in_entryRuleActionElement661);
             ruleActionElement();
             _fsp--;
 
              after(grammarAccess.getActionElementRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleActionElement610); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleActionElement668); 
 
             }
 
@@ -768,23 +843,23 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start ruleActionElement
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:324:1: ruleActionElement : ( ( rule__ActionElement__Group__0 ) ) ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:350:1: ruleActionElement : ( ( rule__ActionElement__Group__0 ) ) ;
     public final void ruleActionElement() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:328:2: ( ( ( rule__ActionElement__Group__0 ) ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:329:1: ( ( rule__ActionElement__Group__0 ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:354:2: ( ( ( rule__ActionElement__Group__0 ) ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:355:1: ( ( rule__ActionElement__Group__0 ) )
             {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:329:1: ( ( rule__ActionElement__Group__0 ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:330:1: ( rule__ActionElement__Group__0 )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:355:1: ( ( rule__ActionElement__Group__0 ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:356:1: ( rule__ActionElement__Group__0 )
             {
              before(grammarAccess.getActionElementAccess().getGroup()); 
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:331:1: ( rule__ActionElement__Group__0 )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:331:2: rule__ActionElement__Group__0
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:357:1: ( rule__ActionElement__Group__0 )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:357:2: rule__ActionElement__Group__0
             {
-            pushFollow(FOLLOW_rule__ActionElement__Group__0_in_ruleActionElement636);
+            pushFollow(FOLLOW_rule__ActionElement__Group__0_in_ruleActionElement694);
             rule__ActionElement__Group__0();
             _fsp--;
 
@@ -814,19 +889,19 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start entryRuleDisplayElement
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:343:1: entryRuleDisplayElement : ruleDisplayElement EOF ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:369:1: entryRuleDisplayElement : ruleDisplayElement EOF ;
     public final void entryRuleDisplayElement() throws RecognitionException {
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:344:1: ( ruleDisplayElement EOF )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:345:1: ruleDisplayElement EOF
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:370:1: ( ruleDisplayElement EOF )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:371:1: ruleDisplayElement EOF
             {
              before(grammarAccess.getDisplayElementRule()); 
-            pushFollow(FOLLOW_ruleDisplayElement_in_entryRuleDisplayElement663);
+            pushFollow(FOLLOW_ruleDisplayElement_in_entryRuleDisplayElement721);
             ruleDisplayElement();
             _fsp--;
 
              after(grammarAccess.getDisplayElementRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleDisplayElement670); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleDisplayElement728); 
 
             }
 
@@ -843,23 +918,23 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start ruleDisplayElement
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:352:1: ruleDisplayElement : ( ( rule__DisplayElement__Group__0 ) ) ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:378:1: ruleDisplayElement : ( ( rule__DisplayElement__Group__0 ) ) ;
     public final void ruleDisplayElement() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:356:2: ( ( ( rule__DisplayElement__Group__0 ) ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:357:1: ( ( rule__DisplayElement__Group__0 ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:382:2: ( ( ( rule__DisplayElement__Group__0 ) ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:383:1: ( ( rule__DisplayElement__Group__0 ) )
             {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:357:1: ( ( rule__DisplayElement__Group__0 ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:358:1: ( rule__DisplayElement__Group__0 )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:383:1: ( ( rule__DisplayElement__Group__0 ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:384:1: ( rule__DisplayElement__Group__0 )
             {
              before(grammarAccess.getDisplayElementAccess().getGroup()); 
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:359:1: ( rule__DisplayElement__Group__0 )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:359:2: rule__DisplayElement__Group__0
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:385:1: ( rule__DisplayElement__Group__0 )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:385:2: rule__DisplayElement__Group__0
             {
-            pushFollow(FOLLOW_rule__DisplayElement__Group__0_in_ruleDisplayElement696);
+            pushFollow(FOLLOW_rule__DisplayElement__Group__0_in_ruleDisplayElement754);
             rule__DisplayElement__Group__0();
             _fsp--;
 
@@ -889,19 +964,19 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start entryRuleRepeatElement
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:371:1: entryRuleRepeatElement : ruleRepeatElement EOF ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:397:1: entryRuleRepeatElement : ruleRepeatElement EOF ;
     public final void entryRuleRepeatElement() throws RecognitionException {
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:372:1: ( ruleRepeatElement EOF )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:373:1: ruleRepeatElement EOF
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:398:1: ( ruleRepeatElement EOF )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:399:1: ruleRepeatElement EOF
             {
              before(grammarAccess.getRepeatElementRule()); 
-            pushFollow(FOLLOW_ruleRepeatElement_in_entryRuleRepeatElement723);
+            pushFollow(FOLLOW_ruleRepeatElement_in_entryRuleRepeatElement781);
             ruleRepeatElement();
             _fsp--;
 
              after(grammarAccess.getRepeatElementRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleRepeatElement730); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleRepeatElement788); 
 
             }
 
@@ -918,23 +993,23 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start ruleRepeatElement
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:380:1: ruleRepeatElement : ( ( rule__RepeatElement__Group__0 ) ) ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:406:1: ruleRepeatElement : ( ( rule__RepeatElement__Group__0 ) ) ;
     public final void ruleRepeatElement() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:384:2: ( ( ( rule__RepeatElement__Group__0 ) ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:385:1: ( ( rule__RepeatElement__Group__0 ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:410:2: ( ( ( rule__RepeatElement__Group__0 ) ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:411:1: ( ( rule__RepeatElement__Group__0 ) )
             {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:385:1: ( ( rule__RepeatElement__Group__0 ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:386:1: ( rule__RepeatElement__Group__0 )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:411:1: ( ( rule__RepeatElement__Group__0 ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:412:1: ( rule__RepeatElement__Group__0 )
             {
              before(grammarAccess.getRepeatElementAccess().getGroup()); 
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:387:1: ( rule__RepeatElement__Group__0 )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:387:2: rule__RepeatElement__Group__0
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:413:1: ( rule__RepeatElement__Group__0 )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:413:2: rule__RepeatElement__Group__0
             {
-            pushFollow(FOLLOW_rule__RepeatElement__Group__0_in_ruleRepeatElement756);
+            pushFollow(FOLLOW_rule__RepeatElement__Group__0_in_ruleRepeatElement814);
             rule__RepeatElement__Group__0();
             _fsp--;
 
@@ -964,13 +1039,13 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Feature__MultivaluedAlternatives_3_0
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:399:1: rule__Feature__MultivaluedAlternatives_3_0 : ( ( '(s)' ) | ( '(es)' ) );
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:425:1: rule__Feature__MultivaluedAlternatives_3_0 : ( ( '(s)' ) | ( '(es)' ) );
     public final void rule__Feature__MultivaluedAlternatives_3_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:403:1: ( ( '(s)' ) | ( '(es)' ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:429:1: ( ( '(s)' ) | ( '(es)' ) )
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -982,19 +1057,19 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("399:1: rule__Feature__MultivaluedAlternatives_3_0 : ( ( '(s)' ) | ( '(es)' ) );", 1, 0, input);
+                    new NoViableAltException("425:1: rule__Feature__MultivaluedAlternatives_3_0 : ( ( '(s)' ) | ( '(es)' ) );", 1, 0, input);
 
                 throw nvae;
             }
             switch (alt1) {
                 case 1 :
-                    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:404:1: ( '(s)' )
+                    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:430:1: ( '(s)' )
                     {
-                    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:404:1: ( '(s)' )
-                    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:405:1: '(s)'
+                    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:430:1: ( '(s)' )
+                    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:431:1: '(s)'
                     {
                      before(grammarAccess.getFeatureAccess().getMultivaluedSKeyword_3_0_0()); 
-                    match(input,11,FOLLOW_11_in_rule__Feature__MultivaluedAlternatives_3_0793); 
+                    match(input,11,FOLLOW_11_in_rule__Feature__MultivaluedAlternatives_3_0851); 
                      after(grammarAccess.getFeatureAccess().getMultivaluedSKeyword_3_0_0()); 
 
                     }
@@ -1003,13 +1078,13 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:412:6: ( '(es)' )
+                    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:438:6: ( '(es)' )
                     {
-                    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:412:6: ( '(es)' )
-                    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:413:1: '(es)'
+                    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:438:6: ( '(es)' )
+                    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:439:1: '(es)'
                     {
                      before(grammarAccess.getFeatureAccess().getMultivaluedEsKeyword_3_0_1()); 
-                    match(input,12,FOLLOW_12_in_rule__Feature__MultivaluedAlternatives_3_0813); 
+                    match(input,12,FOLLOW_12_in_rule__Feature__MultivaluedAlternatives_3_0871); 
                      after(grammarAccess.getFeatureAccess().getMultivaluedEsKeyword_3_0_1()); 
 
                     }
@@ -1034,38 +1109,115 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
     // $ANTLR end rule__Feature__MultivaluedAlternatives_3_0
 
 
-    // $ANTLR start rule__PageElement__Alternatives
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:426:1: rule__PageElement__Alternatives : ( ( ruleSingleElement ) | ( ruleRepeatElement ) );
-    public final void rule__PageElement__Alternatives() throws RecognitionException {
+    // $ANTLR start rule__Type__Alternatives
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:451:1: rule__Type__Alternatives : ( ( ruleEntity ) | ( ruleDataType ) );
+    public final void rule__Type__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:430:1: ( ( ruleSingleElement ) | ( ruleRepeatElement ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:455:1: ( ( ruleEntity ) | ( ruleDataType ) )
             int alt2=2;
             int LA2_0 = input.LA(1);
 
-            if ( ((LA2_0>=25 && LA2_0<=26)) ) {
+            if ( (LA2_0==15) ) {
                 alt2=1;
             }
-            else if ( (LA2_0==27) ) {
+            else if ( (LA2_0==19) ) {
                 alt2=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("426:1: rule__PageElement__Alternatives : ( ( ruleSingleElement ) | ( ruleRepeatElement ) );", 2, 0, input);
+                    new NoViableAltException("451:1: rule__Type__Alternatives : ( ( ruleEntity ) | ( ruleDataType ) );", 2, 0, input);
 
                 throw nvae;
             }
             switch (alt2) {
                 case 1 :
-                    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:431:1: ( ruleSingleElement )
+                    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:456:1: ( ruleEntity )
                     {
-                    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:431:1: ( ruleSingleElement )
-                    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:432:1: ruleSingleElement
+                    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:456:1: ( ruleEntity )
+                    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:457:1: ruleEntity
+                    {
+                     before(grammarAccess.getTypeAccess().getEntityParserRuleCall_0()); 
+                    pushFollow(FOLLOW_ruleEntity_in_rule__Type__Alternatives905);
+                    ruleEntity();
+                    _fsp--;
+
+                     after(grammarAccess.getTypeAccess().getEntityParserRuleCall_0()); 
+
+                    }
+
+
+                    }
+                    break;
+                case 2 :
+                    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:462:6: ( ruleDataType )
+                    {
+                    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:462:6: ( ruleDataType )
+                    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:463:1: ruleDataType
+                    {
+                     before(grammarAccess.getTypeAccess().getDataTypeParserRuleCall_1()); 
+                    pushFollow(FOLLOW_ruleDataType_in_rule__Type__Alternatives922);
+                    ruleDataType();
+                    _fsp--;
+
+                     after(grammarAccess.getTypeAccess().getDataTypeParserRuleCall_1()); 
+
+                    }
+
+
+                    }
+                    break;
+
+            }
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end rule__Type__Alternatives
+
+
+    // $ANTLR start rule__PageElement__Alternatives
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:473:1: rule__PageElement__Alternatives : ( ( ruleSingleElement ) | ( ruleRepeatElement ) );
+    public final void rule__PageElement__Alternatives() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:477:1: ( ( ruleSingleElement ) | ( ruleRepeatElement ) )
+            int alt3=2;
+            int LA3_0 = input.LA(1);
+
+            if ( ((LA3_0>=25 && LA3_0<=26)) ) {
+                alt3=1;
+            }
+            else if ( (LA3_0==27) ) {
+                alt3=2;
+            }
+            else {
+                NoViableAltException nvae =
+                    new NoViableAltException("473:1: rule__PageElement__Alternatives : ( ( ruleSingleElement ) | ( ruleRepeatElement ) );", 3, 0, input);
+
+                throw nvae;
+            }
+            switch (alt3) {
+                case 1 :
+                    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:478:1: ( ruleSingleElement )
+                    {
+                    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:478:1: ( ruleSingleElement )
+                    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:479:1: ruleSingleElement
                     {
                      before(grammarAccess.getPageElementAccess().getSingleElementParserRuleCall_0()); 
-                    pushFollow(FOLLOW_ruleSingleElement_in_rule__PageElement__Alternatives848);
+                    pushFollow(FOLLOW_ruleSingleElement_in_rule__PageElement__Alternatives954);
                     ruleSingleElement();
                     _fsp--;
 
@@ -1077,13 +1229,13 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:437:6: ( ruleRepeatElement )
+                    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:484:6: ( ruleRepeatElement )
                     {
-                    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:437:6: ( ruleRepeatElement )
-                    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:438:1: ruleRepeatElement
+                    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:484:6: ( ruleRepeatElement )
+                    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:485:1: ruleRepeatElement
                     {
                      before(grammarAccess.getPageElementAccess().getRepeatElementParserRuleCall_1()); 
-                    pushFollow(FOLLOW_ruleRepeatElement_in_rule__PageElement__Alternatives865);
+                    pushFollow(FOLLOW_ruleRepeatElement_in_rule__PageElement__Alternatives971);
                     ruleRepeatElement();
                     _fsp--;
 
@@ -1112,37 +1264,37 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__SingleElement__Alternatives
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:448:1: rule__SingleElement__Alternatives : ( ( ruleActionElement ) | ( ruleDisplayElement ) );
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:495:1: rule__SingleElement__Alternatives : ( ( ruleActionElement ) | ( ruleDisplayElement ) );
     public final void rule__SingleElement__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:452:1: ( ( ruleActionElement ) | ( ruleDisplayElement ) )
-            int alt3=2;
-            int LA3_0 = input.LA(1);
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:499:1: ( ( ruleActionElement ) | ( ruleDisplayElement ) )
+            int alt4=2;
+            int LA4_0 = input.LA(1);
 
-            if ( (LA3_0==25) ) {
-                alt3=1;
+            if ( (LA4_0==25) ) {
+                alt4=1;
             }
-            else if ( (LA3_0==26) ) {
-                alt3=2;
+            else if ( (LA4_0==26) ) {
+                alt4=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("448:1: rule__SingleElement__Alternatives : ( ( ruleActionElement ) | ( ruleDisplayElement ) );", 3, 0, input);
+                    new NoViableAltException("495:1: rule__SingleElement__Alternatives : ( ( ruleActionElement ) | ( ruleDisplayElement ) );", 4, 0, input);
 
                 throw nvae;
             }
-            switch (alt3) {
+            switch (alt4) {
                 case 1 :
-                    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:453:1: ( ruleActionElement )
+                    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:500:1: ( ruleActionElement )
                     {
-                    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:453:1: ( ruleActionElement )
-                    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:454:1: ruleActionElement
+                    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:500:1: ( ruleActionElement )
+                    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:501:1: ruleActionElement
                     {
                      before(grammarAccess.getSingleElementAccess().getActionElementParserRuleCall_0()); 
-                    pushFollow(FOLLOW_ruleActionElement_in_rule__SingleElement__Alternatives897);
+                    pushFollow(FOLLOW_ruleActionElement_in_rule__SingleElement__Alternatives1003);
                     ruleActionElement();
                     _fsp--;
 
@@ -1154,13 +1306,13 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:459:6: ( ruleDisplayElement )
+                    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:506:6: ( ruleDisplayElement )
                     {
-                    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:459:6: ( ruleDisplayElement )
-                    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:460:1: ruleDisplayElement
+                    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:506:6: ( ruleDisplayElement )
+                    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:507:1: ruleDisplayElement
                     {
                      before(grammarAccess.getSingleElementAccess().getDisplayElementParserRuleCall_1()); 
-                    pushFollow(FOLLOW_ruleDisplayElement_in_rule__SingleElement__Alternatives914);
+                    pushFollow(FOLLOW_ruleDisplayElement_in_rule__SingleElement__Alternatives1020);
                     ruleDisplayElement();
                     _fsp--;
 
@@ -1189,20 +1341,20 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Model__Group__0
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:472:1: rule__Model__Group__0 : rule__Model__Group__0__Impl rule__Model__Group__1 ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:519:1: rule__Model__Group__0 : rule__Model__Group__0__Impl rule__Model__Group__1 ;
     public final void rule__Model__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:476:1: ( rule__Model__Group__0__Impl rule__Model__Group__1 )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:477:2: rule__Model__Group__0__Impl rule__Model__Group__1
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:523:1: ( rule__Model__Group__0__Impl rule__Model__Group__1 )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:524:2: rule__Model__Group__0__Impl rule__Model__Group__1
             {
-            pushFollow(FOLLOW_rule__Model__Group__0__Impl_in_rule__Model__Group__0944);
+            pushFollow(FOLLOW_rule__Model__Group__0__Impl_in_rule__Model__Group__01050);
             rule__Model__Group__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Model__Group__1_in_rule__Model__Group__0947);
+            pushFollow(FOLLOW_rule__Model__Group__1_in_rule__Model__Group__01053);
             rule__Model__Group__1();
             _fsp--;
 
@@ -1225,20 +1377,20 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Model__Group__0__Impl
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:484:1: rule__Model__Group__0__Impl : ( 'model' ) ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:531:1: rule__Model__Group__0__Impl : ( 'model' ) ;
     public final void rule__Model__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:488:1: ( ( 'model' ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:489:1: ( 'model' )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:535:1: ( ( 'model' ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:536:1: ( 'model' )
             {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:489:1: ( 'model' )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:490:1: 'model'
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:536:1: ( 'model' )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:537:1: 'model'
             {
              before(grammarAccess.getModelAccess().getModelKeyword_0()); 
-            match(input,13,FOLLOW_13_in_rule__Model__Group__0__Impl975); 
+            match(input,13,FOLLOW_13_in_rule__Model__Group__0__Impl1081); 
              after(grammarAccess.getModelAccess().getModelKeyword_0()); 
 
             }
@@ -1262,20 +1414,20 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Model__Group__1
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:503:1: rule__Model__Group__1 : rule__Model__Group__1__Impl rule__Model__Group__2 ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:550:1: rule__Model__Group__1 : rule__Model__Group__1__Impl rule__Model__Group__2 ;
     public final void rule__Model__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:507:1: ( rule__Model__Group__1__Impl rule__Model__Group__2 )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:508:2: rule__Model__Group__1__Impl rule__Model__Group__2
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:554:1: ( rule__Model__Group__1__Impl rule__Model__Group__2 )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:555:2: rule__Model__Group__1__Impl rule__Model__Group__2
             {
-            pushFollow(FOLLOW_rule__Model__Group__1__Impl_in_rule__Model__Group__11006);
+            pushFollow(FOLLOW_rule__Model__Group__1__Impl_in_rule__Model__Group__11112);
             rule__Model__Group__1__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Model__Group__2_in_rule__Model__Group__11009);
+            pushFollow(FOLLOW_rule__Model__Group__2_in_rule__Model__Group__11115);
             rule__Model__Group__2();
             _fsp--;
 
@@ -1298,23 +1450,23 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Model__Group__1__Impl
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:515:1: rule__Model__Group__1__Impl : ( ( rule__Model__NameAssignment_1 ) ) ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:562:1: rule__Model__Group__1__Impl : ( ( rule__Model__NameAssignment_1 ) ) ;
     public final void rule__Model__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:519:1: ( ( ( rule__Model__NameAssignment_1 ) ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:520:1: ( ( rule__Model__NameAssignment_1 ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:566:1: ( ( ( rule__Model__NameAssignment_1 ) ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:567:1: ( ( rule__Model__NameAssignment_1 ) )
             {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:520:1: ( ( rule__Model__NameAssignment_1 ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:521:1: ( rule__Model__NameAssignment_1 )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:567:1: ( ( rule__Model__NameAssignment_1 ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:568:1: ( rule__Model__NameAssignment_1 )
             {
              before(grammarAccess.getModelAccess().getNameAssignment_1()); 
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:522:1: ( rule__Model__NameAssignment_1 )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:522:2: rule__Model__NameAssignment_1
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:569:1: ( rule__Model__NameAssignment_1 )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:569:2: rule__Model__NameAssignment_1
             {
-            pushFollow(FOLLOW_rule__Model__NameAssignment_1_in_rule__Model__Group__1__Impl1036);
+            pushFollow(FOLLOW_rule__Model__NameAssignment_1_in_rule__Model__Group__1__Impl1142);
             rule__Model__NameAssignment_1();
             _fsp--;
 
@@ -1344,20 +1496,20 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Model__Group__2
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:532:1: rule__Model__Group__2 : rule__Model__Group__2__Impl rule__Model__Group__3 ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:579:1: rule__Model__Group__2 : rule__Model__Group__2__Impl rule__Model__Group__3 ;
     public final void rule__Model__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:536:1: ( rule__Model__Group__2__Impl rule__Model__Group__3 )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:537:2: rule__Model__Group__2__Impl rule__Model__Group__3
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:583:1: ( rule__Model__Group__2__Impl rule__Model__Group__3 )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:584:2: rule__Model__Group__2__Impl rule__Model__Group__3
             {
-            pushFollow(FOLLOW_rule__Model__Group__2__Impl_in_rule__Model__Group__21066);
+            pushFollow(FOLLOW_rule__Model__Group__2__Impl_in_rule__Model__Group__21172);
             rule__Model__Group__2__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Model__Group__3_in_rule__Model__Group__21069);
+            pushFollow(FOLLOW_rule__Model__Group__3_in_rule__Model__Group__21175);
             rule__Model__Group__3();
             _fsp--;
 
@@ -1380,23 +1532,23 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Model__Group__2__Impl
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:544:1: rule__Model__Group__2__Impl : ( ( rule__Model__DomainAssignment_2 ) ) ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:591:1: rule__Model__Group__2__Impl : ( ( rule__Model__DomainAssignment_2 ) ) ;
     public final void rule__Model__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:548:1: ( ( ( rule__Model__DomainAssignment_2 ) ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:549:1: ( ( rule__Model__DomainAssignment_2 ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:595:1: ( ( ( rule__Model__DomainAssignment_2 ) ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:596:1: ( ( rule__Model__DomainAssignment_2 ) )
             {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:549:1: ( ( rule__Model__DomainAssignment_2 ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:550:1: ( rule__Model__DomainAssignment_2 )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:596:1: ( ( rule__Model__DomainAssignment_2 ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:597:1: ( rule__Model__DomainAssignment_2 )
             {
              before(grammarAccess.getModelAccess().getDomainAssignment_2()); 
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:551:1: ( rule__Model__DomainAssignment_2 )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:551:2: rule__Model__DomainAssignment_2
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:598:1: ( rule__Model__DomainAssignment_2 )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:598:2: rule__Model__DomainAssignment_2
             {
-            pushFollow(FOLLOW_rule__Model__DomainAssignment_2_in_rule__Model__Group__2__Impl1096);
+            pushFollow(FOLLOW_rule__Model__DomainAssignment_2_in_rule__Model__Group__2__Impl1202);
             rule__Model__DomainAssignment_2();
             _fsp--;
 
@@ -1426,16 +1578,16 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Model__Group__3
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:561:1: rule__Model__Group__3 : rule__Model__Group__3__Impl ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:608:1: rule__Model__Group__3 : rule__Model__Group__3__Impl ;
     public final void rule__Model__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:565:1: ( rule__Model__Group__3__Impl )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:566:2: rule__Model__Group__3__Impl
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:612:1: ( rule__Model__Group__3__Impl )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:613:2: rule__Model__Group__3__Impl
             {
-            pushFollow(FOLLOW_rule__Model__Group__3__Impl_in_rule__Model__Group__31126);
+            pushFollow(FOLLOW_rule__Model__Group__3__Impl_in_rule__Model__Group__31232);
             rule__Model__Group__3__Impl();
             _fsp--;
 
@@ -1458,23 +1610,23 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Model__Group__3__Impl
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:572:1: rule__Model__Group__3__Impl : ( ( rule__Model__WebAssignment_3 ) ) ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:619:1: rule__Model__Group__3__Impl : ( ( rule__Model__WebAssignment_3 ) ) ;
     public final void rule__Model__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:576:1: ( ( ( rule__Model__WebAssignment_3 ) ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:577:1: ( ( rule__Model__WebAssignment_3 ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:623:1: ( ( ( rule__Model__WebAssignment_3 ) ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:624:1: ( ( rule__Model__WebAssignment_3 ) )
             {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:577:1: ( ( rule__Model__WebAssignment_3 ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:578:1: ( rule__Model__WebAssignment_3 )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:624:1: ( ( rule__Model__WebAssignment_3 ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:625:1: ( rule__Model__WebAssignment_3 )
             {
              before(grammarAccess.getModelAccess().getWebAssignment_3()); 
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:579:1: ( rule__Model__WebAssignment_3 )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:579:2: rule__Model__WebAssignment_3
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:626:1: ( rule__Model__WebAssignment_3 )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:626:2: rule__Model__WebAssignment_3
             {
-            pushFollow(FOLLOW_rule__Model__WebAssignment_3_in_rule__Model__Group__3__Impl1153);
+            pushFollow(FOLLOW_rule__Model__WebAssignment_3_in_rule__Model__Group__3__Impl1259);
             rule__Model__WebAssignment_3();
             _fsp--;
 
@@ -1504,20 +1656,20 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__DomainModel__Group__0
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:597:1: rule__DomainModel__Group__0 : rule__DomainModel__Group__0__Impl rule__DomainModel__Group__1 ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:644:1: rule__DomainModel__Group__0 : rule__DomainModel__Group__0__Impl rule__DomainModel__Group__1 ;
     public final void rule__DomainModel__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:601:1: ( rule__DomainModel__Group__0__Impl rule__DomainModel__Group__1 )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:602:2: rule__DomainModel__Group__0__Impl rule__DomainModel__Group__1
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:648:1: ( rule__DomainModel__Group__0__Impl rule__DomainModel__Group__1 )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:649:2: rule__DomainModel__Group__0__Impl rule__DomainModel__Group__1
             {
-            pushFollow(FOLLOW_rule__DomainModel__Group__0__Impl_in_rule__DomainModel__Group__01191);
+            pushFollow(FOLLOW_rule__DomainModel__Group__0__Impl_in_rule__DomainModel__Group__01297);
             rule__DomainModel__Group__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__DomainModel__Group__1_in_rule__DomainModel__Group__01194);
+            pushFollow(FOLLOW_rule__DomainModel__Group__1_in_rule__DomainModel__Group__01300);
             rule__DomainModel__Group__1();
             _fsp--;
 
@@ -1540,31 +1692,31 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__DomainModel__Group__0__Impl
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:609:1: rule__DomainModel__Group__0__Impl : ( () ) ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:656:1: rule__DomainModel__Group__0__Impl : ( 'domain:' ) ;
     public final void rule__DomainModel__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:613:1: ( ( () ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:614:1: ( () )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:660:1: ( ( 'domain:' ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:661:1: ( 'domain:' )
             {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:614:1: ( () )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:615:1: ()
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:661:1: ( 'domain:' )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:662:1: 'domain:'
             {
-             before(grammarAccess.getDomainModelAccess().getDomainModelAction_0()); 
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:616:1: ()
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:618:1: 
-            {
-            }
-
-             after(grammarAccess.getDomainModelAccess().getDomainModelAction_0()); 
+             before(grammarAccess.getDomainModelAccess().getDomainKeyword_0()); 
+            match(input,14,FOLLOW_14_in_rule__DomainModel__Group__0__Impl1328); 
+             after(grammarAccess.getDomainModelAccess().getDomainKeyword_0()); 
 
             }
 
 
             }
 
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
         }
         finally {
 
@@ -1577,21 +1729,17 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__DomainModel__Group__1
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:628:1: rule__DomainModel__Group__1 : rule__DomainModel__Group__1__Impl rule__DomainModel__Group__2 ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:675:1: rule__DomainModel__Group__1 : rule__DomainModel__Group__1__Impl ;
     public final void rule__DomainModel__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:632:1: ( rule__DomainModel__Group__1__Impl rule__DomainModel__Group__2 )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:633:2: rule__DomainModel__Group__1__Impl rule__DomainModel__Group__2
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:679:1: ( rule__DomainModel__Group__1__Impl )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:680:2: rule__DomainModel__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__DomainModel__Group__1__Impl_in_rule__DomainModel__Group__11252);
+            pushFollow(FOLLOW_rule__DomainModel__Group__1__Impl_in_rule__DomainModel__Group__11359);
             rule__DomainModel__Group__1__Impl();
-            _fsp--;
-
-            pushFollow(FOLLOW_rule__DomainModel__Group__2_in_rule__DomainModel__Group__11255);
-            rule__DomainModel__Group__2();
             _fsp--;
 
 
@@ -1613,21 +1761,72 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__DomainModel__Group__1__Impl
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:640:1: rule__DomainModel__Group__1__Impl : ( 'domain:' ) ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:686:1: rule__DomainModel__Group__1__Impl : ( ( ( rule__DomainModel__TypesAssignment_1 ) ) ( ( rule__DomainModel__TypesAssignment_1 )* ) ) ;
     public final void rule__DomainModel__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:644:1: ( ( 'domain:' ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:645:1: ( 'domain:' )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:690:1: ( ( ( ( rule__DomainModel__TypesAssignment_1 ) ) ( ( rule__DomainModel__TypesAssignment_1 )* ) ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:691:1: ( ( ( rule__DomainModel__TypesAssignment_1 ) ) ( ( rule__DomainModel__TypesAssignment_1 )* ) )
             {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:645:1: ( 'domain:' )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:646:1: 'domain:'
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:691:1: ( ( ( rule__DomainModel__TypesAssignment_1 ) ) ( ( rule__DomainModel__TypesAssignment_1 )* ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:692:1: ( ( rule__DomainModel__TypesAssignment_1 ) ) ( ( rule__DomainModel__TypesAssignment_1 )* )
             {
-             before(grammarAccess.getDomainModelAccess().getDomainKeyword_1()); 
-            match(input,14,FOLLOW_14_in_rule__DomainModel__Group__1__Impl1283); 
-             after(grammarAccess.getDomainModelAccess().getDomainKeyword_1()); 
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:692:1: ( ( rule__DomainModel__TypesAssignment_1 ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:693:1: ( rule__DomainModel__TypesAssignment_1 )
+            {
+             before(grammarAccess.getDomainModelAccess().getTypesAssignment_1()); 
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:694:1: ( rule__DomainModel__TypesAssignment_1 )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:694:2: rule__DomainModel__TypesAssignment_1
+            {
+            pushFollow(FOLLOW_rule__DomainModel__TypesAssignment_1_in_rule__DomainModel__Group__1__Impl1388);
+            rule__DomainModel__TypesAssignment_1();
+            _fsp--;
+
+
+            }
+
+             after(grammarAccess.getDomainModelAccess().getTypesAssignment_1()); 
+
+            }
+
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:697:1: ( ( rule__DomainModel__TypesAssignment_1 )* )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:698:1: ( rule__DomainModel__TypesAssignment_1 )*
+            {
+             before(grammarAccess.getDomainModelAccess().getTypesAssignment_1()); 
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:699:1: ( rule__DomainModel__TypesAssignment_1 )*
+            loop5:
+            do {
+                int alt5=2;
+                int LA5_0 = input.LA(1);
+
+                if ( (LA5_0==15||LA5_0==19) ) {
+                    alt5=1;
+                }
+
+
+                switch (alt5) {
+            	case 1 :
+            	    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:699:2: rule__DomainModel__TypesAssignment_1
+            	    {
+            	    pushFollow(FOLLOW_rule__DomainModel__TypesAssignment_1_in_rule__DomainModel__Group__1__Impl1400);
+            	    rule__DomainModel__TypesAssignment_1();
+            	    _fsp--;
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop5;
+                }
+            } while (true);
+
+             after(grammarAccess.getDomainModelAccess().getTypesAssignment_1()); 
+
+            }
+
 
             }
 
@@ -1649,217 +1848,21 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
     // $ANTLR end rule__DomainModel__Group__1__Impl
 
 
-    // $ANTLR start rule__DomainModel__Group__2
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:659:1: rule__DomainModel__Group__2 : rule__DomainModel__Group__2__Impl rule__DomainModel__Group__3 ;
-    public final void rule__DomainModel__Group__2() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:663:1: ( rule__DomainModel__Group__2__Impl rule__DomainModel__Group__3 )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:664:2: rule__DomainModel__Group__2__Impl rule__DomainModel__Group__3
-            {
-            pushFollow(FOLLOW_rule__DomainModel__Group__2__Impl_in_rule__DomainModel__Group__21314);
-            rule__DomainModel__Group__2__Impl();
-            _fsp--;
-
-            pushFollow(FOLLOW_rule__DomainModel__Group__3_in_rule__DomainModel__Group__21317);
-            rule__DomainModel__Group__3();
-            _fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end rule__DomainModel__Group__2
-
-
-    // $ANTLR start rule__DomainModel__Group__2__Impl
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:671:1: rule__DomainModel__Group__2__Impl : ( ( rule__DomainModel__EntitiesAssignment_2 )* ) ;
-    public final void rule__DomainModel__Group__2__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:675:1: ( ( ( rule__DomainModel__EntitiesAssignment_2 )* ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:676:1: ( ( rule__DomainModel__EntitiesAssignment_2 )* )
-            {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:676:1: ( ( rule__DomainModel__EntitiesAssignment_2 )* )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:677:1: ( rule__DomainModel__EntitiesAssignment_2 )*
-            {
-             before(grammarAccess.getDomainModelAccess().getEntitiesAssignment_2()); 
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:678:1: ( rule__DomainModel__EntitiesAssignment_2 )*
-            loop4:
-            do {
-                int alt4=2;
-                int LA4_0 = input.LA(1);
-
-                if ( (LA4_0==15) ) {
-                    alt4=1;
-                }
-
-
-                switch (alt4) {
-            	case 1 :
-            	    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:678:2: rule__DomainModel__EntitiesAssignment_2
-            	    {
-            	    pushFollow(FOLLOW_rule__DomainModel__EntitiesAssignment_2_in_rule__DomainModel__Group__2__Impl1344);
-            	    rule__DomainModel__EntitiesAssignment_2();
-            	    _fsp--;
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop4;
-                }
-            } while (true);
-
-             after(grammarAccess.getDomainModelAccess().getEntitiesAssignment_2()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end rule__DomainModel__Group__2__Impl
-
-
-    // $ANTLR start rule__DomainModel__Group__3
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:688:1: rule__DomainModel__Group__3 : rule__DomainModel__Group__3__Impl ;
-    public final void rule__DomainModel__Group__3() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:692:1: ( rule__DomainModel__Group__3__Impl )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:693:2: rule__DomainModel__Group__3__Impl
-            {
-            pushFollow(FOLLOW_rule__DomainModel__Group__3__Impl_in_rule__DomainModel__Group__31375);
-            rule__DomainModel__Group__3__Impl();
-            _fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end rule__DomainModel__Group__3
-
-
-    // $ANTLR start rule__DomainModel__Group__3__Impl
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:699:1: rule__DomainModel__Group__3__Impl : ( ( rule__DomainModel__DataTypesAssignment_3 )* ) ;
-    public final void rule__DomainModel__Group__3__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:703:1: ( ( ( rule__DomainModel__DataTypesAssignment_3 )* ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:704:1: ( ( rule__DomainModel__DataTypesAssignment_3 )* )
-            {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:704:1: ( ( rule__DomainModel__DataTypesAssignment_3 )* )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:705:1: ( rule__DomainModel__DataTypesAssignment_3 )*
-            {
-             before(grammarAccess.getDomainModelAccess().getDataTypesAssignment_3()); 
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:706:1: ( rule__DomainModel__DataTypesAssignment_3 )*
-            loop5:
-            do {
-                int alt5=2;
-                int LA5_0 = input.LA(1);
-
-                if ( (LA5_0==19) ) {
-                    alt5=1;
-                }
-
-
-                switch (alt5) {
-            	case 1 :
-            	    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:706:2: rule__DomainModel__DataTypesAssignment_3
-            	    {
-            	    pushFollow(FOLLOW_rule__DomainModel__DataTypesAssignment_3_in_rule__DomainModel__Group__3__Impl1402);
-            	    rule__DomainModel__DataTypesAssignment_3();
-            	    _fsp--;
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop5;
-                }
-            } while (true);
-
-             after(grammarAccess.getDomainModelAccess().getDataTypesAssignment_3()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end rule__DomainModel__Group__3__Impl
-
-
     // $ANTLR start rule__Entity__Group__0
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:724:1: rule__Entity__Group__0 : rule__Entity__Group__0__Impl rule__Entity__Group__1 ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:714:1: rule__Entity__Group__0 : rule__Entity__Group__0__Impl rule__Entity__Group__1 ;
     public final void rule__Entity__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:728:1: ( rule__Entity__Group__0__Impl rule__Entity__Group__1 )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:729:2: rule__Entity__Group__0__Impl rule__Entity__Group__1
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:718:1: ( rule__Entity__Group__0__Impl rule__Entity__Group__1 )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:719:2: rule__Entity__Group__0__Impl rule__Entity__Group__1
             {
-            pushFollow(FOLLOW_rule__Entity__Group__0__Impl_in_rule__Entity__Group__01441);
+            pushFollow(FOLLOW_rule__Entity__Group__0__Impl_in_rule__Entity__Group__01437);
             rule__Entity__Group__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Entity__Group__1_in_rule__Entity__Group__01444);
+            pushFollow(FOLLOW_rule__Entity__Group__1_in_rule__Entity__Group__01440);
             rule__Entity__Group__1();
             _fsp--;
 
@@ -1882,20 +1885,20 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Entity__Group__0__Impl
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:736:1: rule__Entity__Group__0__Impl : ( 'entity' ) ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:726:1: rule__Entity__Group__0__Impl : ( 'entity' ) ;
     public final void rule__Entity__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:740:1: ( ( 'entity' ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:741:1: ( 'entity' )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:730:1: ( ( 'entity' ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:731:1: ( 'entity' )
             {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:741:1: ( 'entity' )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:742:1: 'entity'
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:731:1: ( 'entity' )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:732:1: 'entity'
             {
              before(grammarAccess.getEntityAccess().getEntityKeyword_0()); 
-            match(input,15,FOLLOW_15_in_rule__Entity__Group__0__Impl1472); 
+            match(input,15,FOLLOW_15_in_rule__Entity__Group__0__Impl1468); 
              after(grammarAccess.getEntityAccess().getEntityKeyword_0()); 
 
             }
@@ -1919,20 +1922,20 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Entity__Group__1
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:755:1: rule__Entity__Group__1 : rule__Entity__Group__1__Impl rule__Entity__Group__2 ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:745:1: rule__Entity__Group__1 : rule__Entity__Group__1__Impl rule__Entity__Group__2 ;
     public final void rule__Entity__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:759:1: ( rule__Entity__Group__1__Impl rule__Entity__Group__2 )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:760:2: rule__Entity__Group__1__Impl rule__Entity__Group__2
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:749:1: ( rule__Entity__Group__1__Impl rule__Entity__Group__2 )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:750:2: rule__Entity__Group__1__Impl rule__Entity__Group__2
             {
-            pushFollow(FOLLOW_rule__Entity__Group__1__Impl_in_rule__Entity__Group__11503);
+            pushFollow(FOLLOW_rule__Entity__Group__1__Impl_in_rule__Entity__Group__11499);
             rule__Entity__Group__1__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Entity__Group__2_in_rule__Entity__Group__11506);
+            pushFollow(FOLLOW_rule__Entity__Group__2_in_rule__Entity__Group__11502);
             rule__Entity__Group__2();
             _fsp--;
 
@@ -1955,23 +1958,23 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Entity__Group__1__Impl
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:767:1: rule__Entity__Group__1__Impl : ( ( rule__Entity__NameAssignment_1 ) ) ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:757:1: rule__Entity__Group__1__Impl : ( ( rule__Entity__NameAssignment_1 ) ) ;
     public final void rule__Entity__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:771:1: ( ( ( rule__Entity__NameAssignment_1 ) ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:772:1: ( ( rule__Entity__NameAssignment_1 ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:761:1: ( ( ( rule__Entity__NameAssignment_1 ) ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:762:1: ( ( rule__Entity__NameAssignment_1 ) )
             {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:772:1: ( ( rule__Entity__NameAssignment_1 ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:773:1: ( rule__Entity__NameAssignment_1 )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:762:1: ( ( rule__Entity__NameAssignment_1 ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:763:1: ( rule__Entity__NameAssignment_1 )
             {
              before(grammarAccess.getEntityAccess().getNameAssignment_1()); 
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:774:1: ( rule__Entity__NameAssignment_1 )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:774:2: rule__Entity__NameAssignment_1
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:764:1: ( rule__Entity__NameAssignment_1 )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:764:2: rule__Entity__NameAssignment_1
             {
-            pushFollow(FOLLOW_rule__Entity__NameAssignment_1_in_rule__Entity__Group__1__Impl1533);
+            pushFollow(FOLLOW_rule__Entity__NameAssignment_1_in_rule__Entity__Group__1__Impl1529);
             rule__Entity__NameAssignment_1();
             _fsp--;
 
@@ -2001,20 +2004,20 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Entity__Group__2
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:784:1: rule__Entity__Group__2 : rule__Entity__Group__2__Impl rule__Entity__Group__3 ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:774:1: rule__Entity__Group__2 : rule__Entity__Group__2__Impl rule__Entity__Group__3 ;
     public final void rule__Entity__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:788:1: ( rule__Entity__Group__2__Impl rule__Entity__Group__3 )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:789:2: rule__Entity__Group__2__Impl rule__Entity__Group__3
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:778:1: ( rule__Entity__Group__2__Impl rule__Entity__Group__3 )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:779:2: rule__Entity__Group__2__Impl rule__Entity__Group__3
             {
-            pushFollow(FOLLOW_rule__Entity__Group__2__Impl_in_rule__Entity__Group__21563);
+            pushFollow(FOLLOW_rule__Entity__Group__2__Impl_in_rule__Entity__Group__21559);
             rule__Entity__Group__2__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Entity__Group__3_in_rule__Entity__Group__21566);
+            pushFollow(FOLLOW_rule__Entity__Group__3_in_rule__Entity__Group__21562);
             rule__Entity__Group__3();
             _fsp--;
 
@@ -2037,20 +2040,20 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Entity__Group__2__Impl
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:796:1: rule__Entity__Group__2__Impl : ( '{' ) ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:786:1: rule__Entity__Group__2__Impl : ( '{' ) ;
     public final void rule__Entity__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:800:1: ( ( '{' ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:801:1: ( '{' )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:790:1: ( ( '{' ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:791:1: ( '{' )
             {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:801:1: ( '{' )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:802:1: '{'
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:791:1: ( '{' )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:792:1: '{'
             {
              before(grammarAccess.getEntityAccess().getLeftCurlyBracketKeyword_2()); 
-            match(input,16,FOLLOW_16_in_rule__Entity__Group__2__Impl1594); 
+            match(input,16,FOLLOW_16_in_rule__Entity__Group__2__Impl1590); 
              after(grammarAccess.getEntityAccess().getLeftCurlyBracketKeyword_2()); 
 
             }
@@ -2074,20 +2077,20 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Entity__Group__3
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:815:1: rule__Entity__Group__3 : rule__Entity__Group__3__Impl rule__Entity__Group__4 ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:805:1: rule__Entity__Group__3 : rule__Entity__Group__3__Impl rule__Entity__Group__4 ;
     public final void rule__Entity__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:819:1: ( rule__Entity__Group__3__Impl rule__Entity__Group__4 )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:820:2: rule__Entity__Group__3__Impl rule__Entity__Group__4
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:809:1: ( rule__Entity__Group__3__Impl rule__Entity__Group__4 )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:810:2: rule__Entity__Group__3__Impl rule__Entity__Group__4
             {
-            pushFollow(FOLLOW_rule__Entity__Group__3__Impl_in_rule__Entity__Group__31625);
+            pushFollow(FOLLOW_rule__Entity__Group__3__Impl_in_rule__Entity__Group__31621);
             rule__Entity__Group__3__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Entity__Group__4_in_rule__Entity__Group__31628);
+            pushFollow(FOLLOW_rule__Entity__Group__4_in_rule__Entity__Group__31624);
             rule__Entity__Group__4();
             _fsp--;
 
@@ -2110,20 +2113,20 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Entity__Group__3__Impl
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:827:1: rule__Entity__Group__3__Impl : ( ( rule__Entity__FeaturesAssignment_3 )* ) ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:817:1: rule__Entity__Group__3__Impl : ( ( rule__Entity__FeaturesAssignment_3 )* ) ;
     public final void rule__Entity__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:831:1: ( ( ( rule__Entity__FeaturesAssignment_3 )* ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:832:1: ( ( rule__Entity__FeaturesAssignment_3 )* )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:821:1: ( ( ( rule__Entity__FeaturesAssignment_3 )* ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:822:1: ( ( rule__Entity__FeaturesAssignment_3 )* )
             {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:832:1: ( ( rule__Entity__FeaturesAssignment_3 )* )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:833:1: ( rule__Entity__FeaturesAssignment_3 )*
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:822:1: ( ( rule__Entity__FeaturesAssignment_3 )* )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:823:1: ( rule__Entity__FeaturesAssignment_3 )*
             {
              before(grammarAccess.getEntityAccess().getFeaturesAssignment_3()); 
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:834:1: ( rule__Entity__FeaturesAssignment_3 )*
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:824:1: ( rule__Entity__FeaturesAssignment_3 )*
             loop6:
             do {
                 int alt6=2;
@@ -2136,9 +2139,9 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
                 switch (alt6) {
             	case 1 :
-            	    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:834:2: rule__Entity__FeaturesAssignment_3
+            	    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:824:2: rule__Entity__FeaturesAssignment_3
             	    {
-            	    pushFollow(FOLLOW_rule__Entity__FeaturesAssignment_3_in_rule__Entity__Group__3__Impl1655);
+            	    pushFollow(FOLLOW_rule__Entity__FeaturesAssignment_3_in_rule__Entity__Group__3__Impl1651);
             	    rule__Entity__FeaturesAssignment_3();
             	    _fsp--;
 
@@ -2174,16 +2177,16 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Entity__Group__4
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:844:1: rule__Entity__Group__4 : rule__Entity__Group__4__Impl ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:834:1: rule__Entity__Group__4 : rule__Entity__Group__4__Impl ;
     public final void rule__Entity__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:848:1: ( rule__Entity__Group__4__Impl )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:849:2: rule__Entity__Group__4__Impl
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:838:1: ( rule__Entity__Group__4__Impl )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:839:2: rule__Entity__Group__4__Impl
             {
-            pushFollow(FOLLOW_rule__Entity__Group__4__Impl_in_rule__Entity__Group__41686);
+            pushFollow(FOLLOW_rule__Entity__Group__4__Impl_in_rule__Entity__Group__41682);
             rule__Entity__Group__4__Impl();
             _fsp--;
 
@@ -2206,20 +2209,20 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Entity__Group__4__Impl
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:855:1: rule__Entity__Group__4__Impl : ( '}' ) ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:845:1: rule__Entity__Group__4__Impl : ( '}' ) ;
     public final void rule__Entity__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:859:1: ( ( '}' ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:860:1: ( '}' )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:849:1: ( ( '}' ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:850:1: ( '}' )
             {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:860:1: ( '}' )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:861:1: '}'
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:850:1: ( '}' )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:851:1: '}'
             {
              before(grammarAccess.getEntityAccess().getRightCurlyBracketKeyword_4()); 
-            match(input,17,FOLLOW_17_in_rule__Entity__Group__4__Impl1714); 
+            match(input,17,FOLLOW_17_in_rule__Entity__Group__4__Impl1710); 
              after(grammarAccess.getEntityAccess().getRightCurlyBracketKeyword_4()); 
 
             }
@@ -2243,20 +2246,20 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Feature__Group__0
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:884:1: rule__Feature__Group__0 : rule__Feature__Group__0__Impl rule__Feature__Group__1 ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:874:1: rule__Feature__Group__0 : rule__Feature__Group__0__Impl rule__Feature__Group__1 ;
     public final void rule__Feature__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:888:1: ( rule__Feature__Group__0__Impl rule__Feature__Group__1 )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:889:2: rule__Feature__Group__0__Impl rule__Feature__Group__1
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:878:1: ( rule__Feature__Group__0__Impl rule__Feature__Group__1 )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:879:2: rule__Feature__Group__0__Impl rule__Feature__Group__1
             {
-            pushFollow(FOLLOW_rule__Feature__Group__0__Impl_in_rule__Feature__Group__01755);
+            pushFollow(FOLLOW_rule__Feature__Group__0__Impl_in_rule__Feature__Group__01751);
             rule__Feature__Group__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Feature__Group__1_in_rule__Feature__Group__01758);
+            pushFollow(FOLLOW_rule__Feature__Group__1_in_rule__Feature__Group__01754);
             rule__Feature__Group__1();
             _fsp--;
 
@@ -2279,23 +2282,23 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Feature__Group__0__Impl
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:896:1: rule__Feature__Group__0__Impl : ( ( rule__Feature__NameAssignment_0 ) ) ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:886:1: rule__Feature__Group__0__Impl : ( ( rule__Feature__NameAssignment_0 ) ) ;
     public final void rule__Feature__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:900:1: ( ( ( rule__Feature__NameAssignment_0 ) ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:901:1: ( ( rule__Feature__NameAssignment_0 ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:890:1: ( ( ( rule__Feature__NameAssignment_0 ) ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:891:1: ( ( rule__Feature__NameAssignment_0 ) )
             {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:901:1: ( ( rule__Feature__NameAssignment_0 ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:902:1: ( rule__Feature__NameAssignment_0 )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:891:1: ( ( rule__Feature__NameAssignment_0 ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:892:1: ( rule__Feature__NameAssignment_0 )
             {
              before(grammarAccess.getFeatureAccess().getNameAssignment_0()); 
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:903:1: ( rule__Feature__NameAssignment_0 )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:903:2: rule__Feature__NameAssignment_0
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:893:1: ( rule__Feature__NameAssignment_0 )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:893:2: rule__Feature__NameAssignment_0
             {
-            pushFollow(FOLLOW_rule__Feature__NameAssignment_0_in_rule__Feature__Group__0__Impl1785);
+            pushFollow(FOLLOW_rule__Feature__NameAssignment_0_in_rule__Feature__Group__0__Impl1781);
             rule__Feature__NameAssignment_0();
             _fsp--;
 
@@ -2325,20 +2328,20 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Feature__Group__1
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:913:1: rule__Feature__Group__1 : rule__Feature__Group__1__Impl rule__Feature__Group__2 ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:903:1: rule__Feature__Group__1 : rule__Feature__Group__1__Impl rule__Feature__Group__2 ;
     public final void rule__Feature__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:917:1: ( rule__Feature__Group__1__Impl rule__Feature__Group__2 )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:918:2: rule__Feature__Group__1__Impl rule__Feature__Group__2
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:907:1: ( rule__Feature__Group__1__Impl rule__Feature__Group__2 )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:908:2: rule__Feature__Group__1__Impl rule__Feature__Group__2
             {
-            pushFollow(FOLLOW_rule__Feature__Group__1__Impl_in_rule__Feature__Group__11815);
+            pushFollow(FOLLOW_rule__Feature__Group__1__Impl_in_rule__Feature__Group__11811);
             rule__Feature__Group__1__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Feature__Group__2_in_rule__Feature__Group__11818);
+            pushFollow(FOLLOW_rule__Feature__Group__2_in_rule__Feature__Group__11814);
             rule__Feature__Group__2();
             _fsp--;
 
@@ -2361,20 +2364,20 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Feature__Group__1__Impl
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:925:1: rule__Feature__Group__1__Impl : ( ':' ) ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:915:1: rule__Feature__Group__1__Impl : ( ':' ) ;
     public final void rule__Feature__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:929:1: ( ( ':' ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:930:1: ( ':' )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:919:1: ( ( ':' ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:920:1: ( ':' )
             {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:930:1: ( ':' )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:931:1: ':'
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:920:1: ( ':' )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:921:1: ':'
             {
              before(grammarAccess.getFeatureAccess().getColonKeyword_1()); 
-            match(input,18,FOLLOW_18_in_rule__Feature__Group__1__Impl1846); 
+            match(input,18,FOLLOW_18_in_rule__Feature__Group__1__Impl1842); 
              after(grammarAccess.getFeatureAccess().getColonKeyword_1()); 
 
             }
@@ -2398,20 +2401,20 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Feature__Group__2
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:944:1: rule__Feature__Group__2 : rule__Feature__Group__2__Impl rule__Feature__Group__3 ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:934:1: rule__Feature__Group__2 : rule__Feature__Group__2__Impl rule__Feature__Group__3 ;
     public final void rule__Feature__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:948:1: ( rule__Feature__Group__2__Impl rule__Feature__Group__3 )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:949:2: rule__Feature__Group__2__Impl rule__Feature__Group__3
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:938:1: ( rule__Feature__Group__2__Impl rule__Feature__Group__3 )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:939:2: rule__Feature__Group__2__Impl rule__Feature__Group__3
             {
-            pushFollow(FOLLOW_rule__Feature__Group__2__Impl_in_rule__Feature__Group__21877);
+            pushFollow(FOLLOW_rule__Feature__Group__2__Impl_in_rule__Feature__Group__21873);
             rule__Feature__Group__2__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Feature__Group__3_in_rule__Feature__Group__21880);
+            pushFollow(FOLLOW_rule__Feature__Group__3_in_rule__Feature__Group__21876);
             rule__Feature__Group__3();
             _fsp--;
 
@@ -2434,23 +2437,23 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Feature__Group__2__Impl
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:956:1: rule__Feature__Group__2__Impl : ( ( rule__Feature__TypeAssignment_2 ) ) ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:946:1: rule__Feature__Group__2__Impl : ( ( rule__Feature__TypeAssignment_2 ) ) ;
     public final void rule__Feature__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:960:1: ( ( ( rule__Feature__TypeAssignment_2 ) ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:961:1: ( ( rule__Feature__TypeAssignment_2 ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:950:1: ( ( ( rule__Feature__TypeAssignment_2 ) ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:951:1: ( ( rule__Feature__TypeAssignment_2 ) )
             {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:961:1: ( ( rule__Feature__TypeAssignment_2 ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:962:1: ( rule__Feature__TypeAssignment_2 )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:951:1: ( ( rule__Feature__TypeAssignment_2 ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:952:1: ( rule__Feature__TypeAssignment_2 )
             {
              before(grammarAccess.getFeatureAccess().getTypeAssignment_2()); 
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:963:1: ( rule__Feature__TypeAssignment_2 )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:963:2: rule__Feature__TypeAssignment_2
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:953:1: ( rule__Feature__TypeAssignment_2 )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:953:2: rule__Feature__TypeAssignment_2
             {
-            pushFollow(FOLLOW_rule__Feature__TypeAssignment_2_in_rule__Feature__Group__2__Impl1907);
+            pushFollow(FOLLOW_rule__Feature__TypeAssignment_2_in_rule__Feature__Group__2__Impl1903);
             rule__Feature__TypeAssignment_2();
             _fsp--;
 
@@ -2480,16 +2483,16 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Feature__Group__3
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:973:1: rule__Feature__Group__3 : rule__Feature__Group__3__Impl ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:963:1: rule__Feature__Group__3 : rule__Feature__Group__3__Impl ;
     public final void rule__Feature__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:977:1: ( rule__Feature__Group__3__Impl )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:978:2: rule__Feature__Group__3__Impl
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:967:1: ( rule__Feature__Group__3__Impl )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:968:2: rule__Feature__Group__3__Impl
             {
-            pushFollow(FOLLOW_rule__Feature__Group__3__Impl_in_rule__Feature__Group__31937);
+            pushFollow(FOLLOW_rule__Feature__Group__3__Impl_in_rule__Feature__Group__31933);
             rule__Feature__Group__3__Impl();
             _fsp--;
 
@@ -2512,20 +2515,20 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Feature__Group__3__Impl
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:984:1: rule__Feature__Group__3__Impl : ( ( rule__Feature__MultivaluedAssignment_3 )? ) ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:974:1: rule__Feature__Group__3__Impl : ( ( rule__Feature__MultivaluedAssignment_3 )? ) ;
     public final void rule__Feature__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:988:1: ( ( ( rule__Feature__MultivaluedAssignment_3 )? ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:989:1: ( ( rule__Feature__MultivaluedAssignment_3 )? )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:978:1: ( ( ( rule__Feature__MultivaluedAssignment_3 )? ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:979:1: ( ( rule__Feature__MultivaluedAssignment_3 )? )
             {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:989:1: ( ( rule__Feature__MultivaluedAssignment_3 )? )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:990:1: ( rule__Feature__MultivaluedAssignment_3 )?
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:979:1: ( ( rule__Feature__MultivaluedAssignment_3 )? )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:980:1: ( rule__Feature__MultivaluedAssignment_3 )?
             {
              before(grammarAccess.getFeatureAccess().getMultivaluedAssignment_3()); 
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:991:1: ( rule__Feature__MultivaluedAssignment_3 )?
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:981:1: ( rule__Feature__MultivaluedAssignment_3 )?
             int alt7=2;
             int LA7_0 = input.LA(1);
 
@@ -2534,9 +2537,9 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
             }
             switch (alt7) {
                 case 1 :
-                    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:991:2: rule__Feature__MultivaluedAssignment_3
+                    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:981:2: rule__Feature__MultivaluedAssignment_3
                     {
-                    pushFollow(FOLLOW_rule__Feature__MultivaluedAssignment_3_in_rule__Feature__Group__3__Impl1964);
+                    pushFollow(FOLLOW_rule__Feature__MultivaluedAssignment_3_in_rule__Feature__Group__3__Impl1960);
                     rule__Feature__MultivaluedAssignment_3();
                     _fsp--;
 
@@ -2569,20 +2572,20 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__DataType__Group__0
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1009:1: rule__DataType__Group__0 : rule__DataType__Group__0__Impl rule__DataType__Group__1 ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:999:1: rule__DataType__Group__0 : rule__DataType__Group__0__Impl rule__DataType__Group__1 ;
     public final void rule__DataType__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1013:1: ( rule__DataType__Group__0__Impl rule__DataType__Group__1 )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1014:2: rule__DataType__Group__0__Impl rule__DataType__Group__1
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1003:1: ( rule__DataType__Group__0__Impl rule__DataType__Group__1 )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1004:2: rule__DataType__Group__0__Impl rule__DataType__Group__1
             {
-            pushFollow(FOLLOW_rule__DataType__Group__0__Impl_in_rule__DataType__Group__02003);
+            pushFollow(FOLLOW_rule__DataType__Group__0__Impl_in_rule__DataType__Group__01999);
             rule__DataType__Group__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__DataType__Group__1_in_rule__DataType__Group__02006);
+            pushFollow(FOLLOW_rule__DataType__Group__1_in_rule__DataType__Group__02002);
             rule__DataType__Group__1();
             _fsp--;
 
@@ -2605,20 +2608,20 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__DataType__Group__0__Impl
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1021:1: rule__DataType__Group__0__Impl : ( 'type' ) ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1011:1: rule__DataType__Group__0__Impl : ( 'type' ) ;
     public final void rule__DataType__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1025:1: ( ( 'type' ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1026:1: ( 'type' )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1015:1: ( ( 'type' ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1016:1: ( 'type' )
             {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1026:1: ( 'type' )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1027:1: 'type'
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1016:1: ( 'type' )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1017:1: 'type'
             {
              before(grammarAccess.getDataTypeAccess().getTypeKeyword_0()); 
-            match(input,19,FOLLOW_19_in_rule__DataType__Group__0__Impl2034); 
+            match(input,19,FOLLOW_19_in_rule__DataType__Group__0__Impl2030); 
              after(grammarAccess.getDataTypeAccess().getTypeKeyword_0()); 
 
             }
@@ -2642,16 +2645,16 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__DataType__Group__1
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1040:1: rule__DataType__Group__1 : rule__DataType__Group__1__Impl ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1030:1: rule__DataType__Group__1 : rule__DataType__Group__1__Impl ;
     public final void rule__DataType__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1044:1: ( rule__DataType__Group__1__Impl )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1045:2: rule__DataType__Group__1__Impl
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1034:1: ( rule__DataType__Group__1__Impl )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1035:2: rule__DataType__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__DataType__Group__1__Impl_in_rule__DataType__Group__12065);
+            pushFollow(FOLLOW_rule__DataType__Group__1__Impl_in_rule__DataType__Group__12061);
             rule__DataType__Group__1__Impl();
             _fsp--;
 
@@ -2674,23 +2677,23 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__DataType__Group__1__Impl
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1051:1: rule__DataType__Group__1__Impl : ( ( rule__DataType__NameAssignment_1 ) ) ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1041:1: rule__DataType__Group__1__Impl : ( ( rule__DataType__NameAssignment_1 ) ) ;
     public final void rule__DataType__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1055:1: ( ( ( rule__DataType__NameAssignment_1 ) ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1056:1: ( ( rule__DataType__NameAssignment_1 ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1045:1: ( ( ( rule__DataType__NameAssignment_1 ) ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1046:1: ( ( rule__DataType__NameAssignment_1 ) )
             {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1056:1: ( ( rule__DataType__NameAssignment_1 ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1057:1: ( rule__DataType__NameAssignment_1 )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1046:1: ( ( rule__DataType__NameAssignment_1 ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1047:1: ( rule__DataType__NameAssignment_1 )
             {
              before(grammarAccess.getDataTypeAccess().getNameAssignment_1()); 
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1058:1: ( rule__DataType__NameAssignment_1 )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1058:2: rule__DataType__NameAssignment_1
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1048:1: ( rule__DataType__NameAssignment_1 )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1048:2: rule__DataType__NameAssignment_1
             {
-            pushFollow(FOLLOW_rule__DataType__NameAssignment_1_in_rule__DataType__Group__1__Impl2092);
+            pushFollow(FOLLOW_rule__DataType__NameAssignment_1_in_rule__DataType__Group__1__Impl2088);
             rule__DataType__NameAssignment_1();
             _fsp--;
 
@@ -2720,20 +2723,20 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__WebModel__Group__0
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1072:1: rule__WebModel__Group__0 : rule__WebModel__Group__0__Impl rule__WebModel__Group__1 ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1062:1: rule__WebModel__Group__0 : rule__WebModel__Group__0__Impl rule__WebModel__Group__1 ;
     public final void rule__WebModel__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1076:1: ( rule__WebModel__Group__0__Impl rule__WebModel__Group__1 )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1077:2: rule__WebModel__Group__0__Impl rule__WebModel__Group__1
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1066:1: ( rule__WebModel__Group__0__Impl rule__WebModel__Group__1 )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1067:2: rule__WebModel__Group__0__Impl rule__WebModel__Group__1
             {
-            pushFollow(FOLLOW_rule__WebModel__Group__0__Impl_in_rule__WebModel__Group__02126);
+            pushFollow(FOLLOW_rule__WebModel__Group__0__Impl_in_rule__WebModel__Group__02122);
             rule__WebModel__Group__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__WebModel__Group__1_in_rule__WebModel__Group__02129);
+            pushFollow(FOLLOW_rule__WebModel__Group__1_in_rule__WebModel__Group__02125);
             rule__WebModel__Group__1();
             _fsp--;
 
@@ -2756,31 +2759,31 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__WebModel__Group__0__Impl
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1084:1: rule__WebModel__Group__0__Impl : ( () ) ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1074:1: rule__WebModel__Group__0__Impl : ( 'web:' ) ;
     public final void rule__WebModel__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1088:1: ( ( () ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1089:1: ( () )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1078:1: ( ( 'web:' ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1079:1: ( 'web:' )
             {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1089:1: ( () )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1090:1: ()
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1079:1: ( 'web:' )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1080:1: 'web:'
             {
-             before(grammarAccess.getWebModelAccess().getWebModelAction_0()); 
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1091:1: ()
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1093:1: 
-            {
-            }
-
-             after(grammarAccess.getWebModelAccess().getWebModelAction_0()); 
+             before(grammarAccess.getWebModelAccess().getWebKeyword_0()); 
+            match(input,20,FOLLOW_20_in_rule__WebModel__Group__0__Impl2153); 
+             after(grammarAccess.getWebModelAccess().getWebKeyword_0()); 
 
             }
 
 
             }
 
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
         }
         finally {
 
@@ -2793,21 +2796,17 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__WebModel__Group__1
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1103:1: rule__WebModel__Group__1 : rule__WebModel__Group__1__Impl rule__WebModel__Group__2 ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1093:1: rule__WebModel__Group__1 : rule__WebModel__Group__1__Impl ;
     public final void rule__WebModel__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1107:1: ( rule__WebModel__Group__1__Impl rule__WebModel__Group__2 )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1108:2: rule__WebModel__Group__1__Impl rule__WebModel__Group__2
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1097:1: ( rule__WebModel__Group__1__Impl )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1098:2: rule__WebModel__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__WebModel__Group__1__Impl_in_rule__WebModel__Group__12187);
+            pushFollow(FOLLOW_rule__WebModel__Group__1__Impl_in_rule__WebModel__Group__12184);
             rule__WebModel__Group__1__Impl();
-            _fsp--;
-
-            pushFollow(FOLLOW_rule__WebModel__Group__2_in_rule__WebModel__Group__12190);
-            rule__WebModel__Group__2();
             _fsp--;
 
 
@@ -2829,21 +2828,72 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__WebModel__Group__1__Impl
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1115:1: rule__WebModel__Group__1__Impl : ( 'web:' ) ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1104:1: rule__WebModel__Group__1__Impl : ( ( ( rule__WebModel__PagesAssignment_1 ) ) ( ( rule__WebModel__PagesAssignment_1 )* ) ) ;
     public final void rule__WebModel__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1119:1: ( ( 'web:' ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1120:1: ( 'web:' )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1108:1: ( ( ( ( rule__WebModel__PagesAssignment_1 ) ) ( ( rule__WebModel__PagesAssignment_1 )* ) ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1109:1: ( ( ( rule__WebModel__PagesAssignment_1 ) ) ( ( rule__WebModel__PagesAssignment_1 )* ) )
             {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1120:1: ( 'web:' )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1121:1: 'web:'
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1109:1: ( ( ( rule__WebModel__PagesAssignment_1 ) ) ( ( rule__WebModel__PagesAssignment_1 )* ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1110:1: ( ( rule__WebModel__PagesAssignment_1 ) ) ( ( rule__WebModel__PagesAssignment_1 )* )
             {
-             before(grammarAccess.getWebModelAccess().getWebKeyword_1()); 
-            match(input,20,FOLLOW_20_in_rule__WebModel__Group__1__Impl2218); 
-             after(grammarAccess.getWebModelAccess().getWebKeyword_1()); 
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1110:1: ( ( rule__WebModel__PagesAssignment_1 ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1111:1: ( rule__WebModel__PagesAssignment_1 )
+            {
+             before(grammarAccess.getWebModelAccess().getPagesAssignment_1()); 
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1112:1: ( rule__WebModel__PagesAssignment_1 )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1112:2: rule__WebModel__PagesAssignment_1
+            {
+            pushFollow(FOLLOW_rule__WebModel__PagesAssignment_1_in_rule__WebModel__Group__1__Impl2213);
+            rule__WebModel__PagesAssignment_1();
+            _fsp--;
+
+
+            }
+
+             after(grammarAccess.getWebModelAccess().getPagesAssignment_1()); 
+
+            }
+
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1115:1: ( ( rule__WebModel__PagesAssignment_1 )* )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1116:1: ( rule__WebModel__PagesAssignment_1 )*
+            {
+             before(grammarAccess.getWebModelAccess().getPagesAssignment_1()); 
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1117:1: ( rule__WebModel__PagesAssignment_1 )*
+            loop8:
+            do {
+                int alt8=2;
+                int LA8_0 = input.LA(1);
+
+                if ( (LA8_0==21) ) {
+                    alt8=1;
+                }
+
+
+                switch (alt8) {
+            	case 1 :
+            	    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1117:2: rule__WebModel__PagesAssignment_1
+            	    {
+            	    pushFollow(FOLLOW_rule__WebModel__PagesAssignment_1_in_rule__WebModel__Group__1__Impl2225);
+            	    rule__WebModel__PagesAssignment_1();
+            	    _fsp--;
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop8;
+                }
+            } while (true);
+
+             after(grammarAccess.getWebModelAccess().getPagesAssignment_1()); 
+
+            }
+
 
             }
 
@@ -2865,117 +2915,21 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
     // $ANTLR end rule__WebModel__Group__1__Impl
 
 
-    // $ANTLR start rule__WebModel__Group__2
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1134:1: rule__WebModel__Group__2 : rule__WebModel__Group__2__Impl ;
-    public final void rule__WebModel__Group__2() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1138:1: ( rule__WebModel__Group__2__Impl )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1139:2: rule__WebModel__Group__2__Impl
-            {
-            pushFollow(FOLLOW_rule__WebModel__Group__2__Impl_in_rule__WebModel__Group__22249);
-            rule__WebModel__Group__2__Impl();
-            _fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end rule__WebModel__Group__2
-
-
-    // $ANTLR start rule__WebModel__Group__2__Impl
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1145:1: rule__WebModel__Group__2__Impl : ( ( rule__WebModel__PagesAssignment_2 )* ) ;
-    public final void rule__WebModel__Group__2__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1149:1: ( ( ( rule__WebModel__PagesAssignment_2 )* ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1150:1: ( ( rule__WebModel__PagesAssignment_2 )* )
-            {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1150:1: ( ( rule__WebModel__PagesAssignment_2 )* )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1151:1: ( rule__WebModel__PagesAssignment_2 )*
-            {
-             before(grammarAccess.getWebModelAccess().getPagesAssignment_2()); 
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1152:1: ( rule__WebModel__PagesAssignment_2 )*
-            loop8:
-            do {
-                int alt8=2;
-                int LA8_0 = input.LA(1);
-
-                if ( (LA8_0==21) ) {
-                    alt8=1;
-                }
-
-
-                switch (alt8) {
-            	case 1 :
-            	    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1152:2: rule__WebModel__PagesAssignment_2
-            	    {
-            	    pushFollow(FOLLOW_rule__WebModel__PagesAssignment_2_in_rule__WebModel__Group__2__Impl2276);
-            	    rule__WebModel__PagesAssignment_2();
-            	    _fsp--;
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop8;
-                }
-            } while (true);
-
-             after(grammarAccess.getWebModelAccess().getPagesAssignment_2()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end rule__WebModel__Group__2__Impl
-
-
     // $ANTLR start rule__Page__Group__0
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1168:1: rule__Page__Group__0 : rule__Page__Group__0__Impl rule__Page__Group__1 ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1132:1: rule__Page__Group__0 : rule__Page__Group__0__Impl rule__Page__Group__1 ;
     public final void rule__Page__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1172:1: ( rule__Page__Group__0__Impl rule__Page__Group__1 )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1173:2: rule__Page__Group__0__Impl rule__Page__Group__1
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1136:1: ( rule__Page__Group__0__Impl rule__Page__Group__1 )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1137:2: rule__Page__Group__0__Impl rule__Page__Group__1
             {
-            pushFollow(FOLLOW_rule__Page__Group__0__Impl_in_rule__Page__Group__02313);
+            pushFollow(FOLLOW_rule__Page__Group__0__Impl_in_rule__Page__Group__02262);
             rule__Page__Group__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Page__Group__1_in_rule__Page__Group__02316);
+            pushFollow(FOLLOW_rule__Page__Group__1_in_rule__Page__Group__02265);
             rule__Page__Group__1();
             _fsp--;
 
@@ -2998,20 +2952,20 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Page__Group__0__Impl
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1180:1: rule__Page__Group__0__Impl : ( 'page' ) ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1144:1: rule__Page__Group__0__Impl : ( 'page' ) ;
     public final void rule__Page__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1184:1: ( ( 'page' ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1185:1: ( 'page' )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1148:1: ( ( 'page' ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1149:1: ( 'page' )
             {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1185:1: ( 'page' )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1186:1: 'page'
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1149:1: ( 'page' )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1150:1: 'page'
             {
              before(grammarAccess.getPageAccess().getPageKeyword_0()); 
-            match(input,21,FOLLOW_21_in_rule__Page__Group__0__Impl2344); 
+            match(input,21,FOLLOW_21_in_rule__Page__Group__0__Impl2293); 
              after(grammarAccess.getPageAccess().getPageKeyword_0()); 
 
             }
@@ -3035,20 +2989,20 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Page__Group__1
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1199:1: rule__Page__Group__1 : rule__Page__Group__1__Impl rule__Page__Group__2 ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1163:1: rule__Page__Group__1 : rule__Page__Group__1__Impl rule__Page__Group__2 ;
     public final void rule__Page__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1203:1: ( rule__Page__Group__1__Impl rule__Page__Group__2 )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1204:2: rule__Page__Group__1__Impl rule__Page__Group__2
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1167:1: ( rule__Page__Group__1__Impl rule__Page__Group__2 )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1168:2: rule__Page__Group__1__Impl rule__Page__Group__2
             {
-            pushFollow(FOLLOW_rule__Page__Group__1__Impl_in_rule__Page__Group__12375);
+            pushFollow(FOLLOW_rule__Page__Group__1__Impl_in_rule__Page__Group__12324);
             rule__Page__Group__1__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Page__Group__2_in_rule__Page__Group__12378);
+            pushFollow(FOLLOW_rule__Page__Group__2_in_rule__Page__Group__12327);
             rule__Page__Group__2();
             _fsp--;
 
@@ -3071,23 +3025,23 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Page__Group__1__Impl
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1211:1: rule__Page__Group__1__Impl : ( ( rule__Page__NameAssignment_1 ) ) ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1175:1: rule__Page__Group__1__Impl : ( ( rule__Page__NameAssignment_1 ) ) ;
     public final void rule__Page__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1215:1: ( ( ( rule__Page__NameAssignment_1 ) ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1216:1: ( ( rule__Page__NameAssignment_1 ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1179:1: ( ( ( rule__Page__NameAssignment_1 ) ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1180:1: ( ( rule__Page__NameAssignment_1 ) )
             {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1216:1: ( ( rule__Page__NameAssignment_1 ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1217:1: ( rule__Page__NameAssignment_1 )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1180:1: ( ( rule__Page__NameAssignment_1 ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1181:1: ( rule__Page__NameAssignment_1 )
             {
              before(grammarAccess.getPageAccess().getNameAssignment_1()); 
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1218:1: ( rule__Page__NameAssignment_1 )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1218:2: rule__Page__NameAssignment_1
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1182:1: ( rule__Page__NameAssignment_1 )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1182:2: rule__Page__NameAssignment_1
             {
-            pushFollow(FOLLOW_rule__Page__NameAssignment_1_in_rule__Page__Group__1__Impl2405);
+            pushFollow(FOLLOW_rule__Page__NameAssignment_1_in_rule__Page__Group__1__Impl2354);
             rule__Page__NameAssignment_1();
             _fsp--;
 
@@ -3117,20 +3071,20 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Page__Group__2
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1228:1: rule__Page__Group__2 : rule__Page__Group__2__Impl rule__Page__Group__3 ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1192:1: rule__Page__Group__2 : rule__Page__Group__2__Impl rule__Page__Group__3 ;
     public final void rule__Page__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1232:1: ( rule__Page__Group__2__Impl rule__Page__Group__3 )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1233:2: rule__Page__Group__2__Impl rule__Page__Group__3
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1196:1: ( rule__Page__Group__2__Impl rule__Page__Group__3 )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1197:2: rule__Page__Group__2__Impl rule__Page__Group__3
             {
-            pushFollow(FOLLOW_rule__Page__Group__2__Impl_in_rule__Page__Group__22435);
+            pushFollow(FOLLOW_rule__Page__Group__2__Impl_in_rule__Page__Group__22384);
             rule__Page__Group__2__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Page__Group__3_in_rule__Page__Group__22438);
+            pushFollow(FOLLOW_rule__Page__Group__3_in_rule__Page__Group__22387);
             rule__Page__Group__3();
             _fsp--;
 
@@ -3153,20 +3107,20 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Page__Group__2__Impl
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1240:1: rule__Page__Group__2__Impl : ( '{' ) ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1204:1: rule__Page__Group__2__Impl : ( '{' ) ;
     public final void rule__Page__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1244:1: ( ( '{' ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1245:1: ( '{' )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1208:1: ( ( '{' ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1209:1: ( '{' )
             {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1245:1: ( '{' )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1246:1: '{'
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1209:1: ( '{' )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1210:1: '{'
             {
              before(grammarAccess.getPageAccess().getLeftCurlyBracketKeyword_2()); 
-            match(input,16,FOLLOW_16_in_rule__Page__Group__2__Impl2466); 
+            match(input,16,FOLLOW_16_in_rule__Page__Group__2__Impl2415); 
              after(grammarAccess.getPageAccess().getLeftCurlyBracketKeyword_2()); 
 
             }
@@ -3190,20 +3144,20 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Page__Group__3
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1259:1: rule__Page__Group__3 : rule__Page__Group__3__Impl rule__Page__Group__4 ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1223:1: rule__Page__Group__3 : rule__Page__Group__3__Impl rule__Page__Group__4 ;
     public final void rule__Page__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1263:1: ( rule__Page__Group__3__Impl rule__Page__Group__4 )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1264:2: rule__Page__Group__3__Impl rule__Page__Group__4
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1227:1: ( rule__Page__Group__3__Impl rule__Page__Group__4 )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1228:2: rule__Page__Group__3__Impl rule__Page__Group__4
             {
-            pushFollow(FOLLOW_rule__Page__Group__3__Impl_in_rule__Page__Group__32497);
+            pushFollow(FOLLOW_rule__Page__Group__3__Impl_in_rule__Page__Group__32446);
             rule__Page__Group__3__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Page__Group__4_in_rule__Page__Group__32500);
+            pushFollow(FOLLOW_rule__Page__Group__4_in_rule__Page__Group__32449);
             rule__Page__Group__4();
             _fsp--;
 
@@ -3226,20 +3180,20 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Page__Group__3__Impl
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1271:1: rule__Page__Group__3__Impl : ( 'title' ) ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1235:1: rule__Page__Group__3__Impl : ( 'title' ) ;
     public final void rule__Page__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1275:1: ( ( 'title' ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1276:1: ( 'title' )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1239:1: ( ( 'title' ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1240:1: ( 'title' )
             {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1276:1: ( 'title' )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1277:1: 'title'
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1240:1: ( 'title' )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1241:1: 'title'
             {
              before(grammarAccess.getPageAccess().getTitleKeyword_3()); 
-            match(input,22,FOLLOW_22_in_rule__Page__Group__3__Impl2528); 
+            match(input,22,FOLLOW_22_in_rule__Page__Group__3__Impl2477); 
              after(grammarAccess.getPageAccess().getTitleKeyword_3()); 
 
             }
@@ -3263,20 +3217,20 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Page__Group__4
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1290:1: rule__Page__Group__4 : rule__Page__Group__4__Impl rule__Page__Group__5 ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1254:1: rule__Page__Group__4 : rule__Page__Group__4__Impl rule__Page__Group__5 ;
     public final void rule__Page__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1294:1: ( rule__Page__Group__4__Impl rule__Page__Group__5 )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1295:2: rule__Page__Group__4__Impl rule__Page__Group__5
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1258:1: ( rule__Page__Group__4__Impl rule__Page__Group__5 )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1259:2: rule__Page__Group__4__Impl rule__Page__Group__5
             {
-            pushFollow(FOLLOW_rule__Page__Group__4__Impl_in_rule__Page__Group__42559);
+            pushFollow(FOLLOW_rule__Page__Group__4__Impl_in_rule__Page__Group__42508);
             rule__Page__Group__4__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Page__Group__5_in_rule__Page__Group__42562);
+            pushFollow(FOLLOW_rule__Page__Group__5_in_rule__Page__Group__42511);
             rule__Page__Group__5();
             _fsp--;
 
@@ -3299,20 +3253,20 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Page__Group__4__Impl
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1302:1: rule__Page__Group__4__Impl : ( '=' ) ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1266:1: rule__Page__Group__4__Impl : ( '=' ) ;
     public final void rule__Page__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1306:1: ( ( '=' ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1307:1: ( '=' )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1270:1: ( ( '=' ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1271:1: ( '=' )
             {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1307:1: ( '=' )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1308:1: '='
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1271:1: ( '=' )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1272:1: '='
             {
              before(grammarAccess.getPageAccess().getEqualsSignKeyword_4()); 
-            match(input,23,FOLLOW_23_in_rule__Page__Group__4__Impl2590); 
+            match(input,23,FOLLOW_23_in_rule__Page__Group__4__Impl2539); 
              after(grammarAccess.getPageAccess().getEqualsSignKeyword_4()); 
 
             }
@@ -3336,20 +3290,20 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Page__Group__5
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1321:1: rule__Page__Group__5 : rule__Page__Group__5__Impl rule__Page__Group__6 ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1285:1: rule__Page__Group__5 : rule__Page__Group__5__Impl rule__Page__Group__6 ;
     public final void rule__Page__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1325:1: ( rule__Page__Group__5__Impl rule__Page__Group__6 )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1326:2: rule__Page__Group__5__Impl rule__Page__Group__6
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1289:1: ( rule__Page__Group__5__Impl rule__Page__Group__6 )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1290:2: rule__Page__Group__5__Impl rule__Page__Group__6
             {
-            pushFollow(FOLLOW_rule__Page__Group__5__Impl_in_rule__Page__Group__52621);
+            pushFollow(FOLLOW_rule__Page__Group__5__Impl_in_rule__Page__Group__52570);
             rule__Page__Group__5__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Page__Group__6_in_rule__Page__Group__52624);
+            pushFollow(FOLLOW_rule__Page__Group__6_in_rule__Page__Group__52573);
             rule__Page__Group__6();
             _fsp--;
 
@@ -3372,23 +3326,23 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Page__Group__5__Impl
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1333:1: rule__Page__Group__5__Impl : ( ( rule__Page__TitleAssignment_5 ) ) ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1297:1: rule__Page__Group__5__Impl : ( ( rule__Page__TitleAssignment_5 ) ) ;
     public final void rule__Page__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1337:1: ( ( ( rule__Page__TitleAssignment_5 ) ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1338:1: ( ( rule__Page__TitleAssignment_5 ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1301:1: ( ( ( rule__Page__TitleAssignment_5 ) ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1302:1: ( ( rule__Page__TitleAssignment_5 ) )
             {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1338:1: ( ( rule__Page__TitleAssignment_5 ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1339:1: ( rule__Page__TitleAssignment_5 )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1302:1: ( ( rule__Page__TitleAssignment_5 ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1303:1: ( rule__Page__TitleAssignment_5 )
             {
              before(grammarAccess.getPageAccess().getTitleAssignment_5()); 
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1340:1: ( rule__Page__TitleAssignment_5 )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1340:2: rule__Page__TitleAssignment_5
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1304:1: ( rule__Page__TitleAssignment_5 )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1304:2: rule__Page__TitleAssignment_5
             {
-            pushFollow(FOLLOW_rule__Page__TitleAssignment_5_in_rule__Page__Group__5__Impl2651);
+            pushFollow(FOLLOW_rule__Page__TitleAssignment_5_in_rule__Page__Group__5__Impl2600);
             rule__Page__TitleAssignment_5();
             _fsp--;
 
@@ -3418,20 +3372,20 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Page__Group__6
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1350:1: rule__Page__Group__6 : rule__Page__Group__6__Impl rule__Page__Group__7 ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1314:1: rule__Page__Group__6 : rule__Page__Group__6__Impl rule__Page__Group__7 ;
     public final void rule__Page__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1354:1: ( rule__Page__Group__6__Impl rule__Page__Group__7 )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1355:2: rule__Page__Group__6__Impl rule__Page__Group__7
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1318:1: ( rule__Page__Group__6__Impl rule__Page__Group__7 )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1319:2: rule__Page__Group__6__Impl rule__Page__Group__7
             {
-            pushFollow(FOLLOW_rule__Page__Group__6__Impl_in_rule__Page__Group__62681);
+            pushFollow(FOLLOW_rule__Page__Group__6__Impl_in_rule__Page__Group__62630);
             rule__Page__Group__6__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Page__Group__7_in_rule__Page__Group__62684);
+            pushFollow(FOLLOW_rule__Page__Group__7_in_rule__Page__Group__62633);
             rule__Page__Group__7();
             _fsp--;
 
@@ -3454,20 +3408,20 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Page__Group__6__Impl
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1362:1: rule__Page__Group__6__Impl : ( 'content for' ) ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1326:1: rule__Page__Group__6__Impl : ( 'content for' ) ;
     public final void rule__Page__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1366:1: ( ( 'content for' ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1367:1: ( 'content for' )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1330:1: ( ( 'content for' ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1331:1: ( 'content for' )
             {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1367:1: ( 'content for' )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1368:1: 'content for'
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1331:1: ( 'content for' )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1332:1: 'content for'
             {
              before(grammarAccess.getPageAccess().getContentForKeyword_6()); 
-            match(input,24,FOLLOW_24_in_rule__Page__Group__6__Impl2712); 
+            match(input,24,FOLLOW_24_in_rule__Page__Group__6__Impl2661); 
              after(grammarAccess.getPageAccess().getContentForKeyword_6()); 
 
             }
@@ -3491,20 +3445,20 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Page__Group__7
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1381:1: rule__Page__Group__7 : rule__Page__Group__7__Impl rule__Page__Group__8 ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1345:1: rule__Page__Group__7 : rule__Page__Group__7__Impl rule__Page__Group__8 ;
     public final void rule__Page__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1385:1: ( rule__Page__Group__7__Impl rule__Page__Group__8 )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1386:2: rule__Page__Group__7__Impl rule__Page__Group__8
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1349:1: ( rule__Page__Group__7__Impl rule__Page__Group__8 )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1350:2: rule__Page__Group__7__Impl rule__Page__Group__8
             {
-            pushFollow(FOLLOW_rule__Page__Group__7__Impl_in_rule__Page__Group__72743);
+            pushFollow(FOLLOW_rule__Page__Group__7__Impl_in_rule__Page__Group__72692);
             rule__Page__Group__7__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Page__Group__8_in_rule__Page__Group__72746);
+            pushFollow(FOLLOW_rule__Page__Group__8_in_rule__Page__Group__72695);
             rule__Page__Group__8();
             _fsp--;
 
@@ -3527,23 +3481,23 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Page__Group__7__Impl
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1393:1: rule__Page__Group__7__Impl : ( ( rule__Page__EntityAssignment_7 ) ) ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1357:1: rule__Page__Group__7__Impl : ( ( rule__Page__EntityAssignment_7 ) ) ;
     public final void rule__Page__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1397:1: ( ( ( rule__Page__EntityAssignment_7 ) ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1398:1: ( ( rule__Page__EntityAssignment_7 ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1361:1: ( ( ( rule__Page__EntityAssignment_7 ) ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1362:1: ( ( rule__Page__EntityAssignment_7 ) )
             {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1398:1: ( ( rule__Page__EntityAssignment_7 ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1399:1: ( rule__Page__EntityAssignment_7 )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1362:1: ( ( rule__Page__EntityAssignment_7 ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1363:1: ( rule__Page__EntityAssignment_7 )
             {
              before(grammarAccess.getPageAccess().getEntityAssignment_7()); 
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1400:1: ( rule__Page__EntityAssignment_7 )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1400:2: rule__Page__EntityAssignment_7
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1364:1: ( rule__Page__EntityAssignment_7 )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1364:2: rule__Page__EntityAssignment_7
             {
-            pushFollow(FOLLOW_rule__Page__EntityAssignment_7_in_rule__Page__Group__7__Impl2773);
+            pushFollow(FOLLOW_rule__Page__EntityAssignment_7_in_rule__Page__Group__7__Impl2722);
             rule__Page__EntityAssignment_7();
             _fsp--;
 
@@ -3573,20 +3527,20 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Page__Group__8
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1410:1: rule__Page__Group__8 : rule__Page__Group__8__Impl rule__Page__Group__9 ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1374:1: rule__Page__Group__8 : rule__Page__Group__8__Impl rule__Page__Group__9 ;
     public final void rule__Page__Group__8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1414:1: ( rule__Page__Group__8__Impl rule__Page__Group__9 )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1415:2: rule__Page__Group__8__Impl rule__Page__Group__9
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1378:1: ( rule__Page__Group__8__Impl rule__Page__Group__9 )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1379:2: rule__Page__Group__8__Impl rule__Page__Group__9
             {
-            pushFollow(FOLLOW_rule__Page__Group__8__Impl_in_rule__Page__Group__82803);
+            pushFollow(FOLLOW_rule__Page__Group__8__Impl_in_rule__Page__Group__82752);
             rule__Page__Group__8__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Page__Group__9_in_rule__Page__Group__82806);
+            pushFollow(FOLLOW_rule__Page__Group__9_in_rule__Page__Group__82755);
             rule__Page__Group__9();
             _fsp--;
 
@@ -3609,20 +3563,20 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Page__Group__8__Impl
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1422:1: rule__Page__Group__8__Impl : ( '{' ) ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1386:1: rule__Page__Group__8__Impl : ( '{' ) ;
     public final void rule__Page__Group__8__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1426:1: ( ( '{' ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1427:1: ( '{' )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1390:1: ( ( '{' ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1391:1: ( '{' )
             {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1427:1: ( '{' )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1428:1: '{'
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1391:1: ( '{' )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1392:1: '{'
             {
              before(grammarAccess.getPageAccess().getLeftCurlyBracketKeyword_8()); 
-            match(input,16,FOLLOW_16_in_rule__Page__Group__8__Impl2834); 
+            match(input,16,FOLLOW_16_in_rule__Page__Group__8__Impl2783); 
              after(grammarAccess.getPageAccess().getLeftCurlyBracketKeyword_8()); 
 
             }
@@ -3646,20 +3600,20 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Page__Group__9
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1441:1: rule__Page__Group__9 : rule__Page__Group__9__Impl rule__Page__Group__10 ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1405:1: rule__Page__Group__9 : rule__Page__Group__9__Impl rule__Page__Group__10 ;
     public final void rule__Page__Group__9() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1445:1: ( rule__Page__Group__9__Impl rule__Page__Group__10 )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1446:2: rule__Page__Group__9__Impl rule__Page__Group__10
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1409:1: ( rule__Page__Group__9__Impl rule__Page__Group__10 )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1410:2: rule__Page__Group__9__Impl rule__Page__Group__10
             {
-            pushFollow(FOLLOW_rule__Page__Group__9__Impl_in_rule__Page__Group__92865);
+            pushFollow(FOLLOW_rule__Page__Group__9__Impl_in_rule__Page__Group__92814);
             rule__Page__Group__9__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Page__Group__10_in_rule__Page__Group__92868);
+            pushFollow(FOLLOW_rule__Page__Group__10_in_rule__Page__Group__92817);
             rule__Page__Group__10();
             _fsp--;
 
@@ -3682,20 +3636,20 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Page__Group__9__Impl
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1453:1: rule__Page__Group__9__Impl : ( ( rule__Page__ContentsAssignment_9 )* ) ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1417:1: rule__Page__Group__9__Impl : ( ( rule__Page__ContentsAssignment_9 )* ) ;
     public final void rule__Page__Group__9__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1457:1: ( ( ( rule__Page__ContentsAssignment_9 )* ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1458:1: ( ( rule__Page__ContentsAssignment_9 )* )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1421:1: ( ( ( rule__Page__ContentsAssignment_9 )* ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1422:1: ( ( rule__Page__ContentsAssignment_9 )* )
             {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1458:1: ( ( rule__Page__ContentsAssignment_9 )* )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1459:1: ( rule__Page__ContentsAssignment_9 )*
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1422:1: ( ( rule__Page__ContentsAssignment_9 )* )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1423:1: ( rule__Page__ContentsAssignment_9 )*
             {
              before(grammarAccess.getPageAccess().getContentsAssignment_9()); 
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1460:1: ( rule__Page__ContentsAssignment_9 )*
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1424:1: ( rule__Page__ContentsAssignment_9 )*
             loop9:
             do {
                 int alt9=2;
@@ -3708,9 +3662,9 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
                 switch (alt9) {
             	case 1 :
-            	    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1460:2: rule__Page__ContentsAssignment_9
+            	    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1424:2: rule__Page__ContentsAssignment_9
             	    {
-            	    pushFollow(FOLLOW_rule__Page__ContentsAssignment_9_in_rule__Page__Group__9__Impl2895);
+            	    pushFollow(FOLLOW_rule__Page__ContentsAssignment_9_in_rule__Page__Group__9__Impl2844);
             	    rule__Page__ContentsAssignment_9();
             	    _fsp--;
 
@@ -3746,20 +3700,20 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Page__Group__10
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1470:1: rule__Page__Group__10 : rule__Page__Group__10__Impl rule__Page__Group__11 ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1434:1: rule__Page__Group__10 : rule__Page__Group__10__Impl rule__Page__Group__11 ;
     public final void rule__Page__Group__10() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1474:1: ( rule__Page__Group__10__Impl rule__Page__Group__11 )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1475:2: rule__Page__Group__10__Impl rule__Page__Group__11
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1438:1: ( rule__Page__Group__10__Impl rule__Page__Group__11 )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1439:2: rule__Page__Group__10__Impl rule__Page__Group__11
             {
-            pushFollow(FOLLOW_rule__Page__Group__10__Impl_in_rule__Page__Group__102926);
+            pushFollow(FOLLOW_rule__Page__Group__10__Impl_in_rule__Page__Group__102875);
             rule__Page__Group__10__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Page__Group__11_in_rule__Page__Group__102929);
+            pushFollow(FOLLOW_rule__Page__Group__11_in_rule__Page__Group__102878);
             rule__Page__Group__11();
             _fsp--;
 
@@ -3782,20 +3736,20 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Page__Group__10__Impl
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1482:1: rule__Page__Group__10__Impl : ( '}' ) ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1446:1: rule__Page__Group__10__Impl : ( '}' ) ;
     public final void rule__Page__Group__10__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1486:1: ( ( '}' ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1487:1: ( '}' )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1450:1: ( ( '}' ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1451:1: ( '}' )
             {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1487:1: ( '}' )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1488:1: '}'
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1451:1: ( '}' )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1452:1: '}'
             {
              before(grammarAccess.getPageAccess().getRightCurlyBracketKeyword_10()); 
-            match(input,17,FOLLOW_17_in_rule__Page__Group__10__Impl2957); 
+            match(input,17,FOLLOW_17_in_rule__Page__Group__10__Impl2906); 
              after(grammarAccess.getPageAccess().getRightCurlyBracketKeyword_10()); 
 
             }
@@ -3819,16 +3773,16 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Page__Group__11
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1501:1: rule__Page__Group__11 : rule__Page__Group__11__Impl ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1465:1: rule__Page__Group__11 : rule__Page__Group__11__Impl ;
     public final void rule__Page__Group__11() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1505:1: ( rule__Page__Group__11__Impl )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1506:2: rule__Page__Group__11__Impl
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1469:1: ( rule__Page__Group__11__Impl )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1470:2: rule__Page__Group__11__Impl
             {
-            pushFollow(FOLLOW_rule__Page__Group__11__Impl_in_rule__Page__Group__112988);
+            pushFollow(FOLLOW_rule__Page__Group__11__Impl_in_rule__Page__Group__112937);
             rule__Page__Group__11__Impl();
             _fsp--;
 
@@ -3851,20 +3805,20 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Page__Group__11__Impl
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1512:1: rule__Page__Group__11__Impl : ( '}' ) ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1476:1: rule__Page__Group__11__Impl : ( '}' ) ;
     public final void rule__Page__Group__11__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1516:1: ( ( '}' ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1517:1: ( '}' )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1480:1: ( ( '}' ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1481:1: ( '}' )
             {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1517:1: ( '}' )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1518:1: '}'
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1481:1: ( '}' )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1482:1: '}'
             {
              before(grammarAccess.getPageAccess().getRightCurlyBracketKeyword_11()); 
-            match(input,17,FOLLOW_17_in_rule__Page__Group__11__Impl3016); 
+            match(input,17,FOLLOW_17_in_rule__Page__Group__11__Impl2965); 
              after(grammarAccess.getPageAccess().getRightCurlyBracketKeyword_11()); 
 
             }
@@ -3888,20 +3842,20 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__ActionElement__Group__0
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1555:1: rule__ActionElement__Group__0 : rule__ActionElement__Group__0__Impl rule__ActionElement__Group__1 ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1519:1: rule__ActionElement__Group__0 : rule__ActionElement__Group__0__Impl rule__ActionElement__Group__1 ;
     public final void rule__ActionElement__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1559:1: ( rule__ActionElement__Group__0__Impl rule__ActionElement__Group__1 )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1560:2: rule__ActionElement__Group__0__Impl rule__ActionElement__Group__1
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1523:1: ( rule__ActionElement__Group__0__Impl rule__ActionElement__Group__1 )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1524:2: rule__ActionElement__Group__0__Impl rule__ActionElement__Group__1
             {
-            pushFollow(FOLLOW_rule__ActionElement__Group__0__Impl_in_rule__ActionElement__Group__03071);
+            pushFollow(FOLLOW_rule__ActionElement__Group__0__Impl_in_rule__ActionElement__Group__03020);
             rule__ActionElement__Group__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__ActionElement__Group__1_in_rule__ActionElement__Group__03074);
+            pushFollow(FOLLOW_rule__ActionElement__Group__1_in_rule__ActionElement__Group__03023);
             rule__ActionElement__Group__1();
             _fsp--;
 
@@ -3924,20 +3878,20 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__ActionElement__Group__0__Impl
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1567:1: rule__ActionElement__Group__0__Impl : ( 'action' ) ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1531:1: rule__ActionElement__Group__0__Impl : ( 'action' ) ;
     public final void rule__ActionElement__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1571:1: ( ( 'action' ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1572:1: ( 'action' )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1535:1: ( ( 'action' ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1536:1: ( 'action' )
             {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1572:1: ( 'action' )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1573:1: 'action'
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1536:1: ( 'action' )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1537:1: 'action'
             {
              before(grammarAccess.getActionElementAccess().getActionKeyword_0()); 
-            match(input,25,FOLLOW_25_in_rule__ActionElement__Group__0__Impl3102); 
+            match(input,25,FOLLOW_25_in_rule__ActionElement__Group__0__Impl3051); 
              after(grammarAccess.getActionElementAccess().getActionKeyword_0()); 
 
             }
@@ -3961,16 +3915,16 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__ActionElement__Group__1
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1586:1: rule__ActionElement__Group__1 : rule__ActionElement__Group__1__Impl ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1550:1: rule__ActionElement__Group__1 : rule__ActionElement__Group__1__Impl ;
     public final void rule__ActionElement__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1590:1: ( rule__ActionElement__Group__1__Impl )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1591:2: rule__ActionElement__Group__1__Impl
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1554:1: ( rule__ActionElement__Group__1__Impl )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1555:2: rule__ActionElement__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__ActionElement__Group__1__Impl_in_rule__ActionElement__Group__13133);
+            pushFollow(FOLLOW_rule__ActionElement__Group__1__Impl_in_rule__ActionElement__Group__13082);
             rule__ActionElement__Group__1__Impl();
             _fsp--;
 
@@ -3993,23 +3947,23 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__ActionElement__Group__1__Impl
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1597:1: rule__ActionElement__Group__1__Impl : ( ( rule__ActionElement__NameAssignment_1 ) ) ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1561:1: rule__ActionElement__Group__1__Impl : ( ( rule__ActionElement__NameAssignment_1 ) ) ;
     public final void rule__ActionElement__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1601:1: ( ( ( rule__ActionElement__NameAssignment_1 ) ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1602:1: ( ( rule__ActionElement__NameAssignment_1 ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1565:1: ( ( ( rule__ActionElement__NameAssignment_1 ) ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1566:1: ( ( rule__ActionElement__NameAssignment_1 ) )
             {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1602:1: ( ( rule__ActionElement__NameAssignment_1 ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1603:1: ( rule__ActionElement__NameAssignment_1 )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1566:1: ( ( rule__ActionElement__NameAssignment_1 ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1567:1: ( rule__ActionElement__NameAssignment_1 )
             {
              before(grammarAccess.getActionElementAccess().getNameAssignment_1()); 
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1604:1: ( rule__ActionElement__NameAssignment_1 )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1604:2: rule__ActionElement__NameAssignment_1
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1568:1: ( rule__ActionElement__NameAssignment_1 )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1568:2: rule__ActionElement__NameAssignment_1
             {
-            pushFollow(FOLLOW_rule__ActionElement__NameAssignment_1_in_rule__ActionElement__Group__1__Impl3160);
+            pushFollow(FOLLOW_rule__ActionElement__NameAssignment_1_in_rule__ActionElement__Group__1__Impl3109);
             rule__ActionElement__NameAssignment_1();
             _fsp--;
 
@@ -4039,20 +3993,20 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__DisplayElement__Group__0
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1618:1: rule__DisplayElement__Group__0 : rule__DisplayElement__Group__0__Impl rule__DisplayElement__Group__1 ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1582:1: rule__DisplayElement__Group__0 : rule__DisplayElement__Group__0__Impl rule__DisplayElement__Group__1 ;
     public final void rule__DisplayElement__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1622:1: ( rule__DisplayElement__Group__0__Impl rule__DisplayElement__Group__1 )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1623:2: rule__DisplayElement__Group__0__Impl rule__DisplayElement__Group__1
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1586:1: ( rule__DisplayElement__Group__0__Impl rule__DisplayElement__Group__1 )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1587:2: rule__DisplayElement__Group__0__Impl rule__DisplayElement__Group__1
             {
-            pushFollow(FOLLOW_rule__DisplayElement__Group__0__Impl_in_rule__DisplayElement__Group__03194);
+            pushFollow(FOLLOW_rule__DisplayElement__Group__0__Impl_in_rule__DisplayElement__Group__03143);
             rule__DisplayElement__Group__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__DisplayElement__Group__1_in_rule__DisplayElement__Group__03197);
+            pushFollow(FOLLOW_rule__DisplayElement__Group__1_in_rule__DisplayElement__Group__03146);
             rule__DisplayElement__Group__1();
             _fsp--;
 
@@ -4075,20 +4029,20 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__DisplayElement__Group__0__Impl
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1630:1: rule__DisplayElement__Group__0__Impl : ( 'show' ) ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1594:1: rule__DisplayElement__Group__0__Impl : ( 'show' ) ;
     public final void rule__DisplayElement__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1634:1: ( ( 'show' ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1635:1: ( 'show' )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1598:1: ( ( 'show' ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1599:1: ( 'show' )
             {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1635:1: ( 'show' )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1636:1: 'show'
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1599:1: ( 'show' )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1600:1: 'show'
             {
              before(grammarAccess.getDisplayElementAccess().getShowKeyword_0()); 
-            match(input,26,FOLLOW_26_in_rule__DisplayElement__Group__0__Impl3225); 
+            match(input,26,FOLLOW_26_in_rule__DisplayElement__Group__0__Impl3174); 
              after(grammarAccess.getDisplayElementAccess().getShowKeyword_0()); 
 
             }
@@ -4112,16 +4066,16 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__DisplayElement__Group__1
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1649:1: rule__DisplayElement__Group__1 : rule__DisplayElement__Group__1__Impl ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1613:1: rule__DisplayElement__Group__1 : rule__DisplayElement__Group__1__Impl ;
     public final void rule__DisplayElement__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1653:1: ( rule__DisplayElement__Group__1__Impl )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1654:2: rule__DisplayElement__Group__1__Impl
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1617:1: ( rule__DisplayElement__Group__1__Impl )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1618:2: rule__DisplayElement__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__DisplayElement__Group__1__Impl_in_rule__DisplayElement__Group__13256);
+            pushFollow(FOLLOW_rule__DisplayElement__Group__1__Impl_in_rule__DisplayElement__Group__13205);
             rule__DisplayElement__Group__1__Impl();
             _fsp--;
 
@@ -4144,23 +4098,23 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__DisplayElement__Group__1__Impl
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1660:1: rule__DisplayElement__Group__1__Impl : ( ( rule__DisplayElement__ReferenceAssignment_1 ) ) ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1624:1: rule__DisplayElement__Group__1__Impl : ( ( rule__DisplayElement__ReferenceAssignment_1 ) ) ;
     public final void rule__DisplayElement__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1664:1: ( ( ( rule__DisplayElement__ReferenceAssignment_1 ) ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1665:1: ( ( rule__DisplayElement__ReferenceAssignment_1 ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1628:1: ( ( ( rule__DisplayElement__ReferenceAssignment_1 ) ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1629:1: ( ( rule__DisplayElement__ReferenceAssignment_1 ) )
             {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1665:1: ( ( rule__DisplayElement__ReferenceAssignment_1 ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1666:1: ( rule__DisplayElement__ReferenceAssignment_1 )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1629:1: ( ( rule__DisplayElement__ReferenceAssignment_1 ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1630:1: ( rule__DisplayElement__ReferenceAssignment_1 )
             {
              before(grammarAccess.getDisplayElementAccess().getReferenceAssignment_1()); 
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1667:1: ( rule__DisplayElement__ReferenceAssignment_1 )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1667:2: rule__DisplayElement__ReferenceAssignment_1
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1631:1: ( rule__DisplayElement__ReferenceAssignment_1 )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1631:2: rule__DisplayElement__ReferenceAssignment_1
             {
-            pushFollow(FOLLOW_rule__DisplayElement__ReferenceAssignment_1_in_rule__DisplayElement__Group__1__Impl3283);
+            pushFollow(FOLLOW_rule__DisplayElement__ReferenceAssignment_1_in_rule__DisplayElement__Group__1__Impl3232);
             rule__DisplayElement__ReferenceAssignment_1();
             _fsp--;
 
@@ -4190,20 +4144,20 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__RepeatElement__Group__0
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1681:1: rule__RepeatElement__Group__0 : rule__RepeatElement__Group__0__Impl rule__RepeatElement__Group__1 ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1645:1: rule__RepeatElement__Group__0 : rule__RepeatElement__Group__0__Impl rule__RepeatElement__Group__1 ;
     public final void rule__RepeatElement__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1685:1: ( rule__RepeatElement__Group__0__Impl rule__RepeatElement__Group__1 )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1686:2: rule__RepeatElement__Group__0__Impl rule__RepeatElement__Group__1
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1649:1: ( rule__RepeatElement__Group__0__Impl rule__RepeatElement__Group__1 )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1650:2: rule__RepeatElement__Group__0__Impl rule__RepeatElement__Group__1
             {
-            pushFollow(FOLLOW_rule__RepeatElement__Group__0__Impl_in_rule__RepeatElement__Group__03317);
+            pushFollow(FOLLOW_rule__RepeatElement__Group__0__Impl_in_rule__RepeatElement__Group__03266);
             rule__RepeatElement__Group__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__RepeatElement__Group__1_in_rule__RepeatElement__Group__03320);
+            pushFollow(FOLLOW_rule__RepeatElement__Group__1_in_rule__RepeatElement__Group__03269);
             rule__RepeatElement__Group__1();
             _fsp--;
 
@@ -4226,20 +4180,20 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__RepeatElement__Group__0__Impl
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1693:1: rule__RepeatElement__Group__0__Impl : ( 'repeat for' ) ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1657:1: rule__RepeatElement__Group__0__Impl : ( 'repeat for' ) ;
     public final void rule__RepeatElement__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1697:1: ( ( 'repeat for' ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1698:1: ( 'repeat for' )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1661:1: ( ( 'repeat for' ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1662:1: ( 'repeat for' )
             {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1698:1: ( 'repeat for' )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1699:1: 'repeat for'
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1662:1: ( 'repeat for' )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1663:1: 'repeat for'
             {
              before(grammarAccess.getRepeatElementAccess().getRepeatForKeyword_0()); 
-            match(input,27,FOLLOW_27_in_rule__RepeatElement__Group__0__Impl3348); 
+            match(input,27,FOLLOW_27_in_rule__RepeatElement__Group__0__Impl3297); 
              after(grammarAccess.getRepeatElementAccess().getRepeatForKeyword_0()); 
 
             }
@@ -4263,20 +4217,20 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__RepeatElement__Group__1
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1712:1: rule__RepeatElement__Group__1 : rule__RepeatElement__Group__1__Impl rule__RepeatElement__Group__2 ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1676:1: rule__RepeatElement__Group__1 : rule__RepeatElement__Group__1__Impl rule__RepeatElement__Group__2 ;
     public final void rule__RepeatElement__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1716:1: ( rule__RepeatElement__Group__1__Impl rule__RepeatElement__Group__2 )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1717:2: rule__RepeatElement__Group__1__Impl rule__RepeatElement__Group__2
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1680:1: ( rule__RepeatElement__Group__1__Impl rule__RepeatElement__Group__2 )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1681:2: rule__RepeatElement__Group__1__Impl rule__RepeatElement__Group__2
             {
-            pushFollow(FOLLOW_rule__RepeatElement__Group__1__Impl_in_rule__RepeatElement__Group__13379);
+            pushFollow(FOLLOW_rule__RepeatElement__Group__1__Impl_in_rule__RepeatElement__Group__13328);
             rule__RepeatElement__Group__1__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__RepeatElement__Group__2_in_rule__RepeatElement__Group__13382);
+            pushFollow(FOLLOW_rule__RepeatElement__Group__2_in_rule__RepeatElement__Group__13331);
             rule__RepeatElement__Group__2();
             _fsp--;
 
@@ -4299,23 +4253,23 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__RepeatElement__Group__1__Impl
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1724:1: rule__RepeatElement__Group__1__Impl : ( ( rule__RepeatElement__ReferenceAssignment_1 ) ) ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1688:1: rule__RepeatElement__Group__1__Impl : ( ( rule__RepeatElement__ReferenceAssignment_1 ) ) ;
     public final void rule__RepeatElement__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1728:1: ( ( ( rule__RepeatElement__ReferenceAssignment_1 ) ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1729:1: ( ( rule__RepeatElement__ReferenceAssignment_1 ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1692:1: ( ( ( rule__RepeatElement__ReferenceAssignment_1 ) ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1693:1: ( ( rule__RepeatElement__ReferenceAssignment_1 ) )
             {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1729:1: ( ( rule__RepeatElement__ReferenceAssignment_1 ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1730:1: ( rule__RepeatElement__ReferenceAssignment_1 )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1693:1: ( ( rule__RepeatElement__ReferenceAssignment_1 ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1694:1: ( rule__RepeatElement__ReferenceAssignment_1 )
             {
              before(grammarAccess.getRepeatElementAccess().getReferenceAssignment_1()); 
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1731:1: ( rule__RepeatElement__ReferenceAssignment_1 )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1731:2: rule__RepeatElement__ReferenceAssignment_1
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1695:1: ( rule__RepeatElement__ReferenceAssignment_1 )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1695:2: rule__RepeatElement__ReferenceAssignment_1
             {
-            pushFollow(FOLLOW_rule__RepeatElement__ReferenceAssignment_1_in_rule__RepeatElement__Group__1__Impl3409);
+            pushFollow(FOLLOW_rule__RepeatElement__ReferenceAssignment_1_in_rule__RepeatElement__Group__1__Impl3358);
             rule__RepeatElement__ReferenceAssignment_1();
             _fsp--;
 
@@ -4345,20 +4299,20 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__RepeatElement__Group__2
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1741:1: rule__RepeatElement__Group__2 : rule__RepeatElement__Group__2__Impl rule__RepeatElement__Group__3 ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1705:1: rule__RepeatElement__Group__2 : rule__RepeatElement__Group__2__Impl rule__RepeatElement__Group__3 ;
     public final void rule__RepeatElement__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1745:1: ( rule__RepeatElement__Group__2__Impl rule__RepeatElement__Group__3 )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1746:2: rule__RepeatElement__Group__2__Impl rule__RepeatElement__Group__3
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1709:1: ( rule__RepeatElement__Group__2__Impl rule__RepeatElement__Group__3 )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1710:2: rule__RepeatElement__Group__2__Impl rule__RepeatElement__Group__3
             {
-            pushFollow(FOLLOW_rule__RepeatElement__Group__2__Impl_in_rule__RepeatElement__Group__23439);
+            pushFollow(FOLLOW_rule__RepeatElement__Group__2__Impl_in_rule__RepeatElement__Group__23388);
             rule__RepeatElement__Group__2__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__RepeatElement__Group__3_in_rule__RepeatElement__Group__23442);
+            pushFollow(FOLLOW_rule__RepeatElement__Group__3_in_rule__RepeatElement__Group__23391);
             rule__RepeatElement__Group__3();
             _fsp--;
 
@@ -4381,20 +4335,20 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__RepeatElement__Group__2__Impl
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1753:1: rule__RepeatElement__Group__2__Impl : ( '{' ) ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1717:1: rule__RepeatElement__Group__2__Impl : ( '{' ) ;
     public final void rule__RepeatElement__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1757:1: ( ( '{' ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1758:1: ( '{' )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1721:1: ( ( '{' ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1722:1: ( '{' )
             {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1758:1: ( '{' )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1759:1: '{'
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1722:1: ( '{' )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1723:1: '{'
             {
              before(grammarAccess.getRepeatElementAccess().getLeftCurlyBracketKeyword_2()); 
-            match(input,16,FOLLOW_16_in_rule__RepeatElement__Group__2__Impl3470); 
+            match(input,16,FOLLOW_16_in_rule__RepeatElement__Group__2__Impl3419); 
              after(grammarAccess.getRepeatElementAccess().getLeftCurlyBracketKeyword_2()); 
 
             }
@@ -4418,20 +4372,20 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__RepeatElement__Group__3
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1772:1: rule__RepeatElement__Group__3 : rule__RepeatElement__Group__3__Impl rule__RepeatElement__Group__4 ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1736:1: rule__RepeatElement__Group__3 : rule__RepeatElement__Group__3__Impl rule__RepeatElement__Group__4 ;
     public final void rule__RepeatElement__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1776:1: ( rule__RepeatElement__Group__3__Impl rule__RepeatElement__Group__4 )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1777:2: rule__RepeatElement__Group__3__Impl rule__RepeatElement__Group__4
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1740:1: ( rule__RepeatElement__Group__3__Impl rule__RepeatElement__Group__4 )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1741:2: rule__RepeatElement__Group__3__Impl rule__RepeatElement__Group__4
             {
-            pushFollow(FOLLOW_rule__RepeatElement__Group__3__Impl_in_rule__RepeatElement__Group__33501);
+            pushFollow(FOLLOW_rule__RepeatElement__Group__3__Impl_in_rule__RepeatElement__Group__33450);
             rule__RepeatElement__Group__3__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__RepeatElement__Group__4_in_rule__RepeatElement__Group__33504);
+            pushFollow(FOLLOW_rule__RepeatElement__Group__4_in_rule__RepeatElement__Group__33453);
             rule__RepeatElement__Group__4();
             _fsp--;
 
@@ -4454,20 +4408,20 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__RepeatElement__Group__3__Impl
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1784:1: rule__RepeatElement__Group__3__Impl : ( ( rule__RepeatElement__ContentsAssignment_3 )* ) ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1748:1: rule__RepeatElement__Group__3__Impl : ( ( rule__RepeatElement__ContentsAssignment_3 )* ) ;
     public final void rule__RepeatElement__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1788:1: ( ( ( rule__RepeatElement__ContentsAssignment_3 )* ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1789:1: ( ( rule__RepeatElement__ContentsAssignment_3 )* )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1752:1: ( ( ( rule__RepeatElement__ContentsAssignment_3 )* ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1753:1: ( ( rule__RepeatElement__ContentsAssignment_3 )* )
             {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1789:1: ( ( rule__RepeatElement__ContentsAssignment_3 )* )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1790:1: ( rule__RepeatElement__ContentsAssignment_3 )*
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1753:1: ( ( rule__RepeatElement__ContentsAssignment_3 )* )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1754:1: ( rule__RepeatElement__ContentsAssignment_3 )*
             {
              before(grammarAccess.getRepeatElementAccess().getContentsAssignment_3()); 
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1791:1: ( rule__RepeatElement__ContentsAssignment_3 )*
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1755:1: ( rule__RepeatElement__ContentsAssignment_3 )*
             loop10:
             do {
                 int alt10=2;
@@ -4480,9 +4434,9 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
                 switch (alt10) {
             	case 1 :
-            	    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1791:2: rule__RepeatElement__ContentsAssignment_3
+            	    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1755:2: rule__RepeatElement__ContentsAssignment_3
             	    {
-            	    pushFollow(FOLLOW_rule__RepeatElement__ContentsAssignment_3_in_rule__RepeatElement__Group__3__Impl3531);
+            	    pushFollow(FOLLOW_rule__RepeatElement__ContentsAssignment_3_in_rule__RepeatElement__Group__3__Impl3480);
             	    rule__RepeatElement__ContentsAssignment_3();
             	    _fsp--;
 
@@ -4518,16 +4472,16 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__RepeatElement__Group__4
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1801:1: rule__RepeatElement__Group__4 : rule__RepeatElement__Group__4__Impl ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1765:1: rule__RepeatElement__Group__4 : rule__RepeatElement__Group__4__Impl ;
     public final void rule__RepeatElement__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1805:1: ( rule__RepeatElement__Group__4__Impl )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1806:2: rule__RepeatElement__Group__4__Impl
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1769:1: ( rule__RepeatElement__Group__4__Impl )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1770:2: rule__RepeatElement__Group__4__Impl
             {
-            pushFollow(FOLLOW_rule__RepeatElement__Group__4__Impl_in_rule__RepeatElement__Group__43562);
+            pushFollow(FOLLOW_rule__RepeatElement__Group__4__Impl_in_rule__RepeatElement__Group__43511);
             rule__RepeatElement__Group__4__Impl();
             _fsp--;
 
@@ -4550,20 +4504,20 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__RepeatElement__Group__4__Impl
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1812:1: rule__RepeatElement__Group__4__Impl : ( '}' ) ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1776:1: rule__RepeatElement__Group__4__Impl : ( '}' ) ;
     public final void rule__RepeatElement__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1816:1: ( ( '}' ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1817:1: ( '}' )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1780:1: ( ( '}' ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1781:1: ( '}' )
             {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1817:1: ( '}' )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1818:1: '}'
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1781:1: ( '}' )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1782:1: '}'
             {
              before(grammarAccess.getRepeatElementAccess().getRightCurlyBracketKeyword_4()); 
-            match(input,17,FOLLOW_17_in_rule__RepeatElement__Group__4__Impl3590); 
+            match(input,17,FOLLOW_17_in_rule__RepeatElement__Group__4__Impl3539); 
              after(grammarAccess.getRepeatElementAccess().getRightCurlyBracketKeyword_4()); 
 
             }
@@ -4587,20 +4541,20 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Model__NameAssignment_1
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1842:1: rule__Model__NameAssignment_1 : ( RULE_ID ) ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1806:1: rule__Model__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__Model__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1846:1: ( ( RULE_ID ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1847:1: ( RULE_ID )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1810:1: ( ( RULE_ID ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1811:1: ( RULE_ID )
             {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1847:1: ( RULE_ID )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1848:1: RULE_ID
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1811:1: ( RULE_ID )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1812:1: RULE_ID
             {
              before(grammarAccess.getModelAccess().getNameIDTerminalRuleCall_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Model__NameAssignment_13636); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Model__NameAssignment_13585); 
              after(grammarAccess.getModelAccess().getNameIDTerminalRuleCall_1_0()); 
 
             }
@@ -4624,20 +4578,20 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Model__DomainAssignment_2
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1857:1: rule__Model__DomainAssignment_2 : ( ruleDomainModel ) ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1821:1: rule__Model__DomainAssignment_2 : ( ruleDomainModel ) ;
     public final void rule__Model__DomainAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1861:1: ( ( ruleDomainModel ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1862:1: ( ruleDomainModel )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1825:1: ( ( ruleDomainModel ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1826:1: ( ruleDomainModel )
             {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1862:1: ( ruleDomainModel )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1863:1: ruleDomainModel
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1826:1: ( ruleDomainModel )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1827:1: ruleDomainModel
             {
              before(grammarAccess.getModelAccess().getDomainDomainModelParserRuleCall_2_0()); 
-            pushFollow(FOLLOW_ruleDomainModel_in_rule__Model__DomainAssignment_23667);
+            pushFollow(FOLLOW_ruleDomainModel_in_rule__Model__DomainAssignment_23616);
             ruleDomainModel();
             _fsp--;
 
@@ -4664,20 +4618,20 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Model__WebAssignment_3
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1872:1: rule__Model__WebAssignment_3 : ( ruleWebModel ) ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1836:1: rule__Model__WebAssignment_3 : ( ruleWebModel ) ;
     public final void rule__Model__WebAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1876:1: ( ( ruleWebModel ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1877:1: ( ruleWebModel )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1840:1: ( ( ruleWebModel ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1841:1: ( ruleWebModel )
             {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1877:1: ( ruleWebModel )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1878:1: ruleWebModel
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1841:1: ( ruleWebModel )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1842:1: ruleWebModel
             {
              before(grammarAccess.getModelAccess().getWebWebModelParserRuleCall_3_0()); 
-            pushFollow(FOLLOW_ruleWebModel_in_rule__Model__WebAssignment_33698);
+            pushFollow(FOLLOW_ruleWebModel_in_rule__Model__WebAssignment_33647);
             ruleWebModel();
             _fsp--;
 
@@ -4703,25 +4657,25 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
     // $ANTLR end rule__Model__WebAssignment_3
 
 
-    // $ANTLR start rule__DomainModel__EntitiesAssignment_2
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1887:1: rule__DomainModel__EntitiesAssignment_2 : ( ruleEntity ) ;
-    public final void rule__DomainModel__EntitiesAssignment_2() throws RecognitionException {
+    // $ANTLR start rule__DomainModel__TypesAssignment_1
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1851:1: rule__DomainModel__TypesAssignment_1 : ( ruleType ) ;
+    public final void rule__DomainModel__TypesAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1891:1: ( ( ruleEntity ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1892:1: ( ruleEntity )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1855:1: ( ( ruleType ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1856:1: ( ruleType )
             {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1892:1: ( ruleEntity )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1893:1: ruleEntity
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1856:1: ( ruleType )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1857:1: ruleType
             {
-             before(grammarAccess.getDomainModelAccess().getEntitiesEntityParserRuleCall_2_0()); 
-            pushFollow(FOLLOW_ruleEntity_in_rule__DomainModel__EntitiesAssignment_23729);
-            ruleEntity();
+             before(grammarAccess.getDomainModelAccess().getTypesTypeParserRuleCall_1_0()); 
+            pushFollow(FOLLOW_ruleType_in_rule__DomainModel__TypesAssignment_13678);
+            ruleType();
             _fsp--;
 
-             after(grammarAccess.getDomainModelAccess().getEntitiesEntityParserRuleCall_2_0()); 
+             after(grammarAccess.getDomainModelAccess().getTypesTypeParserRuleCall_1_0()); 
 
             }
 
@@ -4740,64 +4694,24 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end rule__DomainModel__EntitiesAssignment_2
-
-
-    // $ANTLR start rule__DomainModel__DataTypesAssignment_3
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1902:1: rule__DomainModel__DataTypesAssignment_3 : ( ruleDataType ) ;
-    public final void rule__DomainModel__DataTypesAssignment_3() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1906:1: ( ( ruleDataType ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1907:1: ( ruleDataType )
-            {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1907:1: ( ruleDataType )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1908:1: ruleDataType
-            {
-             before(grammarAccess.getDomainModelAccess().getDataTypesDataTypeParserRuleCall_3_0()); 
-            pushFollow(FOLLOW_ruleDataType_in_rule__DomainModel__DataTypesAssignment_33760);
-            ruleDataType();
-            _fsp--;
-
-             after(grammarAccess.getDomainModelAccess().getDataTypesDataTypeParserRuleCall_3_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end rule__DomainModel__DataTypesAssignment_3
+    // $ANTLR end rule__DomainModel__TypesAssignment_1
 
 
     // $ANTLR start rule__Entity__NameAssignment_1
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1917:1: rule__Entity__NameAssignment_1 : ( RULE_ID ) ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1866:1: rule__Entity__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__Entity__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1921:1: ( ( RULE_ID ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1922:1: ( RULE_ID )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1870:1: ( ( RULE_ID ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1871:1: ( RULE_ID )
             {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1922:1: ( RULE_ID )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1923:1: RULE_ID
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1871:1: ( RULE_ID )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1872:1: RULE_ID
             {
              before(grammarAccess.getEntityAccess().getNameIDTerminalRuleCall_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Entity__NameAssignment_13791); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Entity__NameAssignment_13709); 
              after(grammarAccess.getEntityAccess().getNameIDTerminalRuleCall_1_0()); 
 
             }
@@ -4821,20 +4735,20 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Entity__FeaturesAssignment_3
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1932:1: rule__Entity__FeaturesAssignment_3 : ( ruleFeature ) ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1881:1: rule__Entity__FeaturesAssignment_3 : ( ruleFeature ) ;
     public final void rule__Entity__FeaturesAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1936:1: ( ( ruleFeature ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1937:1: ( ruleFeature )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1885:1: ( ( ruleFeature ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1886:1: ( ruleFeature )
             {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1937:1: ( ruleFeature )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1938:1: ruleFeature
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1886:1: ( ruleFeature )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1887:1: ruleFeature
             {
              before(grammarAccess.getEntityAccess().getFeaturesFeatureParserRuleCall_3_0()); 
-            pushFollow(FOLLOW_ruleFeature_in_rule__Entity__FeaturesAssignment_33822);
+            pushFollow(FOLLOW_ruleFeature_in_rule__Entity__FeaturesAssignment_33740);
             ruleFeature();
             _fsp--;
 
@@ -4861,20 +4775,20 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Feature__NameAssignment_0
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1947:1: rule__Feature__NameAssignment_0 : ( RULE_ID ) ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1896:1: rule__Feature__NameAssignment_0 : ( RULE_ID ) ;
     public final void rule__Feature__NameAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1951:1: ( ( RULE_ID ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1952:1: ( RULE_ID )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1900:1: ( ( RULE_ID ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1901:1: ( RULE_ID )
             {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1952:1: ( RULE_ID )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1953:1: RULE_ID
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1901:1: ( RULE_ID )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1902:1: RULE_ID
             {
              before(grammarAccess.getFeatureAccess().getNameIDTerminalRuleCall_0_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Feature__NameAssignment_03853); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Feature__NameAssignment_03771); 
              after(grammarAccess.getFeatureAccess().getNameIDTerminalRuleCall_0_0()); 
 
             }
@@ -4898,24 +4812,24 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Feature__TypeAssignment_2
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1962:1: rule__Feature__TypeAssignment_2 : ( ( RULE_ID ) ) ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1911:1: rule__Feature__TypeAssignment_2 : ( ( RULE_ID ) ) ;
     public final void rule__Feature__TypeAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1966:1: ( ( ( RULE_ID ) ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1967:1: ( ( RULE_ID ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1915:1: ( ( ( RULE_ID ) ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1916:1: ( ( RULE_ID ) )
             {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1967:1: ( ( RULE_ID ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1968:1: ( RULE_ID )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1916:1: ( ( RULE_ID ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1917:1: ( RULE_ID )
             {
              before(grammarAccess.getFeatureAccess().getTypeTypeCrossReference_2_0()); 
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1969:1: ( RULE_ID )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1970:1: RULE_ID
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1918:1: ( RULE_ID )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1919:1: RULE_ID
             {
              before(grammarAccess.getFeatureAccess().getTypeTypeIDTerminalRuleCall_2_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Feature__TypeAssignment_23888); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Feature__TypeAssignment_23806); 
              after(grammarAccess.getFeatureAccess().getTypeTypeIDTerminalRuleCall_2_0_1()); 
 
             }
@@ -4943,23 +4857,23 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Feature__MultivaluedAssignment_3
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1981:1: rule__Feature__MultivaluedAssignment_3 : ( ( rule__Feature__MultivaluedAlternatives_3_0 ) ) ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1930:1: rule__Feature__MultivaluedAssignment_3 : ( ( rule__Feature__MultivaluedAlternatives_3_0 ) ) ;
     public final void rule__Feature__MultivaluedAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1985:1: ( ( ( rule__Feature__MultivaluedAlternatives_3_0 ) ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1986:1: ( ( rule__Feature__MultivaluedAlternatives_3_0 ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1934:1: ( ( ( rule__Feature__MultivaluedAlternatives_3_0 ) ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1935:1: ( ( rule__Feature__MultivaluedAlternatives_3_0 ) )
             {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1986:1: ( ( rule__Feature__MultivaluedAlternatives_3_0 ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1987:1: ( rule__Feature__MultivaluedAlternatives_3_0 )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1935:1: ( ( rule__Feature__MultivaluedAlternatives_3_0 ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1936:1: ( rule__Feature__MultivaluedAlternatives_3_0 )
             {
              before(grammarAccess.getFeatureAccess().getMultivaluedAlternatives_3_0()); 
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1988:1: ( rule__Feature__MultivaluedAlternatives_3_0 )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1988:2: rule__Feature__MultivaluedAlternatives_3_0
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1937:1: ( rule__Feature__MultivaluedAlternatives_3_0 )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1937:2: rule__Feature__MultivaluedAlternatives_3_0
             {
-            pushFollow(FOLLOW_rule__Feature__MultivaluedAlternatives_3_0_in_rule__Feature__MultivaluedAssignment_33923);
+            pushFollow(FOLLOW_rule__Feature__MultivaluedAlternatives_3_0_in_rule__Feature__MultivaluedAssignment_33841);
             rule__Feature__MultivaluedAlternatives_3_0();
             _fsp--;
 
@@ -4989,20 +4903,20 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__DataType__NameAssignment_1
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1997:1: rule__DataType__NameAssignment_1 : ( RULE_ID ) ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1946:1: rule__DataType__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__DataType__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2001:1: ( ( RULE_ID ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2002:1: ( RULE_ID )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1950:1: ( ( RULE_ID ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1951:1: ( RULE_ID )
             {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2002:1: ( RULE_ID )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2003:1: RULE_ID
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1951:1: ( RULE_ID )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1952:1: RULE_ID
             {
              before(grammarAccess.getDataTypeAccess().getNameIDTerminalRuleCall_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__DataType__NameAssignment_13956); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__DataType__NameAssignment_13874); 
              after(grammarAccess.getDataTypeAccess().getNameIDTerminalRuleCall_1_0()); 
 
             }
@@ -5025,25 +4939,25 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
     // $ANTLR end rule__DataType__NameAssignment_1
 
 
-    // $ANTLR start rule__WebModel__PagesAssignment_2
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2012:1: rule__WebModel__PagesAssignment_2 : ( rulePage ) ;
-    public final void rule__WebModel__PagesAssignment_2() throws RecognitionException {
+    // $ANTLR start rule__WebModel__PagesAssignment_1
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1961:1: rule__WebModel__PagesAssignment_1 : ( rulePage ) ;
+    public final void rule__WebModel__PagesAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2016:1: ( ( rulePage ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2017:1: ( rulePage )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1965:1: ( ( rulePage ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1966:1: ( rulePage )
             {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2017:1: ( rulePage )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2018:1: rulePage
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1966:1: ( rulePage )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1967:1: rulePage
             {
-             before(grammarAccess.getWebModelAccess().getPagesPageParserRuleCall_2_0()); 
-            pushFollow(FOLLOW_rulePage_in_rule__WebModel__PagesAssignment_23987);
+             before(grammarAccess.getWebModelAccess().getPagesPageParserRuleCall_1_0()); 
+            pushFollow(FOLLOW_rulePage_in_rule__WebModel__PagesAssignment_13905);
             rulePage();
             _fsp--;
 
-             after(grammarAccess.getWebModelAccess().getPagesPageParserRuleCall_2_0()); 
+             after(grammarAccess.getWebModelAccess().getPagesPageParserRuleCall_1_0()); 
 
             }
 
@@ -5062,24 +4976,24 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end rule__WebModel__PagesAssignment_2
+    // $ANTLR end rule__WebModel__PagesAssignment_1
 
 
     // $ANTLR start rule__Page__NameAssignment_1
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2027:1: rule__Page__NameAssignment_1 : ( RULE_ID ) ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1976:1: rule__Page__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__Page__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2031:1: ( ( RULE_ID ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2032:1: ( RULE_ID )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1980:1: ( ( RULE_ID ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1981:1: ( RULE_ID )
             {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2032:1: ( RULE_ID )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2033:1: RULE_ID
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1981:1: ( RULE_ID )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1982:1: RULE_ID
             {
              before(grammarAccess.getPageAccess().getNameIDTerminalRuleCall_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Page__NameAssignment_14018); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Page__NameAssignment_13936); 
              after(grammarAccess.getPageAccess().getNameIDTerminalRuleCall_1_0()); 
 
             }
@@ -5103,20 +5017,20 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Page__TitleAssignment_5
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2042:1: rule__Page__TitleAssignment_5 : ( RULE_STRING ) ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1991:1: rule__Page__TitleAssignment_5 : ( RULE_STRING ) ;
     public final void rule__Page__TitleAssignment_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2046:1: ( ( RULE_STRING ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2047:1: ( RULE_STRING )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1995:1: ( ( RULE_STRING ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1996:1: ( RULE_STRING )
             {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2047:1: ( RULE_STRING )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2048:1: RULE_STRING
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1996:1: ( RULE_STRING )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:1997:1: RULE_STRING
             {
              before(grammarAccess.getPageAccess().getTitleSTRINGTerminalRuleCall_5_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Page__TitleAssignment_54049); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Page__TitleAssignment_53967); 
              after(grammarAccess.getPageAccess().getTitleSTRINGTerminalRuleCall_5_0()); 
 
             }
@@ -5140,24 +5054,24 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Page__EntityAssignment_7
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2057:1: rule__Page__EntityAssignment_7 : ( ( RULE_ID ) ) ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2006:1: rule__Page__EntityAssignment_7 : ( ( RULE_ID ) ) ;
     public final void rule__Page__EntityAssignment_7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2061:1: ( ( ( RULE_ID ) ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2062:1: ( ( RULE_ID ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2010:1: ( ( ( RULE_ID ) ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2011:1: ( ( RULE_ID ) )
             {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2062:1: ( ( RULE_ID ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2063:1: ( RULE_ID )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2011:1: ( ( RULE_ID ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2012:1: ( RULE_ID )
             {
              before(grammarAccess.getPageAccess().getEntityEntityCrossReference_7_0()); 
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2064:1: ( RULE_ID )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2065:1: RULE_ID
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2013:1: ( RULE_ID )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2014:1: RULE_ID
             {
              before(grammarAccess.getPageAccess().getEntityEntityIDTerminalRuleCall_7_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Page__EntityAssignment_74084); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Page__EntityAssignment_74002); 
              after(grammarAccess.getPageAccess().getEntityEntityIDTerminalRuleCall_7_0_1()); 
 
             }
@@ -5185,20 +5099,20 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__Page__ContentsAssignment_9
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2076:1: rule__Page__ContentsAssignment_9 : ( rulePageElement ) ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2025:1: rule__Page__ContentsAssignment_9 : ( rulePageElement ) ;
     public final void rule__Page__ContentsAssignment_9() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2080:1: ( ( rulePageElement ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2081:1: ( rulePageElement )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2029:1: ( ( rulePageElement ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2030:1: ( rulePageElement )
             {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2081:1: ( rulePageElement )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2082:1: rulePageElement
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2030:1: ( rulePageElement )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2031:1: rulePageElement
             {
              before(grammarAccess.getPageAccess().getContentsPageElementParserRuleCall_9_0()); 
-            pushFollow(FOLLOW_rulePageElement_in_rule__Page__ContentsAssignment_94119);
+            pushFollow(FOLLOW_rulePageElement_in_rule__Page__ContentsAssignment_94037);
             rulePageElement();
             _fsp--;
 
@@ -5225,20 +5139,20 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__ActionElement__NameAssignment_1
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2091:1: rule__ActionElement__NameAssignment_1 : ( RULE_ID ) ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2040:1: rule__ActionElement__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__ActionElement__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2095:1: ( ( RULE_ID ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2096:1: ( RULE_ID )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2044:1: ( ( RULE_ID ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2045:1: ( RULE_ID )
             {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2096:1: ( RULE_ID )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2097:1: RULE_ID
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2045:1: ( RULE_ID )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2046:1: RULE_ID
             {
              before(grammarAccess.getActionElementAccess().getNameIDTerminalRuleCall_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__ActionElement__NameAssignment_14150); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__ActionElement__NameAssignment_14068); 
              after(grammarAccess.getActionElementAccess().getNameIDTerminalRuleCall_1_0()); 
 
             }
@@ -5262,24 +5176,24 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__DisplayElement__ReferenceAssignment_1
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2106:1: rule__DisplayElement__ReferenceAssignment_1 : ( ( RULE_ID ) ) ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2055:1: rule__DisplayElement__ReferenceAssignment_1 : ( ( RULE_ID ) ) ;
     public final void rule__DisplayElement__ReferenceAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2110:1: ( ( ( RULE_ID ) ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2111:1: ( ( RULE_ID ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2059:1: ( ( ( RULE_ID ) ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2060:1: ( ( RULE_ID ) )
             {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2111:1: ( ( RULE_ID ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2112:1: ( RULE_ID )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2060:1: ( ( RULE_ID ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2061:1: ( RULE_ID )
             {
              before(grammarAccess.getDisplayElementAccess().getReferenceFeatureCrossReference_1_0()); 
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2113:1: ( RULE_ID )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2114:1: RULE_ID
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2062:1: ( RULE_ID )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2063:1: RULE_ID
             {
              before(grammarAccess.getDisplayElementAccess().getReferenceFeatureIDTerminalRuleCall_1_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__DisplayElement__ReferenceAssignment_14185); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__DisplayElement__ReferenceAssignment_14103); 
              after(grammarAccess.getDisplayElementAccess().getReferenceFeatureIDTerminalRuleCall_1_0_1()); 
 
             }
@@ -5307,24 +5221,24 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__RepeatElement__ReferenceAssignment_1
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2125:1: rule__RepeatElement__ReferenceAssignment_1 : ( ( RULE_ID ) ) ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2074:1: rule__RepeatElement__ReferenceAssignment_1 : ( ( RULE_ID ) ) ;
     public final void rule__RepeatElement__ReferenceAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2129:1: ( ( ( RULE_ID ) ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2130:1: ( ( RULE_ID ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2078:1: ( ( ( RULE_ID ) ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2079:1: ( ( RULE_ID ) )
             {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2130:1: ( ( RULE_ID ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2131:1: ( RULE_ID )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2079:1: ( ( RULE_ID ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2080:1: ( RULE_ID )
             {
              before(grammarAccess.getRepeatElementAccess().getReferenceFeatureCrossReference_1_0()); 
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2132:1: ( RULE_ID )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2133:1: RULE_ID
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2081:1: ( RULE_ID )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2082:1: RULE_ID
             {
              before(grammarAccess.getRepeatElementAccess().getReferenceFeatureIDTerminalRuleCall_1_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__RepeatElement__ReferenceAssignment_14224); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__RepeatElement__ReferenceAssignment_14142); 
              after(grammarAccess.getRepeatElementAccess().getReferenceFeatureIDTerminalRuleCall_1_0_1()); 
 
             }
@@ -5352,20 +5266,20 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start rule__RepeatElement__ContentsAssignment_3
-    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2144:1: rule__RepeatElement__ContentsAssignment_3 : ( ruleSingleElement ) ;
+    // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2093:1: rule__RepeatElement__ContentsAssignment_3 : ( ruleSingleElement ) ;
     public final void rule__RepeatElement__ContentsAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2148:1: ( ( ruleSingleElement ) )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2149:1: ( ruleSingleElement )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2097:1: ( ( ruleSingleElement ) )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2098:1: ( ruleSingleElement )
             {
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2149:1: ( ruleSingleElement )
-            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2150:1: ruleSingleElement
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2098:1: ( ruleSingleElement )
+            // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2099:1: ruleSingleElement
             {
              before(grammarAccess.getRepeatElementAccess().getContentsSingleElementParserRuleCall_3_0()); 
-            pushFollow(FOLLOW_ruleSingleElement_in_rule__RepeatElement__ContentsAssignment_34259);
+            pushFollow(FOLLOW_ruleSingleElement_in_rule__RepeatElement__ContentsAssignment_34177);
             ruleSingleElement();
             _fsp--;
 
@@ -5405,172 +5319,171 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_ruleFeature_in_entryRuleFeature241 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleFeature248 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Feature__Group__0_in_ruleFeature274 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDataType_in_entryRuleDataType303 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleDataType310 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__DataType__Group__0_in_ruleDataType336 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleWebModel_in_entryRuleWebModel363 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleWebModel370 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__WebModel__Group__0_in_ruleWebModel396 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePage_in_entryRulePage423 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulePage430 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Page__Group__0_in_rulePage456 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePageElement_in_entryRulePageElement483 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulePageElement490 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PageElement__Alternatives_in_rulePageElement516 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSingleElement_in_entryRuleSingleElement543 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleSingleElement550 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SingleElement__Alternatives_in_ruleSingleElement576 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleActionElement_in_entryRuleActionElement603 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleActionElement610 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ActionElement__Group__0_in_ruleActionElement636 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDisplayElement_in_entryRuleDisplayElement663 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleDisplayElement670 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__DisplayElement__Group__0_in_ruleDisplayElement696 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRepeatElement_in_entryRuleRepeatElement723 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleRepeatElement730 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RepeatElement__Group__0_in_ruleRepeatElement756 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_11_in_rule__Feature__MultivaluedAlternatives_3_0793 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_12_in_rule__Feature__MultivaluedAlternatives_3_0813 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSingleElement_in_rule__PageElement__Alternatives848 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRepeatElement_in_rule__PageElement__Alternatives865 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleActionElement_in_rule__SingleElement__Alternatives897 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDisplayElement_in_rule__SingleElement__Alternatives914 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Model__Group__0__Impl_in_rule__Model__Group__0944 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Model__Group__1_in_rule__Model__Group__0947 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_13_in_rule__Model__Group__0__Impl975 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Model__Group__1__Impl_in_rule__Model__Group__11006 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_rule__Model__Group__2_in_rule__Model__Group__11009 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Model__NameAssignment_1_in_rule__Model__Group__1__Impl1036 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Model__Group__2__Impl_in_rule__Model__Group__21066 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_rule__Model__Group__3_in_rule__Model__Group__21069 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Model__DomainAssignment_2_in_rule__Model__Group__2__Impl1096 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Model__Group__3__Impl_in_rule__Model__Group__31126 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Model__WebAssignment_3_in_rule__Model__Group__3__Impl1153 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__DomainModel__Group__0__Impl_in_rule__DomainModel__Group__01191 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_rule__DomainModel__Group__1_in_rule__DomainModel__Group__01194 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__DomainModel__Group__1__Impl_in_rule__DomainModel__Group__11252 = new BitSet(new long[]{0x0000000000088002L});
-    public static final BitSet FOLLOW_rule__DomainModel__Group__2_in_rule__DomainModel__Group__11255 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_14_in_rule__DomainModel__Group__1__Impl1283 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__DomainModel__Group__2__Impl_in_rule__DomainModel__Group__21314 = new BitSet(new long[]{0x0000000000080002L});
-    public static final BitSet FOLLOW_rule__DomainModel__Group__3_in_rule__DomainModel__Group__21317 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__DomainModel__EntitiesAssignment_2_in_rule__DomainModel__Group__2__Impl1344 = new BitSet(new long[]{0x0000000000008002L});
-    public static final BitSet FOLLOW_rule__DomainModel__Group__3__Impl_in_rule__DomainModel__Group__31375 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__DomainModel__DataTypesAssignment_3_in_rule__DomainModel__Group__3__Impl1402 = new BitSet(new long[]{0x0000000000080002L});
-    public static final BitSet FOLLOW_rule__Entity__Group__0__Impl_in_rule__Entity__Group__01441 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Entity__Group__1_in_rule__Entity__Group__01444 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_15_in_rule__Entity__Group__0__Impl1472 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Entity__Group__1__Impl_in_rule__Entity__Group__11503 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_rule__Entity__Group__2_in_rule__Entity__Group__11506 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Entity__NameAssignment_1_in_rule__Entity__Group__1__Impl1533 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Entity__Group__2__Impl_in_rule__Entity__Group__21563 = new BitSet(new long[]{0x0000000000020010L});
-    public static final BitSet FOLLOW_rule__Entity__Group__3_in_rule__Entity__Group__21566 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_16_in_rule__Entity__Group__2__Impl1594 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Entity__Group__3__Impl_in_rule__Entity__Group__31625 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_rule__Entity__Group__4_in_rule__Entity__Group__31628 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Entity__FeaturesAssignment_3_in_rule__Entity__Group__3__Impl1655 = new BitSet(new long[]{0x0000000000000012L});
-    public static final BitSet FOLLOW_rule__Entity__Group__4__Impl_in_rule__Entity__Group__41686 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_17_in_rule__Entity__Group__4__Impl1714 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Feature__Group__0__Impl_in_rule__Feature__Group__01755 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_rule__Feature__Group__1_in_rule__Feature__Group__01758 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Feature__NameAssignment_0_in_rule__Feature__Group__0__Impl1785 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Feature__Group__1__Impl_in_rule__Feature__Group__11815 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Feature__Group__2_in_rule__Feature__Group__11818 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_18_in_rule__Feature__Group__1__Impl1846 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Feature__Group__2__Impl_in_rule__Feature__Group__21877 = new BitSet(new long[]{0x0000000000001802L});
-    public static final BitSet FOLLOW_rule__Feature__Group__3_in_rule__Feature__Group__21880 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Feature__TypeAssignment_2_in_rule__Feature__Group__2__Impl1907 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Feature__Group__3__Impl_in_rule__Feature__Group__31937 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Feature__MultivaluedAssignment_3_in_rule__Feature__Group__3__Impl1964 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__DataType__Group__0__Impl_in_rule__DataType__Group__02003 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__DataType__Group__1_in_rule__DataType__Group__02006 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_19_in_rule__DataType__Group__0__Impl2034 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__DataType__Group__1__Impl_in_rule__DataType__Group__12065 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__DataType__NameAssignment_1_in_rule__DataType__Group__1__Impl2092 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__WebModel__Group__0__Impl_in_rule__WebModel__Group__02126 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_rule__WebModel__Group__1_in_rule__WebModel__Group__02129 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__WebModel__Group__1__Impl_in_rule__WebModel__Group__12187 = new BitSet(new long[]{0x0000000000200002L});
-    public static final BitSet FOLLOW_rule__WebModel__Group__2_in_rule__WebModel__Group__12190 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_20_in_rule__WebModel__Group__1__Impl2218 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__WebModel__Group__2__Impl_in_rule__WebModel__Group__22249 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__WebModel__PagesAssignment_2_in_rule__WebModel__Group__2__Impl2276 = new BitSet(new long[]{0x0000000000200002L});
-    public static final BitSet FOLLOW_rule__Page__Group__0__Impl_in_rule__Page__Group__02313 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Page__Group__1_in_rule__Page__Group__02316 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_21_in_rule__Page__Group__0__Impl2344 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Page__Group__1__Impl_in_rule__Page__Group__12375 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_rule__Page__Group__2_in_rule__Page__Group__12378 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Page__NameAssignment_1_in_rule__Page__Group__1__Impl2405 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Page__Group__2__Impl_in_rule__Page__Group__22435 = new BitSet(new long[]{0x0000000000400000L});
-    public static final BitSet FOLLOW_rule__Page__Group__3_in_rule__Page__Group__22438 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_16_in_rule__Page__Group__2__Impl2466 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Page__Group__3__Impl_in_rule__Page__Group__32497 = new BitSet(new long[]{0x0000000000800000L});
-    public static final BitSet FOLLOW_rule__Page__Group__4_in_rule__Page__Group__32500 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_22_in_rule__Page__Group__3__Impl2528 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Page__Group__4__Impl_in_rule__Page__Group__42559 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__Page__Group__5_in_rule__Page__Group__42562 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_23_in_rule__Page__Group__4__Impl2590 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Page__Group__5__Impl_in_rule__Page__Group__52621 = new BitSet(new long[]{0x0000000001000000L});
-    public static final BitSet FOLLOW_rule__Page__Group__6_in_rule__Page__Group__52624 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Page__TitleAssignment_5_in_rule__Page__Group__5__Impl2651 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Page__Group__6__Impl_in_rule__Page__Group__62681 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Page__Group__7_in_rule__Page__Group__62684 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_24_in_rule__Page__Group__6__Impl2712 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Page__Group__7__Impl_in_rule__Page__Group__72743 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_rule__Page__Group__8_in_rule__Page__Group__72746 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Page__EntityAssignment_7_in_rule__Page__Group__7__Impl2773 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Page__Group__8__Impl_in_rule__Page__Group__82803 = new BitSet(new long[]{0x000000000E020000L});
-    public static final BitSet FOLLOW_rule__Page__Group__9_in_rule__Page__Group__82806 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_16_in_rule__Page__Group__8__Impl2834 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Page__Group__9__Impl_in_rule__Page__Group__92865 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_rule__Page__Group__10_in_rule__Page__Group__92868 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Page__ContentsAssignment_9_in_rule__Page__Group__9__Impl2895 = new BitSet(new long[]{0x000000000E000002L});
-    public static final BitSet FOLLOW_rule__Page__Group__10__Impl_in_rule__Page__Group__102926 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_rule__Page__Group__11_in_rule__Page__Group__102929 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_17_in_rule__Page__Group__10__Impl2957 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Page__Group__11__Impl_in_rule__Page__Group__112988 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_17_in_rule__Page__Group__11__Impl3016 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ActionElement__Group__0__Impl_in_rule__ActionElement__Group__03071 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__ActionElement__Group__1_in_rule__ActionElement__Group__03074 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_25_in_rule__ActionElement__Group__0__Impl3102 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ActionElement__Group__1__Impl_in_rule__ActionElement__Group__13133 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ActionElement__NameAssignment_1_in_rule__ActionElement__Group__1__Impl3160 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__DisplayElement__Group__0__Impl_in_rule__DisplayElement__Group__03194 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__DisplayElement__Group__1_in_rule__DisplayElement__Group__03197 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_26_in_rule__DisplayElement__Group__0__Impl3225 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__DisplayElement__Group__1__Impl_in_rule__DisplayElement__Group__13256 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__DisplayElement__ReferenceAssignment_1_in_rule__DisplayElement__Group__1__Impl3283 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RepeatElement__Group__0__Impl_in_rule__RepeatElement__Group__03317 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__RepeatElement__Group__1_in_rule__RepeatElement__Group__03320 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_27_in_rule__RepeatElement__Group__0__Impl3348 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RepeatElement__Group__1__Impl_in_rule__RepeatElement__Group__13379 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_rule__RepeatElement__Group__2_in_rule__RepeatElement__Group__13382 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RepeatElement__ReferenceAssignment_1_in_rule__RepeatElement__Group__1__Impl3409 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RepeatElement__Group__2__Impl_in_rule__RepeatElement__Group__23439 = new BitSet(new long[]{0x0000000006020000L});
-    public static final BitSet FOLLOW_rule__RepeatElement__Group__3_in_rule__RepeatElement__Group__23442 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_16_in_rule__RepeatElement__Group__2__Impl3470 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RepeatElement__Group__3__Impl_in_rule__RepeatElement__Group__33501 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_rule__RepeatElement__Group__4_in_rule__RepeatElement__Group__33504 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RepeatElement__ContentsAssignment_3_in_rule__RepeatElement__Group__3__Impl3531 = new BitSet(new long[]{0x0000000006000002L});
-    public static final BitSet FOLLOW_rule__RepeatElement__Group__4__Impl_in_rule__RepeatElement__Group__43562 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_17_in_rule__RepeatElement__Group__4__Impl3590 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Model__NameAssignment_13636 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDomainModel_in_rule__Model__DomainAssignment_23667 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleWebModel_in_rule__Model__WebAssignment_33698 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEntity_in_rule__DomainModel__EntitiesAssignment_23729 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDataType_in_rule__DomainModel__DataTypesAssignment_33760 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Entity__NameAssignment_13791 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFeature_in_rule__Entity__FeaturesAssignment_33822 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Feature__NameAssignment_03853 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Feature__TypeAssignment_23888 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Feature__MultivaluedAlternatives_3_0_in_rule__Feature__MultivaluedAssignment_33923 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__DataType__NameAssignment_13956 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePage_in_rule__WebModel__PagesAssignment_23987 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Page__NameAssignment_14018 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__Page__TitleAssignment_54049 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Page__EntityAssignment_74084 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePageElement_in_rule__Page__ContentsAssignment_94119 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__ActionElement__NameAssignment_14150 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__DisplayElement__ReferenceAssignment_14185 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__RepeatElement__ReferenceAssignment_14224 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSingleElement_in_rule__RepeatElement__ContentsAssignment_34259 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleType_in_entryRuleType301 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleType308 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Type__Alternatives_in_ruleType334 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDataType_in_entryRuleDataType361 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleDataType368 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DataType__Group__0_in_ruleDataType394 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleWebModel_in_entryRuleWebModel421 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleWebModel428 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__WebModel__Group__0_in_ruleWebModel454 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePage_in_entryRulePage481 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulePage488 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Page__Group__0_in_rulePage514 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePageElement_in_entryRulePageElement541 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulePageElement548 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PageElement__Alternatives_in_rulePageElement574 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSingleElement_in_entryRuleSingleElement601 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleSingleElement608 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SingleElement__Alternatives_in_ruleSingleElement634 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleActionElement_in_entryRuleActionElement661 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleActionElement668 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ActionElement__Group__0_in_ruleActionElement694 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDisplayElement_in_entryRuleDisplayElement721 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleDisplayElement728 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DisplayElement__Group__0_in_ruleDisplayElement754 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRepeatElement_in_entryRuleRepeatElement781 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleRepeatElement788 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RepeatElement__Group__0_in_ruleRepeatElement814 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_11_in_rule__Feature__MultivaluedAlternatives_3_0851 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_12_in_rule__Feature__MultivaluedAlternatives_3_0871 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEntity_in_rule__Type__Alternatives905 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDataType_in_rule__Type__Alternatives922 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSingleElement_in_rule__PageElement__Alternatives954 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRepeatElement_in_rule__PageElement__Alternatives971 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleActionElement_in_rule__SingleElement__Alternatives1003 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDisplayElement_in_rule__SingleElement__Alternatives1020 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Model__Group__0__Impl_in_rule__Model__Group__01050 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Model__Group__1_in_rule__Model__Group__01053 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_13_in_rule__Model__Group__0__Impl1081 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Model__Group__1__Impl_in_rule__Model__Group__11112 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_rule__Model__Group__2_in_rule__Model__Group__11115 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Model__NameAssignment_1_in_rule__Model__Group__1__Impl1142 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Model__Group__2__Impl_in_rule__Model__Group__21172 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_rule__Model__Group__3_in_rule__Model__Group__21175 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Model__DomainAssignment_2_in_rule__Model__Group__2__Impl1202 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Model__Group__3__Impl_in_rule__Model__Group__31232 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Model__WebAssignment_3_in_rule__Model__Group__3__Impl1259 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DomainModel__Group__0__Impl_in_rule__DomainModel__Group__01297 = new BitSet(new long[]{0x0000000000088000L});
+    public static final BitSet FOLLOW_rule__DomainModel__Group__1_in_rule__DomainModel__Group__01300 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_14_in_rule__DomainModel__Group__0__Impl1328 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DomainModel__Group__1__Impl_in_rule__DomainModel__Group__11359 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DomainModel__TypesAssignment_1_in_rule__DomainModel__Group__1__Impl1388 = new BitSet(new long[]{0x0000000000088002L});
+    public static final BitSet FOLLOW_rule__DomainModel__TypesAssignment_1_in_rule__DomainModel__Group__1__Impl1400 = new BitSet(new long[]{0x0000000000088002L});
+    public static final BitSet FOLLOW_rule__Entity__Group__0__Impl_in_rule__Entity__Group__01437 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Entity__Group__1_in_rule__Entity__Group__01440 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_15_in_rule__Entity__Group__0__Impl1468 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Entity__Group__1__Impl_in_rule__Entity__Group__11499 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_rule__Entity__Group__2_in_rule__Entity__Group__11502 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Entity__NameAssignment_1_in_rule__Entity__Group__1__Impl1529 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Entity__Group__2__Impl_in_rule__Entity__Group__21559 = new BitSet(new long[]{0x0000000000020010L});
+    public static final BitSet FOLLOW_rule__Entity__Group__3_in_rule__Entity__Group__21562 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_16_in_rule__Entity__Group__2__Impl1590 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Entity__Group__3__Impl_in_rule__Entity__Group__31621 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_rule__Entity__Group__4_in_rule__Entity__Group__31624 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Entity__FeaturesAssignment_3_in_rule__Entity__Group__3__Impl1651 = new BitSet(new long[]{0x0000000000000012L});
+    public static final BitSet FOLLOW_rule__Entity__Group__4__Impl_in_rule__Entity__Group__41682 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_17_in_rule__Entity__Group__4__Impl1710 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Feature__Group__0__Impl_in_rule__Feature__Group__01751 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_rule__Feature__Group__1_in_rule__Feature__Group__01754 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Feature__NameAssignment_0_in_rule__Feature__Group__0__Impl1781 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Feature__Group__1__Impl_in_rule__Feature__Group__11811 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Feature__Group__2_in_rule__Feature__Group__11814 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_18_in_rule__Feature__Group__1__Impl1842 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Feature__Group__2__Impl_in_rule__Feature__Group__21873 = new BitSet(new long[]{0x0000000000001802L});
+    public static final BitSet FOLLOW_rule__Feature__Group__3_in_rule__Feature__Group__21876 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Feature__TypeAssignment_2_in_rule__Feature__Group__2__Impl1903 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Feature__Group__3__Impl_in_rule__Feature__Group__31933 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Feature__MultivaluedAssignment_3_in_rule__Feature__Group__3__Impl1960 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DataType__Group__0__Impl_in_rule__DataType__Group__01999 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__DataType__Group__1_in_rule__DataType__Group__02002 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_19_in_rule__DataType__Group__0__Impl2030 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DataType__Group__1__Impl_in_rule__DataType__Group__12061 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DataType__NameAssignment_1_in_rule__DataType__Group__1__Impl2088 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__WebModel__Group__0__Impl_in_rule__WebModel__Group__02122 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_rule__WebModel__Group__1_in_rule__WebModel__Group__02125 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_20_in_rule__WebModel__Group__0__Impl2153 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__WebModel__Group__1__Impl_in_rule__WebModel__Group__12184 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__WebModel__PagesAssignment_1_in_rule__WebModel__Group__1__Impl2213 = new BitSet(new long[]{0x0000000000200002L});
+    public static final BitSet FOLLOW_rule__WebModel__PagesAssignment_1_in_rule__WebModel__Group__1__Impl2225 = new BitSet(new long[]{0x0000000000200002L});
+    public static final BitSet FOLLOW_rule__Page__Group__0__Impl_in_rule__Page__Group__02262 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Page__Group__1_in_rule__Page__Group__02265 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_21_in_rule__Page__Group__0__Impl2293 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Page__Group__1__Impl_in_rule__Page__Group__12324 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_rule__Page__Group__2_in_rule__Page__Group__12327 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Page__NameAssignment_1_in_rule__Page__Group__1__Impl2354 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Page__Group__2__Impl_in_rule__Page__Group__22384 = new BitSet(new long[]{0x0000000000400000L});
+    public static final BitSet FOLLOW_rule__Page__Group__3_in_rule__Page__Group__22387 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_16_in_rule__Page__Group__2__Impl2415 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Page__Group__3__Impl_in_rule__Page__Group__32446 = new BitSet(new long[]{0x0000000000800000L});
+    public static final BitSet FOLLOW_rule__Page__Group__4_in_rule__Page__Group__32449 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_22_in_rule__Page__Group__3__Impl2477 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Page__Group__4__Impl_in_rule__Page__Group__42508 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__Page__Group__5_in_rule__Page__Group__42511 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_23_in_rule__Page__Group__4__Impl2539 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Page__Group__5__Impl_in_rule__Page__Group__52570 = new BitSet(new long[]{0x0000000001000000L});
+    public static final BitSet FOLLOW_rule__Page__Group__6_in_rule__Page__Group__52573 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Page__TitleAssignment_5_in_rule__Page__Group__5__Impl2600 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Page__Group__6__Impl_in_rule__Page__Group__62630 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Page__Group__7_in_rule__Page__Group__62633 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_24_in_rule__Page__Group__6__Impl2661 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Page__Group__7__Impl_in_rule__Page__Group__72692 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_rule__Page__Group__8_in_rule__Page__Group__72695 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Page__EntityAssignment_7_in_rule__Page__Group__7__Impl2722 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Page__Group__8__Impl_in_rule__Page__Group__82752 = new BitSet(new long[]{0x000000000E020000L});
+    public static final BitSet FOLLOW_rule__Page__Group__9_in_rule__Page__Group__82755 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_16_in_rule__Page__Group__8__Impl2783 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Page__Group__9__Impl_in_rule__Page__Group__92814 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_rule__Page__Group__10_in_rule__Page__Group__92817 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Page__ContentsAssignment_9_in_rule__Page__Group__9__Impl2844 = new BitSet(new long[]{0x000000000E000002L});
+    public static final BitSet FOLLOW_rule__Page__Group__10__Impl_in_rule__Page__Group__102875 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_rule__Page__Group__11_in_rule__Page__Group__102878 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_17_in_rule__Page__Group__10__Impl2906 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Page__Group__11__Impl_in_rule__Page__Group__112937 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_17_in_rule__Page__Group__11__Impl2965 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ActionElement__Group__0__Impl_in_rule__ActionElement__Group__03020 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__ActionElement__Group__1_in_rule__ActionElement__Group__03023 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_25_in_rule__ActionElement__Group__0__Impl3051 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ActionElement__Group__1__Impl_in_rule__ActionElement__Group__13082 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ActionElement__NameAssignment_1_in_rule__ActionElement__Group__1__Impl3109 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DisplayElement__Group__0__Impl_in_rule__DisplayElement__Group__03143 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__DisplayElement__Group__1_in_rule__DisplayElement__Group__03146 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_26_in_rule__DisplayElement__Group__0__Impl3174 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DisplayElement__Group__1__Impl_in_rule__DisplayElement__Group__13205 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__DisplayElement__ReferenceAssignment_1_in_rule__DisplayElement__Group__1__Impl3232 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RepeatElement__Group__0__Impl_in_rule__RepeatElement__Group__03266 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__RepeatElement__Group__1_in_rule__RepeatElement__Group__03269 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_27_in_rule__RepeatElement__Group__0__Impl3297 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RepeatElement__Group__1__Impl_in_rule__RepeatElement__Group__13328 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_rule__RepeatElement__Group__2_in_rule__RepeatElement__Group__13331 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RepeatElement__ReferenceAssignment_1_in_rule__RepeatElement__Group__1__Impl3358 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RepeatElement__Group__2__Impl_in_rule__RepeatElement__Group__23388 = new BitSet(new long[]{0x0000000006020000L});
+    public static final BitSet FOLLOW_rule__RepeatElement__Group__3_in_rule__RepeatElement__Group__23391 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_16_in_rule__RepeatElement__Group__2__Impl3419 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RepeatElement__Group__3__Impl_in_rule__RepeatElement__Group__33450 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_rule__RepeatElement__Group__4_in_rule__RepeatElement__Group__33453 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RepeatElement__ContentsAssignment_3_in_rule__RepeatElement__Group__3__Impl3480 = new BitSet(new long[]{0x0000000006000002L});
+    public static final BitSet FOLLOW_rule__RepeatElement__Group__4__Impl_in_rule__RepeatElement__Group__43511 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_17_in_rule__RepeatElement__Group__4__Impl3539 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Model__NameAssignment_13585 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDomainModel_in_rule__Model__DomainAssignment_23616 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleWebModel_in_rule__Model__WebAssignment_33647 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleType_in_rule__DomainModel__TypesAssignment_13678 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Entity__NameAssignment_13709 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFeature_in_rule__Entity__FeaturesAssignment_33740 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Feature__NameAssignment_03771 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Feature__TypeAssignment_23806 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Feature__MultivaluedAlternatives_3_0_in_rule__Feature__MultivaluedAssignment_33841 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__DataType__NameAssignment_13874 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePage_in_rule__WebModel__PagesAssignment_13905 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Page__NameAssignment_13936 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__Page__TitleAssignment_53967 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Page__EntityAssignment_74002 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePageElement_in_rule__Page__ContentsAssignment_94037 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__ActionElement__NameAssignment_14068 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__DisplayElement__ReferenceAssignment_14103 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__RepeatElement__ReferenceAssignment_14142 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSingleElement_in_rule__RepeatElement__ContentsAssignment_34177 = new BitSet(new long[]{0x0000000000000002L});
 
 }

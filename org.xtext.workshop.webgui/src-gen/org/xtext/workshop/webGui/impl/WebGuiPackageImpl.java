@@ -245,19 +245,9 @@ public class WebGuiPackageImpl extends EPackageImpl implements WebGuiPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getDomainModel_Entities()
+  public EReference getDomainModel_Types()
   {
     return (EReference)domainModelEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getDomainModel_DataTypes()
-  {
-    return (EReference)domainModelEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -546,8 +536,7 @@ public class WebGuiPackageImpl extends EPackageImpl implements WebGuiPackage
     createEReference(modelEClass, MODEL__WEB);
 
     domainModelEClass = createEClass(DOMAIN_MODEL);
-    createEReference(domainModelEClass, DOMAIN_MODEL__ENTITIES);
-    createEReference(domainModelEClass, DOMAIN_MODEL__DATA_TYPES);
+    createEReference(domainModelEClass, DOMAIN_MODEL__TYPES);
 
     entityEClass = createEClass(ENTITY);
     createEReference(entityEClass, ENTITY__FEATURES);
@@ -629,8 +618,7 @@ public class WebGuiPackageImpl extends EPackageImpl implements WebGuiPackage
     initEReference(getModel_Web(), this.getWebModel(), null, "web", null, 0, 1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(domainModelEClass, DomainModel.class, "DomainModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getDomainModel_Entities(), this.getEntity(), null, "entities", null, 0, -1, DomainModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getDomainModel_DataTypes(), this.getDataType(), null, "dataTypes", null, 0, -1, DomainModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getDomainModel_Types(), this.getType(), null, "types", null, 0, -1, DomainModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(entityEClass, Entity.class, "Entity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getEntity_Features(), this.getFeature(), null, "features", null, 0, -1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

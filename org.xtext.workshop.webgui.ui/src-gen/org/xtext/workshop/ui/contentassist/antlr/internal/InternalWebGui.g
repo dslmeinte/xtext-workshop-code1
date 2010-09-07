@@ -169,6 +169,32 @@ finally {
 
 
 
+// Entry rule entryRuleType
+entryRuleType 
+:
+{ before(grammarAccess.getTypeRule()); }
+	 ruleType
+{ after(grammarAccess.getTypeRule()); } 
+	 EOF 
+;
+
+// Rule Type
+ruleType
+    @init {
+		int stackSize = keepStackSize();
+    }
+	:
+(
+{ before(grammarAccess.getTypeAccess().getAlternatives()); }
+(rule__Type__Alternatives)
+{ after(grammarAccess.getTypeAccess().getAlternatives()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
 
 
 // Entry rule entryRuleDataType
@@ -422,6 +448,27 @@ finally {
 	restoreStackSize(stackSize);
 }
 
+rule__Type__Alternatives
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getTypeAccess().getEntityParserRuleCall_0()); }
+	ruleEntity
+{ after(grammarAccess.getTypeAccess().getEntityParserRuleCall_0()); }
+)
+
+    |(
+{ before(grammarAccess.getTypeAccess().getDataTypeParserRuleCall_1()); }
+	ruleDataType
+{ after(grammarAccess.getTypeAccess().getDataTypeParserRuleCall_1()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
 
 rule__PageElement__Alternatives
     @init {
@@ -612,11 +659,11 @@ rule__DomainModel__Group__0__Impl
     }
 :
 (
-{ before(grammarAccess.getDomainModelAccess().getDomainModelAction_0()); }
-(
+{ before(grammarAccess.getDomainModelAccess().getDomainKeyword_0()); }
 
-)
-{ after(grammarAccess.getDomainModelAccess().getDomainModelAction_0()); }
+	'domain:' 
+
+{ after(grammarAccess.getDomainModelAccess().getDomainKeyword_0()); }
 )
 
 ;
@@ -631,7 +678,6 @@ rule__DomainModel__Group__1
     }
 :
 	rule__DomainModel__Group__1__Impl
-	rule__DomainModel__Group__2
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -643,78 +689,22 @@ rule__DomainModel__Group__1__Impl
     }
 :
 (
-{ before(grammarAccess.getDomainModelAccess().getDomainKeyword_1()); }
-
-	'domain:' 
-
-{ after(grammarAccess.getDomainModelAccess().getDomainKeyword_1()); }
-)
-
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-
-rule__DomainModel__Group__2
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-	rule__DomainModel__Group__2__Impl
-	rule__DomainModel__Group__3
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__DomainModel__Group__2__Impl
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
 (
-{ before(grammarAccess.getDomainModelAccess().getEntitiesAssignment_2()); }
-(rule__DomainModel__EntitiesAssignment_2)*
-{ after(grammarAccess.getDomainModelAccess().getEntitiesAssignment_2()); }
+{ before(grammarAccess.getDomainModelAccess().getTypesAssignment_1()); }
+(rule__DomainModel__TypesAssignment_1)
+{ after(grammarAccess.getDomainModelAccess().getTypesAssignment_1()); }
 )
-
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-
-rule__DomainModel__Group__3
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-	rule__DomainModel__Group__3__Impl
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__DomainModel__Group__3__Impl
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
 (
-{ before(grammarAccess.getDomainModelAccess().getDataTypesAssignment_3()); }
-(rule__DomainModel__DataTypesAssignment_3)*
-{ after(grammarAccess.getDomainModelAccess().getDataTypesAssignment_3()); }
+{ before(grammarAccess.getDomainModelAccess().getTypesAssignment_1()); }
+(rule__DomainModel__TypesAssignment_1)*
+{ after(grammarAccess.getDomainModelAccess().getTypesAssignment_1()); }
+)
 )
 
 ;
 finally {
 	restoreStackSize(stackSize);
 }
-
-
-
-
 
 
 
@@ -1087,11 +1077,11 @@ rule__WebModel__Group__0__Impl
     }
 :
 (
-{ before(grammarAccess.getWebModelAccess().getWebModelAction_0()); }
-(
+{ before(grammarAccess.getWebModelAccess().getWebKeyword_0()); }
 
-)
-{ after(grammarAccess.getWebModelAccess().getWebModelAction_0()); }
+	'web:' 
+
+{ after(grammarAccess.getWebModelAccess().getWebKeyword_0()); }
 )
 
 ;
@@ -1106,7 +1096,6 @@ rule__WebModel__Group__1
     }
 :
 	rule__WebModel__Group__1__Impl
-	rule__WebModel__Group__2
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -1118,47 +1107,22 @@ rule__WebModel__Group__1__Impl
     }
 :
 (
-{ before(grammarAccess.getWebModelAccess().getWebKeyword_1()); }
-
-	'web:' 
-
-{ after(grammarAccess.getWebModelAccess().getWebKeyword_1()); }
-)
-
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-
-rule__WebModel__Group__2
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-	rule__WebModel__Group__2__Impl
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__WebModel__Group__2__Impl
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
 (
-{ before(grammarAccess.getWebModelAccess().getPagesAssignment_2()); }
-(rule__WebModel__PagesAssignment_2)*
-{ after(grammarAccess.getWebModelAccess().getPagesAssignment_2()); }
+{ before(grammarAccess.getWebModelAccess().getPagesAssignment_1()); }
+(rule__WebModel__PagesAssignment_1)
+{ after(grammarAccess.getWebModelAccess().getPagesAssignment_1()); }
+)
+(
+{ before(grammarAccess.getWebModelAccess().getPagesAssignment_1()); }
+(rule__WebModel__PagesAssignment_1)*
+{ after(grammarAccess.getWebModelAccess().getPagesAssignment_1()); }
+)
 )
 
 ;
 finally {
 	restoreStackSize(stackSize);
 }
-
-
 
 
 
@@ -1884,29 +1848,14 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__DomainModel__EntitiesAssignment_2
+rule__DomainModel__TypesAssignment_1
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getDomainModelAccess().getEntitiesEntityParserRuleCall_2_0()); }
-	ruleEntity{ after(grammarAccess.getDomainModelAccess().getEntitiesEntityParserRuleCall_2_0()); }
-)
-
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__DomainModel__DataTypesAssignment_3
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-(
-{ before(grammarAccess.getDomainModelAccess().getDataTypesDataTypeParserRuleCall_3_0()); }
-	ruleDataType{ after(grammarAccess.getDomainModelAccess().getDataTypesDataTypeParserRuleCall_3_0()); }
+{ before(grammarAccess.getDomainModelAccess().getTypesTypeParserRuleCall_1_0()); }
+	ruleType{ after(grammarAccess.getDomainModelAccess().getTypesTypeParserRuleCall_1_0()); }
 )
 
 ;
@@ -2009,14 +1958,14 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__WebModel__PagesAssignment_2
+rule__WebModel__PagesAssignment_1
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getWebModelAccess().getPagesPageParserRuleCall_2_0()); }
-	rulePage{ after(grammarAccess.getWebModelAccess().getPagesPageParserRuleCall_2_0()); }
+{ before(grammarAccess.getWebModelAccess().getPagesPageParserRuleCall_1_0()); }
+	rulePage{ after(grammarAccess.getWebModelAccess().getPagesPageParserRuleCall_1_0()); }
 )
 
 ;
