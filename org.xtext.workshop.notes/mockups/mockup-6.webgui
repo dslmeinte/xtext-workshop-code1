@@ -1,0 +1,56 @@
+model IYou
+
+domain:
+
+   entity Person {
+      name        : string
+      birth       : date
+      email       : string
+      address     : Address
+      salary      : Salary
+      recommends  : Person(s)
+   }
+
+   entity Address {
+      street    : string
+      city      : string
+      zipcode   : Zipcode
+   }
+   
+   entity Zipcode {
+      area_code   : number
+      street_part : string
+   }
+   
+   entity Salary {
+      holiday_allowance : number
+      monthly_pay       : number
+      bonus             : number
+      
+      yearly_salary     = 12 * monthly_pay + holiday_allowance + bonus
+       
+   }
+   
+   type string
+   type date
+   type number
+  
+   
+web:
+
+   page Person {
+      title = "Person details"
+      context = Person
+      
+      show name
+      show email
+      show address.street
+      show address.city
+      show address.zipcode.area_code 
+      show address.zipcode.street_part
+      
+      show recommends
+
+      action home
+   }
+

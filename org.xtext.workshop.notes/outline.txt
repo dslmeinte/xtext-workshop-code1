@@ -159,6 +159,7 @@ recap:
    - modularizing DSL
    - refactoring support (later)
    - add instance data via resource provider
+   - code templates
    
    - UML reader
    - transformations with Xtend

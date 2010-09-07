@@ -1,0 +1,34 @@
+model IYou
+
+domain:
+
+   entity Person {
+      name        : string
+      birth       : date
+      email       : string
+      address     : Address
+      recommends  : Person(s)
+   }
+
+   entity Address {
+      street    : string
+      city      : string
+      zipcode   : string
+   }
+   
+   type string
+   type date
+  
+   
+web:
+
+   page Person {
+      title = "Person details"
+      context = Person
+      
+      show name
+      show email
+
+      action home
+
+   }
