@@ -29,7 +29,7 @@ import org.xtext.workshop.webGui.WebGuiPackage;
  *
  * @generated
  */
-public class DisplayElementImpl extends SingleElementImpl implements DisplayElement
+public class DisplayElementImpl extends PageElementImpl implements DisplayElement
 {
   /**
    * The cached value of the '{@link #getReference() <em>Reference</em>}' reference.

@@ -27,7 +27,7 @@ import org.xtext.workshop.webGui.WebGuiPackage;
  *
  * @generated
  */
-public class ActionElementImpl extends SingleElementImpl implements ActionElement
+public class ActionElementImpl extends PageElementImpl implements ActionElement
 {
   /**
    * The default value of the '{@link #getName() <em>Name</em>}' attribute.

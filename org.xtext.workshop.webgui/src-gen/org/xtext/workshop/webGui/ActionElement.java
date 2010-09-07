@@ -22,7 +22,7 @@ package org.xtext.workshop.webGui;
  * @model
  * @generated
  */
-public interface ActionElement extends SingleElement
+public interface ActionElement extends PageElement
 {
   /**
    * Returns the value of the '<em><b>Name</b></em>' attribute.

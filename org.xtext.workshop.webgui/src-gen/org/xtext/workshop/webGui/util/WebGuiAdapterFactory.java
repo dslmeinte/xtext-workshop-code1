@@ -123,11 +123,6 @@ public class WebGuiAdapterFactory extends AdapterFactoryImpl
         return createPageElementAdapter();
       }
       @Override
-      public Adapter caseSingleElement(SingleElement object)
-      {
-        return createSingleElementAdapter();
-      }
-      @Override
       public Adapter caseActionElement(ActionElement object)
       {
         return createActionElementAdapter();
@@ -136,11 +131,6 @@ public class WebGuiAdapterFactory extends AdapterFactoryImpl
       public Adapter caseDisplayElement(DisplayElement object)
       {
         return createDisplayElementAdapter();
-      }
-      @Override
-      public Adapter caseRepeatElement(RepeatElement object)
-      {
-        return createRepeatElementAdapter();
       }
       @Override
       public Adapter defaultCase(EObject object)
@@ -300,21 +290,6 @@ public class WebGuiAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.workshop.webGui.SingleElement <em>Single Element</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.workshop.webGui.SingleElement
-   * @generated
-   */
-  public Adapter createSingleElementAdapter()
-  {
-    return null;
-  }
-
-  /**
    * Creates a new adapter for an object of class '{@link org.xtext.workshop.webGui.ActionElement <em>Action Element</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -340,21 +315,6 @@ public class WebGuiAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createDisplayElementAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.workshop.webGui.RepeatElement <em>Repeat Element</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.workshop.webGui.RepeatElement
-   * @generated
-   */
-  public Adapter createRepeatElementAdapter()
   {
     return null;
   }

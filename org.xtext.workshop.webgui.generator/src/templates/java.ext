@@ -28,6 +28,5 @@ String toJavaType(Feature this) :
         : type.toJavaType();
 
 Boolean hasMultiValued(Entity this) :
-	exists( f | f.multivalued )
-	;
+	features.exists( f | f.multivalued );
 

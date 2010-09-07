@@ -14,7 +14,6 @@ import org.xtext.workshop.webGui.Feature;
 import org.xtext.workshop.webGui.Model;
 import org.xtext.workshop.webGui.Page;
 import org.xtext.workshop.webGui.PageElement;
-import org.xtext.workshop.webGui.RepeatElement;
 import org.xtext.workshop.webGui.WebModel;
 
 import com.google.inject.Inject;
@@ -55,10 +54,6 @@ public class WebGuiLabelProvider extends DefaultEObjectLabelProvider {
 	
 	String text(DisplayElement elm) {
 		return "show: " + elm.getReference().getName();
-	}
-
-	String text(RepeatElement elm) {
-		return "repeat for: " + elm.getReference().getName();
 	}
 
     String image(Model elm) {

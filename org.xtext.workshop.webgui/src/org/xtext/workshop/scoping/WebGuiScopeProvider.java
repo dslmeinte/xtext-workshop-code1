@@ -8,7 +8,6 @@ import org.eclipse.xtext.scoping.impl.AbstractDeclarativeScopeProvider;
 import org.xtext.workshop.webGui.Entity;
 import org.xtext.workshop.webGui.Feature;
 import org.xtext.workshop.webGui.Page;
-import org.xtext.workshop.webGui.RepeatElement;
 
 /**
  * This class contains custom scoping description.
@@ -51,24 +50,13 @@ public class WebGuiScopeProvider extends AbstractDeclarativeScopeProvider {
 	}
 
 	private IScope getFeatureScope(final Page page) {
+		IScope scope = IScope.NULLSCOPE;
+		
 		Entity entity = page.getEntity();
-		return (entity != null) ? scopeFor(entity.getFeatures()) : IScope.NULLSCOPE;
-	}
-
-	public IScope scope_DisplayElement_reference(final RepeatElement context, EReference reference) {
-		return getFeatureScope(context);
-	}
-
-	public IScope scope_InputElement_reference(final RepeatElement context, EReference reference) {
-		return getFeatureScope(context);
-	}
-
-	private IScope getFeatureScope(final RepeatElement context) {
-		Feature reference = context.getReference();
-		return
-			(reference != null && reference.getType() instanceof Entity)
-				? scopeFor( ((Entity) reference.getType()).getFeatures() )
-				: IScope.NULLSCOPE;
+		if (entity != null) {
+			scope = scopeFor(entity.getFeatures());
+		}
+		return scope;
 	}
 
 }

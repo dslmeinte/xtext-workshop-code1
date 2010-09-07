@@ -712,49 +712,7 @@ rulePageElement returns [EObject current=null]
     }:
 (
     { 
-        currentNode=createCompositeNode(grammarAccess.getPageElementAccess().getSingleElementParserRuleCall_0(), currentNode); 
-    }
-    this_SingleElement_0=ruleSingleElement
-    { 
-        $current = $this_SingleElement_0.current; 
-        currentNode = currentNode.getParent();
-    }
-
-    |
-    { 
-        currentNode=createCompositeNode(grammarAccess.getPageElementAccess().getRepeatElementParserRuleCall_1(), currentNode); 
-    }
-    this_RepeatElement_1=ruleRepeatElement
-    { 
-        $current = $this_RepeatElement_1.current; 
-        currentNode = currentNode.getParent();
-    }
-)
-;
-
-
-
-
-
-// Entry rule entryRuleSingleElement
-entryRuleSingleElement returns [EObject current=null] 
-	:
-	{ currentNode = createCompositeNode(grammarAccess.getSingleElementRule(), currentNode); }
-	 iv_ruleSingleElement=ruleSingleElement 
-	 { $current=$iv_ruleSingleElement.current; } 
-	 EOF 
-;
-
-// Rule SingleElement
-ruleSingleElement returns [EObject current=null] 
-    @init { EObject temp=null; setCurrentLookahead(); resetLookahead(); 
-    }
-    @after { resetLookahead(); 
-    	lastConsumedNode = currentNode;
-    }:
-(
-    { 
-        currentNode=createCompositeNode(grammarAccess.getSingleElementAccess().getActionElementParserRuleCall_0(), currentNode); 
+        currentNode=createCompositeNode(grammarAccess.getPageElementAccess().getActionElementParserRuleCall_0(), currentNode); 
     }
     this_ActionElement_0=ruleActionElement
     { 
@@ -764,7 +722,7 @@ ruleSingleElement returns [EObject current=null]
 
     |
     { 
-        currentNode=createCompositeNode(grammarAccess.getSingleElementAccess().getDisplayElementParserRuleCall_1(), currentNode); 
+        currentNode=createCompositeNode(grammarAccess.getPageElementAccess().getDisplayElementParserRuleCall_1(), currentNode); 
     }
     this_DisplayElement_1=ruleDisplayElement
     { 
@@ -864,79 +822,6 @@ ruleDisplayElement returns [EObject current=null]
 
 )
 ))
-;
-
-
-
-
-
-// Entry rule entryRuleRepeatElement
-entryRuleRepeatElement returns [EObject current=null] 
-	:
-	{ currentNode = createCompositeNode(grammarAccess.getRepeatElementRule(), currentNode); }
-	 iv_ruleRepeatElement=ruleRepeatElement 
-	 { $current=$iv_ruleRepeatElement.current; } 
-	 EOF 
-;
-
-// Rule RepeatElement
-ruleRepeatElement returns [EObject current=null] 
-    @init { EObject temp=null; setCurrentLookahead(); resetLookahead(); 
-    }
-    @after { resetLookahead(); 
-    	lastConsumedNode = currentNode;
-    }:
-(	'repeat for' 
-    {
-        createLeafNode(grammarAccess.getRepeatElementAccess().getRepeatForKeyword_0(), null); 
-    }
-(
-(
-		{
-			if ($current==null) {
-	            $current = factory.create(grammarAccess.getRepeatElementRule().getType().getClassifier());
-	            associateNodeWithAstElement(currentNode, $current);
-	        }
-        }
-	RULE_ID
-	{
-		createLeafNode(grammarAccess.getRepeatElementAccess().getReferenceFeatureCrossReference_1_0(), "reference"); 
-	}
-
-)
-)	'{' 
-    {
-        createLeafNode(grammarAccess.getRepeatElementAccess().getLeftCurlyBracketKeyword_2(), null); 
-    }
-(
-(
-		{ 
-	        currentNode=createCompositeNode(grammarAccess.getRepeatElementAccess().getContentsSingleElementParserRuleCall_3_0(), currentNode); 
-	    }
-		lv_contents_3_0=ruleSingleElement		{
-	        if ($current==null) {
-	            $current = factory.create(grammarAccess.getRepeatElementRule().getType().getClassifier());
-	            associateNodeWithAstElement(currentNode.getParent(), $current);
-	        }
-	        try {
-	       		add(
-	       			$current, 
-	       			"contents",
-	        		lv_contents_3_0, 
-	        		"SingleElement", 
-	        		currentNode);
-	        } catch (ValueConverterException vce) {
-				handleValueConverterException(vce);
-	        }
-	        currentNode = currentNode.getParent();
-	    }
-
-)
-)*	'}' 
-    {
-        createLeafNode(grammarAccess.getRepeatElementAccess().getRightCurlyBracketKeyword_4(), null); 
-    }
-)
 ;
 
 

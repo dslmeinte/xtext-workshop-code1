@@ -29,22 +29,5 @@
    <tr> <td span="2"> <i>«reference.name»</i> </td></tr>
 «ENDDEFINE»
 
-«DEFINE element FOR RepeatElement»
-   «IF reference.multivalued»
-   <td></td>
-   <td>
-   <table>
-   «EXPAND element FOREACH contents»
-   <tr> <td>&nbsp;<td> </tr>
-   «EXPAND element FOREACH contents»
-   <tr> <td>&nbsp;</td> </tr>
-   «EXPAND element FOREACH contents»
-  </table>
-  </td>
-   «ELSE»
-   «EXPAND element FOREACH contents»
-   «ENDIF»
-«ENDDEFINE»
-
 
     

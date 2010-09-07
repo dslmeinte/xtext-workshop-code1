@@ -8,7 +8,6 @@ RULE_ML_COMMENT=7
 'context'=24
 '}'=15
 'model'=11
-'repeat for'=27
 'type'=19
 'domain:'=12
 'action'=25

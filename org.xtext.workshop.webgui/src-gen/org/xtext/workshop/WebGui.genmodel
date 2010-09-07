@@ -39,16 +39,11 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference WebGui.ecore#//Page/contents"/>
     </genClasses>
     <genClasses ecoreClass="WebGui.ecore#//PageElement"/>
-    <genClasses ecoreClass="WebGui.ecore#//SingleElement"/>
     <genClasses ecoreClass="WebGui.ecore#//ActionElement">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute WebGui.ecore#//ActionElement/name"/>
     </genClasses>
     <genClasses ecoreClass="WebGui.ecore#//DisplayElement">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference WebGui.ecore#//DisplayElement/reference"/>
-    </genClasses>
-    <genClasses ecoreClass="WebGui.ecore#//RepeatElement">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference WebGui.ecore#//RepeatElement/reference"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference WebGui.ecore#//RepeatElement/contents"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

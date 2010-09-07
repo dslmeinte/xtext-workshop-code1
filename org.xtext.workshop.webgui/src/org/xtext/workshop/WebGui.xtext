@@ -60,9 +60,6 @@ Page:
     // (initial) scope for PageElement-s: features of referenced Entity
 
 PageElement:
-    SingleElement | RepeatElement;
-
-SingleElement:
     ActionElement | DisplayElement;
 
 ActionElement:	// ~ link
@@ -70,13 +67,6 @@ ActionElement:	// ~ link
 
 DisplayElement:	// ~ display field
     'show' reference=[Feature];
-    // scope is narrowed to referenced Feature
-
-RepeatElement:	// ~ for loop
-    'repeat for' reference=[Feature] 
-    '{'
-        (contents+=SingleElement)*
-    '}';
     // scope is narrowed to referenced Feature
 
 

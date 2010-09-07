@@ -22,7 +22,7 @@ package org.xtext.workshop.webGui;
  * @model
  * @generated
  */
-public interface DisplayElement extends SingleElement
+public interface DisplayElement extends PageElement
 {
   /**
    * Returns the value of the '<em><b>Reference</b></em>' reference.
