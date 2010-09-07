@@ -262,21 +262,20 @@ public class WebGuiGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cEqualsSignKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		private final Assignment cTitleAssignment_5 = (Assignment)cGroup.eContents().get(5);
 		private final RuleCall cTitleSTRINGTerminalRuleCall_5_0 = (RuleCall)cTitleAssignment_5.eContents().get(0);
-		private final Keyword cContentForKeyword_6 = (Keyword)cGroup.eContents().get(6);
-		private final Assignment cEntityAssignment_7 = (Assignment)cGroup.eContents().get(7);
-		private final CrossReference cEntityEntityCrossReference_7_0 = (CrossReference)cEntityAssignment_7.eContents().get(0);
-		private final RuleCall cEntityEntityIDTerminalRuleCall_7_0_1 = (RuleCall)cEntityEntityCrossReference_7_0.eContents().get(1);
-		private final Keyword cLeftCurlyBracketKeyword_8 = (Keyword)cGroup.eContents().get(8);
+		private final Keyword cContextKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Keyword cEqualsSignKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		private final Assignment cEntityAssignment_8 = (Assignment)cGroup.eContents().get(8);
+		private final CrossReference cEntityEntityCrossReference_8_0 = (CrossReference)cEntityAssignment_8.eContents().get(0);
+		private final RuleCall cEntityEntityIDTerminalRuleCall_8_0_1 = (RuleCall)cEntityEntityCrossReference_8_0.eContents().get(1);
 		private final Assignment cContentsAssignment_9 = (Assignment)cGroup.eContents().get(9);
 		private final RuleCall cContentsPageElementParserRuleCall_9_0 = (RuleCall)cContentsAssignment_9.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_10 = (Keyword)cGroup.eContents().get(10);
-		private final Keyword cRightCurlyBracketKeyword_11 = (Keyword)cGroup.eContents().get(11);
 		
 		//Page:
-		//	"page" name=ID "{" "title" "=" title=STRING "content for" entity=[Entity] "{" contents+=PageElement* "}" "}";
+		//	"page" name=ID "{" "title" "=" title=STRING "context" "=" entity=[Entity] contents+=PageElement* "}";
 		public ParserRule getRule() { return rule; }
 
-		//"page" name=ID "{" "title" "=" title=STRING "content for" entity=[Entity] "{" contents+=PageElement* "}" "}"
+		//"page" name=ID "{" "title" "=" title=STRING "context" "=" entity=[Entity] contents+=PageElement* "}"
 		public Group getGroup() { return cGroup; }
 
 		//"page"
@@ -303,20 +302,20 @@ public class WebGuiGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getTitleSTRINGTerminalRuleCall_5_0() { return cTitleSTRINGTerminalRuleCall_5_0; }
 
-		//"content for"
-		public Keyword getContentForKeyword_6() { return cContentForKeyword_6; }
+		//"context"
+		public Keyword getContextKeyword_6() { return cContextKeyword_6; }
+
+		//"="
+		public Keyword getEqualsSignKeyword_7() { return cEqualsSignKeyword_7; }
 
 		//entity=[Entity]
-		public Assignment getEntityAssignment_7() { return cEntityAssignment_7; }
+		public Assignment getEntityAssignment_8() { return cEntityAssignment_8; }
 
 		//[Entity]
-		public CrossReference getEntityEntityCrossReference_7_0() { return cEntityEntityCrossReference_7_0; }
+		public CrossReference getEntityEntityCrossReference_8_0() { return cEntityEntityCrossReference_8_0; }
 
 		//ID
-		public RuleCall getEntityEntityIDTerminalRuleCall_7_0_1() { return cEntityEntityIDTerminalRuleCall_7_0_1; }
-
-		//"{"
-		public Keyword getLeftCurlyBracketKeyword_8() { return cLeftCurlyBracketKeyword_8; }
+		public RuleCall getEntityEntityIDTerminalRuleCall_8_0_1() { return cEntityEntityIDTerminalRuleCall_8_0_1; }
 
 		//contents+=PageElement*
 		public Assignment getContentsAssignment_9() { return cContentsAssignment_9; }
@@ -326,9 +325,6 @@ public class WebGuiGrammarAccess extends AbstractGrammarElementFinder {
 
 		//"}"
 		public Keyword getRightCurlyBracketKeyword_10() { return cRightCurlyBracketKeyword_10; }
-
-		//"}"
-		public Keyword getRightCurlyBracketKeyword_11() { return cRightCurlyBracketKeyword_11; }
 	}
 
 	public class PageElementElements extends AbstractParserRuleElementFinder {
@@ -619,7 +615,7 @@ public class WebGuiGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Page:
-	//	"page" name=ID "{" "title" "=" title=STRING "content for" entity=[Entity] "{" contents+=PageElement* "}" "}";
+	//	"page" name=ID "{" "title" "=" title=STRING "context" "=" entity=[Entity] contents+=PageElement* "}";
 	public PageElements getPageAccess() {
 		return (pPage != null) ? pPage : (pPage = new PageElements());
 	}

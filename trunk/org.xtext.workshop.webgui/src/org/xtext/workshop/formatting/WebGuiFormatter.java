@@ -8,7 +8,7 @@ import org.xtext.workshop.services.WebGuiGrammarAccess;
 import org.xtext.workshop.services.WebGuiGrammarAccess.FeatureElements;
 
 /**
- * This class contains custom formatting description.
+ * This class contains custom the formatting description.
  * 
  * See http://www.eclipse.org/Xtext/documentation/latest/xtext.html#formatting
  * on how and when to use it. Also see
@@ -53,6 +53,7 @@ public class WebGuiFormatter extends AbstractDeclarativeFormatter {
 
 		// page:
 		cfg.setLinewrap().after(grammar.getPageAccess().getTitleSTRINGTerminalRuleCall_5_0());
+		cfg.setLinewrap().after(grammar.getPageAccess().getEntityEntityIDTerminalRuleCall_8_0_1());
 
 		// display element:
 		cfg.setLinewrap().after(grammar.getDisplayElementRule());

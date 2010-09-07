@@ -24,7 +24,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalWebGuiParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'model'", "'domain:'", "'entity'", "'{'", "'}'", "':'", "'(s)'", "'(es)'", "'type'", "'web:'", "'page'", "'title'", "'='", "'content for'", "'action'", "'show'", "'repeat for'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'model'", "'domain:'", "'entity'", "'{'", "'}'", "':'", "'(s)'", "'(es)'", "'type'", "'web:'", "'page'", "'title'", "'='", "'context'", "'action'", "'show'", "'repeat for'"
     };
     public static final int RULE_ID=4;
     public static final int RULE_STRING=5;
@@ -1199,7 +1199,7 @@ public class InternalWebGuiParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start rulePage
-    // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:570:1: rulePage returns [EObject current=null] : ( 'page' ( (lv_name_1_0= RULE_ID ) ) '{' 'title' '=' ( (lv_title_5_0= RULE_STRING ) ) 'content for' ( ( RULE_ID ) ) '{' ( (lv_contents_9_0= rulePageElement ) )* '}' '}' ) ;
+    // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:570:1: rulePage returns [EObject current=null] : ( 'page' ( (lv_name_1_0= RULE_ID ) ) '{' 'title' '=' ( (lv_title_5_0= RULE_STRING ) ) 'context' '=' ( ( RULE_ID ) ) ( (lv_contents_9_0= rulePageElement ) )* '}' ) ;
     public final EObject rulePage() throws RecognitionException {
         EObject current = null;
 
@@ -1211,11 +1211,11 @@ public class InternalWebGuiParser extends AbstractInternalAntlrParser {
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:575:6: ( ( 'page' ( (lv_name_1_0= RULE_ID ) ) '{' 'title' '=' ( (lv_title_5_0= RULE_STRING ) ) 'content for' ( ( RULE_ID ) ) '{' ( (lv_contents_9_0= rulePageElement ) )* '}' '}' ) )
-            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:576:1: ( 'page' ( (lv_name_1_0= RULE_ID ) ) '{' 'title' '=' ( (lv_title_5_0= RULE_STRING ) ) 'content for' ( ( RULE_ID ) ) '{' ( (lv_contents_9_0= rulePageElement ) )* '}' '}' )
+            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:575:6: ( ( 'page' ( (lv_name_1_0= RULE_ID ) ) '{' 'title' '=' ( (lv_title_5_0= RULE_STRING ) ) 'context' '=' ( ( RULE_ID ) ) ( (lv_contents_9_0= rulePageElement ) )* '}' ) )
+            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:576:1: ( 'page' ( (lv_name_1_0= RULE_ID ) ) '{' 'title' '=' ( (lv_title_5_0= RULE_STRING ) ) 'context' '=' ( ( RULE_ID ) ) ( (lv_contents_9_0= rulePageElement ) )* '}' )
             {
-            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:576:1: ( 'page' ( (lv_name_1_0= RULE_ID ) ) '{' 'title' '=' ( (lv_title_5_0= RULE_STRING ) ) 'content for' ( ( RULE_ID ) ) '{' ( (lv_contents_9_0= rulePageElement ) )* '}' '}' )
-            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:576:3: 'page' ( (lv_name_1_0= RULE_ID ) ) '{' 'title' '=' ( (lv_title_5_0= RULE_STRING ) ) 'content for' ( ( RULE_ID ) ) '{' ( (lv_contents_9_0= rulePageElement ) )* '}' '}'
+            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:576:1: ( 'page' ( (lv_name_1_0= RULE_ID ) ) '{' 'title' '=' ( (lv_title_5_0= RULE_STRING ) ) 'context' '=' ( ( RULE_ID ) ) ( (lv_contents_9_0= rulePageElement ) )* '}' )
+            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:576:3: 'page' ( (lv_name_1_0= RULE_ID ) ) '{' 'title' '=' ( (lv_title_5_0= RULE_STRING ) ) 'context' '=' ( ( RULE_ID ) ) ( (lv_contents_9_0= rulePageElement ) )* '}'
             {
             match(input,21,FOLLOW_21_in_rulePage1025); 
 
@@ -1301,13 +1301,17 @@ public class InternalWebGuiParser extends AbstractInternalAntlrParser {
 
             match(input,24,FOLLOW_24_in_rulePage1109); 
 
-                    createLeafNode(grammarAccess.getPageAccess().getContentForKeyword_6(), null); 
+                    createLeafNode(grammarAccess.getPageAccess().getContextKeyword_6(), null); 
                 
-            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:644:1: ( ( RULE_ID ) )
-            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:645:1: ( RULE_ID )
+            match(input,23,FOLLOW_23_in_rulePage1119); 
+
+                    createLeafNode(grammarAccess.getPageAccess().getEqualsSignKeyword_7(), null); 
+                
+            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:648:1: ( ( RULE_ID ) )
+            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:649:1: ( RULE_ID )
             {
-            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:645:1: ( RULE_ID )
-            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:646:3: RULE_ID
+            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:649:1: ( RULE_ID )
+            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:650:3: RULE_ID
             {
 
             			if (current==null) {
@@ -1315,9 +1319,9 @@ public class InternalWebGuiParser extends AbstractInternalAntlrParser {
             	            associateNodeWithAstElement(currentNode, current);
             	        }
                     
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rulePage1127); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rulePage1137); 
 
-            		createLeafNode(grammarAccess.getPageAccess().getEntityEntityCrossReference_7_0(), "entity"); 
+            		createLeafNode(grammarAccess.getPageAccess().getEntityEntityCrossReference_8_0(), "entity"); 
             	
 
             }
@@ -1325,11 +1329,7 @@ public class InternalWebGuiParser extends AbstractInternalAntlrParser {
 
             }
 
-            match(input,14,FOLLOW_14_in_rulePage1137); 
-
-                    createLeafNode(grammarAccess.getPageAccess().getLeftCurlyBracketKeyword_8(), null); 
-                
-            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:662:1: ( (lv_contents_9_0= rulePageElement ) )*
+            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:662:2: ( (lv_contents_9_0= rulePageElement ) )*
             loop7:
             do {
                 int alt7=2;
@@ -1387,10 +1387,6 @@ public class InternalWebGuiParser extends AbstractInternalAntlrParser {
 
                     createLeafNode(grammarAccess.getPageAccess().getRightCurlyBracketKeyword_10(), null); 
                 
-            match(input,15,FOLLOW_15_in_rulePage1179); 
-
-                    createLeafNode(grammarAccess.getPageAccess().getRightCurlyBracketKeyword_11(), null); 
-                
 
             }
 
@@ -1414,7 +1410,7 @@ public class InternalWebGuiParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start entryRulePageElement
-    // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:702:1: entryRulePageElement returns [EObject current=null] : iv_rulePageElement= rulePageElement EOF ;
+    // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:698:1: entryRulePageElement returns [EObject current=null] : iv_rulePageElement= rulePageElement EOF ;
     public final EObject entryRulePageElement() throws RecognitionException {
         EObject current = null;
 
@@ -1422,16 +1418,16 @@ public class InternalWebGuiParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:703:2: (iv_rulePageElement= rulePageElement EOF )
-            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:704:2: iv_rulePageElement= rulePageElement EOF
+            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:699:2: (iv_rulePageElement= rulePageElement EOF )
+            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:700:2: iv_rulePageElement= rulePageElement EOF
             {
              currentNode = createCompositeNode(grammarAccess.getPageElementRule(), currentNode); 
-            pushFollow(FOLLOW_rulePageElement_in_entryRulePageElement1215);
+            pushFollow(FOLLOW_rulePageElement_in_entryRulePageElement1205);
             iv_rulePageElement=rulePageElement();
             _fsp--;
 
              current =iv_rulePageElement; 
-            match(input,EOF,FOLLOW_EOF_in_entryRulePageElement1225); 
+            match(input,EOF,FOLLOW_EOF_in_entryRulePageElement1215); 
 
             }
 
@@ -1449,7 +1445,7 @@ public class InternalWebGuiParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start rulePageElement
-    // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:711:1: rulePageElement returns [EObject current=null] : (this_SingleElement_0= ruleSingleElement | this_RepeatElement_1= ruleRepeatElement ) ;
+    // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:707:1: rulePageElement returns [EObject current=null] : (this_SingleElement_0= ruleSingleElement | this_RepeatElement_1= ruleRepeatElement ) ;
     public final EObject rulePageElement() throws RecognitionException {
         EObject current = null;
 
@@ -1461,10 +1457,10 @@ public class InternalWebGuiParser extends AbstractInternalAntlrParser {
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:716:6: ( (this_SingleElement_0= ruleSingleElement | this_RepeatElement_1= ruleRepeatElement ) )
-            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:717:1: (this_SingleElement_0= ruleSingleElement | this_RepeatElement_1= ruleRepeatElement )
+            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:712:6: ( (this_SingleElement_0= ruleSingleElement | this_RepeatElement_1= ruleRepeatElement ) )
+            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:713:1: (this_SingleElement_0= ruleSingleElement | this_RepeatElement_1= ruleRepeatElement )
             {
-            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:717:1: (this_SingleElement_0= ruleSingleElement | this_RepeatElement_1= ruleRepeatElement )
+            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:713:1: (this_SingleElement_0= ruleSingleElement | this_RepeatElement_1= ruleRepeatElement )
             int alt8=2;
             int LA8_0 = input.LA(1);
 
@@ -1476,18 +1472,18 @@ public class InternalWebGuiParser extends AbstractInternalAntlrParser {
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("717:1: (this_SingleElement_0= ruleSingleElement | this_RepeatElement_1= ruleRepeatElement )", 8, 0, input);
+                    new NoViableAltException("713:1: (this_SingleElement_0= ruleSingleElement | this_RepeatElement_1= ruleRepeatElement )", 8, 0, input);
 
                 throw nvae;
             }
             switch (alt8) {
                 case 1 :
-                    // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:718:5: this_SingleElement_0= ruleSingleElement
+                    // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:714:5: this_SingleElement_0= ruleSingleElement
                     {
                      
                             currentNode=createCompositeNode(grammarAccess.getPageElementAccess().getSingleElementParserRuleCall_0(), currentNode); 
                         
-                    pushFollow(FOLLOW_ruleSingleElement_in_rulePageElement1272);
+                    pushFollow(FOLLOW_ruleSingleElement_in_rulePageElement1262);
                     this_SingleElement_0=ruleSingleElement();
                     _fsp--;
 
@@ -1499,12 +1495,12 @@ public class InternalWebGuiParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:728:5: this_RepeatElement_1= ruleRepeatElement
+                    // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:724:5: this_RepeatElement_1= ruleRepeatElement
                     {
                      
                             currentNode=createCompositeNode(grammarAccess.getPageElementAccess().getRepeatElementParserRuleCall_1(), currentNode); 
                         
-                    pushFollow(FOLLOW_ruleRepeatElement_in_rulePageElement1299);
+                    pushFollow(FOLLOW_ruleRepeatElement_in_rulePageElement1289);
                     this_RepeatElement_1=ruleRepeatElement();
                     _fsp--;
 
@@ -1538,7 +1534,7 @@ public class InternalWebGuiParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start entryRuleSingleElement
-    // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:744:1: entryRuleSingleElement returns [EObject current=null] : iv_ruleSingleElement= ruleSingleElement EOF ;
+    // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:740:1: entryRuleSingleElement returns [EObject current=null] : iv_ruleSingleElement= ruleSingleElement EOF ;
     public final EObject entryRuleSingleElement() throws RecognitionException {
         EObject current = null;
 
@@ -1546,16 +1542,16 @@ public class InternalWebGuiParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:745:2: (iv_ruleSingleElement= ruleSingleElement EOF )
-            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:746:2: iv_ruleSingleElement= ruleSingleElement EOF
+            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:741:2: (iv_ruleSingleElement= ruleSingleElement EOF )
+            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:742:2: iv_ruleSingleElement= ruleSingleElement EOF
             {
              currentNode = createCompositeNode(grammarAccess.getSingleElementRule(), currentNode); 
-            pushFollow(FOLLOW_ruleSingleElement_in_entryRuleSingleElement1334);
+            pushFollow(FOLLOW_ruleSingleElement_in_entryRuleSingleElement1324);
             iv_ruleSingleElement=ruleSingleElement();
             _fsp--;
 
              current =iv_ruleSingleElement; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleSingleElement1344); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleSingleElement1334); 
 
             }
 
@@ -1573,7 +1569,7 @@ public class InternalWebGuiParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleSingleElement
-    // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:753:1: ruleSingleElement returns [EObject current=null] : (this_ActionElement_0= ruleActionElement | this_DisplayElement_1= ruleDisplayElement ) ;
+    // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:749:1: ruleSingleElement returns [EObject current=null] : (this_ActionElement_0= ruleActionElement | this_DisplayElement_1= ruleDisplayElement ) ;
     public final EObject ruleSingleElement() throws RecognitionException {
         EObject current = null;
 
@@ -1585,10 +1581,10 @@ public class InternalWebGuiParser extends AbstractInternalAntlrParser {
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:758:6: ( (this_ActionElement_0= ruleActionElement | this_DisplayElement_1= ruleDisplayElement ) )
-            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:759:1: (this_ActionElement_0= ruleActionElement | this_DisplayElement_1= ruleDisplayElement )
+            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:754:6: ( (this_ActionElement_0= ruleActionElement | this_DisplayElement_1= ruleDisplayElement ) )
+            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:755:1: (this_ActionElement_0= ruleActionElement | this_DisplayElement_1= ruleDisplayElement )
             {
-            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:759:1: (this_ActionElement_0= ruleActionElement | this_DisplayElement_1= ruleDisplayElement )
+            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:755:1: (this_ActionElement_0= ruleActionElement | this_DisplayElement_1= ruleDisplayElement )
             int alt9=2;
             int LA9_0 = input.LA(1);
 
@@ -1600,18 +1596,18 @@ public class InternalWebGuiParser extends AbstractInternalAntlrParser {
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("759:1: (this_ActionElement_0= ruleActionElement | this_DisplayElement_1= ruleDisplayElement )", 9, 0, input);
+                    new NoViableAltException("755:1: (this_ActionElement_0= ruleActionElement | this_DisplayElement_1= ruleDisplayElement )", 9, 0, input);
 
                 throw nvae;
             }
             switch (alt9) {
                 case 1 :
-                    // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:760:5: this_ActionElement_0= ruleActionElement
+                    // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:756:5: this_ActionElement_0= ruleActionElement
                     {
                      
                             currentNode=createCompositeNode(grammarAccess.getSingleElementAccess().getActionElementParserRuleCall_0(), currentNode); 
                         
-                    pushFollow(FOLLOW_ruleActionElement_in_ruleSingleElement1391);
+                    pushFollow(FOLLOW_ruleActionElement_in_ruleSingleElement1381);
                     this_ActionElement_0=ruleActionElement();
                     _fsp--;
 
@@ -1623,12 +1619,12 @@ public class InternalWebGuiParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:770:5: this_DisplayElement_1= ruleDisplayElement
+                    // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:766:5: this_DisplayElement_1= ruleDisplayElement
                     {
                      
                             currentNode=createCompositeNode(grammarAccess.getSingleElementAccess().getDisplayElementParserRuleCall_1(), currentNode); 
                         
-                    pushFollow(FOLLOW_ruleDisplayElement_in_ruleSingleElement1418);
+                    pushFollow(FOLLOW_ruleDisplayElement_in_ruleSingleElement1408);
                     this_DisplayElement_1=ruleDisplayElement();
                     _fsp--;
 
@@ -1662,7 +1658,7 @@ public class InternalWebGuiParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start entryRuleActionElement
-    // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:786:1: entryRuleActionElement returns [EObject current=null] : iv_ruleActionElement= ruleActionElement EOF ;
+    // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:782:1: entryRuleActionElement returns [EObject current=null] : iv_ruleActionElement= ruleActionElement EOF ;
     public final EObject entryRuleActionElement() throws RecognitionException {
         EObject current = null;
 
@@ -1670,16 +1666,16 @@ public class InternalWebGuiParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:787:2: (iv_ruleActionElement= ruleActionElement EOF )
-            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:788:2: iv_ruleActionElement= ruleActionElement EOF
+            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:783:2: (iv_ruleActionElement= ruleActionElement EOF )
+            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:784:2: iv_ruleActionElement= ruleActionElement EOF
             {
              currentNode = createCompositeNode(grammarAccess.getActionElementRule(), currentNode); 
-            pushFollow(FOLLOW_ruleActionElement_in_entryRuleActionElement1453);
+            pushFollow(FOLLOW_ruleActionElement_in_entryRuleActionElement1443);
             iv_ruleActionElement=ruleActionElement();
             _fsp--;
 
              current =iv_ruleActionElement; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleActionElement1463); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleActionElement1453); 
 
             }
 
@@ -1697,7 +1693,7 @@ public class InternalWebGuiParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleActionElement
-    // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:795:1: ruleActionElement returns [EObject current=null] : ( 'action' ( (lv_name_1_0= RULE_ID ) ) ) ;
+    // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:791:1: ruleActionElement returns [EObject current=null] : ( 'action' ( (lv_name_1_0= RULE_ID ) ) ) ;
     public final EObject ruleActionElement() throws RecognitionException {
         EObject current = null;
 
@@ -1706,24 +1702,24 @@ public class InternalWebGuiParser extends AbstractInternalAntlrParser {
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:800:6: ( ( 'action' ( (lv_name_1_0= RULE_ID ) ) ) )
-            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:801:1: ( 'action' ( (lv_name_1_0= RULE_ID ) ) )
+            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:796:6: ( ( 'action' ( (lv_name_1_0= RULE_ID ) ) ) )
+            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:797:1: ( 'action' ( (lv_name_1_0= RULE_ID ) ) )
             {
-            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:801:1: ( 'action' ( (lv_name_1_0= RULE_ID ) ) )
-            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:801:3: 'action' ( (lv_name_1_0= RULE_ID ) )
+            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:797:1: ( 'action' ( (lv_name_1_0= RULE_ID ) ) )
+            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:797:3: 'action' ( (lv_name_1_0= RULE_ID ) )
             {
-            match(input,25,FOLLOW_25_in_ruleActionElement1498); 
+            match(input,25,FOLLOW_25_in_ruleActionElement1488); 
 
                     createLeafNode(grammarAccess.getActionElementAccess().getActionKeyword_0(), null); 
                 
-            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:805:1: ( (lv_name_1_0= RULE_ID ) )
-            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:806:1: (lv_name_1_0= RULE_ID )
+            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:801:1: ( (lv_name_1_0= RULE_ID ) )
+            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:802:1: (lv_name_1_0= RULE_ID )
             {
-            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:806:1: (lv_name_1_0= RULE_ID )
-            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:807:3: lv_name_1_0= RULE_ID
+            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:802:1: (lv_name_1_0= RULE_ID )
+            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:803:3: lv_name_1_0= RULE_ID
             {
             lv_name_1_0=(Token)input.LT(1);
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleActionElement1515); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleActionElement1505); 
 
             			createLeafNode(grammarAccess.getActionElementAccess().getNameIDTerminalRuleCall_1_0(), "name"); 
             		
@@ -1772,7 +1768,7 @@ public class InternalWebGuiParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start entryRuleDisplayElement
-    // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:837:1: entryRuleDisplayElement returns [EObject current=null] : iv_ruleDisplayElement= ruleDisplayElement EOF ;
+    // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:833:1: entryRuleDisplayElement returns [EObject current=null] : iv_ruleDisplayElement= ruleDisplayElement EOF ;
     public final EObject entryRuleDisplayElement() throws RecognitionException {
         EObject current = null;
 
@@ -1780,16 +1776,16 @@ public class InternalWebGuiParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:838:2: (iv_ruleDisplayElement= ruleDisplayElement EOF )
-            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:839:2: iv_ruleDisplayElement= ruleDisplayElement EOF
+            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:834:2: (iv_ruleDisplayElement= ruleDisplayElement EOF )
+            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:835:2: iv_ruleDisplayElement= ruleDisplayElement EOF
             {
              currentNode = createCompositeNode(grammarAccess.getDisplayElementRule(), currentNode); 
-            pushFollow(FOLLOW_ruleDisplayElement_in_entryRuleDisplayElement1556);
+            pushFollow(FOLLOW_ruleDisplayElement_in_entryRuleDisplayElement1546);
             iv_ruleDisplayElement=ruleDisplayElement();
             _fsp--;
 
              current =iv_ruleDisplayElement; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleDisplayElement1566); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleDisplayElement1556); 
 
             }
 
@@ -1807,28 +1803,28 @@ public class InternalWebGuiParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleDisplayElement
-    // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:846:1: ruleDisplayElement returns [EObject current=null] : ( 'show' ( ( RULE_ID ) ) ) ;
+    // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:842:1: ruleDisplayElement returns [EObject current=null] : ( 'show' ( ( RULE_ID ) ) ) ;
     public final EObject ruleDisplayElement() throws RecognitionException {
         EObject current = null;
 
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:851:6: ( ( 'show' ( ( RULE_ID ) ) ) )
-            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:852:1: ( 'show' ( ( RULE_ID ) ) )
+            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:847:6: ( ( 'show' ( ( RULE_ID ) ) ) )
+            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:848:1: ( 'show' ( ( RULE_ID ) ) )
             {
-            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:852:1: ( 'show' ( ( RULE_ID ) ) )
-            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:852:3: 'show' ( ( RULE_ID ) )
+            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:848:1: ( 'show' ( ( RULE_ID ) ) )
+            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:848:3: 'show' ( ( RULE_ID ) )
             {
-            match(input,26,FOLLOW_26_in_ruleDisplayElement1601); 
+            match(input,26,FOLLOW_26_in_ruleDisplayElement1591); 
 
                     createLeafNode(grammarAccess.getDisplayElementAccess().getShowKeyword_0(), null); 
                 
-            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:856:1: ( ( RULE_ID ) )
-            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:857:1: ( RULE_ID )
+            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:852:1: ( ( RULE_ID ) )
+            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:853:1: ( RULE_ID )
             {
-            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:857:1: ( RULE_ID )
-            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:858:3: RULE_ID
+            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:853:1: ( RULE_ID )
+            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:854:3: RULE_ID
             {
 
             			if (current==null) {
@@ -1836,7 +1832,7 @@ public class InternalWebGuiParser extends AbstractInternalAntlrParser {
             	            associateNodeWithAstElement(currentNode, current);
             	        }
                     
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDisplayElement1619); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDisplayElement1609); 
 
             		createLeafNode(grammarAccess.getDisplayElementAccess().getReferenceFeatureCrossReference_1_0(), "reference"); 
             	
@@ -1869,7 +1865,7 @@ public class InternalWebGuiParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start entryRuleRepeatElement
-    // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:878:1: entryRuleRepeatElement returns [EObject current=null] : iv_ruleRepeatElement= ruleRepeatElement EOF ;
+    // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:874:1: entryRuleRepeatElement returns [EObject current=null] : iv_ruleRepeatElement= ruleRepeatElement EOF ;
     public final EObject entryRuleRepeatElement() throws RecognitionException {
         EObject current = null;
 
@@ -1877,16 +1873,16 @@ public class InternalWebGuiParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:879:2: (iv_ruleRepeatElement= ruleRepeatElement EOF )
-            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:880:2: iv_ruleRepeatElement= ruleRepeatElement EOF
+            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:875:2: (iv_ruleRepeatElement= ruleRepeatElement EOF )
+            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:876:2: iv_ruleRepeatElement= ruleRepeatElement EOF
             {
              currentNode = createCompositeNode(grammarAccess.getRepeatElementRule(), currentNode); 
-            pushFollow(FOLLOW_ruleRepeatElement_in_entryRuleRepeatElement1655);
+            pushFollow(FOLLOW_ruleRepeatElement_in_entryRuleRepeatElement1645);
             iv_ruleRepeatElement=ruleRepeatElement();
             _fsp--;
 
              current =iv_ruleRepeatElement; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleRepeatElement1665); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleRepeatElement1655); 
 
             }
 
@@ -1904,7 +1900,7 @@ public class InternalWebGuiParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleRepeatElement
-    // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:887:1: ruleRepeatElement returns [EObject current=null] : ( 'repeat for' ( ( RULE_ID ) ) '{' ( (lv_contents_3_0= ruleSingleElement ) )* '}' ) ;
+    // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:883:1: ruleRepeatElement returns [EObject current=null] : ( 'repeat for' ( ( RULE_ID ) ) '{' ( (lv_contents_3_0= ruleSingleElement ) )* '}' ) ;
     public final EObject ruleRepeatElement() throws RecognitionException {
         EObject current = null;
 
@@ -1914,21 +1910,21 @@ public class InternalWebGuiParser extends AbstractInternalAntlrParser {
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:892:6: ( ( 'repeat for' ( ( RULE_ID ) ) '{' ( (lv_contents_3_0= ruleSingleElement ) )* '}' ) )
-            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:893:1: ( 'repeat for' ( ( RULE_ID ) ) '{' ( (lv_contents_3_0= ruleSingleElement ) )* '}' )
+            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:888:6: ( ( 'repeat for' ( ( RULE_ID ) ) '{' ( (lv_contents_3_0= ruleSingleElement ) )* '}' ) )
+            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:889:1: ( 'repeat for' ( ( RULE_ID ) ) '{' ( (lv_contents_3_0= ruleSingleElement ) )* '}' )
             {
-            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:893:1: ( 'repeat for' ( ( RULE_ID ) ) '{' ( (lv_contents_3_0= ruleSingleElement ) )* '}' )
-            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:893:3: 'repeat for' ( ( RULE_ID ) ) '{' ( (lv_contents_3_0= ruleSingleElement ) )* '}'
+            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:889:1: ( 'repeat for' ( ( RULE_ID ) ) '{' ( (lv_contents_3_0= ruleSingleElement ) )* '}' )
+            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:889:3: 'repeat for' ( ( RULE_ID ) ) '{' ( (lv_contents_3_0= ruleSingleElement ) )* '}'
             {
-            match(input,27,FOLLOW_27_in_ruleRepeatElement1700); 
+            match(input,27,FOLLOW_27_in_ruleRepeatElement1690); 
 
                     createLeafNode(grammarAccess.getRepeatElementAccess().getRepeatForKeyword_0(), null); 
                 
-            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:897:1: ( ( RULE_ID ) )
-            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:898:1: ( RULE_ID )
+            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:893:1: ( ( RULE_ID ) )
+            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:894:1: ( RULE_ID )
             {
-            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:898:1: ( RULE_ID )
-            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:899:3: RULE_ID
+            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:894:1: ( RULE_ID )
+            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:895:3: RULE_ID
             {
 
             			if (current==null) {
@@ -1936,7 +1932,7 @@ public class InternalWebGuiParser extends AbstractInternalAntlrParser {
             	            associateNodeWithAstElement(currentNode, current);
             	        }
                     
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleRepeatElement1718); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleRepeatElement1708); 
 
             		createLeafNode(grammarAccess.getRepeatElementAccess().getReferenceFeatureCrossReference_1_0(), "reference"); 
             	
@@ -1946,11 +1942,11 @@ public class InternalWebGuiParser extends AbstractInternalAntlrParser {
 
             }
 
-            match(input,14,FOLLOW_14_in_ruleRepeatElement1728); 
+            match(input,14,FOLLOW_14_in_ruleRepeatElement1718); 
 
                     createLeafNode(grammarAccess.getRepeatElementAccess().getLeftCurlyBracketKeyword_2(), null); 
                 
-            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:915:1: ( (lv_contents_3_0= ruleSingleElement ) )*
+            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:911:1: ( (lv_contents_3_0= ruleSingleElement ) )*
             loop10:
             do {
                 int alt10=2;
@@ -1963,15 +1959,15 @@ public class InternalWebGuiParser extends AbstractInternalAntlrParser {
 
                 switch (alt10) {
             	case 1 :
-            	    // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:916:1: (lv_contents_3_0= ruleSingleElement )
+            	    // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:912:1: (lv_contents_3_0= ruleSingleElement )
             	    {
-            	    // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:916:1: (lv_contents_3_0= ruleSingleElement )
-            	    // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:917:3: lv_contents_3_0= ruleSingleElement
+            	    // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:912:1: (lv_contents_3_0= ruleSingleElement )
+            	    // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:913:3: lv_contents_3_0= ruleSingleElement
             	    {
             	     
             	    	        currentNode=createCompositeNode(grammarAccess.getRepeatElementAccess().getContentsSingleElementParserRuleCall_3_0(), currentNode); 
             	    	    
-            	    pushFollow(FOLLOW_ruleSingleElement_in_ruleRepeatElement1749);
+            	    pushFollow(FOLLOW_ruleSingleElement_in_ruleRepeatElement1739);
             	    lv_contents_3_0=ruleSingleElement();
             	    _fsp--;
 
@@ -2004,7 +2000,7 @@ public class InternalWebGuiParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            match(input,15,FOLLOW_15_in_ruleRepeatElement1760); 
+            match(input,15,FOLLOW_15_in_ruleRepeatElement1750); 
 
                     createLeafNode(grammarAccess.getRepeatElementAccess().getRightCurlyBracketKeyword_4(), null); 
                 
@@ -2076,34 +2072,33 @@ public class InternalWebGuiParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_22_in_rulePage1067 = new BitSet(new long[]{0x0000000000800000L});
     public static final BitSet FOLLOW_23_in_rulePage1077 = new BitSet(new long[]{0x0000000000000020L});
     public static final BitSet FOLLOW_RULE_STRING_in_rulePage1094 = new BitSet(new long[]{0x0000000001000000L});
-    public static final BitSet FOLLOW_24_in_rulePage1109 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_rulePage1127 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_14_in_rulePage1137 = new BitSet(new long[]{0x000000000E008000L});
+    public static final BitSet FOLLOW_24_in_rulePage1109 = new BitSet(new long[]{0x0000000000800000L});
+    public static final BitSet FOLLOW_23_in_rulePage1119 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_rulePage1137 = new BitSet(new long[]{0x000000000E008000L});
     public static final BitSet FOLLOW_rulePageElement_in_rulePage1158 = new BitSet(new long[]{0x000000000E008000L});
-    public static final BitSet FOLLOW_15_in_rulePage1169 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_15_in_rulePage1179 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePageElement_in_entryRulePageElement1215 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulePageElement1225 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSingleElement_in_rulePageElement1272 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRepeatElement_in_rulePageElement1299 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSingleElement_in_entryRuleSingleElement1334 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleSingleElement1344 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleActionElement_in_ruleSingleElement1391 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDisplayElement_in_ruleSingleElement1418 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleActionElement_in_entryRuleActionElement1453 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleActionElement1463 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_25_in_ruleActionElement1498 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleActionElement1515 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDisplayElement_in_entryRuleDisplayElement1556 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleDisplayElement1566 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_26_in_ruleDisplayElement1601 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleDisplayElement1619 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRepeatElement_in_entryRuleRepeatElement1655 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleRepeatElement1665 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_27_in_ruleRepeatElement1700 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleRepeatElement1718 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_14_in_ruleRepeatElement1728 = new BitSet(new long[]{0x0000000006008000L});
-    public static final BitSet FOLLOW_ruleSingleElement_in_ruleRepeatElement1749 = new BitSet(new long[]{0x0000000006008000L});
-    public static final BitSet FOLLOW_15_in_ruleRepeatElement1760 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_15_in_rulePage1169 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePageElement_in_entryRulePageElement1205 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulePageElement1215 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSingleElement_in_rulePageElement1262 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRepeatElement_in_rulePageElement1289 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSingleElement_in_entryRuleSingleElement1324 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleSingleElement1334 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleActionElement_in_ruleSingleElement1381 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDisplayElement_in_ruleSingleElement1408 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleActionElement_in_entryRuleActionElement1443 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleActionElement1453 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_25_in_ruleActionElement1488 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleActionElement1505 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDisplayElement_in_entryRuleDisplayElement1546 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleDisplayElement1556 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_26_in_ruleDisplayElement1591 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleDisplayElement1609 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRepeatElement_in_entryRuleRepeatElement1645 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleRepeatElement1655 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_27_in_ruleRepeatElement1690 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleRepeatElement1708 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_14_in_ruleRepeatElement1718 = new BitSet(new long[]{0x0000000006008000L});
+    public static final BitSet FOLLOW_ruleSingleElement_in_ruleRepeatElement1739 = new BitSet(new long[]{0x0000000006008000L});
+    public static final BitSet FOLLOW_15_in_ruleRepeatElement1750 = new BitSet(new long[]{0x0000000000000002L});
 
 }
