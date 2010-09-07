@@ -413,7 +413,7 @@ public interface WebGuiPackage extends EPackage
   int DISPLAY_ELEMENT = 10;
 
   /**
-   * The feature id for the '<em><b>Reference</b></em>' reference.
+   * The feature id for the '<em><b>Reference</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -429,6 +429,80 @@ public interface WebGuiPackage extends EPackage
    * @ordered
    */
   int DISPLAY_ELEMENT_FEATURE_COUNT = PAGE_ELEMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.workshop.webGui.impl.DomainPathImpl <em>Domain Path</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.workshop.webGui.impl.DomainPathImpl
+   * @see org.xtext.workshop.webGui.impl.WebGuiPackageImpl#getDomainPath()
+   * @generated
+   */
+  int DOMAIN_PATH = 11;
+
+  /**
+   * The feature id for the '<em><b>Feature</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DOMAIN_PATH__FEATURE = 0;
+
+  /**
+   * The feature id for the '<em><b>Tail</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DOMAIN_PATH__TAIL = 1;
+
+  /**
+   * The number of structural features of the '<em>Domain Path</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DOMAIN_PATH_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.workshop.webGui.impl.DomainPathTailImpl <em>Domain Path Tail</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.workshop.webGui.impl.DomainPathTailImpl
+   * @see org.xtext.workshop.webGui.impl.WebGuiPackageImpl#getDomainPathTail()
+   * @generated
+   */
+  int DOMAIN_PATH_TAIL = 12;
+
+  /**
+   * The feature id for the '<em><b>Feature</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DOMAIN_PATH_TAIL__FEATURE = 0;
+
+  /**
+   * The feature id for the '<em><b>Tail</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DOMAIN_PATH_TAIL__TAIL = 1;
+
+  /**
+   * The number of structural features of the '<em>Domain Path Tail</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DOMAIN_PATH_TAIL_FEATURE_COUNT = 2;
 
 
   /**
@@ -707,15 +781,79 @@ public interface WebGuiPackage extends EPackage
   EClass getDisplayElement();
 
   /**
-   * Returns the meta object for the reference '{@link org.xtext.workshop.webGui.DisplayElement#getReference <em>Reference</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.workshop.webGui.DisplayElement#getReference <em>Reference</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Reference</em>'.
+   * @return the meta object for the containment reference '<em>Reference</em>'.
    * @see org.xtext.workshop.webGui.DisplayElement#getReference()
    * @see #getDisplayElement()
    * @generated
    */
   EReference getDisplayElement_Reference();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.workshop.webGui.DomainPath <em>Domain Path</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Domain Path</em>'.
+   * @see org.xtext.workshop.webGui.DomainPath
+   * @generated
+   */
+  EClass getDomainPath();
+
+  /**
+   * Returns the meta object for the reference '{@link org.xtext.workshop.webGui.DomainPath#getFeature <em>Feature</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Feature</em>'.
+   * @see org.xtext.workshop.webGui.DomainPath#getFeature()
+   * @see #getDomainPath()
+   * @generated
+   */
+  EReference getDomainPath_Feature();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.workshop.webGui.DomainPath#getTail <em>Tail</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Tail</em>'.
+   * @see org.xtext.workshop.webGui.DomainPath#getTail()
+   * @see #getDomainPath()
+   * @generated
+   */
+  EReference getDomainPath_Tail();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.workshop.webGui.DomainPathTail <em>Domain Path Tail</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Domain Path Tail</em>'.
+   * @see org.xtext.workshop.webGui.DomainPathTail
+   * @generated
+   */
+  EClass getDomainPathTail();
+
+  /**
+   * Returns the meta object for the reference '{@link org.xtext.workshop.webGui.DomainPathTail#getFeature <em>Feature</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Feature</em>'.
+   * @see org.xtext.workshop.webGui.DomainPathTail#getFeature()
+   * @see #getDomainPathTail()
+   * @generated
+   */
+  EReference getDomainPathTail_Feature();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.workshop.webGui.DomainPathTail#getTail <em>Tail</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Tail</em>'.
+   * @see org.xtext.workshop.webGui.DomainPathTail#getTail()
+   * @see #getDomainPathTail()
+   * @generated
+   */
+  EReference getDomainPathTail_Tail();
 
   /**
    * Returns the factory that creates the instances of the model.
@@ -971,12 +1109,64 @@ public interface WebGuiPackage extends EPackage
     EClass DISPLAY_ELEMENT = eINSTANCE.getDisplayElement();
 
     /**
-     * The meta object literal for the '<em><b>Reference</b></em>' reference feature.
+     * The meta object literal for the '<em><b>Reference</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
     EReference DISPLAY_ELEMENT__REFERENCE = eINSTANCE.getDisplayElement_Reference();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.workshop.webGui.impl.DomainPathImpl <em>Domain Path</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.workshop.webGui.impl.DomainPathImpl
+     * @see org.xtext.workshop.webGui.impl.WebGuiPackageImpl#getDomainPath()
+     * @generated
+     */
+    EClass DOMAIN_PATH = eINSTANCE.getDomainPath();
+
+    /**
+     * The meta object literal for the '<em><b>Feature</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DOMAIN_PATH__FEATURE = eINSTANCE.getDomainPath_Feature();
+
+    /**
+     * The meta object literal for the '<em><b>Tail</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DOMAIN_PATH__TAIL = eINSTANCE.getDomainPath_Tail();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.workshop.webGui.impl.DomainPathTailImpl <em>Domain Path Tail</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.workshop.webGui.impl.DomainPathTailImpl
+     * @see org.xtext.workshop.webGui.impl.WebGuiPackageImpl#getDomainPathTail()
+     * @generated
+     */
+    EClass DOMAIN_PATH_TAIL = eINSTANCE.getDomainPathTail();
+
+    /**
+     * The meta object literal for the '<em><b>Feature</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DOMAIN_PATH_TAIL__FEATURE = eINSTANCE.getDomainPathTail_Feature();
+
+    /**
+     * The meta object literal for the '<em><b>Tail</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DOMAIN_PATH_TAIL__TAIL = eINSTANCE.getDomainPathTail_Tail();
 
   }
 

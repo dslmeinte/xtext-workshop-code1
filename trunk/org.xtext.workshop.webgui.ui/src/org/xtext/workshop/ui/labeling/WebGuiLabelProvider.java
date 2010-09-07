@@ -9,6 +9,8 @@ import org.xtext.workshop.webGui.ActionElement;
 import org.xtext.workshop.webGui.DataType;
 import org.xtext.workshop.webGui.DisplayElement;
 import org.xtext.workshop.webGui.DomainModel;
+import org.xtext.workshop.webGui.DomainPath;
+import org.xtext.workshop.webGui.DomainPathTail;
 import org.xtext.workshop.webGui.Entity;
 import org.xtext.workshop.webGui.Feature;
 import org.xtext.workshop.webGui.Model;
@@ -51,11 +53,33 @@ public class WebGuiLabelProvider extends DefaultEObjectLabelProvider {
 	String text(ActionElement elm) {
 		return "action: " + elm.getName();
 	}
-	
-	String text(DisplayElement elm) {
-		return "show: " + elm.getReference().getName();
-	}
 
+	String text(DisplayElement elm) {
+		return "show: " + domainPath(elm.getReference());
+	}
+	
+	private String domainPath(DomainPath domainPath) {
+		String path = "";
+		
+		if (domainPath.getFeature() != null ) {
+			path = domainPath.getFeature().getName() + domainPath(domainPath.getTail());
+		}
+		
+		return path;
+	}
+	
+	private String domainPath(DomainPathTail tail) {
+		String path = "";
+		
+		if (tail != null) {
+			if (tail.getFeature() != null) {
+				path = "." + tail.getFeature().getName() + domainPath(tail.getTail());
+			}
+		}
+		
+		return path;
+	}
+	
     String image(Model elm) {
         return "globe.png";
     }

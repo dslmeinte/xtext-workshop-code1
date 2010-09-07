@@ -133,6 +133,16 @@ public class WebGuiAdapterFactory extends AdapterFactoryImpl
         return createDisplayElementAdapter();
       }
       @Override
+      public Adapter caseDomainPath(DomainPath object)
+      {
+        return createDomainPathAdapter();
+      }
+      @Override
+      public Adapter caseDomainPathTail(DomainPathTail object)
+      {
+        return createDomainPathTailAdapter();
+      }
+      @Override
       public Adapter defaultCase(EObject object)
       {
         return createEObjectAdapter();
@@ -315,6 +325,36 @@ public class WebGuiAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createDisplayElementAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.workshop.webGui.DomainPath <em>Domain Path</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.workshop.webGui.DomainPath
+   * @generated
+   */
+  public Adapter createDomainPathAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.workshop.webGui.DomainPathTail <em>Domain Path Tail</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.workshop.webGui.DomainPathTail
+   * @generated
+   */
+  public Adapter createDomainPathTailAdapter()
   {
     return null;
   }

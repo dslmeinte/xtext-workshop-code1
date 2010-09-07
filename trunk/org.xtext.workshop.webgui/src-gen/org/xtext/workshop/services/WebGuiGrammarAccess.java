@@ -378,68 +378,93 @@ public class WebGuiGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cShowKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cReferenceAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final CrossReference cReferenceFeatureCrossReference_1_0 = (CrossReference)cReferenceAssignment_1.eContents().get(0);
-		private final RuleCall cReferenceFeatureIDTerminalRuleCall_1_0_1 = (RuleCall)cReferenceFeatureCrossReference_1_0.eContents().get(1);
+		private final RuleCall cReferenceDomainPathParserRuleCall_1_0 = (RuleCall)cReferenceAssignment_1.eContents().get(0);
 		
 		//// ~ display field
-		//// scope is narrowed to referenced Feature
-		/// *  
-		//DomainPath:
-		//    head=DomainPathHead;
-		//    
-		//DomainPathHead:
-		//    reference=[Feature]  tail=DomainPathTail;
-		//    
-		//DomainPathTail:
-		//    '.' reference=[Feature] (tail=DomainPathTail)?;
-		// * /DisplayElement:
-		//	"show" reference=[Feature];
+		//DisplayElement:
+		//	"show" reference=DomainPath;
 		public ParserRule getRule() { return rule; }
 
-		//"show" reference=[Feature] // scope is narrowed to referenced Feature
-		/// *  
-		//DomainPath:
-		//    head=DomainPathHead;
-		//    
-		//DomainPathHead:
-		//    reference=[Feature]  tail=DomainPathTail;
-		//    
-		//DomainPathTail:
-		//    '.' reference=[Feature] (tail=DomainPathTail)?;
-		// * /
+		//"show" reference=DomainPath
 		public Group getGroup() { return cGroup; }
 
 		//"show"
 		public Keyword getShowKeyword_0() { return cShowKeyword_0; }
 
-		//// scope is narrowed to referenced Feature
-		/// *  
-		//DomainPath:
-		//    head=DomainPathHead;
-		//    
-		//DomainPathHead:
-		//    reference=[Feature]  tail=DomainPathTail;
-		//    
-		//DomainPathTail:
-		//    '.' reference=[Feature] (tail=DomainPathTail)?;
-		// * /reference=[Feature]
+		//reference=DomainPath
 		public Assignment getReferenceAssignment_1() { return cReferenceAssignment_1; }
 
+		//DomainPath
+		public RuleCall getReferenceDomainPathParserRuleCall_1_0() { return cReferenceDomainPathParserRuleCall_1_0; }
+	}
+
+	public class DomainPathElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "DomainPath");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cFeatureAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final CrossReference cFeatureFeatureCrossReference_0_0 = (CrossReference)cFeatureAssignment_0.eContents().get(0);
+		private final RuleCall cFeatureFeatureIDTerminalRuleCall_0_0_1 = (RuleCall)cFeatureFeatureCrossReference_0_0.eContents().get(1);
+		private final Assignment cTailAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cTailDomainPathTailParserRuleCall_1_0 = (RuleCall)cTailAssignment_1.eContents().get(0);
+		
 		//// scope is narrowed to referenced Feature
-		/// *  
 		//DomainPath:
-		//    head=DomainPathHead;
-		//    
-		//DomainPathHead:
-		//    reference=[Feature]  tail=DomainPathTail;
-		//    
-		//DomainPathTail:
-		//    '.' reference=[Feature] (tail=DomainPathTail)?;
-		// * /[Feature]
-		public CrossReference getReferenceFeatureCrossReference_1_0() { return cReferenceFeatureCrossReference_1_0; }
+		//	feature=[Feature] tail=DomainPathTail?;
+		public ParserRule getRule() { return rule; }
+
+		//feature=[Feature] tail=DomainPathTail?
+		public Group getGroup() { return cGroup; }
+
+		//feature=[Feature]
+		public Assignment getFeatureAssignment_0() { return cFeatureAssignment_0; }
+
+		//[Feature]
+		public CrossReference getFeatureFeatureCrossReference_0_0() { return cFeatureFeatureCrossReference_0_0; }
 
 		//ID
-		public RuleCall getReferenceFeatureIDTerminalRuleCall_1_0_1() { return cReferenceFeatureIDTerminalRuleCall_1_0_1; }
+		public RuleCall getFeatureFeatureIDTerminalRuleCall_0_0_1() { return cFeatureFeatureIDTerminalRuleCall_0_0_1; }
+
+		//tail=DomainPathTail?
+		public Assignment getTailAssignment_1() { return cTailAssignment_1; }
+
+		//DomainPathTail
+		public RuleCall getTailDomainPathTailParserRuleCall_1_0() { return cTailDomainPathTailParserRuleCall_1_0; }
+	}
+
+	public class DomainPathTailElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "DomainPathTail");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cFullStopKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cFeatureAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final CrossReference cFeatureFeatureCrossReference_1_0 = (CrossReference)cFeatureAssignment_1.eContents().get(0);
+		private final RuleCall cFeatureFeatureIDTerminalRuleCall_1_0_1 = (RuleCall)cFeatureFeatureCrossReference_1_0.eContents().get(1);
+		private final Assignment cTailAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTailDomainPathTailParserRuleCall_2_0 = (RuleCall)cTailAssignment_2.eContents().get(0);
+		
+		//DomainPathTail:
+		//	"." feature=[Feature] tail=DomainPathTail?;
+		public ParserRule getRule() { return rule; }
+
+		//"." feature=[Feature] tail=DomainPathTail?
+		public Group getGroup() { return cGroup; }
+
+		//"."
+		public Keyword getFullStopKeyword_0() { return cFullStopKeyword_0; }
+
+		//feature=[Feature]
+		public Assignment getFeatureAssignment_1() { return cFeatureAssignment_1; }
+
+		//[Feature]
+		public CrossReference getFeatureFeatureCrossReference_1_0() { return cFeatureFeatureCrossReference_1_0; }
+
+		//ID
+		public RuleCall getFeatureFeatureIDTerminalRuleCall_1_0_1() { return cFeatureFeatureIDTerminalRuleCall_1_0_1; }
+
+		//tail=DomainPathTail?
+		public Assignment getTailAssignment_2() { return cTailAssignment_2; }
+
+		//DomainPathTail
+		public RuleCall getTailDomainPathTailParserRuleCall_2_0() { return cTailDomainPathTailParserRuleCall_2_0; }
 	}
 	
 	
@@ -454,6 +479,8 @@ public class WebGuiGrammarAccess extends AbstractGrammarElementFinder {
 	private PageElementElements pPageElement;
 	private ActionElementElements pActionElement;
 	private DisplayElementElements pDisplayElement;
+	private DomainPathElements pDomainPath;
+	private DomainPathTailElements pDomainPathTail;
 	
 	private final GrammarProvider grammarProvider;
 
@@ -589,24 +616,35 @@ public class WebGuiGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//// ~ display field
-	//// scope is narrowed to referenced Feature
-	/// *  
-	//DomainPath:
-	//    head=DomainPathHead;
-	//    
-	//DomainPathHead:
-	//    reference=[Feature]  tail=DomainPathTail;
-	//    
-	//DomainPathTail:
-	//    '.' reference=[Feature] (tail=DomainPathTail)?;
-	// * /DisplayElement:
-	//	"show" reference=[Feature];
+	//DisplayElement:
+	//	"show" reference=DomainPath;
 	public DisplayElementElements getDisplayElementAccess() {
 		return (pDisplayElement != null) ? pDisplayElement : (pDisplayElement = new DisplayElementElements());
 	}
 	
 	public ParserRule getDisplayElementRule() {
 		return getDisplayElementAccess().getRule();
+	}
+
+	//// scope is narrowed to referenced Feature
+	//DomainPath:
+	//	feature=[Feature] tail=DomainPathTail?;
+	public DomainPathElements getDomainPathAccess() {
+		return (pDomainPath != null) ? pDomainPath : (pDomainPath = new DomainPathElements());
+	}
+	
+	public ParserRule getDomainPathRule() {
+		return getDomainPathAccess().getRule();
+	}
+
+	//DomainPathTail:
+	//	"." feature=[Feature] tail=DomainPathTail?;
+	public DomainPathTailElements getDomainPathTailAccess() {
+		return (pDomainPathTail != null) ? pDomainPathTail : (pDomainPathTail = new DomainPathTailElements());
+	}
+	
+	public ParserRule getDomainPathTailRule() {
+		return getDomainPathTailAccess().getRule();
 	}
 
 	//terminal ID:

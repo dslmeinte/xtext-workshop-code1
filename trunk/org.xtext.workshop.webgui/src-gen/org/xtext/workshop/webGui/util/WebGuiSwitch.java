@@ -176,6 +176,20 @@ public class WebGuiSwitch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case WebGuiPackage.DOMAIN_PATH:
+      {
+        DomainPath domainPath = (DomainPath)theEObject;
+        T result = caseDomainPath(domainPath);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case WebGuiPackage.DOMAIN_PATH_TAIL:
+      {
+        DomainPathTail domainPathTail = (DomainPathTail)theEObject;
+        T result = caseDomainPathTail(domainPathTail);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       default: return defaultCase(theEObject);
     }
   }
@@ -352,6 +366,38 @@ public class WebGuiSwitch<T>
    * @generated
    */
   public T caseDisplayElement(DisplayElement object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Domain Path</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Domain Path</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseDomainPath(DomainPath object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Domain Path Tail</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Domain Path Tail</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseDomainPathTail(DomainPathTail object)
   {
     return null;
   }

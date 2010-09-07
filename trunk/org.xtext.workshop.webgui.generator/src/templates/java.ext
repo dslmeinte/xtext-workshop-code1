@@ -16,6 +16,7 @@ String toJavaType(DataType this) :
     switch(name) {
         case "string" : "String"
         case "date"   : "java.util.Date"
+        case "number" : "int"
         default       : "unknown"
     };
 

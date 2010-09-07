@@ -53,10 +53,14 @@ public class WebGuiFormatter extends AbstractDeclarativeFormatter {
 
 		// page:
 		cfg.setLinewrap().after(grammar.getPageAccess().getTitleSTRINGTerminalRuleCall_5_0());
-		cfg.setLinewrap().after(grammar.getPageAccess().getEntityEntityIDTerminalRuleCall_8_0_1());
+		cfg.setLinewrap(2).after(grammar.getPageAccess().getEntityAssignment_8());
 
 		// display element:
 		cfg.setLinewrap().after(grammar.getDisplayElementRule());
+		
+		// domain path
+		cfg.setNoSpace().before(grammar.getDomainPathTailAccess().getFullStopKeyword_0());
+		cfg.setNoSpace().after(grammar.getDomainPathTailAccess().getFullStopKeyword_0());
 
 		// action element:
 		cfg.setLinewrap().after(grammar.getActionElementRule());

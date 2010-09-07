@@ -43,6 +43,17 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DisplayElement" eSuperTypes="#//PageElement">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="reference" eType="#//Feature"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="reference" eType="#//DomainPath"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DomainPath">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="feature" eType="#//Feature"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tail" eType="#//DomainPathTail"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DomainPathTail">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="feature" eType="#//Feature"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tail" eType="#//DomainPathTail"
+        containment="true"/>
   </eClassifiers>
 </ecore:EPackage>

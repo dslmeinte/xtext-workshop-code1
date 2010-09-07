@@ -28,13 +28,13 @@ public class Address {
       this.city = city;
    }      
 
-   private String zipcode;
+   private Zipcode zipcode;
 
-   public String getZipcode() {
+   public Zipcode getZipcode() {
       return zipcode;
    }
    
-   public void setZipcode(String zipcode) {
+   public void setZipcode(Zipcode zipcode) {
       this.zipcode = zipcode;
    }      
 

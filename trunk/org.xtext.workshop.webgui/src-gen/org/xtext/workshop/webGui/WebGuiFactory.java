@@ -125,6 +125,24 @@ public interface WebGuiFactory extends EFactory
   DisplayElement createDisplayElement();
 
   /**
+   * Returns a new object of class '<em>Domain Path</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Domain Path</em>'.
+   * @generated
+   */
+  DomainPath createDomainPath();
+
+  /**
+   * Returns a new object of class '<em>Domain Path Tail</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Domain Path Tail</em>'.
+   * @generated
+   */
+  DomainPathTail createDomainPathTail();
+
+  /**
    * Returns the package supported by this factory.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

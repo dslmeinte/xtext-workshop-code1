@@ -13,17 +13,31 @@ domain:
    entity Address {
       street : string
       city : string
-      zipcode : string
+      zipcode : Zipcode
+   }
+
+   entity Zipcode {
+      area_code : number
+      street_part : string
    }
 
    type string
    type date
+   type number
 
 web:
 
    page Person {
       title = "Person details"
-      context = Person show name
+      context = Person
+
+      show name
       show email
+      show address.street
+      show address.city
+      show address.zipcode.area_code
+      show address.zipcode.street_part
+      show recommends
       action home
    }
+

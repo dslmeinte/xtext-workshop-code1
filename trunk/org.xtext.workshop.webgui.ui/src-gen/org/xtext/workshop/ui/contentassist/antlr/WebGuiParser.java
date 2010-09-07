@@ -49,6 +49,8 @@ public class WebGuiParser extends AbstractContentAssistParser {
 					put(grammarAccess.getPageAccess().getGroup(), "rule__Page__Group__0");
 					put(grammarAccess.getActionElementAccess().getGroup(), "rule__ActionElement__Group__0");
 					put(grammarAccess.getDisplayElementAccess().getGroup(), "rule__DisplayElement__Group__0");
+					put(grammarAccess.getDomainPathAccess().getGroup(), "rule__DomainPath__Group__0");
+					put(grammarAccess.getDomainPathTailAccess().getGroup(), "rule__DomainPathTail__Group__0");
 					put(grammarAccess.getModelAccess().getNameAssignment_1(), "rule__Model__NameAssignment_1");
 					put(grammarAccess.getModelAccess().getDomainAssignment_2(), "rule__Model__DomainAssignment_2");
 					put(grammarAccess.getModelAccess().getWebAssignment_3(), "rule__Model__WebAssignment_3");
@@ -66,6 +68,10 @@ public class WebGuiParser extends AbstractContentAssistParser {
 					put(grammarAccess.getPageAccess().getContentsAssignment_9(), "rule__Page__ContentsAssignment_9");
 					put(grammarAccess.getActionElementAccess().getNameAssignment_1(), "rule__ActionElement__NameAssignment_1");
 					put(grammarAccess.getDisplayElementAccess().getReferenceAssignment_1(), "rule__DisplayElement__ReferenceAssignment_1");
+					put(grammarAccess.getDomainPathAccess().getFeatureAssignment_0(), "rule__DomainPath__FeatureAssignment_0");
+					put(grammarAccess.getDomainPathAccess().getTailAssignment_1(), "rule__DomainPath__TailAssignment_1");
+					put(grammarAccess.getDomainPathTailAccess().getFeatureAssignment_1(), "rule__DomainPathTail__FeatureAssignment_1");
+					put(grammarAccess.getDomainPathTailAccess().getTailAssignment_2(), "rule__DomainPathTail__TailAssignment_2");
 				}
 			};
 		}

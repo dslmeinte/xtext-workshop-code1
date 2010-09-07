@@ -26,8 +26,19 @@
 «ENDDEFINE»
 
 «DEFINE element FOR DisplayElement»
-   <tr> <td span="2"> <i>«reference.name»</i> </td></tr>
+   «EXPAND displayType(this) FOR tailFeature().type»
 «ENDDEFINE»
 
+«DEFINE displayType(DisplayElement f) FOR Type»
+«ENDDEFINE»
+    
+«DEFINE displayType(DisplayElement f) FOR DataType»
+      <tr> <td span="2"> <i>«f.tailFeature().name»</i> </td></tr>
+«ENDDEFINE»
 
+«DEFINE displayType(DisplayElement f) FOR Entity»
+   «FOREACH features AS f»
+      <tr> <td> </td>  <td> <i>«f.name»</i> </td></tr>
+   «ENDFOREACH»
+«ENDDEFINE»
     

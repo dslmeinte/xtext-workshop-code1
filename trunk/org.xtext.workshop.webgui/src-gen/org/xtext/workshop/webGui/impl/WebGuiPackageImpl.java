@@ -16,6 +16,8 @@ import org.xtext.workshop.webGui.ActionElement;
 import org.xtext.workshop.webGui.DataType;
 import org.xtext.workshop.webGui.DisplayElement;
 import org.xtext.workshop.webGui.DomainModel;
+import org.xtext.workshop.webGui.DomainPath;
+import org.xtext.workshop.webGui.DomainPathTail;
 import org.xtext.workshop.webGui.Entity;
 import org.xtext.workshop.webGui.Feature;
 import org.xtext.workshop.webGui.Model;
@@ -110,6 +112,20 @@ public class WebGuiPackageImpl extends EPackageImpl implements WebGuiPackage
    * @generated
    */
   private EClass displayElementEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass domainPathEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass domainPathTailEClass = null;
 
   /**
    * Creates an instance of the model <b>Package</b>, registered with
@@ -449,6 +465,66 @@ public class WebGuiPackageImpl extends EPackageImpl implements WebGuiPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getDomainPath()
+  {
+    return domainPathEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getDomainPath_Feature()
+  {
+    return (EReference)domainPathEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getDomainPath_Tail()
+  {
+    return (EReference)domainPathEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getDomainPathTail()
+  {
+    return domainPathTailEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getDomainPathTail_Feature()
+  {
+    return (EReference)domainPathTailEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getDomainPathTail_Tail()
+  {
+    return (EReference)domainPathTailEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public WebGuiFactory getWebGuiFactory()
   {
     return (WebGuiFactory)getEFactoryInstance();
@@ -511,6 +587,14 @@ public class WebGuiPackageImpl extends EPackageImpl implements WebGuiPackage
 
     displayElementEClass = createEClass(DISPLAY_ELEMENT);
     createEReference(displayElementEClass, DISPLAY_ELEMENT__REFERENCE);
+
+    domainPathEClass = createEClass(DOMAIN_PATH);
+    createEReference(domainPathEClass, DOMAIN_PATH__FEATURE);
+    createEReference(domainPathEClass, DOMAIN_PATH__TAIL);
+
+    domainPathTailEClass = createEClass(DOMAIN_PATH_TAIL);
+    createEReference(domainPathTailEClass, DOMAIN_PATH_TAIL__FEATURE);
+    createEReference(domainPathTailEClass, DOMAIN_PATH_TAIL__TAIL);
   }
 
   /**
@@ -584,7 +668,15 @@ public class WebGuiPackageImpl extends EPackageImpl implements WebGuiPackage
     initEAttribute(getActionElement_Name(), ecorePackage.getEString(), "name", null, 0, 1, ActionElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(displayElementEClass, DisplayElement.class, "DisplayElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getDisplayElement_Reference(), this.getFeature(), null, "reference", null, 0, 1, DisplayElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getDisplayElement_Reference(), this.getDomainPath(), null, "reference", null, 0, 1, DisplayElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(domainPathEClass, DomainPath.class, "DomainPath", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getDomainPath_Feature(), this.getFeature(), null, "feature", null, 0, 1, DomainPath.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getDomainPath_Tail(), this.getDomainPathTail(), null, "tail", null, 0, 1, DomainPath.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(domainPathTailEClass, DomainPathTail.class, "DomainPathTail", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getDomainPathTail_Feature(), this.getFeature(), null, "feature", null, 0, 1, DomainPathTail.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getDomainPathTail_Tail(), this.getDomainPathTail(), null, "tail", null, 0, 1, DomainPathTail.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Create resource
     createResource(eNS_URI);
