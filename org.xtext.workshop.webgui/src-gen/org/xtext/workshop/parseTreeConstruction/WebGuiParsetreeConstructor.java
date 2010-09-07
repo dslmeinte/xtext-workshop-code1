@@ -1034,11 +1034,11 @@ protected class WebModel_PagesAssignment_1 extends AssignmentToken  {
 /************ begin Rule Page ****************
  *
  * Page:
- * 	"page" name=ID "{" "title" "=" title=STRING "content for" entity=[Entity] "{" contents+=PageElement* "}" "}";
+ * 	"page" name=ID "{" "title" "=" title=STRING "context" "=" entity=[Entity] contents+=PageElement* "}";
  *
  **/
 
-// "page" name=ID "{" "title" "=" title=STRING "content for" entity=[Entity] "{" contents+=PageElement* "}" "}"
+// "page" name=ID "{" "title" "=" title=STRING "context" "=" entity=[Entity] contents+=PageElement* "}"
 protected class Page_Group extends GroupToken {
 	
 	public Page_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -1053,7 +1053,7 @@ protected class Page_Group extends GroupToken {
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new Page_RightCurlyBracketKeyword_11(lastRuleCallOrigin, this, 0, inst);
+			case 0: return new Page_RightCurlyBracketKeyword_10(lastRuleCallOrigin, this, 0, inst);
 			default: return null;
 		}	
 	}
@@ -1222,16 +1222,16 @@ protected class Page_TitleAssignment_5 extends AssignmentToken  {
 
 }
 
-// "content for"
-protected class Page_ContentForKeyword_6 extends KeywordToken  {
+// "context"
+protected class Page_ContextKeyword_6 extends KeywordToken  {
 	
-	public Page_ContentForKeyword_6(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+	public Page_ContextKeyword_6(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
 		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
 	}
 	
 	@Override
 	public Keyword getGrammarElement() {
-		return grammarAccess.getPageAccess().getContentForKeyword_6();
+		return grammarAccess.getPageAccess().getContextKeyword_6();
 	}
 
     @Override
@@ -1244,22 +1244,44 @@ protected class Page_ContentForKeyword_6 extends KeywordToken  {
 
 }
 
-// entity=[Entity]
-protected class Page_EntityAssignment_7 extends AssignmentToken  {
+// "="
+protected class Page_EqualsSignKeyword_7 extends KeywordToken  {
 	
-	public Page_EntityAssignment_7(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+	public Page_EqualsSignKeyword_7(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
 		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
 	}
 	
 	@Override
-	public Assignment getGrammarElement() {
-		return grammarAccess.getPageAccess().getEntityAssignment_7();
+	public Keyword getGrammarElement() {
+		return grammarAccess.getPageAccess().getEqualsSignKeyword_7();
 	}
 
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new Page_ContentForKeyword_6(lastRuleCallOrigin, this, 0, inst);
+			case 0: return new Page_ContextKeyword_6(lastRuleCallOrigin, this, 0, inst);
+			default: return null;
+		}	
+	}
+
+}
+
+// entity=[Entity]
+protected class Page_EntityAssignment_8 extends AssignmentToken  {
+	
+	public Page_EntityAssignment_8(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
+	}
+	
+	@Override
+	public Assignment getGrammarElement() {
+		return grammarAccess.getPageAccess().getEntityAssignment_8();
+	}
+
+    @Override
+	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
+		switch(index) {
+			case 0: return new Page_EqualsSignKeyword_7(lastRuleCallOrigin, this, 0, inst);
 			default: return null;
 		}	
 	}
@@ -1270,35 +1292,13 @@ protected class Page_EntityAssignment_7 extends AssignmentToken  {
 		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("entity");
 		if(value instanceof EObject) { // org::eclipse::xtext::impl::CrossReferenceImpl
 			IEObjectConsumer param = createEObjectConsumer((EObject)value);
-			if(param.isInstanceOf(grammarAccess.getPageAccess().getEntityEntityCrossReference_7_0().getType().getClassifier())) {
+			if(param.isInstanceOf(grammarAccess.getPageAccess().getEntityEntityCrossReference_8_0().getType().getClassifier())) {
 				type = AssignmentType.CROSS_REFERENCE;
-				element = grammarAccess.getPageAccess().getEntityEntityCrossReference_7_0(); 
+				element = grammarAccess.getPageAccess().getEntityEntityCrossReference_8_0(); 
 				return obj;
 			}
 		}
 		return null;
-	}
-
-}
-
-// "{"
-protected class Page_LeftCurlyBracketKeyword_8 extends KeywordToken  {
-	
-	public Page_LeftCurlyBracketKeyword_8(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
-		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
-	}
-	
-	@Override
-	public Keyword getGrammarElement() {
-		return grammarAccess.getPageAccess().getLeftCurlyBracketKeyword_8();
-	}
-
-    @Override
-	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
-		switch(index) {
-			case 0: return new Page_EntityAssignment_7(lastRuleCallOrigin, this, 0, inst);
-			default: return null;
-		}	
 	}
 
 }
@@ -1344,7 +1344,7 @@ protected class Page_ContentsAssignment_9 extends AssignmentToken  {
 		if(value == inst.getEObject() && !inst.isConsumed()) return null;
 		switch(index) {
 			case 0: return new Page_ContentsAssignment_9(lastRuleCallOrigin, next, actIndex, consumed);
-			case 1: return new Page_LeftCurlyBracketKeyword_8(lastRuleCallOrigin, next, actIndex, consumed);
+			case 1: return new Page_EntityAssignment_8(lastRuleCallOrigin, next, actIndex, consumed);
 			default: return null;
 		}	
 	}	
@@ -1366,29 +1366,7 @@ protected class Page_RightCurlyBracketKeyword_10 extends KeywordToken  {
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
 			case 0: return new Page_ContentsAssignment_9(lastRuleCallOrigin, this, 0, inst);
-			case 1: return new Page_LeftCurlyBracketKeyword_8(lastRuleCallOrigin, this, 1, inst);
-			default: return null;
-		}	
-	}
-
-}
-
-// "}"
-protected class Page_RightCurlyBracketKeyword_11 extends KeywordToken  {
-	
-	public Page_RightCurlyBracketKeyword_11(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
-		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
-	}
-	
-	@Override
-	public Keyword getGrammarElement() {
-		return grammarAccess.getPageAccess().getRightCurlyBracketKeyword_11();
-	}
-
-    @Override
-	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
-		switch(index) {
-			case 0: return new Page_RightCurlyBracketKeyword_10(lastRuleCallOrigin, this, 0, inst);
+			case 1: return new Page_EntityAssignment_8(lastRuleCallOrigin, this, 1, inst);
 			default: return null;
 		}	
 	}

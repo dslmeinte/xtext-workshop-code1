@@ -54,11 +54,8 @@ Page:
     'page' name=ID
     '{'
         'title' '=' title=STRING
-        'content for' entity=[Entity]
-        '{'
+        'context' '=' entity=[Entity]
             (contents+=PageElement)*
-            
-        '}'
     '}';
     // (initial) scope for PageElement-s: features of referenced Entity
 

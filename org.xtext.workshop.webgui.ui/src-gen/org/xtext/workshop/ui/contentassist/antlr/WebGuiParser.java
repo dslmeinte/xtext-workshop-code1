@@ -64,7 +64,7 @@ public class WebGuiParser extends AbstractContentAssistParser {
 					put(grammarAccess.getWebModelAccess().getPagesAssignment_1(), "rule__WebModel__PagesAssignment_1");
 					put(grammarAccess.getPageAccess().getNameAssignment_1(), "rule__Page__NameAssignment_1");
 					put(grammarAccess.getPageAccess().getTitleAssignment_5(), "rule__Page__TitleAssignment_5");
-					put(grammarAccess.getPageAccess().getEntityAssignment_7(), "rule__Page__EntityAssignment_7");
+					put(grammarAccess.getPageAccess().getEntityAssignment_8(), "rule__Page__EntityAssignment_8");
 					put(grammarAccess.getPageAccess().getContentsAssignment_9(), "rule__Page__ContentsAssignment_9");
 					put(grammarAccess.getActionElementAccess().getNameAssignment_1(), "rule__ActionElement__NameAssignment_1");
 					put(grammarAccess.getDisplayElementAccess().getReferenceAssignment_1(), "rule__DisplayElement__ReferenceAssignment_1");

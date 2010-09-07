@@ -637,9 +637,13 @@ rulePage returns [EObject current=null]
 	    }
 
 )
-)	'content for' 
+)	'context' 
     {
-        createLeafNode(grammarAccess.getPageAccess().getContentForKeyword_6(), null); 
+        createLeafNode(grammarAccess.getPageAccess().getContextKeyword_6(), null); 
+    }
+	'=' 
+    {
+        createLeafNode(grammarAccess.getPageAccess().getEqualsSignKeyword_7(), null); 
     }
 (
 (
@@ -651,15 +655,11 @@ rulePage returns [EObject current=null]
         }
 	RULE_ID
 	{
-		createLeafNode(grammarAccess.getPageAccess().getEntityEntityCrossReference_7_0(), "entity"); 
+		createLeafNode(grammarAccess.getPageAccess().getEntityEntityCrossReference_8_0(), "entity"); 
 	}
 
 )
-)	'{' 
-    {
-        createLeafNode(grammarAccess.getPageAccess().getLeftCurlyBracketKeyword_8(), null); 
-    }
-(
+)(
 (
 		{ 
 	        currentNode=createCompositeNode(grammarAccess.getPageAccess().getContentsPageElementParserRuleCall_9_0(), currentNode); 
@@ -686,10 +686,6 @@ rulePage returns [EObject current=null]
 )*	'}' 
     {
         createLeafNode(grammarAccess.getPageAccess().getRightCurlyBracketKeyword_10(), null); 
-    }
-	'}' 
-    {
-        createLeafNode(grammarAccess.getPageAccess().getRightCurlyBracketKeyword_11(), null); 
     }
 )
 ;
