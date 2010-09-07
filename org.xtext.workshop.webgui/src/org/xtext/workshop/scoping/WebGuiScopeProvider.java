@@ -89,5 +89,15 @@ public class WebGuiScopeProvider extends AbstractDeclarativeScopeProvider {
 		return scope;
 	}
 	
+	/* domain path scope implementation for expression: */
+	public IScope scope_DomainPath_feature(final Feature context, EReference reference) {
+		//System.out.println("scope_DomainPath_feature for Feature");
+		IScope scope = IScope.NULLSCOPE;
+		
+		Entity entity = (Entity) context.eContainer();
+		scope = scopeFor(entity.getFeatures());
+		
+		return scope;
+	}
 
 }
