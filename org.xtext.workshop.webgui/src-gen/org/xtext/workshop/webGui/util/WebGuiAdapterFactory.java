@@ -143,6 +143,41 @@ public class WebGuiAdapterFactory extends AdapterFactoryImpl
         return createDomainPathTailAdapter();
       }
       @Override
+      public Adapter caseExpression(Expression object)
+      {
+        return createExpressionAdapter();
+      }
+      @Override
+      public Adapter caseLiteral(Literal object)
+      {
+        return createLiteralAdapter();
+      }
+      @Override
+      public Adapter caseNumberLiteral(NumberLiteral object)
+      {
+        return createNumberLiteralAdapter();
+      }
+      @Override
+      public Adapter caseAdd(Add object)
+      {
+        return createAddAdapter();
+      }
+      @Override
+      public Adapter caseSubstract(Substract object)
+      {
+        return createSubstractAdapter();
+      }
+      @Override
+      public Adapter caseMultiply(Multiply object)
+      {
+        return createMultiplyAdapter();
+      }
+      @Override
+      public Adapter caseDivide(Divide object)
+      {
+        return createDivideAdapter();
+      }
+      @Override
       public Adapter defaultCase(EObject object)
       {
         return createEObjectAdapter();
@@ -355,6 +390,111 @@ public class WebGuiAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createDomainPathTailAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.workshop.webGui.Expression <em>Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.workshop.webGui.Expression
+   * @generated
+   */
+  public Adapter createExpressionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.workshop.webGui.Literal <em>Literal</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.workshop.webGui.Literal
+   * @generated
+   */
+  public Adapter createLiteralAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.workshop.webGui.NumberLiteral <em>Number Literal</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.workshop.webGui.NumberLiteral
+   * @generated
+   */
+  public Adapter createNumberLiteralAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.workshop.webGui.Add <em>Add</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.workshop.webGui.Add
+   * @generated
+   */
+  public Adapter createAddAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.workshop.webGui.Substract <em>Substract</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.workshop.webGui.Substract
+   * @generated
+   */
+  public Adapter createSubstractAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.workshop.webGui.Multiply <em>Multiply</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.workshop.webGui.Multiply
+   * @generated
+   */
+  public Adapter createMultiplyAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.workshop.webGui.Divide <em>Divide</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.workshop.webGui.Divide
+   * @generated
+   */
+  public Adapter createDivideAdapter()
   {
     return null;
   }

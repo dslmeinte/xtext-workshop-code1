@@ -28,7 +28,8 @@ Entity:
 
 Feature:
     name=ID ':' type=[Type]
-    	( multivalued ?= ( '(s)' | '(es)' ) )?;
+    	( multivalued ?= ( '(s)' | '(es)' ) )?
+    	( '=' expression=Expression)?;
 
 Type:
     Entity | DataType;
@@ -74,3 +75,22 @@ DomainPath:
     
 DomainPathTail:
     '.' feature=[Feature] (tail=DomainPathTail)?;
+
+Expression:
+    Addition;
+    
+Addition returns Expression:
+    Multiplication ( ({Add.left=current} '+' | {Substract.left=current} '-') right=Multiplication)*;
+
+Multiplication returns Expression:
+    Value ( ({Multiply.left=current} '*' | {Divide.left=current} '/') right=Value)*;
+    
+Value returns Expression:
+    Literal | DomainPath;
+    
+Literal:
+    NumberLiteral;
+    
+NumberLiteral:
+    value=INT;
+                    

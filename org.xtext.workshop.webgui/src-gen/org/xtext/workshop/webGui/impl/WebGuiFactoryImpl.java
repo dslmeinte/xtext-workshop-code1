@@ -80,6 +80,13 @@ public class WebGuiFactoryImpl extends EFactoryImpl implements WebGuiFactory
       case WebGuiPackage.DISPLAY_ELEMENT: return createDisplayElement();
       case WebGuiPackage.DOMAIN_PATH: return createDomainPath();
       case WebGuiPackage.DOMAIN_PATH_TAIL: return createDomainPathTail();
+      case WebGuiPackage.EXPRESSION: return createExpression();
+      case WebGuiPackage.LITERAL: return createLiteral();
+      case WebGuiPackage.NUMBER_LITERAL: return createNumberLiteral();
+      case WebGuiPackage.ADD: return createAdd();
+      case WebGuiPackage.SUBSTRACT: return createSubstract();
+      case WebGuiPackage.MULTIPLY: return createMultiply();
+      case WebGuiPackage.DIVIDE: return createDivide();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -226,6 +233,83 @@ public class WebGuiFactoryImpl extends EFactoryImpl implements WebGuiFactory
   {
     DomainPathTailImpl domainPathTail = new DomainPathTailImpl();
     return domainPathTail;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Expression createExpression()
+  {
+    ExpressionImpl expression = new ExpressionImpl();
+    return expression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Literal createLiteral()
+  {
+    LiteralImpl literal = new LiteralImpl();
+    return literal;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NumberLiteral createNumberLiteral()
+  {
+    NumberLiteralImpl numberLiteral = new NumberLiteralImpl();
+    return numberLiteral;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Add createAdd()
+  {
+    AddImpl add = new AddImpl();
+    return add;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Substract createSubstract()
+  {
+    SubstractImpl substract = new SubstractImpl();
+    return substract;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Multiply createMultiply()
+  {
+    MultiplyImpl multiply = new MultiplyImpl();
+    return multiply;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Divide createDivide()
+  {
+    DivideImpl divide = new DivideImpl();
+    return divide;
   }
 
   /**

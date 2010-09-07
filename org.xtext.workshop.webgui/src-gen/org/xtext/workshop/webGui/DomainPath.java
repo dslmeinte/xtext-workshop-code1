@@ -5,7 +5,6 @@
  */
 package org.xtext.workshop.webGui;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,7 +23,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface DomainPath extends EObject
+public interface DomainPath extends Expression
 {
   /**
    * Returns the value of the '<em><b>Feature</b></em>' reference.

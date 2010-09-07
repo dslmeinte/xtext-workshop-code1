@@ -180,6 +180,7 @@ public class WebGuiSwitch<T>
       {
         DomainPath domainPath = (DomainPath)theEObject;
         T result = caseDomainPath(domainPath);
+        if (result == null) result = caseExpression(domainPath);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -187,6 +188,62 @@ public class WebGuiSwitch<T>
       {
         DomainPathTail domainPathTail = (DomainPathTail)theEObject;
         T result = caseDomainPathTail(domainPathTail);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case WebGuiPackage.EXPRESSION:
+      {
+        Expression expression = (Expression)theEObject;
+        T result = caseExpression(expression);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case WebGuiPackage.LITERAL:
+      {
+        Literal literal = (Literal)theEObject;
+        T result = caseLiteral(literal);
+        if (result == null) result = caseExpression(literal);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case WebGuiPackage.NUMBER_LITERAL:
+      {
+        NumberLiteral numberLiteral = (NumberLiteral)theEObject;
+        T result = caseNumberLiteral(numberLiteral);
+        if (result == null) result = caseLiteral(numberLiteral);
+        if (result == null) result = caseExpression(numberLiteral);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case WebGuiPackage.ADD:
+      {
+        Add add = (Add)theEObject;
+        T result = caseAdd(add);
+        if (result == null) result = caseExpression(add);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case WebGuiPackage.SUBSTRACT:
+      {
+        Substract substract = (Substract)theEObject;
+        T result = caseSubstract(substract);
+        if (result == null) result = caseExpression(substract);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case WebGuiPackage.MULTIPLY:
+      {
+        Multiply multiply = (Multiply)theEObject;
+        T result = caseMultiply(multiply);
+        if (result == null) result = caseExpression(multiply);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case WebGuiPackage.DIVIDE:
+      {
+        Divide divide = (Divide)theEObject;
+        T result = caseDivide(divide);
+        if (result == null) result = caseExpression(divide);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -398,6 +455,118 @@ public class WebGuiSwitch<T>
    * @generated
    */
   public T caseDomainPathTail(DomainPathTail object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Expression</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Expression</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseExpression(Expression object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Literal</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Literal</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseLiteral(Literal object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Number Literal</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Number Literal</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseNumberLiteral(NumberLiteral object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Add</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Add</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseAdd(Add object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Substract</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Substract</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseSubstract(Substract object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Multiply</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Multiply</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseMultiply(Multiply object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Divide</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Divide</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseDivide(Divide object)
   {
     return null;
   }

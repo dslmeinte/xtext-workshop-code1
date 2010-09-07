@@ -15,35 +15,39 @@ T15 : '}' ;
 T16 : ':' ;
 T17 : '(s)' ;
 T18 : '(es)' ;
-T19 : 'type' ;
-T20 : 'web:' ;
-T21 : 'page' ;
-T22 : 'title' ;
-T23 : '=' ;
+T19 : '=' ;
+T20 : 'type' ;
+T21 : 'web:' ;
+T22 : 'page' ;
+T23 : 'title' ;
 T24 : 'context' ;
 T25 : 'action' ;
 T26 : 'show' ;
 T27 : '.' ;
+T28 : '+' ;
+T29 : '-' ;
+T30 : '*' ;
+T31 : '/' ;
 
-// $ANTLR src "../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g" 967
+// $ANTLR src "../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g" 1342
 RULE_ID : '^'? ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
 
-// $ANTLR src "../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g" 969
+// $ANTLR src "../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g" 1344
 RULE_INT : ('0'..'9')+;
 
-// $ANTLR src "../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g" 971
+// $ANTLR src "../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g" 1346
 RULE_STRING : ('"' ('\\' ('b'|'t'|'n'|'f'|'r'|'"'|'\''|'\\')|~(('\\'|'"')))* '"'|'\'' ('\\' ('b'|'t'|'n'|'f'|'r'|'"'|'\''|'\\')|~(('\\'|'\'')))* '\'');
 
-// $ANTLR src "../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g" 973
+// $ANTLR src "../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g" 1348
 RULE_ML_COMMENT : '/*' ( options {greedy=false;} : . )*'*/';
 
-// $ANTLR src "../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g" 975
+// $ANTLR src "../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g" 1350
 RULE_SL_COMMENT : '//' ~(('\n'|'\r'))* ('\r'? '\n')?;
 
-// $ANTLR src "../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g" 977
+// $ANTLR src "../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g" 1352
 RULE_WS : (' '|'\t'|'\r'|'\n')+;
 
-// $ANTLR src "../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g" 979
+// $ANTLR src "../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g" 1354
 RULE_ANY_OTHER : .;
 
 

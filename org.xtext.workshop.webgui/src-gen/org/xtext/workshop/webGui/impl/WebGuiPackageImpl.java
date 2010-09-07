@@ -13,16 +13,23 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.xtext.workshop.webGui.ActionElement;
+import org.xtext.workshop.webGui.Add;
 import org.xtext.workshop.webGui.DataType;
 import org.xtext.workshop.webGui.DisplayElement;
+import org.xtext.workshop.webGui.Divide;
 import org.xtext.workshop.webGui.DomainModel;
 import org.xtext.workshop.webGui.DomainPath;
 import org.xtext.workshop.webGui.DomainPathTail;
 import org.xtext.workshop.webGui.Entity;
+import org.xtext.workshop.webGui.Expression;
 import org.xtext.workshop.webGui.Feature;
+import org.xtext.workshop.webGui.Literal;
 import org.xtext.workshop.webGui.Model;
+import org.xtext.workshop.webGui.Multiply;
+import org.xtext.workshop.webGui.NumberLiteral;
 import org.xtext.workshop.webGui.Page;
 import org.xtext.workshop.webGui.PageElement;
+import org.xtext.workshop.webGui.Substract;
 import org.xtext.workshop.webGui.Type;
 import org.xtext.workshop.webGui.WebGuiFactory;
 import org.xtext.workshop.webGui.WebGuiPackage;
@@ -126,6 +133,55 @@ public class WebGuiPackageImpl extends EPackageImpl implements WebGuiPackage
    * @generated
    */
   private EClass domainPathTailEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass expressionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass literalEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass numberLiteralEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass addEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass substractEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass multiplyEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass divideEClass = null;
 
   /**
    * Creates an instance of the model <b>Package</b>, registered with
@@ -308,6 +364,16 @@ public class WebGuiPackageImpl extends EPackageImpl implements WebGuiPackage
   public EAttribute getFeature_Multivalued()
   {
     return (EAttribute)featureEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getFeature_Expression()
+  {
+    return (EReference)featureEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -525,6 +591,166 @@ public class WebGuiPackageImpl extends EPackageImpl implements WebGuiPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getExpression()
+  {
+    return expressionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getLiteral()
+  {
+    return literalEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getNumberLiteral()
+  {
+    return numberLiteralEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getNumberLiteral_Value()
+  {
+    return (EAttribute)numberLiteralEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getAdd()
+  {
+    return addEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getAdd_Left()
+  {
+    return (EReference)addEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getAdd_Right()
+  {
+    return (EReference)addEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getSubstract()
+  {
+    return substractEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getSubstract_Left()
+  {
+    return (EReference)substractEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getSubstract_Right()
+  {
+    return (EReference)substractEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getMultiply()
+  {
+    return multiplyEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getMultiply_Left()
+  {
+    return (EReference)multiplyEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getMultiply_Right()
+  {
+    return (EReference)multiplyEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getDivide()
+  {
+    return divideEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getDivide_Left()
+  {
+    return (EReference)divideEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getDivide_Right()
+  {
+    return (EReference)divideEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public WebGuiFactory getWebGuiFactory()
   {
     return (WebGuiFactory)getEFactoryInstance();
@@ -565,6 +791,7 @@ public class WebGuiPackageImpl extends EPackageImpl implements WebGuiPackage
     createEAttribute(featureEClass, FEATURE__NAME);
     createEReference(featureEClass, FEATURE__TYPE);
     createEAttribute(featureEClass, FEATURE__MULTIVALUED);
+    createEReference(featureEClass, FEATURE__EXPRESSION);
 
     typeEClass = createEClass(TYPE);
     createEAttribute(typeEClass, TYPE__NAME);
@@ -595,6 +822,29 @@ public class WebGuiPackageImpl extends EPackageImpl implements WebGuiPackage
     domainPathTailEClass = createEClass(DOMAIN_PATH_TAIL);
     createEReference(domainPathTailEClass, DOMAIN_PATH_TAIL__FEATURE);
     createEReference(domainPathTailEClass, DOMAIN_PATH_TAIL__TAIL);
+
+    expressionEClass = createEClass(EXPRESSION);
+
+    literalEClass = createEClass(LITERAL);
+
+    numberLiteralEClass = createEClass(NUMBER_LITERAL);
+    createEAttribute(numberLiteralEClass, NUMBER_LITERAL__VALUE);
+
+    addEClass = createEClass(ADD);
+    createEReference(addEClass, ADD__LEFT);
+    createEReference(addEClass, ADD__RIGHT);
+
+    substractEClass = createEClass(SUBSTRACT);
+    createEReference(substractEClass, SUBSTRACT__LEFT);
+    createEReference(substractEClass, SUBSTRACT__RIGHT);
+
+    multiplyEClass = createEClass(MULTIPLY);
+    createEReference(multiplyEClass, MULTIPLY__LEFT);
+    createEReference(multiplyEClass, MULTIPLY__RIGHT);
+
+    divideEClass = createEClass(DIVIDE);
+    createEReference(divideEClass, DIVIDE__LEFT);
+    createEReference(divideEClass, DIVIDE__RIGHT);
   }
 
   /**
@@ -630,6 +880,13 @@ public class WebGuiPackageImpl extends EPackageImpl implements WebGuiPackage
     dataTypeEClass.getESuperTypes().add(this.getType());
     actionElementEClass.getESuperTypes().add(this.getPageElement());
     displayElementEClass.getESuperTypes().add(this.getPageElement());
+    domainPathEClass.getESuperTypes().add(this.getExpression());
+    literalEClass.getESuperTypes().add(this.getExpression());
+    numberLiteralEClass.getESuperTypes().add(this.getLiteral());
+    addEClass.getESuperTypes().add(this.getExpression());
+    substractEClass.getESuperTypes().add(this.getExpression());
+    multiplyEClass.getESuperTypes().add(this.getExpression());
+    divideEClass.getESuperTypes().add(this.getExpression());
 
     // Initialize classes and features; add operations and parameters
     initEClass(modelEClass, Model.class, "Model", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -647,6 +904,7 @@ public class WebGuiPackageImpl extends EPackageImpl implements WebGuiPackage
     initEAttribute(getFeature_Name(), ecorePackage.getEString(), "name", null, 0, 1, Feature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getFeature_Type(), this.getType(), null, "type", null, 0, 1, Feature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getFeature_Multivalued(), ecorePackage.getEBoolean(), "multivalued", null, 0, 1, Feature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getFeature_Expression(), this.getExpression(), null, "expression", null, 0, 1, Feature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(typeEClass, Type.class, "Type", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getType_Name(), ecorePackage.getEString(), "name", null, 0, 1, Type.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -677,6 +935,29 @@ public class WebGuiPackageImpl extends EPackageImpl implements WebGuiPackage
     initEClass(domainPathTailEClass, DomainPathTail.class, "DomainPathTail", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getDomainPathTail_Feature(), this.getFeature(), null, "feature", null, 0, 1, DomainPathTail.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getDomainPathTail_Tail(), this.getDomainPathTail(), null, "tail", null, 0, 1, DomainPathTail.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(expressionEClass, Expression.class, "Expression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(literalEClass, Literal.class, "Literal", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(numberLiteralEClass, NumberLiteral.class, "NumberLiteral", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getNumberLiteral_Value(), ecorePackage.getEInt(), "value", null, 0, 1, NumberLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(addEClass, Add.class, "Add", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getAdd_Left(), this.getExpression(), null, "left", null, 0, 1, Add.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getAdd_Right(), this.getExpression(), null, "right", null, 0, 1, Add.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(substractEClass, Substract.class, "Substract", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getSubstract_Left(), this.getExpression(), null, "left", null, 0, 1, Substract.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getSubstract_Right(), this.getExpression(), null, "right", null, 0, 1, Substract.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(multiplyEClass, Multiply.class, "Multiply", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getMultiply_Left(), this.getExpression(), null, "left", null, 0, 1, Multiply.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getMultiply_Right(), this.getExpression(), null, "right", null, 0, 1, Multiply.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(divideEClass, Divide.class, "Divide", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getDivide_Left(), this.getExpression(), null, "left", null, 0, 1, Divide.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getDivide_Right(), this.getExpression(), null, "right", null, 0, 1, Divide.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Create resource
     createResource(eNS_URI);
