@@ -43,7 +43,15 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute WebGui.ecore#//ActionElement/name"/>
     </genClasses>
     <genClasses ecoreClass="WebGui.ecore#//DisplayElement">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference WebGui.ecore#//DisplayElement/reference"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference WebGui.ecore#//DisplayElement/reference"/>
+    </genClasses>
+    <genClasses ecoreClass="WebGui.ecore#//DomainPath">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference WebGui.ecore#//DomainPath/feature"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference WebGui.ecore#//DomainPath/tail"/>
+    </genClasses>
+    <genClasses ecoreClass="WebGui.ecore#//DomainPathTail">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference WebGui.ecore#//DomainPathTail/feature"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference WebGui.ecore#//DomainPathTail/tail"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

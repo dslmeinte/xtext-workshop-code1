@@ -6,23 +6,10 @@ Model model(Page this) :
 String fileName(Page this) :
     model().name + "/" + name + ".html";
 
-/*    
-String toJavaType(Type this) :
-    "unknown"; // super 
-  
-String toJavaType(DataType this) :
-    switch(name) {
-        case "string" : "String"
-        case "date"   : "java.util.Date"
-        default  : "unknown"
-    };
-    
-String toJavaType(Entity this) :
-    name;
-    
-String toJavaType(Feature this) :
-    multivalued 
-        ? "List<" + type.toJavaType() + ">"
-        : type.toJavaType();
-*/
+Feature tailFeature(DisplayElement this) :
+    reference.tail == null ? reference.feature : reference.tail.tailFeature();
+
+private Feature tailFeature(DomainPathTail this) :
+    tail == null ? feature : tail.tailFeature();
+       
 

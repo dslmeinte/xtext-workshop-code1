@@ -78,6 +78,8 @@ public class WebGuiFactoryImpl extends EFactoryImpl implements WebGuiFactory
       case WebGuiPackage.PAGE_ELEMENT: return createPageElement();
       case WebGuiPackage.ACTION_ELEMENT: return createActionElement();
       case WebGuiPackage.DISPLAY_ELEMENT: return createDisplayElement();
+      case WebGuiPackage.DOMAIN_PATH: return createDomainPath();
+      case WebGuiPackage.DOMAIN_PATH_TAIL: return createDomainPathTail();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -202,6 +204,28 @@ public class WebGuiFactoryImpl extends EFactoryImpl implements WebGuiFactory
   {
     DisplayElementImpl displayElement = new DisplayElementImpl();
     return displayElement;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public DomainPath createDomainPath()
+  {
+    DomainPathImpl domainPath = new DomainPathImpl();
+    return domainPath;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public DomainPathTail createDomainPathTail()
+  {
+    DomainPathTailImpl domainPathTail = new DomainPathTailImpl();
+    return domainPathTail;
   }
 
   /**

@@ -809,19 +809,155 @@ ruleDisplayElement returns [EObject current=null]
     }
 (
 (
+		{ 
+	        currentNode=createCompositeNode(grammarAccess.getDisplayElementAccess().getReferenceDomainPathParserRuleCall_1_0(), currentNode); 
+	    }
+		lv_reference_1_0=ruleDomainPath		{
+	        if ($current==null) {
+	            $current = factory.create(grammarAccess.getDisplayElementRule().getType().getClassifier());
+	            associateNodeWithAstElement(currentNode.getParent(), $current);
+	        }
+	        try {
+	       		set(
+	       			$current, 
+	       			"reference",
+	        		lv_reference_1_0, 
+	        		"DomainPath", 
+	        		currentNode);
+	        } catch (ValueConverterException vce) {
+				handleValueConverterException(vce);
+	        }
+	        currentNode = currentNode.getParent();
+	    }
+
+)
+))
+;
+
+
+
+
+
+// Entry rule entryRuleDomainPath
+entryRuleDomainPath returns [EObject current=null] 
+	:
+	{ currentNode = createCompositeNode(grammarAccess.getDomainPathRule(), currentNode); }
+	 iv_ruleDomainPath=ruleDomainPath 
+	 { $current=$iv_ruleDomainPath.current; } 
+	 EOF 
+;
+
+// Rule DomainPath
+ruleDomainPath returns [EObject current=null] 
+    @init { EObject temp=null; setCurrentLookahead(); resetLookahead(); 
+    }
+    @after { resetLookahead(); 
+    	lastConsumedNode = currentNode;
+    }:
+((
+(
 		{
 			if ($current==null) {
-	            $current = factory.create(grammarAccess.getDisplayElementRule().getType().getClassifier());
+	            $current = factory.create(grammarAccess.getDomainPathRule().getType().getClassifier());
 	            associateNodeWithAstElement(currentNode, $current);
 	        }
         }
 	RULE_ID
 	{
-		createLeafNode(grammarAccess.getDisplayElementAccess().getReferenceFeatureCrossReference_1_0(), "reference"); 
+		createLeafNode(grammarAccess.getDomainPathAccess().getFeatureFeatureCrossReference_0_0(), "feature"); 
 	}
 
 )
-))
+)(
+(
+		{ 
+	        currentNode=createCompositeNode(grammarAccess.getDomainPathAccess().getTailDomainPathTailParserRuleCall_1_0(), currentNode); 
+	    }
+		lv_tail_1_0=ruleDomainPathTail		{
+	        if ($current==null) {
+	            $current = factory.create(grammarAccess.getDomainPathRule().getType().getClassifier());
+	            associateNodeWithAstElement(currentNode.getParent(), $current);
+	        }
+	        try {
+	       		set(
+	       			$current, 
+	       			"tail",
+	        		lv_tail_1_0, 
+	        		"DomainPathTail", 
+	        		currentNode);
+	        } catch (ValueConverterException vce) {
+				handleValueConverterException(vce);
+	        }
+	        currentNode = currentNode.getParent();
+	    }
+
+)
+)?)
+;
+
+
+
+
+
+// Entry rule entryRuleDomainPathTail
+entryRuleDomainPathTail returns [EObject current=null] 
+	:
+	{ currentNode = createCompositeNode(grammarAccess.getDomainPathTailRule(), currentNode); }
+	 iv_ruleDomainPathTail=ruleDomainPathTail 
+	 { $current=$iv_ruleDomainPathTail.current; } 
+	 EOF 
+;
+
+// Rule DomainPathTail
+ruleDomainPathTail returns [EObject current=null] 
+    @init { EObject temp=null; setCurrentLookahead(); resetLookahead(); 
+    }
+    @after { resetLookahead(); 
+    	lastConsumedNode = currentNode;
+    }:
+(	'.' 
+    {
+        createLeafNode(grammarAccess.getDomainPathTailAccess().getFullStopKeyword_0(), null); 
+    }
+(
+(
+		{
+			if ($current==null) {
+	            $current = factory.create(grammarAccess.getDomainPathTailRule().getType().getClassifier());
+	            associateNodeWithAstElement(currentNode, $current);
+	        }
+        }
+	RULE_ID
+	{
+		createLeafNode(grammarAccess.getDomainPathTailAccess().getFeatureFeatureCrossReference_1_0(), "feature"); 
+	}
+
+)
+)(
+(
+		{ 
+	        currentNode=createCompositeNode(grammarAccess.getDomainPathTailAccess().getTailDomainPathTailParserRuleCall_2_0(), currentNode); 
+	    }
+		lv_tail_2_0=ruleDomainPathTail		{
+	        if ($current==null) {
+	            $current = factory.create(grammarAccess.getDomainPathTailRule().getType().getClassifier());
+	            associateNodeWithAstElement(currentNode.getParent(), $current);
+	        }
+	        try {
+	       		set(
+	       			$current, 
+	       			"tail",
+	        		lv_tail_2_0, 
+	        		"DomainPathTail", 
+	        		currentNode);
+	        } catch (ValueConverterException vce) {
+				handleValueConverterException(vce);
+	        }
+	        currentNode = currentNode.getParent();
+	    }
+
+)
+)?)
 ;
 
 

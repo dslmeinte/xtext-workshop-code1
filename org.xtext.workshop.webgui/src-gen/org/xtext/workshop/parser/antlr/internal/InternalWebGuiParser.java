@@ -24,7 +24,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalWebGuiParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'model'", "'domain:'", "'entity'", "'{'", "'}'", "':'", "'(s)'", "'(es)'", "'type'", "'web:'", "'page'", "'title'", "'='", "'context'", "'action'", "'show'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'model'", "'domain:'", "'entity'", "'{'", "'}'", "':'", "'(s)'", "'(es)'", "'type'", "'web:'", "'page'", "'title'", "'='", "'context'", "'action'", "'show'", "'.'"
     };
     public static final int RULE_ID=4;
     public static final int RULE_STRING=5;
@@ -1679,39 +1679,56 @@ public class InternalWebGuiParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start ruleDisplayElement
-    // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:800:1: ruleDisplayElement returns [EObject current=null] : ( 'show' ( ( RULE_ID ) ) ) ;
+    // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:800:1: ruleDisplayElement returns [EObject current=null] : ( 'show' ( (lv_reference_1_0= ruleDomainPath ) ) ) ;
     public final EObject ruleDisplayElement() throws RecognitionException {
         EObject current = null;
+
+        EObject lv_reference_1_0 = null;
+
 
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:805:6: ( ( 'show' ( ( RULE_ID ) ) ) )
-            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:806:1: ( 'show' ( ( RULE_ID ) ) )
+            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:805:6: ( ( 'show' ( (lv_reference_1_0= ruleDomainPath ) ) ) )
+            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:806:1: ( 'show' ( (lv_reference_1_0= ruleDomainPath ) ) )
             {
-            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:806:1: ( 'show' ( ( RULE_ID ) ) )
-            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:806:3: 'show' ( ( RULE_ID ) )
+            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:806:1: ( 'show' ( (lv_reference_1_0= ruleDomainPath ) ) )
+            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:806:3: 'show' ( (lv_reference_1_0= ruleDomainPath ) )
             {
             match(input,26,FOLLOW_26_in_ruleDisplayElement1472); 
 
                     createLeafNode(grammarAccess.getDisplayElementAccess().getShowKeyword_0(), null); 
                 
-            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:810:1: ( ( RULE_ID ) )
-            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:811:1: ( RULE_ID )
+            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:810:1: ( (lv_reference_1_0= ruleDomainPath ) )
+            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:811:1: (lv_reference_1_0= ruleDomainPath )
             {
-            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:811:1: ( RULE_ID )
-            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:812:3: RULE_ID
+            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:811:1: (lv_reference_1_0= ruleDomainPath )
+            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:812:3: lv_reference_1_0= ruleDomainPath
             {
+             
+            	        currentNode=createCompositeNode(grammarAccess.getDisplayElementAccess().getReferenceDomainPathParserRuleCall_1_0(), currentNode); 
+            	    
+            pushFollow(FOLLOW_ruleDomainPath_in_ruleDisplayElement1493);
+            lv_reference_1_0=ruleDomainPath();
+            _fsp--;
 
-            			if (current==null) {
+
+            	        if (current==null) {
             	            current = factory.create(grammarAccess.getDisplayElementRule().getType().getClassifier());
-            	            associateNodeWithAstElement(currentNode, current);
+            	            associateNodeWithAstElement(currentNode.getParent(), current);
             	        }
-                    
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDisplayElement1490); 
-
-            		createLeafNode(grammarAccess.getDisplayElementAccess().getReferenceFeatureCrossReference_1_0(), "reference"); 
-            	
+            	        try {
+            	       		set(
+            	       			current, 
+            	       			"reference",
+            	        		lv_reference_1_0, 
+            	        		"DomainPath", 
+            	        		currentNode);
+            	        } catch (ValueConverterException vce) {
+            				handleValueConverterException(vce);
+            	        }
+            	        currentNode = currentNode.getParent();
+            	    
 
             }
 
@@ -1738,6 +1755,296 @@ public class InternalWebGuiParser extends AbstractInternalAntlrParser {
         return current;
     }
     // $ANTLR end ruleDisplayElement
+
+
+    // $ANTLR start entryRuleDomainPath
+    // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:842:1: entryRuleDomainPath returns [EObject current=null] : iv_ruleDomainPath= ruleDomainPath EOF ;
+    public final EObject entryRuleDomainPath() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleDomainPath = null;
+
+
+        try {
+            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:843:2: (iv_ruleDomainPath= ruleDomainPath EOF )
+            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:844:2: iv_ruleDomainPath= ruleDomainPath EOF
+            {
+             currentNode = createCompositeNode(grammarAccess.getDomainPathRule(), currentNode); 
+            pushFollow(FOLLOW_ruleDomainPath_in_entryRuleDomainPath1529);
+            iv_ruleDomainPath=ruleDomainPath();
+            _fsp--;
+
+             current =iv_ruleDomainPath; 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleDomainPath1539); 
+
+            }
+
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end entryRuleDomainPath
+
+
+    // $ANTLR start ruleDomainPath
+    // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:851:1: ruleDomainPath returns [EObject current=null] : ( ( ( RULE_ID ) ) ( (lv_tail_1_0= ruleDomainPathTail ) )? ) ;
+    public final EObject ruleDomainPath() throws RecognitionException {
+        EObject current = null;
+
+        EObject lv_tail_1_0 = null;
+
+
+         EObject temp=null; setCurrentLookahead(); resetLookahead(); 
+            
+        try {
+            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:856:6: ( ( ( ( RULE_ID ) ) ( (lv_tail_1_0= ruleDomainPathTail ) )? ) )
+            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:857:1: ( ( ( RULE_ID ) ) ( (lv_tail_1_0= ruleDomainPathTail ) )? )
+            {
+            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:857:1: ( ( ( RULE_ID ) ) ( (lv_tail_1_0= ruleDomainPathTail ) )? )
+            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:857:2: ( ( RULE_ID ) ) ( (lv_tail_1_0= ruleDomainPathTail ) )?
+            {
+            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:857:2: ( ( RULE_ID ) )
+            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:858:1: ( RULE_ID )
+            {
+            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:858:1: ( RULE_ID )
+            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:859:3: RULE_ID
+            {
+
+            			if (current==null) {
+            	            current = factory.create(grammarAccess.getDomainPathRule().getType().getClassifier());
+            	            associateNodeWithAstElement(currentNode, current);
+            	        }
+                    
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDomainPath1582); 
+
+            		createLeafNode(grammarAccess.getDomainPathAccess().getFeatureFeatureCrossReference_0_0(), "feature"); 
+            	
+
+            }
+
+
+            }
+
+            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:871:2: ( (lv_tail_1_0= ruleDomainPathTail ) )?
+            int alt9=2;
+            int LA9_0 = input.LA(1);
+
+            if ( (LA9_0==27) ) {
+                alt9=1;
+            }
+            switch (alt9) {
+                case 1 :
+                    // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:872:1: (lv_tail_1_0= ruleDomainPathTail )
+                    {
+                    // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:872:1: (lv_tail_1_0= ruleDomainPathTail )
+                    // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:873:3: lv_tail_1_0= ruleDomainPathTail
+                    {
+                     
+                    	        currentNode=createCompositeNode(grammarAccess.getDomainPathAccess().getTailDomainPathTailParserRuleCall_1_0(), currentNode); 
+                    	    
+                    pushFollow(FOLLOW_ruleDomainPathTail_in_ruleDomainPath1603);
+                    lv_tail_1_0=ruleDomainPathTail();
+                    _fsp--;
+
+
+                    	        if (current==null) {
+                    	            current = factory.create(grammarAccess.getDomainPathRule().getType().getClassifier());
+                    	            associateNodeWithAstElement(currentNode.getParent(), current);
+                    	        }
+                    	        try {
+                    	       		set(
+                    	       			current, 
+                    	       			"tail",
+                    	        		lv_tail_1_0, 
+                    	        		"DomainPathTail", 
+                    	        		currentNode);
+                    	        } catch (ValueConverterException vce) {
+                    				handleValueConverterException(vce);
+                    	        }
+                    	        currentNode = currentNode.getParent();
+                    	    
+
+                    }
+
+
+                    }
+                    break;
+
+            }
+
+
+            }
+
+
+            }
+
+             resetLookahead(); 
+                	lastConsumedNode = currentNode;
+                
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end ruleDomainPath
+
+
+    // $ANTLR start entryRuleDomainPathTail
+    // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:903:1: entryRuleDomainPathTail returns [EObject current=null] : iv_ruleDomainPathTail= ruleDomainPathTail EOF ;
+    public final EObject entryRuleDomainPathTail() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleDomainPathTail = null;
+
+
+        try {
+            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:904:2: (iv_ruleDomainPathTail= ruleDomainPathTail EOF )
+            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:905:2: iv_ruleDomainPathTail= ruleDomainPathTail EOF
+            {
+             currentNode = createCompositeNode(grammarAccess.getDomainPathTailRule(), currentNode); 
+            pushFollow(FOLLOW_ruleDomainPathTail_in_entryRuleDomainPathTail1640);
+            iv_ruleDomainPathTail=ruleDomainPathTail();
+            _fsp--;
+
+             current =iv_ruleDomainPathTail; 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleDomainPathTail1650); 
+
+            }
+
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end entryRuleDomainPathTail
+
+
+    // $ANTLR start ruleDomainPathTail
+    // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:912:1: ruleDomainPathTail returns [EObject current=null] : ( '.' ( ( RULE_ID ) ) ( (lv_tail_2_0= ruleDomainPathTail ) )? ) ;
+    public final EObject ruleDomainPathTail() throws RecognitionException {
+        EObject current = null;
+
+        EObject lv_tail_2_0 = null;
+
+
+         EObject temp=null; setCurrentLookahead(); resetLookahead(); 
+            
+        try {
+            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:917:6: ( ( '.' ( ( RULE_ID ) ) ( (lv_tail_2_0= ruleDomainPathTail ) )? ) )
+            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:918:1: ( '.' ( ( RULE_ID ) ) ( (lv_tail_2_0= ruleDomainPathTail ) )? )
+            {
+            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:918:1: ( '.' ( ( RULE_ID ) ) ( (lv_tail_2_0= ruleDomainPathTail ) )? )
+            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:918:3: '.' ( ( RULE_ID ) ) ( (lv_tail_2_0= ruleDomainPathTail ) )?
+            {
+            match(input,27,FOLLOW_27_in_ruleDomainPathTail1685); 
+
+                    createLeafNode(grammarAccess.getDomainPathTailAccess().getFullStopKeyword_0(), null); 
+                
+            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:922:1: ( ( RULE_ID ) )
+            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:923:1: ( RULE_ID )
+            {
+            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:923:1: ( RULE_ID )
+            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:924:3: RULE_ID
+            {
+
+            			if (current==null) {
+            	            current = factory.create(grammarAccess.getDomainPathTailRule().getType().getClassifier());
+            	            associateNodeWithAstElement(currentNode, current);
+            	        }
+                    
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDomainPathTail1703); 
+
+            		createLeafNode(grammarAccess.getDomainPathTailAccess().getFeatureFeatureCrossReference_1_0(), "feature"); 
+            	
+
+            }
+
+
+            }
+
+            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:936:2: ( (lv_tail_2_0= ruleDomainPathTail ) )?
+            int alt10=2;
+            int LA10_0 = input.LA(1);
+
+            if ( (LA10_0==27) ) {
+                alt10=1;
+            }
+            switch (alt10) {
+                case 1 :
+                    // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:937:1: (lv_tail_2_0= ruleDomainPathTail )
+                    {
+                    // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:937:1: (lv_tail_2_0= ruleDomainPathTail )
+                    // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:938:3: lv_tail_2_0= ruleDomainPathTail
+                    {
+                     
+                    	        currentNode=createCompositeNode(grammarAccess.getDomainPathTailAccess().getTailDomainPathTailParserRuleCall_2_0(), currentNode); 
+                    	    
+                    pushFollow(FOLLOW_ruleDomainPathTail_in_ruleDomainPathTail1724);
+                    lv_tail_2_0=ruleDomainPathTail();
+                    _fsp--;
+
+
+                    	        if (current==null) {
+                    	            current = factory.create(grammarAccess.getDomainPathTailRule().getType().getClassifier());
+                    	            associateNodeWithAstElement(currentNode.getParent(), current);
+                    	        }
+                    	        try {
+                    	       		set(
+                    	       			current, 
+                    	       			"tail",
+                    	        		lv_tail_2_0, 
+                    	        		"DomainPathTail", 
+                    	        		currentNode);
+                    	        } catch (ValueConverterException vce) {
+                    				handleValueConverterException(vce);
+                    	        }
+                    	        currentNode = currentNode.getParent();
+                    	    
+
+                    }
+
+
+                    }
+                    break;
+
+            }
+
+
+            }
+
+
+            }
+
+             resetLookahead(); 
+                	lastConsumedNode = currentNode;
+                
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end ruleDomainPathTail
 
 
  
@@ -1802,6 +2109,15 @@ public class InternalWebGuiParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_ruleDisplayElement_in_entryRuleDisplayElement1427 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleDisplayElement1437 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_26_in_ruleDisplayElement1472 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleDisplayElement1490 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDomainPath_in_ruleDisplayElement1493 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDomainPath_in_entryRuleDomainPath1529 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleDomainPath1539 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleDomainPath1582 = new BitSet(new long[]{0x0000000008000002L});
+    public static final BitSet FOLLOW_ruleDomainPathTail_in_ruleDomainPath1603 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDomainPathTail_in_entryRuleDomainPathTail1640 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleDomainPathTail1650 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_27_in_ruleDomainPathTail1685 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleDomainPathTail1703 = new BitSet(new long[]{0x0000000008000002L});
+    public static final BitSet FOLLOW_ruleDomainPathTail_in_ruleDomainPathTail1724 = new BitSet(new long[]{0x0000000000000002L});
 
 }

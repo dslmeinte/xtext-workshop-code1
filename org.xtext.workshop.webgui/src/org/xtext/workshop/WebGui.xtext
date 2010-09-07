@@ -66,17 +66,11 @@ ActionElement:	// ~ link
     'action' name=ID;
 
 DisplayElement:	// ~ display field
-    'show' reference=[Feature];
+    'show' reference=DomainPath;
     // scope is narrowed to referenced Feature
 
-
-/*  
 DomainPath:
-    head=DomainPathHead;
-    
-DomainPathHead:
-    reference=[Feature]  tail=DomainPathTail;
+    feature=[Feature]  (tail=DomainPathTail)?;
     
 DomainPathTail:
-    '.' reference=[Feature] (tail=DomainPathTail)?;
-*/        
+    '.' feature=[Feature] (tail=DomainPathTail)?;

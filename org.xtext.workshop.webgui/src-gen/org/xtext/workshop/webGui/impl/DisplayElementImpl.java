@@ -6,6 +6,7 @@
 package org.xtext.workshop.webGui.impl;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -13,7 +14,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.xtext.workshop.webGui.DisplayElement;
-import org.xtext.workshop.webGui.Feature;
+import org.xtext.workshop.webGui.DomainPath;
 import org.xtext.workshop.webGui.WebGuiPackage;
 
 /**
@@ -32,14 +33,14 @@ import org.xtext.workshop.webGui.WebGuiPackage;
 public class DisplayElementImpl extends PageElementImpl implements DisplayElement
 {
   /**
-   * The cached value of the '{@link #getReference() <em>Reference</em>}' reference.
+   * The cached value of the '{@link #getReference() <em>Reference</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getReference()
    * @generated
    * @ordered
    */
-  protected Feature reference;
+  protected DomainPath reference;
 
   /**
    * <!-- begin-user-doc -->
@@ -67,27 +68,7 @@ public class DisplayElementImpl extends PageElementImpl implements DisplayElemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public Feature getReference()
-  {
-    if (reference != null && reference.eIsProxy())
-    {
-      InternalEObject oldReference = (InternalEObject)reference;
-      reference = (Feature)eResolveProxy(oldReference);
-      if (reference != oldReference)
-      {
-        if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, WebGuiPackage.DISPLAY_ELEMENT__REFERENCE, oldReference, reference));
-      }
-    }
-    return reference;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Feature basicGetReference()
+  public DomainPath getReference()
   {
     return reference;
   }
@@ -97,12 +78,53 @@ public class DisplayElementImpl extends PageElementImpl implements DisplayElemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setReference(Feature newReference)
+  public NotificationChain basicSetReference(DomainPath newReference, NotificationChain msgs)
   {
-    Feature oldReference = reference;
+    DomainPath oldReference = reference;
     reference = newReference;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, WebGuiPackage.DISPLAY_ELEMENT__REFERENCE, oldReference, reference));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, WebGuiPackage.DISPLAY_ELEMENT__REFERENCE, oldReference, newReference);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setReference(DomainPath newReference)
+  {
+    if (newReference != reference)
+    {
+      NotificationChain msgs = null;
+      if (reference != null)
+        msgs = ((InternalEObject)reference).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - WebGuiPackage.DISPLAY_ELEMENT__REFERENCE, null, msgs);
+      if (newReference != null)
+        msgs = ((InternalEObject)newReference).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - WebGuiPackage.DISPLAY_ELEMENT__REFERENCE, null, msgs);
+      msgs = basicSetReference(newReference, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, WebGuiPackage.DISPLAY_ELEMENT__REFERENCE, newReference, newReference));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case WebGuiPackage.DISPLAY_ELEMENT__REFERENCE:
+        return basicSetReference(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -116,8 +138,7 @@ public class DisplayElementImpl extends PageElementImpl implements DisplayElemen
     switch (featureID)
     {
       case WebGuiPackage.DISPLAY_ELEMENT__REFERENCE:
-        if (resolve) return getReference();
-        return basicGetReference();
+        return getReference();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -133,7 +154,7 @@ public class DisplayElementImpl extends PageElementImpl implements DisplayElemen
     switch (featureID)
     {
       case WebGuiPackage.DISPLAY_ELEMENT__REFERENCE:
-        setReference((Feature)newValue);
+        setReference((DomainPath)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -150,7 +171,7 @@ public class DisplayElementImpl extends PageElementImpl implements DisplayElemen
     switch (featureID)
     {
       case WebGuiPackage.DISPLAY_ELEMENT__REFERENCE:
-        setReference((Feature)null);
+        setReference((DomainPath)null);
         return;
     }
     super.eUnset(featureID);

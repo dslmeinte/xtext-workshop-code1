@@ -42,6 +42,8 @@ protected class ThisRootNode extends RootToken {
 			case 8: return new PageElement_Alternatives(this, this, 8, inst);
 			case 9: return new ActionElement_Group(this, this, 9, inst);
 			case 10: return new DisplayElement_Group(this, this, 10, inst);
+			case 11: return new DomainPath_Group(this, this, 11, inst);
+			case 12: return new DomainPathTail_Group(this, this, 12, inst);
 			default: return null;
 		}	
 	}	
@@ -1589,32 +1591,12 @@ protected class ActionElement_NameAssignment_1 extends AssignmentToken  {
 /************ begin Rule DisplayElement ****************
  *
  * // ~ display field
- * // scope is narrowed to referenced Feature
- * / *  
- * DomainPath:
- *     head=DomainPathHead;
- *     
- * DomainPathHead:
- *     reference=[Feature]  tail=DomainPathTail;
- *     
- * DomainPathTail:
- *     '.' reference=[Feature] (tail=DomainPathTail)?;
- * * /DisplayElement:
- * 	"show" reference=[Feature];
+ * DisplayElement:
+ * 	"show" reference=DomainPath;
  *
  **/
 
-// "show" reference=[Feature] // scope is narrowed to referenced Feature
-// / *  
-// DomainPath:
-//     head=DomainPathHead;
-//     
-// DomainPathHead:
-//     reference=[Feature]  tail=DomainPathTail;
-//     
-// DomainPathTail:
-//     '.' reference=[Feature] (tail=DomainPathTail)?;
-// * /
+// "show" reference=DomainPath
 protected class DisplayElement_Group extends GroupToken {
 	
 	public DisplayElement_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -1664,17 +1646,7 @@ protected class DisplayElement_ShowKeyword_0 extends KeywordToken  {
 
 }
 
-// // scope is narrowed to referenced Feature
-// / *  
-// DomainPath:
-//     head=DomainPathHead;
-//     
-// DomainPathHead:
-//     reference=[Feature]  tail=DomainPathTail;
-//     
-// DomainPathTail:
-//     '.' reference=[Feature] (tail=DomainPathTail)?;
-// * /reference=[Feature]
+// reference=DomainPath
 protected class DisplayElement_ReferenceAssignment_1 extends AssignmentToken  {
 	
 	public DisplayElement_ReferenceAssignment_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -1689,7 +1661,7 @@ protected class DisplayElement_ReferenceAssignment_1 extends AssignmentToken  {
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new DisplayElement_ShowKeyword_0(lastRuleCallOrigin, this, 0, inst);
+			case 0: return new DomainPath_Group(this, this, 0, inst);
 			default: return null;
 		}	
 	}
@@ -1698,11 +1670,98 @@ protected class DisplayElement_ReferenceAssignment_1 extends AssignmentToken  {
 	public IEObjectConsumer tryConsume() {
 		if((value = eObjectConsumer.getConsumable("reference",true)) == null) return null;
 		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("reference");
+		if(value instanceof EObject) { // org::eclipse::xtext::impl::RuleCallImpl
+			IEObjectConsumer param = createEObjectConsumer((EObject)value);
+			if(param.isInstanceOf(grammarAccess.getDomainPathRule().getType().getClassifier())) {
+				type = AssignmentType.PARSER_RULE_CALL;
+				element = grammarAccess.getDisplayElementAccess().getReferenceDomainPathParserRuleCall_1_0(); 
+				consumed = obj;
+				return param;
+			}
+		}
+		return null;
+	}
+
+    @Override
+	public AbstractToken createFollowerAfterReturn(AbstractToken next,	int actIndex, int index, IEObjectConsumer inst) {
+		if(value == inst.getEObject() && !inst.isConsumed()) return null;
+		switch(index) {
+			case 0: return new DisplayElement_ShowKeyword_0(lastRuleCallOrigin, next, actIndex, consumed);
+			default: return null;
+		}	
+	}	
+}
+
+
+/************ end Rule DisplayElement ****************/
+
+
+/************ begin Rule DomainPath ****************
+ *
+ * // scope is narrowed to referenced Feature
+ * DomainPath:
+ * 	feature=[Feature] tail=DomainPathTail?;
+ *
+ **/
+
+// feature=[Feature] tail=DomainPathTail?
+protected class DomainPath_Group extends GroupToken {
+	
+	public DomainPath_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
+	}
+	
+	@Override
+	public Group getGrammarElement() {
+		return grammarAccess.getDomainPathAccess().getGroup();
+	}
+
+    @Override
+	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
+		switch(index) {
+			case 0: return new DomainPath_TailAssignment_1(lastRuleCallOrigin, this, 0, inst);
+			case 1: return new DomainPath_FeatureAssignment_0(lastRuleCallOrigin, this, 1, inst);
+			default: return null;
+		}	
+	}
+
+    @Override
+	public IEObjectConsumer tryConsume() {
+		if(getEObject().eClass() != grammarAccess.getDomainPathRule().getType().getClassifier())
+			return null;
+		return eObjectConsumer;
+	}
+
+}
+
+// feature=[Feature]
+protected class DomainPath_FeatureAssignment_0 extends AssignmentToken  {
+	
+	public DomainPath_FeatureAssignment_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
+	}
+	
+	@Override
+	public Assignment getGrammarElement() {
+		return grammarAccess.getDomainPathAccess().getFeatureAssignment_0();
+	}
+
+    @Override
+	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
+		switch(index) {
+			default: return lastRuleCallOrigin.createFollowerAfterReturn(this, index, index, inst);
+		}	
+	}
+
+    @Override	
+	public IEObjectConsumer tryConsume() {
+		if((value = eObjectConsumer.getConsumable("feature",true)) == null) return null;
+		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("feature");
 		if(value instanceof EObject) { // org::eclipse::xtext::impl::CrossReferenceImpl
 			IEObjectConsumer param = createEObjectConsumer((EObject)value);
-			if(param.isInstanceOf(grammarAccess.getDisplayElementAccess().getReferenceFeatureCrossReference_1_0().getType().getClassifier())) {
+			if(param.isInstanceOf(grammarAccess.getDomainPathAccess().getFeatureFeatureCrossReference_0_0().getType().getClassifier())) {
 				type = AssignmentType.CROSS_REFERENCE;
-				element = grammarAccess.getDisplayElementAccess().getReferenceFeatureCrossReference_1_0(); 
+				element = grammarAccess.getDomainPathAccess().getFeatureFeatureCrossReference_0_0(); 
 				return obj;
 			}
 		}
@@ -1711,7 +1770,198 @@ protected class DisplayElement_ReferenceAssignment_1 extends AssignmentToken  {
 
 }
 
+// tail=DomainPathTail?
+protected class DomainPath_TailAssignment_1 extends AssignmentToken  {
+	
+	public DomainPath_TailAssignment_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
+	}
+	
+	@Override
+	public Assignment getGrammarElement() {
+		return grammarAccess.getDomainPathAccess().getTailAssignment_1();
+	}
 
-/************ end Rule DisplayElement ****************/
+    @Override
+	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
+		switch(index) {
+			case 0: return new DomainPathTail_Group(this, this, 0, inst);
+			default: return null;
+		}	
+	}
+
+    @Override	
+	public IEObjectConsumer tryConsume() {
+		if((value = eObjectConsumer.getConsumable("tail",false)) == null) return null;
+		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("tail");
+		if(value instanceof EObject) { // org::eclipse::xtext::impl::RuleCallImpl
+			IEObjectConsumer param = createEObjectConsumer((EObject)value);
+			if(param.isInstanceOf(grammarAccess.getDomainPathTailRule().getType().getClassifier())) {
+				type = AssignmentType.PARSER_RULE_CALL;
+				element = grammarAccess.getDomainPathAccess().getTailDomainPathTailParserRuleCall_1_0(); 
+				consumed = obj;
+				return param;
+			}
+		}
+		return null;
+	}
+
+    @Override
+	public AbstractToken createFollowerAfterReturn(AbstractToken next,	int actIndex, int index, IEObjectConsumer inst) {
+		if(value == inst.getEObject() && !inst.isConsumed()) return null;
+		switch(index) {
+			case 0: return new DomainPath_FeatureAssignment_0(lastRuleCallOrigin, next, actIndex, consumed);
+			default: return null;
+		}	
+	}	
+}
+
+
+/************ end Rule DomainPath ****************/
+
+
+/************ begin Rule DomainPathTail ****************
+ *
+ * DomainPathTail:
+ * 	"." feature=[Feature] tail=DomainPathTail?;
+ *
+ **/
+
+// "." feature=[Feature] tail=DomainPathTail?
+protected class DomainPathTail_Group extends GroupToken {
+	
+	public DomainPathTail_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
+	}
+	
+	@Override
+	public Group getGrammarElement() {
+		return grammarAccess.getDomainPathTailAccess().getGroup();
+	}
+
+    @Override
+	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
+		switch(index) {
+			case 0: return new DomainPathTail_TailAssignment_2(lastRuleCallOrigin, this, 0, inst);
+			case 1: return new DomainPathTail_FeatureAssignment_1(lastRuleCallOrigin, this, 1, inst);
+			default: return null;
+		}	
+	}
+
+    @Override
+	public IEObjectConsumer tryConsume() {
+		if(getEObject().eClass() != grammarAccess.getDomainPathTailRule().getType().getClassifier())
+			return null;
+		return eObjectConsumer;
+	}
+
+}
+
+// "."
+protected class DomainPathTail_FullStopKeyword_0 extends KeywordToken  {
+	
+	public DomainPathTail_FullStopKeyword_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
+	}
+	
+	@Override
+	public Keyword getGrammarElement() {
+		return grammarAccess.getDomainPathTailAccess().getFullStopKeyword_0();
+	}
+
+    @Override
+	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
+		switch(index) {
+			default: return lastRuleCallOrigin.createFollowerAfterReturn(this, index, index, inst);
+		}	
+	}
+
+}
+
+// feature=[Feature]
+protected class DomainPathTail_FeatureAssignment_1 extends AssignmentToken  {
+	
+	public DomainPathTail_FeatureAssignment_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
+	}
+	
+	@Override
+	public Assignment getGrammarElement() {
+		return grammarAccess.getDomainPathTailAccess().getFeatureAssignment_1();
+	}
+
+    @Override
+	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
+		switch(index) {
+			case 0: return new DomainPathTail_FullStopKeyword_0(lastRuleCallOrigin, this, 0, inst);
+			default: return null;
+		}	
+	}
+
+    @Override	
+	public IEObjectConsumer tryConsume() {
+		if((value = eObjectConsumer.getConsumable("feature",true)) == null) return null;
+		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("feature");
+		if(value instanceof EObject) { // org::eclipse::xtext::impl::CrossReferenceImpl
+			IEObjectConsumer param = createEObjectConsumer((EObject)value);
+			if(param.isInstanceOf(grammarAccess.getDomainPathTailAccess().getFeatureFeatureCrossReference_1_0().getType().getClassifier())) {
+				type = AssignmentType.CROSS_REFERENCE;
+				element = grammarAccess.getDomainPathTailAccess().getFeatureFeatureCrossReference_1_0(); 
+				return obj;
+			}
+		}
+		return null;
+	}
+
+}
+
+// tail=DomainPathTail?
+protected class DomainPathTail_TailAssignment_2 extends AssignmentToken  {
+	
+	public DomainPathTail_TailAssignment_2(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
+	}
+	
+	@Override
+	public Assignment getGrammarElement() {
+		return grammarAccess.getDomainPathTailAccess().getTailAssignment_2();
+	}
+
+    @Override
+	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
+		switch(index) {
+			case 0: return new DomainPathTail_Group(this, this, 0, inst);
+			default: return null;
+		}	
+	}
+
+    @Override	
+	public IEObjectConsumer tryConsume() {
+		if((value = eObjectConsumer.getConsumable("tail",false)) == null) return null;
+		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("tail");
+		if(value instanceof EObject) { // org::eclipse::xtext::impl::RuleCallImpl
+			IEObjectConsumer param = createEObjectConsumer((EObject)value);
+			if(param.isInstanceOf(grammarAccess.getDomainPathTailRule().getType().getClassifier())) {
+				type = AssignmentType.PARSER_RULE_CALL;
+				element = grammarAccess.getDomainPathTailAccess().getTailDomainPathTailParserRuleCall_2_0(); 
+				consumed = obj;
+				return param;
+			}
+		}
+		return null;
+	}
+
+    @Override
+	public AbstractToken createFollowerAfterReturn(AbstractToken next,	int actIndex, int index, IEObjectConsumer inst) {
+		if(value == inst.getEObject() && !inst.isConsumed()) return null;
+		switch(index) {
+			case 0: return new DomainPathTail_FeatureAssignment_1(lastRuleCallOrigin, next, actIndex, consumed);
+			default: return null;
+		}	
+	}	
+}
+
+
+/************ end Rule DomainPathTail ****************/
 
 }
