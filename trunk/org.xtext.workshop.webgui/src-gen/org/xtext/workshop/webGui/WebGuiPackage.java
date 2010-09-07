@@ -236,13 +236,22 @@ public interface WebGuiPackage extends EPackage
   int FEATURE__MULTIVALUED = 2;
 
   /**
+   * The feature id for the '<em><b>Expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FEATURE__EXPRESSION = 3;
+
+  /**
    * The number of structural features of the '<em>Feature</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int FEATURE_FEATURE_COUNT = 3;
+  int FEATURE_FEATURE_COUNT = 4;
 
   /**
    * The meta object id for the '{@link org.xtext.workshop.webGui.impl.DataTypeImpl <em>Data Type</em>}' class.
@@ -431,6 +440,25 @@ public interface WebGuiPackage extends EPackage
   int DISPLAY_ELEMENT_FEATURE_COUNT = PAGE_ELEMENT_FEATURE_COUNT + 1;
 
   /**
+   * The meta object id for the '{@link org.xtext.workshop.webGui.impl.ExpressionImpl <em>Expression</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.workshop.webGui.impl.ExpressionImpl
+   * @see org.xtext.workshop.webGui.impl.WebGuiPackageImpl#getExpression()
+   * @generated
+   */
+  int EXPRESSION = 13;
+
+  /**
+   * The number of structural features of the '<em>Expression</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXPRESSION_FEATURE_COUNT = 0;
+
+  /**
    * The meta object id for the '{@link org.xtext.workshop.webGui.impl.DomainPathImpl <em>Domain Path</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -447,7 +475,7 @@ public interface WebGuiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int DOMAIN_PATH__FEATURE = 0;
+  int DOMAIN_PATH__FEATURE = EXPRESSION_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Tail</b></em>' containment reference.
@@ -456,7 +484,7 @@ public interface WebGuiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int DOMAIN_PATH__TAIL = 1;
+  int DOMAIN_PATH__TAIL = EXPRESSION_FEATURE_COUNT + 1;
 
   /**
    * The number of structural features of the '<em>Domain Path</em>' class.
@@ -465,7 +493,7 @@ public interface WebGuiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int DOMAIN_PATH_FEATURE_COUNT = 2;
+  int DOMAIN_PATH_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link org.xtext.workshop.webGui.impl.DomainPathTailImpl <em>Domain Path Tail</em>}' class.
@@ -503,6 +531,201 @@ public interface WebGuiPackage extends EPackage
    * @ordered
    */
   int DOMAIN_PATH_TAIL_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.workshop.webGui.impl.LiteralImpl <em>Literal</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.workshop.webGui.impl.LiteralImpl
+   * @see org.xtext.workshop.webGui.impl.WebGuiPackageImpl#getLiteral()
+   * @generated
+   */
+  int LITERAL = 14;
+
+  /**
+   * The number of structural features of the '<em>Literal</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LITERAL_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 0;
+
+  /**
+   * The meta object id for the '{@link org.xtext.workshop.webGui.impl.NumberLiteralImpl <em>Number Literal</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.workshop.webGui.impl.NumberLiteralImpl
+   * @see org.xtext.workshop.webGui.impl.WebGuiPackageImpl#getNumberLiteral()
+   * @generated
+   */
+  int NUMBER_LITERAL = 15;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NUMBER_LITERAL__VALUE = LITERAL_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Number Literal</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NUMBER_LITERAL_FEATURE_COUNT = LITERAL_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.workshop.webGui.impl.AddImpl <em>Add</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.workshop.webGui.impl.AddImpl
+   * @see org.xtext.workshop.webGui.impl.WebGuiPackageImpl#getAdd()
+   * @generated
+   */
+  int ADD = 16;
+
+  /**
+   * The feature id for the '<em><b>Left</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ADD__LEFT = EXPRESSION_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Right</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ADD__RIGHT = EXPRESSION_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Add</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ADD_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.workshop.webGui.impl.SubstractImpl <em>Substract</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.workshop.webGui.impl.SubstractImpl
+   * @see org.xtext.workshop.webGui.impl.WebGuiPackageImpl#getSubstract()
+   * @generated
+   */
+  int SUBSTRACT = 17;
+
+  /**
+   * The feature id for the '<em><b>Left</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SUBSTRACT__LEFT = EXPRESSION_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Right</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SUBSTRACT__RIGHT = EXPRESSION_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Substract</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SUBSTRACT_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.workshop.webGui.impl.MultiplyImpl <em>Multiply</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.workshop.webGui.impl.MultiplyImpl
+   * @see org.xtext.workshop.webGui.impl.WebGuiPackageImpl#getMultiply()
+   * @generated
+   */
+  int MULTIPLY = 18;
+
+  /**
+   * The feature id for the '<em><b>Left</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MULTIPLY__LEFT = EXPRESSION_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Right</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MULTIPLY__RIGHT = EXPRESSION_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Multiply</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MULTIPLY_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.workshop.webGui.impl.DivideImpl <em>Divide</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.workshop.webGui.impl.DivideImpl
+   * @see org.xtext.workshop.webGui.impl.WebGuiPackageImpl#getDivide()
+   * @generated
+   */
+  int DIVIDE = 19;
+
+  /**
+   * The feature id for the '<em><b>Left</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DIVIDE__LEFT = EXPRESSION_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Right</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DIVIDE__RIGHT = EXPRESSION_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Divide</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DIVIDE_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 2;
 
 
   /**
@@ -632,6 +855,17 @@ public interface WebGuiPackage extends EPackage
    * @generated
    */
   EAttribute getFeature_Multivalued();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.workshop.webGui.Feature#getExpression <em>Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Expression</em>'.
+   * @see org.xtext.workshop.webGui.Feature#getExpression()
+   * @see #getFeature()
+   * @generated
+   */
+  EReference getFeature_Expression();
 
   /**
    * Returns the meta object for class '{@link org.xtext.workshop.webGui.Type <em>Type</em>}'.
@@ -856,6 +1090,175 @@ public interface WebGuiPackage extends EPackage
   EReference getDomainPathTail_Tail();
 
   /**
+   * Returns the meta object for class '{@link org.xtext.workshop.webGui.Expression <em>Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Expression</em>'.
+   * @see org.xtext.workshop.webGui.Expression
+   * @generated
+   */
+  EClass getExpression();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.workshop.webGui.Literal <em>Literal</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Literal</em>'.
+   * @see org.xtext.workshop.webGui.Literal
+   * @generated
+   */
+  EClass getLiteral();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.workshop.webGui.NumberLiteral <em>Number Literal</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Number Literal</em>'.
+   * @see org.xtext.workshop.webGui.NumberLiteral
+   * @generated
+   */
+  EClass getNumberLiteral();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.workshop.webGui.NumberLiteral#getValue <em>Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Value</em>'.
+   * @see org.xtext.workshop.webGui.NumberLiteral#getValue()
+   * @see #getNumberLiteral()
+   * @generated
+   */
+  EAttribute getNumberLiteral_Value();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.workshop.webGui.Add <em>Add</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Add</em>'.
+   * @see org.xtext.workshop.webGui.Add
+   * @generated
+   */
+  EClass getAdd();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.workshop.webGui.Add#getLeft <em>Left</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Left</em>'.
+   * @see org.xtext.workshop.webGui.Add#getLeft()
+   * @see #getAdd()
+   * @generated
+   */
+  EReference getAdd_Left();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.workshop.webGui.Add#getRight <em>Right</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Right</em>'.
+   * @see org.xtext.workshop.webGui.Add#getRight()
+   * @see #getAdd()
+   * @generated
+   */
+  EReference getAdd_Right();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.workshop.webGui.Substract <em>Substract</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Substract</em>'.
+   * @see org.xtext.workshop.webGui.Substract
+   * @generated
+   */
+  EClass getSubstract();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.workshop.webGui.Substract#getLeft <em>Left</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Left</em>'.
+   * @see org.xtext.workshop.webGui.Substract#getLeft()
+   * @see #getSubstract()
+   * @generated
+   */
+  EReference getSubstract_Left();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.workshop.webGui.Substract#getRight <em>Right</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Right</em>'.
+   * @see org.xtext.workshop.webGui.Substract#getRight()
+   * @see #getSubstract()
+   * @generated
+   */
+  EReference getSubstract_Right();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.workshop.webGui.Multiply <em>Multiply</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Multiply</em>'.
+   * @see org.xtext.workshop.webGui.Multiply
+   * @generated
+   */
+  EClass getMultiply();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.workshop.webGui.Multiply#getLeft <em>Left</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Left</em>'.
+   * @see org.xtext.workshop.webGui.Multiply#getLeft()
+   * @see #getMultiply()
+   * @generated
+   */
+  EReference getMultiply_Left();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.workshop.webGui.Multiply#getRight <em>Right</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Right</em>'.
+   * @see org.xtext.workshop.webGui.Multiply#getRight()
+   * @see #getMultiply()
+   * @generated
+   */
+  EReference getMultiply_Right();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.workshop.webGui.Divide <em>Divide</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Divide</em>'.
+   * @see org.xtext.workshop.webGui.Divide
+   * @generated
+   */
+  EClass getDivide();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.workshop.webGui.Divide#getLeft <em>Left</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Left</em>'.
+   * @see org.xtext.workshop.webGui.Divide#getLeft()
+   * @see #getDivide()
+   * @generated
+   */
+  EReference getDivide_Left();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.workshop.webGui.Divide#getRight <em>Right</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Right</em>'.
+   * @see org.xtext.workshop.webGui.Divide#getRight()
+   * @see #getDivide()
+   * @generated
+   */
+  EReference getDivide_Right();
+
+  /**
    * Returns the factory that creates the instances of the model.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -981,6 +1384,14 @@ public interface WebGuiPackage extends EPackage
      * @generated
      */
     EAttribute FEATURE__MULTIVALUED = eINSTANCE.getFeature_Multivalued();
+
+    /**
+     * The meta object literal for the '<em><b>Expression</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference FEATURE__EXPRESSION = eINSTANCE.getFeature_Expression();
 
     /**
      * The meta object literal for the '{@link org.xtext.workshop.webGui.impl.TypeImpl <em>Type</em>}' class.
@@ -1167,6 +1578,148 @@ public interface WebGuiPackage extends EPackage
      * @generated
      */
     EReference DOMAIN_PATH_TAIL__TAIL = eINSTANCE.getDomainPathTail_Tail();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.workshop.webGui.impl.ExpressionImpl <em>Expression</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.workshop.webGui.impl.ExpressionImpl
+     * @see org.xtext.workshop.webGui.impl.WebGuiPackageImpl#getExpression()
+     * @generated
+     */
+    EClass EXPRESSION = eINSTANCE.getExpression();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.workshop.webGui.impl.LiteralImpl <em>Literal</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.workshop.webGui.impl.LiteralImpl
+     * @see org.xtext.workshop.webGui.impl.WebGuiPackageImpl#getLiteral()
+     * @generated
+     */
+    EClass LITERAL = eINSTANCE.getLiteral();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.workshop.webGui.impl.NumberLiteralImpl <em>Number Literal</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.workshop.webGui.impl.NumberLiteralImpl
+     * @see org.xtext.workshop.webGui.impl.WebGuiPackageImpl#getNumberLiteral()
+     * @generated
+     */
+    EClass NUMBER_LITERAL = eINSTANCE.getNumberLiteral();
+
+    /**
+     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute NUMBER_LITERAL__VALUE = eINSTANCE.getNumberLiteral_Value();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.workshop.webGui.impl.AddImpl <em>Add</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.workshop.webGui.impl.AddImpl
+     * @see org.xtext.workshop.webGui.impl.WebGuiPackageImpl#getAdd()
+     * @generated
+     */
+    EClass ADD = eINSTANCE.getAdd();
+
+    /**
+     * The meta object literal for the '<em><b>Left</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ADD__LEFT = eINSTANCE.getAdd_Left();
+
+    /**
+     * The meta object literal for the '<em><b>Right</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ADD__RIGHT = eINSTANCE.getAdd_Right();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.workshop.webGui.impl.SubstractImpl <em>Substract</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.workshop.webGui.impl.SubstractImpl
+     * @see org.xtext.workshop.webGui.impl.WebGuiPackageImpl#getSubstract()
+     * @generated
+     */
+    EClass SUBSTRACT = eINSTANCE.getSubstract();
+
+    /**
+     * The meta object literal for the '<em><b>Left</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference SUBSTRACT__LEFT = eINSTANCE.getSubstract_Left();
+
+    /**
+     * The meta object literal for the '<em><b>Right</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference SUBSTRACT__RIGHT = eINSTANCE.getSubstract_Right();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.workshop.webGui.impl.MultiplyImpl <em>Multiply</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.workshop.webGui.impl.MultiplyImpl
+     * @see org.xtext.workshop.webGui.impl.WebGuiPackageImpl#getMultiply()
+     * @generated
+     */
+    EClass MULTIPLY = eINSTANCE.getMultiply();
+
+    /**
+     * The meta object literal for the '<em><b>Left</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference MULTIPLY__LEFT = eINSTANCE.getMultiply_Left();
+
+    /**
+     * The meta object literal for the '<em><b>Right</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference MULTIPLY__RIGHT = eINSTANCE.getMultiply_Right();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.workshop.webGui.impl.DivideImpl <em>Divide</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.workshop.webGui.impl.DivideImpl
+     * @see org.xtext.workshop.webGui.impl.WebGuiPackageImpl#getDivide()
+     * @generated
+     */
+    EClass DIVIDE = eINSTANCE.getDivide();
+
+    /**
+     * The meta object literal for the '<em><b>Left</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DIVIDE__LEFT = eINSTANCE.getDivide_Left();
+
+    /**
+     * The meta object literal for the '<em><b>Right</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DIVIDE__RIGHT = eINSTANCE.getDivide_Right();
 
   }
 

@@ -24,6 +24,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute WebGui.ecore#//Feature/name"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference WebGui.ecore#//Feature/type"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute WebGui.ecore#//Feature/multivalued"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference WebGui.ecore#//Feature/expression"/>
     </genClasses>
     <genClasses ecoreClass="WebGui.ecore#//Type">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute WebGui.ecore#//Type/name"/>
@@ -52,6 +53,27 @@
     <genClasses ecoreClass="WebGui.ecore#//DomainPathTail">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference WebGui.ecore#//DomainPathTail/feature"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference WebGui.ecore#//DomainPathTail/tail"/>
+    </genClasses>
+    <genClasses ecoreClass="WebGui.ecore#//Expression"/>
+    <genClasses ecoreClass="WebGui.ecore#//Literal"/>
+    <genClasses ecoreClass="WebGui.ecore#//NumberLiteral">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute WebGui.ecore#//NumberLiteral/value"/>
+    </genClasses>
+    <genClasses ecoreClass="WebGui.ecore#//Add">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference WebGui.ecore#//Add/left"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference WebGui.ecore#//Add/right"/>
+    </genClasses>
+    <genClasses ecoreClass="WebGui.ecore#//Substract">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference WebGui.ecore#//Substract/left"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference WebGui.ecore#//Substract/right"/>
+    </genClasses>
+    <genClasses ecoreClass="WebGui.ecore#//Multiply">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference WebGui.ecore#//Multiply/left"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference WebGui.ecore#//Multiply/right"/>
+    </genClasses>
+    <genClasses ecoreClass="WebGui.ecore#//Divide">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference WebGui.ecore#//Divide/left"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference WebGui.ecore#//Divide/right"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

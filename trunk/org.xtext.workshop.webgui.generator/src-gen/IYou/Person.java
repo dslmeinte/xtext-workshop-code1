@@ -50,6 +50,16 @@ public class Person {
       this.address = address;
    }      
 
+   private Salary salary;
+
+   public Salary getSalary() {
+      return salary;
+   }
+   
+   public void setSalary(Salary salary) {
+      this.salary = salary;
+   }      
+
    private List<Person> recommends;
 
    public List<Person> getRecommends() {

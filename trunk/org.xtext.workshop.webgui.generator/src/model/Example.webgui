@@ -7,6 +7,7 @@ domain:
       birth : date
       email : string
       address : Address
+      salary : Salary
       recommends : Person(s)
    }
 
@@ -19,6 +20,13 @@ domain:
    entity Zipcode {
       area_code : number
       street_part : string
+   }
+
+   entity Salary {
+      holiday_allowance : number
+      monthly_pay : number
+      bonus : number
+      yearly_salary : number = 12 * monthly_pay + holiday_allowance + bonus
    }
 
    type string
