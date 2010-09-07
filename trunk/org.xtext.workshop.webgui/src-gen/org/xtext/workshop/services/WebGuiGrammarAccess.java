@@ -60,43 +60,29 @@ public class WebGuiGrammarAccess extends AbstractGrammarElementFinder {
 	public class DomainModelElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "DomainModel");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Action cDomainModelAction_0 = (Action)cGroup.eContents().get(0);
-		private final Keyword cDomainKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cEntitiesAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cEntitiesEntityParserRuleCall_2_0 = (RuleCall)cEntitiesAssignment_2.eContents().get(0);
-		private final Assignment cDataTypesAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cDataTypesDataTypeParserRuleCall_3_0 = (RuleCall)cDataTypesAssignment_3.eContents().get(0);
+		private final Keyword cDomainKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cTypesAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cTypesTypeParserRuleCall_1_0 = (RuleCall)cTypesAssignment_1.eContents().get(0);
 		
 		/// *
 		// * +--------------+
 		// * | Domain model |
 		// * +--------------+
-		// * /DomainModel: // ensure model.domain != null
-		//	{DomainModel} "domain:" entities+=Entity* dataTypes+=DataType*;
+		// * /DomainModel:
+		//	"domain:" types+=Type+;
 		public ParserRule getRule() { return rule; }
 
-		//// ensure model.domain != null
-		//{DomainModel} "domain:" entities+=Entity* dataTypes+=DataType*
+		//"domain:" types+=Type+
 		public Group getGroup() { return cGroup; }
 
-		//// ensure model.domain != null
-		//{DomainModel}
-		public Action getDomainModelAction_0() { return cDomainModelAction_0; }
-
 		//"domain:"
-		public Keyword getDomainKeyword_1() { return cDomainKeyword_1; }
+		public Keyword getDomainKeyword_0() { return cDomainKeyword_0; }
 
-		//entities+=Entity*
-		public Assignment getEntitiesAssignment_2() { return cEntitiesAssignment_2; }
+		//types+=Type+
+		public Assignment getTypesAssignment_1() { return cTypesAssignment_1; }
 
-		//Entity
-		public RuleCall getEntitiesEntityParserRuleCall_2_0() { return cEntitiesEntityParserRuleCall_2_0; }
-
-		//dataTypes+=DataType*
-		public Assignment getDataTypesAssignment_3() { return cDataTypesAssignment_3; }
-
-		//DataType
-		public RuleCall getDataTypesDataTypeParserRuleCall_3_0() { return cDataTypesDataTypeParserRuleCall_3_0; }
+		//Type
+		public RuleCall getTypesTypeParserRuleCall_1_0() { return cTypesTypeParserRuleCall_1_0; }
 	}
 
 	public class EntityElements extends AbstractParserRuleElementFinder {
@@ -240,35 +226,29 @@ public class WebGuiGrammarAccess extends AbstractGrammarElementFinder {
 	public class WebModelElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "WebModel");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Action cWebModelAction_0 = (Action)cGroup.eContents().get(0);
-		private final Keyword cWebKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cPagesAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cPagesPageParserRuleCall_2_0 = (RuleCall)cPagesAssignment_2.eContents().get(0);
+		private final Keyword cWebKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cPagesAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cPagesPageParserRuleCall_1_0 = (RuleCall)cPagesAssignment_1.eContents().get(0);
 		
 		/// *
 		// * +-----------+
 		// * | Web model |
 		// * +-----------+
-		// * /WebModel: // ensure model.web != null
-		//	{WebModel} "web:" pages+=Page*;
+		// * /WebModel:
+		//	"web:" pages+=Page+;
 		public ParserRule getRule() { return rule; }
 
-		//// ensure model.web != null
-		//{WebModel} "web:" pages+=Page*
+		//"web:" pages+=Page+
 		public Group getGroup() { return cGroup; }
 
-		//// ensure model.web != null
-		//{WebModel}
-		public Action getWebModelAction_0() { return cWebModelAction_0; }
-
 		//"web:"
-		public Keyword getWebKeyword_1() { return cWebKeyword_1; }
+		public Keyword getWebKeyword_0() { return cWebKeyword_0; }
 
-		//pages+=Page*
-		public Assignment getPagesAssignment_2() { return cPagesAssignment_2; }
+		//pages+=Page+
+		public Assignment getPagesAssignment_1() { return cPagesAssignment_1; }
 
 		//Page
-		public RuleCall getPagesPageParserRuleCall_2_0() { return cPagesPageParserRuleCall_2_0; }
+		public RuleCall getPagesPageParserRuleCall_1_0() { return cPagesPageParserRuleCall_1_0; }
 	}
 
 	public class PageElements extends AbstractParserRuleElementFinder {
@@ -572,8 +552,8 @@ public class WebGuiGrammarAccess extends AbstractGrammarElementFinder {
 	// * +--------------+
 	// * | Domain model |
 	// * +--------------+
-	// * /DomainModel: // ensure model.domain != null
-	//	{DomainModel} "domain:" entities+=Entity* dataTypes+=DataType*;
+	// * /DomainModel:
+	//	"domain:" types+=Type+;
 	public DomainModelElements getDomainModelAccess() {
 		return (pDomainModel != null) ? pDomainModel : (pDomainModel = new DomainModelElements());
 	}
@@ -628,8 +608,8 @@ public class WebGuiGrammarAccess extends AbstractGrammarElementFinder {
 	// * +-----------+
 	// * | Web model |
 	// * +-----------+
-	// * /WebModel: // ensure model.web != null
-	//	{WebModel} "web:" pages+=Page*;
+	// * /WebModel:
+	//	"web:" pages+=Page+;
 	public WebModelElements getWebModelAccess() {
 		return (pWebModel != null) ? pWebModel : (pWebModel = new WebModelElements());
 	}

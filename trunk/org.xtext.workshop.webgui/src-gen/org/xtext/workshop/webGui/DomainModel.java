@@ -17,8 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.xtext.workshop.webGui.DomainModel#getEntities <em>Entities</em>}</li>
- *   <li>{@link org.xtext.workshop.webGui.DomainModel#getDataTypes <em>Data Types</em>}</li>
+ *   <li>{@link org.xtext.workshop.webGui.DomainModel#getTypes <em>Types</em>}</li>
  * </ul>
  * </p>
  *
@@ -29,35 +28,19 @@ import org.eclipse.emf.ecore.EObject;
 public interface DomainModel extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Entities</b></em>' containment reference list.
-   * The list contents are of type {@link org.xtext.workshop.webGui.Entity}.
+   * Returns the value of the '<em><b>Types</b></em>' containment reference list.
+   * The list contents are of type {@link org.xtext.workshop.webGui.Type}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Entities</em>' containment reference list isn't clear,
+   * If the meaning of the '<em>Types</em>' containment reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Entities</em>' containment reference list.
-   * @see org.xtext.workshop.webGui.WebGuiPackage#getDomainModel_Entities()
+   * @return the value of the '<em>Types</em>' containment reference list.
+   * @see org.xtext.workshop.webGui.WebGuiPackage#getDomainModel_Types()
    * @model containment="true"
    * @generated
    */
-  EList<Entity> getEntities();
-
-  /**
-   * Returns the value of the '<em><b>Data Types</b></em>' containment reference list.
-   * The list contents are of type {@link org.xtext.workshop.webGui.DataType}.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Data Types</em>' containment reference list isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Data Types</em>' containment reference list.
-   * @see org.xtext.workshop.webGui.WebGuiPackage#getDomainModel_DataTypes()
-   * @model containment="true"
-   * @generated
-   */
-  EList<DataType> getDataTypes();
+  EList<Type> getTypes();
 
 } // DomainModel

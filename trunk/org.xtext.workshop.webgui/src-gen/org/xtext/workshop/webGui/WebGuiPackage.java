@@ -116,22 +116,13 @@ public interface WebGuiPackage extends EPackage
   int DOMAIN_MODEL = 1;
 
   /**
-   * The feature id for the '<em><b>Entities</b></em>' containment reference list.
+   * The feature id for the '<em><b>Types</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int DOMAIN_MODEL__ENTITIES = 0;
-
-  /**
-   * The feature id for the '<em><b>Data Types</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int DOMAIN_MODEL__DATA_TYPES = 1;
+  int DOMAIN_MODEL__TYPES = 0;
 
   /**
    * The number of structural features of the '<em>Domain Model</em>' class.
@@ -140,7 +131,7 @@ public interface WebGuiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int DOMAIN_MODEL_FEATURE_COUNT = 2;
+  int DOMAIN_MODEL_FEATURE_COUNT = 1;
 
   /**
    * The meta object id for the '{@link org.xtext.workshop.webGui.impl.TypeImpl <em>Type</em>}' class.
@@ -550,26 +541,15 @@ public interface WebGuiPackage extends EPackage
   EClass getDomainModel();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.workshop.webGui.DomainModel#getEntities <em>Entities</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.xtext.workshop.webGui.DomainModel#getTypes <em>Types</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Entities</em>'.
-   * @see org.xtext.workshop.webGui.DomainModel#getEntities()
+   * @return the meta object for the containment reference list '<em>Types</em>'.
+   * @see org.xtext.workshop.webGui.DomainModel#getTypes()
    * @see #getDomainModel()
    * @generated
    */
-  EReference getDomainModel_Entities();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.workshop.webGui.DomainModel#getDataTypes <em>Data Types</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Data Types</em>'.
-   * @see org.xtext.workshop.webGui.DomainModel#getDataTypes()
-   * @see #getDomainModel()
-   * @generated
-   */
-  EReference getDomainModel_DataTypes();
+  EReference getDomainModel_Types();
 
   /**
    * Returns the meta object for class '{@link org.xtext.workshop.webGui.Entity <em>Entity</em>}'.
@@ -903,20 +883,12 @@ public interface WebGuiPackage extends EPackage
     EClass DOMAIN_MODEL = eINSTANCE.getDomainModel();
 
     /**
-     * The meta object literal for the '<em><b>Entities</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Types</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference DOMAIN_MODEL__ENTITIES = eINSTANCE.getDomainModel_Entities();
-
-    /**
-     * The meta object literal for the '<em><b>Data Types</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference DOMAIN_MODEL__DATA_TYPES = eINSTANCE.getDomainModel_DataTypes();
+    EReference DOMAIN_MODEL__TYPES = eINSTANCE.getDomainModel_Types();
 
     /**
      * The meta object literal for the '{@link org.xtext.workshop.webGui.impl.EntityImpl <em>Entity</em>}' class.

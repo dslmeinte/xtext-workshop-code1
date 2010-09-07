@@ -19,9 +19,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
-import org.xtext.workshop.webGui.DataType;
 import org.xtext.workshop.webGui.DomainModel;
-import org.xtext.workshop.webGui.Entity;
+import org.xtext.workshop.webGui.Type;
 import org.xtext.workshop.webGui.WebGuiPackage;
 
 /**
@@ -31,8 +30,7 @@ import org.xtext.workshop.webGui.WebGuiPackage;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.xtext.workshop.webGui.impl.DomainModelImpl#getEntities <em>Entities</em>}</li>
- *   <li>{@link org.xtext.workshop.webGui.impl.DomainModelImpl#getDataTypes <em>Data Types</em>}</li>
+ *   <li>{@link org.xtext.workshop.webGui.impl.DomainModelImpl#getTypes <em>Types</em>}</li>
  * </ul>
  * </p>
  *
@@ -41,24 +39,14 @@ import org.xtext.workshop.webGui.WebGuiPackage;
 public class DomainModelImpl extends MinimalEObjectImpl.Container implements DomainModel
 {
   /**
-   * The cached value of the '{@link #getEntities() <em>Entities</em>}' containment reference list.
+   * The cached value of the '{@link #getTypes() <em>Types</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getEntities()
+   * @see #getTypes()
    * @generated
    * @ordered
    */
-  protected EList<Entity> entities;
-
-  /**
-   * The cached value of the '{@link #getDataTypes() <em>Data Types</em>}' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getDataTypes()
-   * @generated
-   * @ordered
-   */
-  protected EList<DataType> dataTypes;
+  protected EList<Type> types;
 
   /**
    * <!-- begin-user-doc -->
@@ -86,27 +74,13 @@ public class DomainModelImpl extends MinimalEObjectImpl.Container implements Dom
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<Entity> getEntities()
+  public EList<Type> getTypes()
   {
-    if (entities == null)
+    if (types == null)
     {
-      entities = new EObjectContainmentEList<Entity>(Entity.class, this, WebGuiPackage.DOMAIN_MODEL__ENTITIES);
+      types = new EObjectContainmentEList<Type>(Type.class, this, WebGuiPackage.DOMAIN_MODEL__TYPES);
     }
-    return entities;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EList<DataType> getDataTypes()
-  {
-    if (dataTypes == null)
-    {
-      dataTypes = new EObjectContainmentEList<DataType>(DataType.class, this, WebGuiPackage.DOMAIN_MODEL__DATA_TYPES);
-    }
-    return dataTypes;
+    return types;
   }
 
   /**
@@ -119,10 +93,8 @@ public class DomainModelImpl extends MinimalEObjectImpl.Container implements Dom
   {
     switch (featureID)
     {
-      case WebGuiPackage.DOMAIN_MODEL__ENTITIES:
-        return ((InternalEList<?>)getEntities()).basicRemove(otherEnd, msgs);
-      case WebGuiPackage.DOMAIN_MODEL__DATA_TYPES:
-        return ((InternalEList<?>)getDataTypes()).basicRemove(otherEnd, msgs);
+      case WebGuiPackage.DOMAIN_MODEL__TYPES:
+        return ((InternalEList<?>)getTypes()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -137,10 +109,8 @@ public class DomainModelImpl extends MinimalEObjectImpl.Container implements Dom
   {
     switch (featureID)
     {
-      case WebGuiPackage.DOMAIN_MODEL__ENTITIES:
-        return getEntities();
-      case WebGuiPackage.DOMAIN_MODEL__DATA_TYPES:
-        return getDataTypes();
+      case WebGuiPackage.DOMAIN_MODEL__TYPES:
+        return getTypes();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -156,13 +126,9 @@ public class DomainModelImpl extends MinimalEObjectImpl.Container implements Dom
   {
     switch (featureID)
     {
-      case WebGuiPackage.DOMAIN_MODEL__ENTITIES:
-        getEntities().clear();
-        getEntities().addAll((Collection<? extends Entity>)newValue);
-        return;
-      case WebGuiPackage.DOMAIN_MODEL__DATA_TYPES:
-        getDataTypes().clear();
-        getDataTypes().addAll((Collection<? extends DataType>)newValue);
+      case WebGuiPackage.DOMAIN_MODEL__TYPES:
+        getTypes().clear();
+        getTypes().addAll((Collection<? extends Type>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -178,11 +144,8 @@ public class DomainModelImpl extends MinimalEObjectImpl.Container implements Dom
   {
     switch (featureID)
     {
-      case WebGuiPackage.DOMAIN_MODEL__ENTITIES:
-        getEntities().clear();
-        return;
-      case WebGuiPackage.DOMAIN_MODEL__DATA_TYPES:
-        getDataTypes().clear();
+      case WebGuiPackage.DOMAIN_MODEL__TYPES:
+        getTypes().clear();
         return;
     }
     super.eUnset(featureID);
@@ -198,10 +161,8 @@ public class DomainModelImpl extends MinimalEObjectImpl.Container implements Dom
   {
     switch (featureID)
     {
-      case WebGuiPackage.DOMAIN_MODEL__ENTITIES:
-        return entities != null && !entities.isEmpty();
-      case WebGuiPackage.DOMAIN_MODEL__DATA_TYPES:
-        return dataTypes != null && !dataTypes.isEmpty();
+      case WebGuiPackage.DOMAIN_MODEL__TYPES:
+        return types != null && !types.isEmpty();
     }
     return super.eIsSet(featureID);
   }
