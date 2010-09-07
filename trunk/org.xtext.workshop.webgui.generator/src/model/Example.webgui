@@ -23,28 +23,7 @@ web:
 
    page Person {
       title = "Person details"
-      content for Person {
-         show name
-         repeat for address {
-            show street
-            show city
-         }
-
-         action recommends
-      }
-
+      context = Person show name
+      show email
+      action home
    }
-
-   page Results {
-      title = "Person recommends"
-      content for Person {
-         show name
-         repeat for recommends {
-            show name
-            show birth
-         }
-
-      }
-
-   }
-

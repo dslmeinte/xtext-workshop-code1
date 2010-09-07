@@ -40,10 +40,8 @@ protected class ThisRootNode extends RootToken {
 			case 6: return new WebModel_Group(this, this, 6, inst);
 			case 7: return new Page_Group(this, this, 7, inst);
 			case 8: return new PageElement_Alternatives(this, this, 8, inst);
-			case 9: return new SingleElement_Alternatives(this, this, 9, inst);
-			case 10: return new ActionElement_Group(this, this, 10, inst);
-			case 11: return new DisplayElement_Group(this, this, 11, inst);
-			case 12: return new RepeatElement_Group(this, this, 12, inst);
+			case 9: return new ActionElement_Group(this, this, 9, inst);
+			case 10: return new DisplayElement_Group(this, this, 10, inst);
 			default: return null;
 		}	
 	}	
@@ -1381,11 +1379,11 @@ protected class Page_RightCurlyBracketKeyword_10 extends KeywordToken  {
  *
  * // (initial) scope for PageElement-s: features of referenced Entity
  * PageElement:
- * 	SingleElement | RepeatElement;
+ * 	ActionElement | DisplayElement;
  *
  **/
 
-// SingleElement | RepeatElement
+// ActionElement | DisplayElement
 protected class PageElement_Alternatives extends AlternativesToken {
 
 	public PageElement_Alternatives(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -1400,124 +1398,8 @@ protected class PageElement_Alternatives extends AlternativesToken {
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new PageElement_SingleElementParserRuleCall_0(lastRuleCallOrigin, this, 0, inst);
-			case 1: return new PageElement_RepeatElementParserRuleCall_1(lastRuleCallOrigin, this, 1, inst);
-			default: return null;
-		}	
-	}
-
-    @Override
-	public IEObjectConsumer tryConsume() {
-		if(getEObject().eClass() != grammarAccess.getActionElementRule().getType().getClassifier() && 
-		   getEObject().eClass() != grammarAccess.getDisplayElementRule().getType().getClassifier() && 
-		   getEObject().eClass() != grammarAccess.getRepeatElementRule().getType().getClassifier())
-			return null;
-		return eObjectConsumer;
-	}
-
-}
-
-// SingleElement
-protected class PageElement_SingleElementParserRuleCall_0 extends RuleCallToken {
-	
-	public PageElement_SingleElementParserRuleCall_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
-		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
-	}
-	
-	@Override
-	public RuleCall getGrammarElement() {
-		return grammarAccess.getPageElementAccess().getSingleElementParserRuleCall_0();
-	}
-
-    @Override
-	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
-		switch(index) {
-			case 0: return new SingleElement_Alternatives(this, this, 0, inst);
-			default: return null;
-		}	
-	}
-
-    @Override
-	public IEObjectConsumer tryConsume() {
-		if(getEObject().eClass() != grammarAccess.getActionElementRule().getType().getClassifier() && 
-		   getEObject().eClass() != grammarAccess.getDisplayElementRule().getType().getClassifier())
-			return null;
-		if(checkForRecursion(SingleElement_Alternatives.class, eObjectConsumer)) return null;
-		return eObjectConsumer;
-	}
-	
-    @Override
-	public AbstractToken createFollowerAfterReturn(AbstractToken next,	int actIndex, int index, IEObjectConsumer inst) {
-		switch(index) {
-			default: return lastRuleCallOrigin.createFollowerAfterReturn(next, actIndex , index, inst);
-		}	
-	}	
-}
-
-// RepeatElement
-protected class PageElement_RepeatElementParserRuleCall_1 extends RuleCallToken {
-	
-	public PageElement_RepeatElementParserRuleCall_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
-		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
-	}
-	
-	@Override
-	public RuleCall getGrammarElement() {
-		return grammarAccess.getPageElementAccess().getRepeatElementParserRuleCall_1();
-	}
-
-    @Override
-	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
-		switch(index) {
-			case 0: return new RepeatElement_Group(this, this, 0, inst);
-			default: return null;
-		}	
-	}
-
-    @Override
-	public IEObjectConsumer tryConsume() {
-		if(getEObject().eClass() != grammarAccess.getRepeatElementRule().getType().getClassifier())
-			return null;
-		if(checkForRecursion(RepeatElement_Group.class, eObjectConsumer)) return null;
-		return eObjectConsumer;
-	}
-	
-    @Override
-	public AbstractToken createFollowerAfterReturn(AbstractToken next,	int actIndex, int index, IEObjectConsumer inst) {
-		switch(index) {
-			default: return lastRuleCallOrigin.createFollowerAfterReturn(next, actIndex , index, inst);
-		}	
-	}	
-}
-
-
-/************ end Rule PageElement ****************/
-
-
-/************ begin Rule SingleElement ****************
- *
- * SingleElement:
- * 	ActionElement | DisplayElement;
- *
- **/
-
-// ActionElement | DisplayElement
-protected class SingleElement_Alternatives extends AlternativesToken {
-
-	public SingleElement_Alternatives(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
-		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
-	}
-	
-	@Override
-	public Alternatives getGrammarElement() {
-		return grammarAccess.getSingleElementAccess().getAlternatives();
-	}
-
-    @Override
-	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
-		switch(index) {
-			case 0: return new SingleElement_ActionElementParserRuleCall_0(lastRuleCallOrigin, this, 0, inst);
-			case 1: return new SingleElement_DisplayElementParserRuleCall_1(lastRuleCallOrigin, this, 1, inst);
+			case 0: return new PageElement_ActionElementParserRuleCall_0(lastRuleCallOrigin, this, 0, inst);
+			case 1: return new PageElement_DisplayElementParserRuleCall_1(lastRuleCallOrigin, this, 1, inst);
 			default: return null;
 		}	
 	}
@@ -1533,15 +1415,15 @@ protected class SingleElement_Alternatives extends AlternativesToken {
 }
 
 // ActionElement
-protected class SingleElement_ActionElementParserRuleCall_0 extends RuleCallToken {
+protected class PageElement_ActionElementParserRuleCall_0 extends RuleCallToken {
 	
-	public SingleElement_ActionElementParserRuleCall_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+	public PageElement_ActionElementParserRuleCall_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
 		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
 	}
 	
 	@Override
 	public RuleCall getGrammarElement() {
-		return grammarAccess.getSingleElementAccess().getActionElementParserRuleCall_0();
+		return grammarAccess.getPageElementAccess().getActionElementParserRuleCall_0();
 	}
 
     @Override
@@ -1569,15 +1451,15 @@ protected class SingleElement_ActionElementParserRuleCall_0 extends RuleCallToke
 }
 
 // DisplayElement
-protected class SingleElement_DisplayElementParserRuleCall_1 extends RuleCallToken {
+protected class PageElement_DisplayElementParserRuleCall_1 extends RuleCallToken {
 	
-	public SingleElement_DisplayElementParserRuleCall_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+	public PageElement_DisplayElementParserRuleCall_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
 		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
 	}
 	
 	@Override
 	public RuleCall getGrammarElement() {
-		return grammarAccess.getSingleElementAccess().getDisplayElementParserRuleCall_1();
+		return grammarAccess.getPageElementAccess().getDisplayElementParserRuleCall_1();
 	}
 
     @Override
@@ -1605,7 +1487,7 @@ protected class SingleElement_DisplayElementParserRuleCall_1 extends RuleCallTok
 }
 
 
-/************ end Rule SingleElement ****************/
+/************ end Rule PageElement ****************/
 
 
 /************ begin Rule ActionElement ****************
@@ -1707,12 +1589,32 @@ protected class ActionElement_NameAssignment_1 extends AssignmentToken  {
 /************ begin Rule DisplayElement ****************
  *
  * // ~ display field
- * DisplayElement:
+ * // scope is narrowed to referenced Feature
+ * / *  
+ * DomainPath:
+ *     head=DomainPathHead;
+ *     
+ * DomainPathHead:
+ *     reference=[Feature]  tail=DomainPathTail;
+ *     
+ * DomainPathTail:
+ *     '.' reference=[Feature] (tail=DomainPathTail)?;
+ * * /DisplayElement:
  * 	"show" reference=[Feature];
  *
  **/
 
-// "show" reference=[Feature]
+// "show" reference=[Feature] // scope is narrowed to referenced Feature
+// / *  
+// DomainPath:
+//     head=DomainPathHead;
+//     
+// DomainPathHead:
+//     reference=[Feature]  tail=DomainPathTail;
+//     
+// DomainPathTail:
+//     '.' reference=[Feature] (tail=DomainPathTail)?;
+// * /
 protected class DisplayElement_Group extends GroupToken {
 	
 	public DisplayElement_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -1762,7 +1664,17 @@ protected class DisplayElement_ShowKeyword_0 extends KeywordToken  {
 
 }
 
-// reference=[Feature]
+// // scope is narrowed to referenced Feature
+// / *  
+// DomainPath:
+//     head=DomainPathHead;
+//     
+// DomainPathHead:
+//     reference=[Feature]  tail=DomainPathTail;
+//     
+// DomainPathTail:
+//     '.' reference=[Feature] (tail=DomainPathTail)?;
+// * /reference=[Feature]
 protected class DisplayElement_ReferenceAssignment_1 extends AssignmentToken  {
 	
 	public DisplayElement_ReferenceAssignment_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -1801,227 +1713,5 @@ protected class DisplayElement_ReferenceAssignment_1 extends AssignmentToken  {
 
 
 /************ end Rule DisplayElement ****************/
-
-
-/************ begin Rule RepeatElement ****************
- *
- * // scope is narrowed to referenced Feature
- * // ~ for loop
- * // scope is narrowed to referenced Feature
- * / *  
- * DomainPath:
- *     head=DomainPathHead;
- *     
- * DomainPathHead:
- *     reference=[Feature]  tail=DomainPathTail;
- *     
- * DomainPathTail:
- *     '.' reference=[Feature] (tail=DomainPathTail)?;
- * * /RepeatElement:
- * 	"repeat for" reference=[Feature] "{" contents+=SingleElement* "}";
- *
- **/
-
-// "repeat for" reference=[Feature] "{" contents+=SingleElement* "}" // scope is narrowed to referenced Feature
-// / *  
-// DomainPath:
-//     head=DomainPathHead;
-//     
-// DomainPathHead:
-//     reference=[Feature]  tail=DomainPathTail;
-//     
-// DomainPathTail:
-//     '.' reference=[Feature] (tail=DomainPathTail)?;
-// * /
-protected class RepeatElement_Group extends GroupToken {
-	
-	public RepeatElement_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
-		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
-	}
-	
-	@Override
-	public Group getGrammarElement() {
-		return grammarAccess.getRepeatElementAccess().getGroup();
-	}
-
-    @Override
-	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
-		switch(index) {
-			case 0: return new RepeatElement_RightCurlyBracketKeyword_4(lastRuleCallOrigin, this, 0, inst);
-			default: return null;
-		}	
-	}
-
-    @Override
-	public IEObjectConsumer tryConsume() {
-		if(getEObject().eClass() != grammarAccess.getRepeatElementRule().getType().getClassifier())
-			return null;
-		return eObjectConsumer;
-	}
-
-}
-
-// "repeat for"
-protected class RepeatElement_RepeatForKeyword_0 extends KeywordToken  {
-	
-	public RepeatElement_RepeatForKeyword_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
-		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
-	}
-	
-	@Override
-	public Keyword getGrammarElement() {
-		return grammarAccess.getRepeatElementAccess().getRepeatForKeyword_0();
-	}
-
-    @Override
-	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
-		switch(index) {
-			default: return lastRuleCallOrigin.createFollowerAfterReturn(this, index, index, inst);
-		}	
-	}
-
-}
-
-// reference=[Feature]
-protected class RepeatElement_ReferenceAssignment_1 extends AssignmentToken  {
-	
-	public RepeatElement_ReferenceAssignment_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
-		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
-	}
-	
-	@Override
-	public Assignment getGrammarElement() {
-		return grammarAccess.getRepeatElementAccess().getReferenceAssignment_1();
-	}
-
-    @Override
-	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
-		switch(index) {
-			case 0: return new RepeatElement_RepeatForKeyword_0(lastRuleCallOrigin, this, 0, inst);
-			default: return null;
-		}	
-	}
-
-    @Override	
-	public IEObjectConsumer tryConsume() {
-		if((value = eObjectConsumer.getConsumable("reference",true)) == null) return null;
-		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("reference");
-		if(value instanceof EObject) { // org::eclipse::xtext::impl::CrossReferenceImpl
-			IEObjectConsumer param = createEObjectConsumer((EObject)value);
-			if(param.isInstanceOf(grammarAccess.getRepeatElementAccess().getReferenceFeatureCrossReference_1_0().getType().getClassifier())) {
-				type = AssignmentType.CROSS_REFERENCE;
-				element = grammarAccess.getRepeatElementAccess().getReferenceFeatureCrossReference_1_0(); 
-				return obj;
-			}
-		}
-		return null;
-	}
-
-}
-
-// "{"
-protected class RepeatElement_LeftCurlyBracketKeyword_2 extends KeywordToken  {
-	
-	public RepeatElement_LeftCurlyBracketKeyword_2(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
-		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
-	}
-	
-	@Override
-	public Keyword getGrammarElement() {
-		return grammarAccess.getRepeatElementAccess().getLeftCurlyBracketKeyword_2();
-	}
-
-    @Override
-	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
-		switch(index) {
-			case 0: return new RepeatElement_ReferenceAssignment_1(lastRuleCallOrigin, this, 0, inst);
-			default: return null;
-		}	
-	}
-
-}
-
-// contents+=SingleElement*
-protected class RepeatElement_ContentsAssignment_3 extends AssignmentToken  {
-	
-	public RepeatElement_ContentsAssignment_3(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
-		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
-	}
-	
-	@Override
-	public Assignment getGrammarElement() {
-		return grammarAccess.getRepeatElementAccess().getContentsAssignment_3();
-	}
-
-    @Override
-	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
-		switch(index) {
-			case 0: return new SingleElement_Alternatives(this, this, 0, inst);
-			default: return null;
-		}	
-	}
-
-    @Override	
-	public IEObjectConsumer tryConsume() {
-		if((value = eObjectConsumer.getConsumable("contents",false)) == null) return null;
-		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("contents");
-		if(value instanceof EObject) { // org::eclipse::xtext::impl::RuleCallImpl
-			IEObjectConsumer param = createEObjectConsumer((EObject)value);
-			if(param.isInstanceOf(grammarAccess.getSingleElementRule().getType().getClassifier())) {
-				type = AssignmentType.PARSER_RULE_CALL;
-				element = grammarAccess.getRepeatElementAccess().getContentsSingleElementParserRuleCall_3_0(); 
-				consumed = obj;
-				return param;
-			}
-		}
-		return null;
-	}
-
-    @Override
-	public AbstractToken createFollowerAfterReturn(AbstractToken next,	int actIndex, int index, IEObjectConsumer inst) {
-		if(value == inst.getEObject() && !inst.isConsumed()) return null;
-		switch(index) {
-			case 0: return new RepeatElement_ContentsAssignment_3(lastRuleCallOrigin, next, actIndex, consumed);
-			case 1: return new RepeatElement_LeftCurlyBracketKeyword_2(lastRuleCallOrigin, next, actIndex, consumed);
-			default: return null;
-		}	
-	}	
-}
-
-// // scope is narrowed to referenced Feature
-// / *  
-// DomainPath:
-//     head=DomainPathHead;
-//     
-// DomainPathHead:
-//     reference=[Feature]  tail=DomainPathTail;
-//     
-// DomainPathTail:
-//     '.' reference=[Feature] (tail=DomainPathTail)?;
-// * /"}"
-protected class RepeatElement_RightCurlyBracketKeyword_4 extends KeywordToken  {
-	
-	public RepeatElement_RightCurlyBracketKeyword_4(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
-		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
-	}
-	
-	@Override
-	public Keyword getGrammarElement() {
-		return grammarAccess.getRepeatElementAccess().getRightCurlyBracketKeyword_4();
-	}
-
-    @Override
-	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
-		switch(index) {
-			case 0: return new RepeatElement_ContentsAssignment_3(lastRuleCallOrigin, this, 0, inst);
-			case 1: return new RepeatElement_LeftCurlyBracketKeyword_2(lastRuleCallOrigin, this, 1, inst);
-			default: return null;
-		}	
-	}
-
-}
-
-
-/************ end Rule RepeatElement ****************/
 
 }

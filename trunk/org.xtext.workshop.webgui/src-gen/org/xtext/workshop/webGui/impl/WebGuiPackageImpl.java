@@ -21,8 +21,6 @@ import org.xtext.workshop.webGui.Feature;
 import org.xtext.workshop.webGui.Model;
 import org.xtext.workshop.webGui.Page;
 import org.xtext.workshop.webGui.PageElement;
-import org.xtext.workshop.webGui.RepeatElement;
-import org.xtext.workshop.webGui.SingleElement;
 import org.xtext.workshop.webGui.Type;
 import org.xtext.workshop.webGui.WebGuiFactory;
 import org.xtext.workshop.webGui.WebGuiPackage;
@@ -104,13 +102,6 @@ public class WebGuiPackageImpl extends EPackageImpl implements WebGuiPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass singleElementEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   private EClass actionElementEClass = null;
 
   /**
@@ -119,13 +110,6 @@ public class WebGuiPackageImpl extends EPackageImpl implements WebGuiPackage
    * @generated
    */
   private EClass displayElementEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass repeatElementEClass = null;
 
   /**
    * Creates an instance of the model <b>Package</b>, registered with
@@ -425,16 +409,6 @@ public class WebGuiPackageImpl extends EPackageImpl implements WebGuiPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getSingleElement()
-  {
-    return singleElementEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EClass getActionElement()
   {
     return actionElementEClass;
@@ -468,36 +442,6 @@ public class WebGuiPackageImpl extends EPackageImpl implements WebGuiPackage
   public EReference getDisplayElement_Reference()
   {
     return (EReference)displayElementEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getRepeatElement()
-  {
-    return repeatElementEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getRepeatElement_Reference()
-  {
-    return (EReference)repeatElementEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getRepeatElement_Contents()
-  {
-    return (EReference)repeatElementEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -562,17 +506,11 @@ public class WebGuiPackageImpl extends EPackageImpl implements WebGuiPackage
 
     pageElementEClass = createEClass(PAGE_ELEMENT);
 
-    singleElementEClass = createEClass(SINGLE_ELEMENT);
-
     actionElementEClass = createEClass(ACTION_ELEMENT);
     createEAttribute(actionElementEClass, ACTION_ELEMENT__NAME);
 
     displayElementEClass = createEClass(DISPLAY_ELEMENT);
     createEReference(displayElementEClass, DISPLAY_ELEMENT__REFERENCE);
-
-    repeatElementEClass = createEClass(REPEAT_ELEMENT);
-    createEReference(repeatElementEClass, REPEAT_ELEMENT__REFERENCE);
-    createEReference(repeatElementEClass, REPEAT_ELEMENT__CONTENTS);
   }
 
   /**
@@ -606,10 +544,8 @@ public class WebGuiPackageImpl extends EPackageImpl implements WebGuiPackage
     // Add supertypes to classes
     entityEClass.getESuperTypes().add(this.getType());
     dataTypeEClass.getESuperTypes().add(this.getType());
-    singleElementEClass.getESuperTypes().add(this.getPageElement());
-    actionElementEClass.getESuperTypes().add(this.getSingleElement());
-    displayElementEClass.getESuperTypes().add(this.getSingleElement());
-    repeatElementEClass.getESuperTypes().add(this.getPageElement());
+    actionElementEClass.getESuperTypes().add(this.getPageElement());
+    displayElementEClass.getESuperTypes().add(this.getPageElement());
 
     // Initialize classes and features; add operations and parameters
     initEClass(modelEClass, Model.class, "Model", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -644,17 +580,11 @@ public class WebGuiPackageImpl extends EPackageImpl implements WebGuiPackage
 
     initEClass(pageElementEClass, PageElement.class, "PageElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-    initEClass(singleElementEClass, SingleElement.class, "SingleElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
     initEClass(actionElementEClass, ActionElement.class, "ActionElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getActionElement_Name(), ecorePackage.getEString(), "name", null, 0, 1, ActionElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(displayElementEClass, DisplayElement.class, "DisplayElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getDisplayElement_Reference(), this.getFeature(), null, "reference", null, 0, 1, DisplayElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(repeatElementEClass, RepeatElement.class, "RepeatElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getRepeatElement_Reference(), this.getFeature(), null, "reference", null, 0, 1, RepeatElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getRepeatElement_Contents(), this.getSingleElement(), null, "contents", null, 0, -1, RepeatElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Create resource
     createResource(eNS_URI);

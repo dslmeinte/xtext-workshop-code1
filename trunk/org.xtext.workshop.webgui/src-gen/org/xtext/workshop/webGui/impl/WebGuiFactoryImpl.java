@@ -76,10 +76,8 @@ public class WebGuiFactoryImpl extends EFactoryImpl implements WebGuiFactory
       case WebGuiPackage.WEB_MODEL: return createWebModel();
       case WebGuiPackage.PAGE: return createPage();
       case WebGuiPackage.PAGE_ELEMENT: return createPageElement();
-      case WebGuiPackage.SINGLE_ELEMENT: return createSingleElement();
       case WebGuiPackage.ACTION_ELEMENT: return createActionElement();
       case WebGuiPackage.DISPLAY_ELEMENT: return createDisplayElement();
-      case WebGuiPackage.REPEAT_ELEMENT: return createRepeatElement();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -189,17 +187,6 @@ public class WebGuiFactoryImpl extends EFactoryImpl implements WebGuiFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public SingleElement createSingleElement()
-  {
-    SingleElementImpl singleElement = new SingleElementImpl();
-    return singleElement;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public ActionElement createActionElement()
   {
     ActionElementImpl actionElement = new ActionElementImpl();
@@ -215,17 +202,6 @@ public class WebGuiFactoryImpl extends EFactoryImpl implements WebGuiFactory
   {
     DisplayElementImpl displayElement = new DisplayElementImpl();
     return displayElement;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public RepeatElement createRepeatElement()
-  {
-    RepeatElementImpl repeatElement = new RepeatElementImpl();
-    return repeatElement;
   }
 
   /**

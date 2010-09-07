@@ -160,19 +160,10 @@ public class WebGuiSwitch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case WebGuiPackage.SINGLE_ELEMENT:
-      {
-        SingleElement singleElement = (SingleElement)theEObject;
-        T result = caseSingleElement(singleElement);
-        if (result == null) result = casePageElement(singleElement);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
       case WebGuiPackage.ACTION_ELEMENT:
       {
         ActionElement actionElement = (ActionElement)theEObject;
         T result = caseActionElement(actionElement);
-        if (result == null) result = caseSingleElement(actionElement);
         if (result == null) result = casePageElement(actionElement);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -181,16 +172,7 @@ public class WebGuiSwitch<T>
       {
         DisplayElement displayElement = (DisplayElement)theEObject;
         T result = caseDisplayElement(displayElement);
-        if (result == null) result = caseSingleElement(displayElement);
         if (result == null) result = casePageElement(displayElement);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case WebGuiPackage.REPEAT_ELEMENT:
-      {
-        RepeatElement repeatElement = (RepeatElement)theEObject;
-        T result = caseRepeatElement(repeatElement);
-        if (result == null) result = casePageElement(repeatElement);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -343,22 +325,6 @@ public class WebGuiSwitch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Single Element</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Single Element</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseSingleElement(SingleElement object)
-  {
-    return null;
-  }
-
-  /**
    * Returns the result of interpreting the object as an instance of '<em>Action Element</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -386,22 +352,6 @@ public class WebGuiSwitch<T>
    * @generated
    */
   public T caseDisplayElement(DisplayElement object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Repeat Element</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Repeat Element</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseRepeatElement(RepeatElement object)
   {
     return null;
   }

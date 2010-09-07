@@ -39,16 +39,10 @@
         eType="#//PageElement" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PageElement"/>
-  <eClassifiers xsi:type="ecore:EClass" name="SingleElement" eSuperTypes="#//PageElement"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ActionElement" eSuperTypes="#//SingleElement">
+  <eClassifiers xsi:type="ecore:EClass" name="ActionElement" eSuperTypes="#//PageElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="DisplayElement" eSuperTypes="#//SingleElement">
+  <eClassifiers xsi:type="ecore:EClass" name="DisplayElement" eSuperTypes="#//PageElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="reference" eType="#//Feature"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="RepeatElement" eSuperTypes="#//PageElement">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="reference" eType="#//Feature"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="contents" upperBound="-1"
-        eType="#//SingleElement" containment="true"/>
   </eClassifiers>
 </ecore:EPackage>

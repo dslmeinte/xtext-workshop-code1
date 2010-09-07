@@ -107,15 +107,6 @@ public interface WebGuiFactory extends EFactory
   PageElement createPageElement();
 
   /**
-   * Returns a new object of class '<em>Single Element</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Single Element</em>'.
-   * @generated
-   */
-  SingleElement createSingleElement();
-
-  /**
    * Returns a new object of class '<em>Action Element</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -132,15 +123,6 @@ public interface WebGuiFactory extends EFactory
    * @generated
    */
   DisplayElement createDisplayElement();
-
-  /**
-   * Returns a new object of class '<em>Repeat Element</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Repeat Element</em>'.
-   * @generated
-   */
-  RepeatElement createRepeatElement();
 
   /**
    * Returns the package supported by this factory.

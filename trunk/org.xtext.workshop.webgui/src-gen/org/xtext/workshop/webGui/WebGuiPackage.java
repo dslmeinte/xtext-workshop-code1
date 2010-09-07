@@ -375,25 +375,6 @@ public interface WebGuiPackage extends EPackage
   int PAGE_ELEMENT_FEATURE_COUNT = 0;
 
   /**
-   * The meta object id for the '{@link org.xtext.workshop.webGui.impl.SingleElementImpl <em>Single Element</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.workshop.webGui.impl.SingleElementImpl
-   * @see org.xtext.workshop.webGui.impl.WebGuiPackageImpl#getSingleElement()
-   * @generated
-   */
-  int SINGLE_ELEMENT = 9;
-
-  /**
-   * The number of structural features of the '<em>Single Element</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SINGLE_ELEMENT_FEATURE_COUNT = PAGE_ELEMENT_FEATURE_COUNT + 0;
-
-  /**
    * The meta object id for the '{@link org.xtext.workshop.webGui.impl.ActionElementImpl <em>Action Element</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -401,7 +382,7 @@ public interface WebGuiPackage extends EPackage
    * @see org.xtext.workshop.webGui.impl.WebGuiPackageImpl#getActionElement()
    * @generated
    */
-  int ACTION_ELEMENT = 10;
+  int ACTION_ELEMENT = 9;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -410,7 +391,7 @@ public interface WebGuiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ACTION_ELEMENT__NAME = SINGLE_ELEMENT_FEATURE_COUNT + 0;
+  int ACTION_ELEMENT__NAME = PAGE_ELEMENT_FEATURE_COUNT + 0;
 
   /**
    * The number of structural features of the '<em>Action Element</em>' class.
@@ -419,7 +400,7 @@ public interface WebGuiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ACTION_ELEMENT_FEATURE_COUNT = SINGLE_ELEMENT_FEATURE_COUNT + 1;
+  int ACTION_ELEMENT_FEATURE_COUNT = PAGE_ELEMENT_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link org.xtext.workshop.webGui.impl.DisplayElementImpl <em>Display Element</em>}' class.
@@ -429,7 +410,7 @@ public interface WebGuiPackage extends EPackage
    * @see org.xtext.workshop.webGui.impl.WebGuiPackageImpl#getDisplayElement()
    * @generated
    */
-  int DISPLAY_ELEMENT = 11;
+  int DISPLAY_ELEMENT = 10;
 
   /**
    * The feature id for the '<em><b>Reference</b></em>' reference.
@@ -438,7 +419,7 @@ public interface WebGuiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int DISPLAY_ELEMENT__REFERENCE = SINGLE_ELEMENT_FEATURE_COUNT + 0;
+  int DISPLAY_ELEMENT__REFERENCE = PAGE_ELEMENT_FEATURE_COUNT + 0;
 
   /**
    * The number of structural features of the '<em>Display Element</em>' class.
@@ -447,44 +428,7 @@ public interface WebGuiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int DISPLAY_ELEMENT_FEATURE_COUNT = SINGLE_ELEMENT_FEATURE_COUNT + 1;
-
-  /**
-   * The meta object id for the '{@link org.xtext.workshop.webGui.impl.RepeatElementImpl <em>Repeat Element</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.workshop.webGui.impl.RepeatElementImpl
-   * @see org.xtext.workshop.webGui.impl.WebGuiPackageImpl#getRepeatElement()
-   * @generated
-   */
-  int REPEAT_ELEMENT = 12;
-
-  /**
-   * The feature id for the '<em><b>Reference</b></em>' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int REPEAT_ELEMENT__REFERENCE = PAGE_ELEMENT_FEATURE_COUNT + 0;
-
-  /**
-   * The feature id for the '<em><b>Contents</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int REPEAT_ELEMENT__CONTENTS = PAGE_ELEMENT_FEATURE_COUNT + 1;
-
-  /**
-   * The number of structural features of the '<em>Repeat Element</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int REPEAT_ELEMENT_FEATURE_COUNT = PAGE_ELEMENT_FEATURE_COUNT + 2;
+  int DISPLAY_ELEMENT_FEATURE_COUNT = PAGE_ELEMENT_FEATURE_COUNT + 1;
 
 
   /**
@@ -732,16 +676,6 @@ public interface WebGuiPackage extends EPackage
   EClass getPageElement();
 
   /**
-   * Returns the meta object for class '{@link org.xtext.workshop.webGui.SingleElement <em>Single Element</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Single Element</em>'.
-   * @see org.xtext.workshop.webGui.SingleElement
-   * @generated
-   */
-  EClass getSingleElement();
-
-  /**
    * Returns the meta object for class '{@link org.xtext.workshop.webGui.ActionElement <em>Action Element</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -782,38 +716,6 @@ public interface WebGuiPackage extends EPackage
    * @generated
    */
   EReference getDisplayElement_Reference();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.workshop.webGui.RepeatElement <em>Repeat Element</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Repeat Element</em>'.
-   * @see org.xtext.workshop.webGui.RepeatElement
-   * @generated
-   */
-  EClass getRepeatElement();
-
-  /**
-   * Returns the meta object for the reference '{@link org.xtext.workshop.webGui.RepeatElement#getReference <em>Reference</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Reference</em>'.
-   * @see org.xtext.workshop.webGui.RepeatElement#getReference()
-   * @see #getRepeatElement()
-   * @generated
-   */
-  EReference getRepeatElement_Reference();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.workshop.webGui.RepeatElement#getContents <em>Contents</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Contents</em>'.
-   * @see org.xtext.workshop.webGui.RepeatElement#getContents()
-   * @see #getRepeatElement()
-   * @generated
-   */
-  EReference getRepeatElement_Contents();
 
   /**
    * Returns the factory that creates the instances of the model.
@@ -1041,16 +943,6 @@ public interface WebGuiPackage extends EPackage
     EClass PAGE_ELEMENT = eINSTANCE.getPageElement();
 
     /**
-     * The meta object literal for the '{@link org.xtext.workshop.webGui.impl.SingleElementImpl <em>Single Element</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.xtext.workshop.webGui.impl.SingleElementImpl
-     * @see org.xtext.workshop.webGui.impl.WebGuiPackageImpl#getSingleElement()
-     * @generated
-     */
-    EClass SINGLE_ELEMENT = eINSTANCE.getSingleElement();
-
-    /**
      * The meta object literal for the '{@link org.xtext.workshop.webGui.impl.ActionElementImpl <em>Action Element</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1085,32 +977,6 @@ public interface WebGuiPackage extends EPackage
      * @generated
      */
     EReference DISPLAY_ELEMENT__REFERENCE = eINSTANCE.getDisplayElement_Reference();
-
-    /**
-     * The meta object literal for the '{@link org.xtext.workshop.webGui.impl.RepeatElementImpl <em>Repeat Element</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.xtext.workshop.webGui.impl.RepeatElementImpl
-     * @see org.xtext.workshop.webGui.impl.WebGuiPackageImpl#getRepeatElement()
-     * @generated
-     */
-    EClass REPEAT_ELEMENT = eINSTANCE.getRepeatElement();
-
-    /**
-     * The meta object literal for the '<em><b>Reference</b></em>' reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference REPEAT_ELEMENT__REFERENCE = eINSTANCE.getRepeatElement_Reference();
-
-    /**
-     * The meta object literal for the '<em><b>Contents</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference REPEAT_ELEMENT__CONTENTS = eINSTANCE.getRepeatElement_Contents();
 
   }
 
