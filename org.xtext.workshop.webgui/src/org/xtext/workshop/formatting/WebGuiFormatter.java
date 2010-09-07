@@ -31,19 +31,10 @@ public class WebGuiFormatter extends AbstractDeclarativeFormatter {
 			cfg.setLinewrap(2).after( pair.getSecond() );
 		}
 
-		// model:
-		cfg.setLinewrap(2).between(grammar.getModelRule(), grammar.getDomainModelRule());
-
 		// 'domain:' heading:
-		cfg.setIndentationIncrement().after(grammar.getDomainModelRule());
-		cfg.setLinewrap(2).after(grammar.getDomainModelRule());
-
-		// entity:
-		cfg.setLinewrap(2).between(grammar.getDomainModelRule(), grammar.getEntityRule());
-		cfg.setIndentationIncrement().after(grammar.getEntityAccess().getLeftCurlyBracketKeyword_2());
-		cfg.setIndentationDecrement().before(grammar.getEntityAccess().getRightCurlyBracketKeyword_4());
-		cfg.setLinewrap().after(grammar.getEntityAccess().getLeftCurlyBracketKeyword_2());
-		cfg.setLinewrap().after(grammar.getEntityAccess().getRightCurlyBracketKeyword_4());
+		cfg.setLinewrap(2).before(grammar.getDomainModelAccess().getDomainKeyword_1());
+		cfg.setIndentationIncrement().after(grammar.getDomainModelAccess().getDomainKeyword_1());
+		cfg.setLinewrap(2).after(grammar.getDomainModelAccess().getDomainKeyword_1());
 
 		// feature:
 		FeatureElements featureAccess = grammar.getFeatureAccess();
@@ -56,8 +47,9 @@ public class WebGuiFormatter extends AbstractDeclarativeFormatter {
 
 		// 'web:' heading:
 		cfg.setIndentationDecrement().before(grammar.getWebModelRule());
-		cfg.setIndentationIncrement().after(grammar.getWebModelRule());
-		cfg.setLinewrap(2).after(grammar.getWebModelRule());
+		cfg.setIndentationIncrement().after(grammar.getWebModelAccess().getWebKeyword_1());
+		cfg.setLinewrap(2).before(grammar.getWebModelAccess().getWebKeyword_1());
+		cfg.setLinewrap(2).after(grammar.getWebModelAccess().getWebKeyword_1());
 
 		// page:
 		cfg.setLinewrap().after(grammar.getPageAccess().getTitleSTRINGTerminalRuleCall_5_0());

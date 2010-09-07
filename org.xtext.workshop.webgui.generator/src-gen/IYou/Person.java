@@ -1,4 +1,4 @@
-package IYouDomain;
+package IYou;
 
 import java.util.List;
 
