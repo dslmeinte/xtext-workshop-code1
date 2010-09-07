@@ -6,7 +6,9 @@
 «FILE fileName()-»
 package «packageName()»;
 
+«IF hasMultiValued()»
 import java.util.List;
+«ENDIF»
 
 public class «name» {
 

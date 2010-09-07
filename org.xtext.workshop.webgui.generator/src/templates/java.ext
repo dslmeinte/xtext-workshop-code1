@@ -27,3 +27,7 @@ String toJavaType(Feature this) :
         ? "List<" + type.toJavaType() + ">"
         : type.toJavaType();
 
+Boolean hasMultiValued(Entity this) :
+	exists( f | f.multivalued )
+	;
+
