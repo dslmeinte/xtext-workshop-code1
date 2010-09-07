@@ -116,22 +116,13 @@ public interface WebGuiPackage extends EPackage
   int DOMAIN_MODEL = 1;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int DOMAIN_MODEL__NAME = 0;
-
-  /**
    * The feature id for the '<em><b>Entities</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int DOMAIN_MODEL__ENTITIES = 1;
+  int DOMAIN_MODEL__ENTITIES = 0;
 
   /**
    * The feature id for the '<em><b>Data Types</b></em>' containment reference list.
@@ -140,7 +131,7 @@ public interface WebGuiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int DOMAIN_MODEL__DATA_TYPES = 2;
+  int DOMAIN_MODEL__DATA_TYPES = 1;
 
   /**
    * The number of structural features of the '<em>Domain Model</em>' class.
@@ -149,7 +140,7 @@ public interface WebGuiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int DOMAIN_MODEL_FEATURE_COUNT = 3;
+  int DOMAIN_MODEL_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link org.xtext.workshop.webGui.impl.TypeImpl <em>Type</em>}' class.
@@ -301,22 +292,13 @@ public interface WebGuiPackage extends EPackage
   int WEB_MODEL = 6;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int WEB_MODEL__NAME = 0;
-
-  /**
    * The feature id for the '<em><b>Pages</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int WEB_MODEL__PAGES = 1;
+  int WEB_MODEL__PAGES = 0;
 
   /**
    * The number of structural features of the '<em>Web Model</em>' class.
@@ -325,7 +307,7 @@ public interface WebGuiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int WEB_MODEL_FEATURE_COUNT = 2;
+  int WEB_MODEL_FEATURE_COUNT = 1;
 
   /**
    * The meta object id for the '{@link org.xtext.workshop.webGui.impl.PageImpl <em>Page</em>}' class.
@@ -596,17 +578,6 @@ public interface WebGuiPackage extends EPackage
   EClass getDomainModel();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.workshop.webGui.DomainModel#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see org.xtext.workshop.webGui.DomainModel#getName()
-   * @see #getDomainModel()
-   * @generated
-   */
-  EAttribute getDomainModel_Name();
-
-  /**
    * Returns the meta object for the containment reference list '{@link org.xtext.workshop.webGui.DomainModel#getEntities <em>Entities</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -732,17 +703,6 @@ public interface WebGuiPackage extends EPackage
    * @generated
    */
   EClass getWebModel();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.workshop.webGui.WebModel#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see org.xtext.workshop.webGui.WebModel#getName()
-   * @see #getWebModel()
-   * @generated
-   */
-  EAttribute getWebModel_Name();
 
   /**
    * Returns the meta object for the containment reference list '{@link org.xtext.workshop.webGui.WebModel#getPages <em>Pages</em>}'.
@@ -992,14 +952,6 @@ public interface WebGuiPackage extends EPackage
     EClass DOMAIN_MODEL = eINSTANCE.getDomainModel();
 
     /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute DOMAIN_MODEL__NAME = eINSTANCE.getDomainModel_Name();
-
-    /**
      * The meta object literal for the '<em><b>Entities</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1104,14 +1056,6 @@ public interface WebGuiPackage extends EPackage
      * @generated
      */
     EClass WEB_MODEL = eINSTANCE.getWebModel();
-
-    /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute WEB_MODEL__NAME = eINSTANCE.getWebModel_Name();
 
     /**
      * The meta object literal for the '<em><b>Pages</b></em>' containment reference list feature.

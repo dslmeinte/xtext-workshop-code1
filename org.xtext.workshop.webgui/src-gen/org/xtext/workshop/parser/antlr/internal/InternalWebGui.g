@@ -117,16 +117,12 @@ ruleModel returns [EObject current=null]
 	    }
 
 )
-)	'{' 
-    {
-        createLeafNode(grammarAccess.getModelAccess().getLeftCurlyBracketKeyword_2(), null); 
-    }
-(
+)(
 (
 		{ 
-	        currentNode=createCompositeNode(grammarAccess.getModelAccess().getDomainDomainModelParserRuleCall_3_0(), currentNode); 
+	        currentNode=createCompositeNode(grammarAccess.getModelAccess().getDomainDomainModelParserRuleCall_2_0(), currentNode); 
 	    }
-		lv_domain_3_0=ruleDomainModel		{
+		lv_domain_2_0=ruleDomainModel		{
 	        if ($current==null) {
 	            $current = factory.create(grammarAccess.getModelRule().getType().getClassifier());
 	            associateNodeWithAstElement(currentNode.getParent(), $current);
@@ -135,7 +131,7 @@ ruleModel returns [EObject current=null]
 	       		set(
 	       			$current, 
 	       			"domain",
-	        		lv_domain_3_0, 
+	        		lv_domain_2_0, 
 	        		"DomainModel", 
 	        		currentNode);
 	        } catch (ValueConverterException vce) {
@@ -148,9 +144,9 @@ ruleModel returns [EObject current=null]
 )(
 (
 		{ 
-	        currentNode=createCompositeNode(grammarAccess.getModelAccess().getWebWebModelParserRuleCall_4_0(), currentNode); 
+	        currentNode=createCompositeNode(grammarAccess.getModelAccess().getWebWebModelParserRuleCall_3_0(), currentNode); 
 	    }
-		lv_web_4_0=ruleWebModel		{
+		lv_web_3_0=ruleWebModel		{
 	        if ($current==null) {
 	            $current = factory.create(grammarAccess.getModelRule().getType().getClassifier());
 	            associateNodeWithAstElement(currentNode.getParent(), $current);
@@ -159,7 +155,7 @@ ruleModel returns [EObject current=null]
 	       		set(
 	       			$current, 
 	       			"web",
-	        		lv_web_4_0, 
+	        		lv_web_3_0, 
 	        		"WebModel", 
 	        		currentNode);
 	        } catch (ValueConverterException vce) {
@@ -169,11 +165,7 @@ ruleModel returns [EObject current=null]
 	    }
 
 )
-)	'}' 
-    {
-        createLeafNode(grammarAccess.getModelAccess().getRightCurlyBracketKeyword_5(), null); 
-    }
-)
+))
 ;
 
 
@@ -196,44 +188,27 @@ ruleDomainModel returns [EObject current=null]
     @after { resetLookahead(); 
     	lastConsumedNode = currentNode;
     }:
-(	'domain' 
-    {
-        createLeafNode(grammarAccess.getDomainModelAccess().getDomainKeyword_0(), null); 
+((
+    { 
+        temp=factory.create(grammarAccess.getDomainModelAccess().getDomainModelAction_0().getType().getClassifier());
+        $current = temp; 
+        temp = null;
+        CompositeNode newNode = createCompositeNode(grammarAccess.getDomainModelAccess().getDomainModelAction_0(), currentNode.getParent());
+    newNode.getChildren().add(currentNode);
+    moveLookaheadInfo(currentNode, newNode);
+    currentNode = newNode; 
+        associateNodeWithAstElement(currentNode, $current); 
     }
-(
-(
-		lv_name_1_0=RULE_ID
-		{
-			createLeafNode(grammarAccess.getDomainModelAccess().getNameIDTerminalRuleCall_1_0(), "name"); 
-		}
-		{
-	        if ($current==null) {
-	            $current = factory.create(grammarAccess.getDomainModelRule().getType().getClassifier());
-	            associateNodeWithAstElement(currentNode, $current);
-	        }
-	        try {
-	       		set(
-	       			$current, 
-	       			"name",
-	        		lv_name_1_0, 
-	        		"ID", 
-	        		lastConsumedNode);
-	        } catch (ValueConverterException vce) {
-				handleValueConverterException(vce);
-	        }
-	    }
-
-)
-)	'{' 
+)	'domain:' 
     {
-        createLeafNode(grammarAccess.getDomainModelAccess().getLeftCurlyBracketKeyword_2(), null); 
+        createLeafNode(grammarAccess.getDomainModelAccess().getDomainKeyword_1(), null); 
     }
 (
 (
 		{ 
-	        currentNode=createCompositeNode(grammarAccess.getDomainModelAccess().getEntitiesEntityParserRuleCall_3_0(), currentNode); 
+	        currentNode=createCompositeNode(grammarAccess.getDomainModelAccess().getEntitiesEntityParserRuleCall_2_0(), currentNode); 
 	    }
-		lv_entities_3_0=ruleEntity		{
+		lv_entities_2_0=ruleEntity		{
 	        if ($current==null) {
 	            $current = factory.create(grammarAccess.getDomainModelRule().getType().getClassifier());
 	            associateNodeWithAstElement(currentNode.getParent(), $current);
@@ -242,7 +217,7 @@ ruleDomainModel returns [EObject current=null]
 	       		add(
 	       			$current, 
 	       			"entities",
-	        		lv_entities_3_0, 
+	        		lv_entities_2_0, 
 	        		"Entity", 
 	        		currentNode);
 	        } catch (ValueConverterException vce) {
@@ -255,9 +230,9 @@ ruleDomainModel returns [EObject current=null]
 )*(
 (
 		{ 
-	        currentNode=createCompositeNode(grammarAccess.getDomainModelAccess().getDataTypesDataTypeParserRuleCall_4_0(), currentNode); 
+	        currentNode=createCompositeNode(grammarAccess.getDomainModelAccess().getDataTypesDataTypeParserRuleCall_3_0(), currentNode); 
 	    }
-		lv_dataTypes_4_0=ruleDataType		{
+		lv_dataTypes_3_0=ruleDataType		{
 	        if ($current==null) {
 	            $current = factory.create(grammarAccess.getDomainModelRule().getType().getClassifier());
 	            associateNodeWithAstElement(currentNode.getParent(), $current);
@@ -266,7 +241,7 @@ ruleDomainModel returns [EObject current=null]
 	       		add(
 	       			$current, 
 	       			"dataTypes",
-	        		lv_dataTypes_4_0, 
+	        		lv_dataTypes_3_0, 
 	        		"DataType", 
 	        		currentNode);
 	        } catch (ValueConverterException vce) {
@@ -276,11 +251,7 @@ ruleDomainModel returns [EObject current=null]
 	    }
 
 )
-)*	'}' 
-    {
-        createLeafNode(grammarAccess.getDomainModelAccess().getRightCurlyBracketKeyword_5(), null); 
-    }
-)
+)*)
 ;
 
 
@@ -430,9 +401,10 @@ ruleFeature returns [EObject current=null]
 )
 )(
 (
-		lv_multivalued_3_0=	'(s)' 
+(
+		lv_multivalued_3_1=	'(s)' 
     {
-        createLeafNode(grammarAccess.getFeatureAccess().getMultivaluedSKeyword_3_0(), "multivalued"); 
+        createLeafNode(grammarAccess.getFeatureAccess().getMultivaluedSKeyword_3_0_0(), "multivalued"); 
     }
  
 	    {
@@ -442,11 +414,31 @@ ruleFeature returns [EObject current=null]
 	        }
 	        
 	        try {
-	       		set($current, "multivalued", true, "(s)", lastConsumedNode);
+	       		set($current, "multivalued", true, null, lastConsumedNode);
 	        } catch (ValueConverterException vce) {
 				handleValueConverterException(vce);
 	        }
 	    }
+
+    |		lv_multivalued_3_2=	'(es)' 
+    {
+        createLeafNode(grammarAccess.getFeatureAccess().getMultivaluedEsKeyword_3_0_1(), "multivalued"); 
+    }
+ 
+	    {
+	        if ($current==null) {
+	            $current = factory.create(grammarAccess.getFeatureRule().getType().getClassifier());
+	            associateNodeWithAstElement(currentNode, $current);
+	        }
+	        
+	        try {
+	       		set($current, "multivalued", true, null, lastConsumedNode);
+	        } catch (ValueConverterException vce) {
+				handleValueConverterException(vce);
+	        }
+	    }
+
+)
 
 )
 )?)
@@ -525,44 +517,27 @@ ruleWebModel returns [EObject current=null]
     @after { resetLookahead(); 
     	lastConsumedNode = currentNode;
     }:
-(	'web' 
-    {
-        createLeafNode(grammarAccess.getWebModelAccess().getWebKeyword_0(), null); 
+((
+    { 
+        temp=factory.create(grammarAccess.getWebModelAccess().getWebModelAction_0().getType().getClassifier());
+        $current = temp; 
+        temp = null;
+        CompositeNode newNode = createCompositeNode(grammarAccess.getWebModelAccess().getWebModelAction_0(), currentNode.getParent());
+    newNode.getChildren().add(currentNode);
+    moveLookaheadInfo(currentNode, newNode);
+    currentNode = newNode; 
+        associateNodeWithAstElement(currentNode, $current); 
     }
-(
-(
-		lv_name_1_0=RULE_ID
-		{
-			createLeafNode(grammarAccess.getWebModelAccess().getNameIDTerminalRuleCall_1_0(), "name"); 
-		}
-		{
-	        if ($current==null) {
-	            $current = factory.create(grammarAccess.getWebModelRule().getType().getClassifier());
-	            associateNodeWithAstElement(currentNode, $current);
-	        }
-	        try {
-	       		set(
-	       			$current, 
-	       			"name",
-	        		lv_name_1_0, 
-	        		"ID", 
-	        		lastConsumedNode);
-	        } catch (ValueConverterException vce) {
-				handleValueConverterException(vce);
-	        }
-	    }
-
-)
-)	'{' 
+)	'web:' 
     {
-        createLeafNode(grammarAccess.getWebModelAccess().getLeftCurlyBracketKeyword_2(), null); 
+        createLeafNode(grammarAccess.getWebModelAccess().getWebKeyword_1(), null); 
     }
 (
 (
 		{ 
-	        currentNode=createCompositeNode(grammarAccess.getWebModelAccess().getPagesPageParserRuleCall_3_0(), currentNode); 
+	        currentNode=createCompositeNode(grammarAccess.getWebModelAccess().getPagesPageParserRuleCall_2_0(), currentNode); 
 	    }
-		lv_pages_3_0=rulePage		{
+		lv_pages_2_0=rulePage		{
 	        if ($current==null) {
 	            $current = factory.create(grammarAccess.getWebModelRule().getType().getClassifier());
 	            associateNodeWithAstElement(currentNode.getParent(), $current);
@@ -571,7 +546,7 @@ ruleWebModel returns [EObject current=null]
 	       		add(
 	       			$current, 
 	       			"pages",
-	        		lv_pages_3_0, 
+	        		lv_pages_2_0, 
 	        		"Page", 
 	        		currentNode);
 	        } catch (ValueConverterException vce) {
@@ -581,11 +556,7 @@ ruleWebModel returns [EObject current=null]
 	    }
 
 )
-)*	'}' 
-    {
-        createLeafNode(grammarAccess.getWebModelAccess().getRightCurlyBracketKeyword_4(), null); 
-    }
-)
+)*)
 ;
 
 

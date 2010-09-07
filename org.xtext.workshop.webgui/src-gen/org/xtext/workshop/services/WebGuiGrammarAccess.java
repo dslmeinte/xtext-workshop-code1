@@ -23,18 +23,16 @@ public class WebGuiGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cModelKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cDomainAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cDomainDomainModelParserRuleCall_3_0 = (RuleCall)cDomainAssignment_3.eContents().get(0);
-		private final Assignment cWebAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cWebWebModelParserRuleCall_4_0 = (RuleCall)cWebAssignment_4.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Assignment cDomainAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cDomainDomainModelParserRuleCall_2_0 = (RuleCall)cDomainAssignment_2.eContents().get(0);
+		private final Assignment cWebAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cWebWebModelParserRuleCall_3_0 = (RuleCall)cWebAssignment_3.eContents().get(0);
 		
 		//Model:
-		//	"model" name=ID "{" domain=DomainModel web=WebModel "}";
+		//	"model" name=ID domain=DomainModel web=WebModel;
 		public ParserRule getRule() { return rule; }
 
-		//"model" name=ID "{" domain=DomainModel web=WebModel "}"
+		//"model" name=ID domain=DomainModel web=WebModel
 		public Group getGroup() { return cGroup; }
 
 		//"model"
@@ -46,71 +44,59 @@ public class WebGuiGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"{"
-		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
-
 		//domain=DomainModel
-		public Assignment getDomainAssignment_3() { return cDomainAssignment_3; }
+		public Assignment getDomainAssignment_2() { return cDomainAssignment_2; }
 
 		//DomainModel
-		public RuleCall getDomainDomainModelParserRuleCall_3_0() { return cDomainDomainModelParserRuleCall_3_0; }
+		public RuleCall getDomainDomainModelParserRuleCall_2_0() { return cDomainDomainModelParserRuleCall_2_0; }
 
 		//web=WebModel
-		public Assignment getWebAssignment_4() { return cWebAssignment_4; }
+		public Assignment getWebAssignment_3() { return cWebAssignment_3; }
 
 		//WebModel
-		public RuleCall getWebWebModelParserRuleCall_4_0() { return cWebWebModelParserRuleCall_4_0; }
-
-		//"}"
-		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
+		public RuleCall getWebWebModelParserRuleCall_3_0() { return cWebWebModelParserRuleCall_3_0; }
 	}
 
 	public class DomainModelElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "DomainModel");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cDomainKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cEntitiesAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cEntitiesEntityParserRuleCall_3_0 = (RuleCall)cEntitiesAssignment_3.eContents().get(0);
-		private final Assignment cDataTypesAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cDataTypesDataTypeParserRuleCall_4_0 = (RuleCall)cDataTypesAssignment_4.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Action cDomainModelAction_0 = (Action)cGroup.eContents().get(0);
+		private final Keyword cDomainKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cEntitiesAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cEntitiesEntityParserRuleCall_2_0 = (RuleCall)cEntitiesAssignment_2.eContents().get(0);
+		private final Assignment cDataTypesAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cDataTypesDataTypeParserRuleCall_3_0 = (RuleCall)cDataTypesAssignment_3.eContents().get(0);
 		
-		//DomainModel:
-		//	"domain" name=ID "{" entities+=Entity* dataTypes+=DataType* "}";
+		/// *
+		// * +--------------+
+		// * | Domain model |
+		// * +--------------+
+		// * /DomainModel: // ensure model.domain != null
+		//	{DomainModel} "domain:" entities+=Entity* dataTypes+=DataType*;
 		public ParserRule getRule() { return rule; }
 
-		//"domain" name=ID "{" entities+=Entity* dataTypes+=DataType* "}"
+		//// ensure model.domain != null
+		//{DomainModel} "domain:" entities+=Entity* dataTypes+=DataType*
 		public Group getGroup() { return cGroup; }
 
-		//"domain"
-		public Keyword getDomainKeyword_0() { return cDomainKeyword_0; }
+		//// ensure model.domain != null
+		//{DomainModel}
+		public Action getDomainModelAction_0() { return cDomainModelAction_0; }
 
-		//name=ID
-		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
-
-		//ID
-		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
-
-		//"{"
-		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
+		//"domain:"
+		public Keyword getDomainKeyword_1() { return cDomainKeyword_1; }
 
 		//entities+=Entity*
-		public Assignment getEntitiesAssignment_3() { return cEntitiesAssignment_3; }
+		public Assignment getEntitiesAssignment_2() { return cEntitiesAssignment_2; }
 
 		//Entity
-		public RuleCall getEntitiesEntityParserRuleCall_3_0() { return cEntitiesEntityParserRuleCall_3_0; }
+		public RuleCall getEntitiesEntityParserRuleCall_2_0() { return cEntitiesEntityParserRuleCall_2_0; }
 
 		//dataTypes+=DataType*
-		public Assignment getDataTypesAssignment_4() { return cDataTypesAssignment_4; }
+		public Assignment getDataTypesAssignment_3() { return cDataTypesAssignment_3; }
 
 		//DataType
-		public RuleCall getDataTypesDataTypeParserRuleCall_4_0() { return cDataTypesDataTypeParserRuleCall_4_0; }
-
-		//"}"
-		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
+		public RuleCall getDataTypesDataTypeParserRuleCall_3_0() { return cDataTypesDataTypeParserRuleCall_3_0; }
 	}
 
 	public class EntityElements extends AbstractParserRuleElementFinder {
@@ -163,13 +149,15 @@ public class WebGuiGrammarAccess extends AbstractGrammarElementFinder {
 		private final CrossReference cTypeTypeCrossReference_2_0 = (CrossReference)cTypeAssignment_2.eContents().get(0);
 		private final RuleCall cTypeTypeIDTerminalRuleCall_2_0_1 = (RuleCall)cTypeTypeCrossReference_2_0.eContents().get(1);
 		private final Assignment cMultivaluedAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final Keyword cMultivaluedSKeyword_3_0 = (Keyword)cMultivaluedAssignment_3.eContents().get(0);
+		private final Alternatives cMultivaluedAlternatives_3_0 = (Alternatives)cMultivaluedAssignment_3.eContents().get(0);
+		private final Keyword cMultivaluedSKeyword_3_0_0 = (Keyword)cMultivaluedAlternatives_3_0.eContents().get(0);
+		private final Keyword cMultivaluedEsKeyword_3_0_1 = (Keyword)cMultivaluedAlternatives_3_0.eContents().get(1);
 		
 		//Feature:
-		//	name=ID ":" type=[Type] multivalued?="(s)"?;
+		//	name=ID ":" type=[Type] multivalued?=("(s)" | "(es)")?;
 		public ParserRule getRule() { return rule; }
 
-		//name=ID ":" type=[Type] multivalued?="(s)"?
+		//name=ID ":" type=[Type] multivalued?=("(s)" | "(es)")?
 		public Group getGroup() { return cGroup; }
 
 		//name=ID
@@ -190,11 +178,17 @@ public class WebGuiGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getTypeTypeIDTerminalRuleCall_2_0_1() { return cTypeTypeIDTerminalRuleCall_2_0_1; }
 
-		//multivalued?="(s)"?
+		//multivalued?=("(s)" | "(es)")?
 		public Assignment getMultivaluedAssignment_3() { return cMultivaluedAssignment_3; }
 
+		//"(s)" | "(es)"
+		public Alternatives getMultivaluedAlternatives_3_0() { return cMultivaluedAlternatives_3_0; }
+
 		//"(s)"
-		public Keyword getMultivaluedSKeyword_3_0() { return cMultivaluedSKeyword_3_0; }
+		public Keyword getMultivaluedSKeyword_3_0_0() { return cMultivaluedSKeyword_3_0_0; }
+
+		//"(es)"
+		public Keyword getMultivaluedEsKeyword_3_0_1() { return cMultivaluedEsKeyword_3_0_1; }
 	}
 
 	public class TypeElements extends AbstractParserRuleElementFinder {
@@ -224,6 +218,8 @@ public class WebGuiGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		
+		//// convenience super type
+		//// 	(does not correspond to a particular language construct)
 		//DataType:
 		//	"type" name=ID;
 		public ParserRule getRule() { return rule; }
@@ -244,41 +240,35 @@ public class WebGuiGrammarAccess extends AbstractGrammarElementFinder {
 	public class WebModelElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "WebModel");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cWebKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cPagesAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cPagesPageParserRuleCall_3_0 = (RuleCall)cPagesAssignment_3.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Action cWebModelAction_0 = (Action)cGroup.eContents().get(0);
+		private final Keyword cWebKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cPagesAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cPagesPageParserRuleCall_2_0 = (RuleCall)cPagesAssignment_2.eContents().get(0);
 		
-		//WebModel:
-		//	"web" name=ID "{" pages+=Page* "}";
+		/// *
+		// * +-----------+
+		// * | Web model |
+		// * +-----------+
+		// * /WebModel: // ensure model.web != null
+		//	{WebModel} "web:" pages+=Page*;
 		public ParserRule getRule() { return rule; }
 
-		//"web" name=ID "{" pages+=Page* "}"
+		//// ensure model.web != null
+		//{WebModel} "web:" pages+=Page*
 		public Group getGroup() { return cGroup; }
 
-		//"web"
-		public Keyword getWebKeyword_0() { return cWebKeyword_0; }
+		//// ensure model.web != null
+		//{WebModel}
+		public Action getWebModelAction_0() { return cWebModelAction_0; }
 
-		//name=ID
-		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
-
-		//ID
-		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
-
-		//"{"
-		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
+		//"web:"
+		public Keyword getWebKeyword_1() { return cWebKeyword_1; }
 
 		//pages+=Page*
-		public Assignment getPagesAssignment_3() { return cPagesAssignment_3; }
+		public Assignment getPagesAssignment_2() { return cPagesAssignment_2; }
 
 		//Page
-		public RuleCall getPagesPageParserRuleCall_3_0() { return cPagesPageParserRuleCall_3_0; }
-
-		//"}"
-		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
+		public RuleCall getPagesPageParserRuleCall_2_0() { return cPagesPageParserRuleCall_2_0; }
 	}
 
 	public class PageElements extends AbstractParserRuleElementFinder {
@@ -367,6 +357,7 @@ public class WebGuiGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cSingleElementParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cRepeatElementParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		
+		//// (initial) scope for PageElement-s: features of referenced Entity
 		//PageElement:
 		//	SingleElement | RepeatElement;
 		public ParserRule getRule() { return rule; }
@@ -412,6 +403,7 @@ public class WebGuiGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		
+		//// ~ button
 		//ActionElement:
 		//	"action" name=ID;
 		public ParserRule getRule() { return rule; }
@@ -437,6 +429,7 @@ public class WebGuiGrammarAccess extends AbstractGrammarElementFinder {
 		private final CrossReference cReferenceFeatureCrossReference_1_0 = (CrossReference)cReferenceAssignment_1.eContents().get(0);
 		private final RuleCall cReferenceFeatureIDTerminalRuleCall_1_0_1 = (RuleCall)cReferenceFeatureCrossReference_1_0.eContents().get(1);
 		
+		//// ~ display field
 		//DisplayElement:
 		//	"show" reference=[Feature];
 		public ParserRule getRule() { return rule; }
@@ -465,6 +458,8 @@ public class WebGuiGrammarAccess extends AbstractGrammarElementFinder {
 		private final CrossReference cReferenceFeatureCrossReference_1_0 = (CrossReference)cReferenceAssignment_1.eContents().get(0);
 		private final RuleCall cReferenceFeatureIDTerminalRuleCall_1_0_1 = (RuleCall)cReferenceFeatureCrossReference_1_0.eContents().get(1);
 		
+		//// scope is narrowed to referenced Feature
+		//// ~ input field
 		//InputElement:
 		//	"input for" reference=[Feature];
 		public ParserRule getRule() { return rule; }
@@ -497,6 +492,9 @@ public class WebGuiGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cContentsSingleElementParserRuleCall_3_0 = (RuleCall)cContentsAssignment_3.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
+		//// scope is narrowed to referenced Feature
+		//// ~ for loop
+		//// scope is narrowed to referenced Feature
 		/// *  
 		//DomainPath:
 		//    head=DomainPathHead;
@@ -510,7 +508,8 @@ public class WebGuiGrammarAccess extends AbstractGrammarElementFinder {
 		//	"repeat for" reference=[Feature] "{" contents+=SingleElement* "}";
 		public ParserRule getRule() { return rule; }
 
-		//"repeat for" reference=[Feature] "{" contents+=SingleElement* "}" / *  
+		//"repeat for" reference=[Feature] "{" contents+=SingleElement* "}" // scope is narrowed to referenced Feature
+		/// *  
 		//DomainPath:
 		//    head=DomainPathHead;
 		//    
@@ -543,6 +542,7 @@ public class WebGuiGrammarAccess extends AbstractGrammarElementFinder {
 		//SingleElement
 		public RuleCall getContentsSingleElementParserRuleCall_3_0() { return cContentsSingleElementParserRuleCall_3_0; }
 
+		//// scope is narrowed to referenced Feature
 		/// *  
 		//DomainPath:
 		//    head=DomainPathHead;
@@ -594,7 +594,7 @@ public class WebGuiGrammarAccess extends AbstractGrammarElementFinder {
 
 	
 	//Model:
-	//	"model" name=ID "{" domain=DomainModel web=WebModel "}";
+	//	"model" name=ID domain=DomainModel web=WebModel;
 	public ModelElements getModelAccess() {
 		return (pModel != null) ? pModel : (pModel = new ModelElements());
 	}
@@ -603,8 +603,12 @@ public class WebGuiGrammarAccess extends AbstractGrammarElementFinder {
 		return getModelAccess().getRule();
 	}
 
-	//DomainModel:
-	//	"domain" name=ID "{" entities+=Entity* dataTypes+=DataType* "}";
+	/// *
+	// * +--------------+
+	// * | Domain model |
+	// * +--------------+
+	// * /DomainModel: // ensure model.domain != null
+	//	{DomainModel} "domain:" entities+=Entity* dataTypes+=DataType*;
 	public DomainModelElements getDomainModelAccess() {
 		return (pDomainModel != null) ? pDomainModel : (pDomainModel = new DomainModelElements());
 	}
@@ -624,7 +628,7 @@ public class WebGuiGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Feature:
-	//	name=ID ":" type=[Type] multivalued?="(s)"?;
+	//	name=ID ":" type=[Type] multivalued?=("(s)" | "(es)")?;
 	public FeatureElements getFeatureAccess() {
 		return (pFeature != null) ? pFeature : (pFeature = new FeatureElements());
 	}
@@ -643,6 +647,8 @@ public class WebGuiGrammarAccess extends AbstractGrammarElementFinder {
 		return getTypeAccess().getRule();
 	}
 
+	//// convenience super type
+	//// 	(does not correspond to a particular language construct)
 	//DataType:
 	//	"type" name=ID;
 	public DataTypeElements getDataTypeAccess() {
@@ -653,8 +659,12 @@ public class WebGuiGrammarAccess extends AbstractGrammarElementFinder {
 		return getDataTypeAccess().getRule();
 	}
 
-	//WebModel:
-	//	"web" name=ID "{" pages+=Page* "}";
+	/// *
+	// * +-----------+
+	// * | Web model |
+	// * +-----------+
+	// * /WebModel: // ensure model.web != null
+	//	{WebModel} "web:" pages+=Page*;
 	public WebModelElements getWebModelAccess() {
 		return (pWebModel != null) ? pWebModel : (pWebModel = new WebModelElements());
 	}
@@ -673,6 +683,7 @@ public class WebGuiGrammarAccess extends AbstractGrammarElementFinder {
 		return getPageAccess().getRule();
 	}
 
+	//// (initial) scope for PageElement-s: features of referenced Entity
 	//PageElement:
 	//	SingleElement | RepeatElement;
 	public PageElementElements getPageElementAccess() {
@@ -693,6 +704,7 @@ public class WebGuiGrammarAccess extends AbstractGrammarElementFinder {
 		return getSingleElementAccess().getRule();
 	}
 
+	//// ~ button
 	//ActionElement:
 	//	"action" name=ID;
 	public ActionElementElements getActionElementAccess() {
@@ -703,6 +715,7 @@ public class WebGuiGrammarAccess extends AbstractGrammarElementFinder {
 		return getActionElementAccess().getRule();
 	}
 
+	//// ~ display field
 	//DisplayElement:
 	//	"show" reference=[Feature];
 	public DisplayElementElements getDisplayElementAccess() {
@@ -713,6 +726,8 @@ public class WebGuiGrammarAccess extends AbstractGrammarElementFinder {
 		return getDisplayElementAccess().getRule();
 	}
 
+	//// scope is narrowed to referenced Feature
+	//// ~ input field
 	//InputElement:
 	//	"input for" reference=[Feature];
 	public InputElementElements getInputElementAccess() {
@@ -723,6 +738,9 @@ public class WebGuiGrammarAccess extends AbstractGrammarElementFinder {
 		return getInputElementAccess().getRule();
 	}
 
+	//// scope is narrowed to referenced Feature
+	//// ~ for loop
+	//// scope is narrowed to referenced Feature
 	/// *  
 	//DomainPath:
 	//    head=DomainPathHead;

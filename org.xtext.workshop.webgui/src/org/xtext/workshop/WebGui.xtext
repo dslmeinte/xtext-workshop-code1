@@ -2,42 +2,56 @@ grammar org.xtext.workshop.WebGui with org.eclipse.xtext.common.Terminals
 
 generate webGui "http://www.xtext.org/workshop/WebGui"
 
+
 Model:
     'model' name=ID
-    '{'
         domain=DomainModel
         web=WebModel
-    '}';
+    ;
+
+/*
+ * +--------------+
+ * | Domain model |
+ * +--------------+
+ */
 
 DomainModel:
-    'domain' name=ID
-    '{'
+    {DomainModel}	// ensure model.domain != null
+    'domain:'
         (entities+=Entity)*
         (dataTypes+=DataType)*
-    '}';
+    ;
 
-        
 Entity:
     'entity' name=ID 
     '{'
         (features+=Feature)*
     '}';
-            
+
 Feature:
-    name=ID ':' type=[Type]  multivalued?='(s)'?;
-    
+    name=ID ':' type=[Type]
+    	( multivalued ?= ( '(s)' | '(es)' ) )?;
+
 Type:
-    Entity | DataType;    
-    
+    Entity | DataType;
+    // convenience super type
+    // 	(does not correspond to a particular language construct)
+
 DataType:
     'type' name=ID;
-    
-    
+
+
+/*
+ * +-----------+
+ * | Web model |
+ * +-----------+
+ */
+
 WebModel:
-    'web' name=ID
-    '{'
-        (pages+=Page)*
-    '}';
+	{WebModel}	// ensure model.web != null
+    'web:'
+    	(pages+=Page)*
+    ;
 
 Page:
     'page' name=ID
@@ -49,27 +63,32 @@ Page:
             
         '}'
     '}';
-    
+    // (initial) scope for PageElement-s: features of referenced Entity
+
 PageElement:
     SingleElement | RepeatElement;
 
 SingleElement:
     ActionElement | DisplayElement | InputElement;
-    
-ActionElement:
+
+ActionElement:	// ~ button
     'action' name=ID;
 
-DisplayElement:
-    'show' reference=[Feature];    
-    
-InputElement:
-    'input for' reference=[Feature];    
-    
-RepeatElement:
+DisplayElement:	// ~ display field
+    'show' reference=[Feature];
+    // scope is narrowed to referenced Feature
+
+InputElement:	// ~ input field
+    'input for' reference=[Feature];
+    // scope is narrowed to referenced Feature
+
+RepeatElement:	// ~ for loop
     'repeat for' reference=[Feature] 
     '{'
         (contents+=SingleElement)*
-    '}';    
+    '}';
+    // scope is narrowed to referenced Feature
+
 
 /*  
 DomainPath:
@@ -81,4 +100,3 @@ DomainPathHead:
 DomainPathTail:
     '.' reference=[Feature] (tail=DomainPathTail)?;
 */        
-    
