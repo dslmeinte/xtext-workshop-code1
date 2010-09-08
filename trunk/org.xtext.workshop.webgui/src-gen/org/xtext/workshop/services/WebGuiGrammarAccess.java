@@ -220,8 +220,6 @@ public class WebGuiGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		
-		//// convenience super type
-		//// 	(does not correspond to a particular language construct)
 		//DataType:
 		//	"type" name=ID;
 		public ParserRule getRule() { return rule; }
@@ -423,7 +421,6 @@ public class WebGuiGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cTailAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cTailDomainPathTailParserRuleCall_1_0 = (RuleCall)cTailAssignment_1.eContents().get(0);
 		
-		//// scope is narrowed to referenced Feature
 		//DomainPath:
 		//	feature=[Feature] tail=DomainPathTail?;
 		public ParserRule getRule() { return rule; }
@@ -457,6 +454,7 @@ public class WebGuiGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cTailAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cTailDomainPathTailParserRuleCall_2_0 = (RuleCall)cTailAssignment_2.eContents().get(0);
 		
+		//// scope(feature)=features of Entity reference by container or empty
 		//DomainPathTail:
 		//	"." feature=[Feature] tail=DomainPathTail?;
 		public ParserRule getRule() { return rule; }
@@ -487,6 +485,7 @@ public class WebGuiGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Expression");
 		private final RuleCall cAdditionParserRuleCall = (RuleCall)rule.eContents().get(1);
 		
+		//// scope(feature)=features of Entity reference by container or empty
 		//Expression:
 		//	Addition;
 		public ParserRule getRule() { return rule; }
@@ -751,8 +750,6 @@ public class WebGuiGrammarAccess extends AbstractGrammarElementFinder {
 		return getTypeAccess().getRule();
 	}
 
-	//// convenience super type
-	//// 	(does not correspond to a particular language construct)
 	//DataType:
 	//	"type" name=ID;
 	public DataTypeElements getDataTypeAccess() {
@@ -820,7 +817,6 @@ public class WebGuiGrammarAccess extends AbstractGrammarElementFinder {
 		return getDisplayElementAccess().getRule();
 	}
 
-	//// scope is narrowed to referenced Feature
 	//DomainPath:
 	//	feature=[Feature] tail=DomainPathTail?;
 	public DomainPathElements getDomainPathAccess() {
@@ -831,6 +827,7 @@ public class WebGuiGrammarAccess extends AbstractGrammarElementFinder {
 		return getDomainPathAccess().getRule();
 	}
 
+	//// scope(feature)=features of Entity reference by container or empty
 	//DomainPathTail:
 	//	"." feature=[Feature] tail=DomainPathTail?;
 	public DomainPathTailElements getDomainPathTailAccess() {
@@ -841,6 +838,7 @@ public class WebGuiGrammarAccess extends AbstractGrammarElementFinder {
 		return getDomainPathTailAccess().getRule();
 	}
 
+	//// scope(feature)=features of Entity reference by container or empty
 	//Expression:
 	//	Addition;
 	public ExpressionElements getExpressionAccess() {

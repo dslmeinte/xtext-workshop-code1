@@ -923,8 +923,6 @@ protected class Type_DataTypeParserRuleCall_1 extends RuleCallToken {
 
 /************ begin Rule DataType ****************
  *
- * // convenience super type
- * // 	(does not correspond to a particular language construct)
  * DataType:
  * 	"type" name=ID;
  *
@@ -1797,7 +1795,6 @@ protected class DisplayElement_ReferenceAssignment_1 extends AssignmentToken  {
 
 /************ begin Rule DomainPath ****************
  *
- * // scope is narrowed to referenced Feature
  * DomainPath:
  * 	feature=[Feature] tail=DomainPathTail?;
  *
@@ -1921,6 +1918,7 @@ protected class DomainPath_TailAssignment_1 extends AssignmentToken  {
 
 /************ begin Rule DomainPathTail ****************
  *
+ * // scope(feature)=features of Entity reference by container or empty
  * DomainPathTail:
  * 	"." feature=[Feature] tail=DomainPathTail?;
  *
@@ -2066,6 +2064,7 @@ protected class DomainPathTail_TailAssignment_2 extends AssignmentToken  {
 
 /************ begin Rule Expression ****************
  *
+ * // scope(feature)=features of Entity reference by container or empty
  * Expression:
  * 	Addition;
  *
