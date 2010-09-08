@@ -29,12 +29,10 @@ Entity:
 Feature:
     name=ID ':' type=[Type]
     	( multivalued ?= ( '(s)' | '(es)' ) )?
-    	( '=' expression=Expression)?;
+    	( '=' expression=Expression )?;
 
 Type:
     Entity | DataType;
-    // convenience super type
-    // 	(does not correspond to a particular language construct)
 
 DataType:
     'type' name=ID;
@@ -68,29 +66,30 @@ ActionElement:	// ~ link
 
 DisplayElement:	// ~ display field
     'show' reference=DomainPath;
-    // scope is narrowed to referenced Feature
 
 DomainPath:
     feature=[Feature]  (tail=DomainPathTail)?;
-    
+    // scope(feature)=features of Entity reference by container or empty
+
 DomainPathTail:
     '.' feature=[Feature] (tail=DomainPathTail)?;
+    // scope(feature)=features of Entity reference by container or empty
 
 Expression:
     Addition;
-    
+
 Addition returns Expression:
     Multiplication ( ({Add.left=current} '+' | {Substract.left=current} '-') right=Multiplication)*;
 
 Multiplication returns Expression:
     Value ( ({Multiply.left=current} '*' | {Divide.left=current} '/') right=Value)*;
-    
+
 Value returns Expression:
     Literal | DomainPath;
-    
+
 Literal:
     NumberLiteral;
-    
+
 NumberLiteral:
     value=INT;
-                    
+
