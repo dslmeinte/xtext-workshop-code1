@@ -45,6 +45,9 @@
 
 
 - Xtext more
+
+   type rules:
+
    EClass :
       ;
 
@@ -61,7 +64,7 @@
       assignments:
          =   simple assignment
          += multi-valued feature, adds value to the right
-         ?= boolean assigment, expects a feature of type EBoolean
+         ?= boolean assigmnent, expects a feature of type EBoolean
          
       cross reference:  [EClass]
    
@@ -74,7 +77,7 @@
    - de eerste element in je Xtext file is je top element
    - vergeet name feature niet van je element waarover je later code wilt genereren.
 
-- Expand example
+- Expand/enhance example
      met schermen, en cross-reference naar domain model
    - start with the plain domain text of your DSL instance
 
@@ -91,7 +94,7 @@
 
    IF
    
-- Example
+- Exercise
    genereer html voor een pagina + java voor entity.
 
 - More Xpand with Xtend
