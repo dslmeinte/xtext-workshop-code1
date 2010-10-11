@@ -163,9 +163,9 @@ public class WebGuiAdapterFactory extends AdapterFactoryImpl
         return createAddAdapter();
       }
       @Override
-      public Adapter caseSubstract(Substract object)
+      public Adapter caseSubtract(Subtract object)
       {
-        return createSubstractAdapter();
+        return createSubtractAdapter();
       }
       @Override
       public Adapter caseMultiply(Multiply object)
@@ -455,16 +455,16 @@ public class WebGuiAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.workshop.webGui.Substract <em>Substract</em>}'.
+   * Creates a new adapter for an object of class '{@link org.xtext.workshop.webGui.Subtract <em>Subtract</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.xtext.workshop.webGui.Substract
+   * @see org.xtext.workshop.webGui.Subtract
    * @generated
    */
-  public Adapter createSubstractAdapter()
+  public Adapter createSubtractAdapter()
   {
     return null;
   }

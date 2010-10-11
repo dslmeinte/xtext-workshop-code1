@@ -2329,7 +2329,7 @@ public class InternalWebGuiParser extends AbstractInternalAntlrParser {
             	            // ../org.xtext.workshop.webgui/src-gen/org/xtext/workshop/parser/antlr/internal/InternalWebGui.g:1074:5: 
             	            {
             	             
-            	                    temp=factory.create(grammarAccess.getAdditionAccess().getSubstractLeftAction_1_0_1_0().getType().getClassifier());
+            	                    temp=factory.create(grammarAccess.getAdditionAccess().getSubtractLeftAction_1_0_1_0().getType().getClassifier());
             	                    try {
             	                    	factory.set(temp, "left", current, null /*ParserRule*/, currentNode);
             	                    } catch(ValueConverterException vce) {
@@ -2337,7 +2337,7 @@ public class InternalWebGuiParser extends AbstractInternalAntlrParser {
             	                    }
             	                    current = temp; 
             	                    temp = null;
-            	                    CompositeNode newNode = createCompositeNode(grammarAccess.getAdditionAccess().getSubstractLeftAction_1_0_1_0(), currentNode.getParent());
+            	                    CompositeNode newNode = createCompositeNode(grammarAccess.getAdditionAccess().getSubtractLeftAction_1_0_1_0(), currentNode.getParent());
             	                newNode.getChildren().add(currentNode);
             	                moveLookaheadInfo(currentNode, newNode);
             	                currentNode = newNode; 

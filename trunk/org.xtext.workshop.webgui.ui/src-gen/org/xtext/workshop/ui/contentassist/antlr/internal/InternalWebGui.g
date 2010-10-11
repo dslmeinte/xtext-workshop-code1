@@ -2247,11 +2247,11 @@ rule__Addition__Group_1_0_1__0__Impl
     }
 :
 (
-{ before(grammarAccess.getAdditionAccess().getSubstractLeftAction_1_0_1_0()); }
+{ before(grammarAccess.getAdditionAccess().getSubtractLeftAction_1_0_1_0()); }
 (
 
 )
-{ after(grammarAccess.getAdditionAccess().getSubstractLeftAction_1_0_1_0()); }
+{ after(grammarAccess.getAdditionAccess().getSubtractLeftAction_1_0_1_0()); }
 )
 
 ;

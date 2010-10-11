@@ -224,11 +224,11 @@ public class WebGuiSwitch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case WebGuiPackage.SUBSTRACT:
+      case WebGuiPackage.SUBTRACT:
       {
-        Substract substract = (Substract)theEObject;
-        T result = caseSubstract(substract);
-        if (result == null) result = caseExpression(substract);
+        Subtract subtract = (Subtract)theEObject;
+        T result = caseSubtract(subtract);
+        if (result == null) result = caseExpression(subtract);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -525,17 +525,17 @@ public class WebGuiSwitch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Substract</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Subtract</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Substract</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Subtract</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseSubstract(Substract object)
+  public T caseSubtract(Subtract object)
   {
     return null;
   }

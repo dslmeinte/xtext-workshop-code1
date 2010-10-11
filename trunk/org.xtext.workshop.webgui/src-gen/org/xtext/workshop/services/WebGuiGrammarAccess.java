@@ -504,25 +504,25 @@ public class WebGuiGrammarAccess extends AbstractGrammarElementFinder {
 		private final Action cAddLeftAction_1_0_0_0 = (Action)cGroup_1_0_0.eContents().get(0);
 		private final Keyword cPlusSignKeyword_1_0_0_1 = (Keyword)cGroup_1_0_0.eContents().get(1);
 		private final Group cGroup_1_0_1 = (Group)cAlternatives_1_0.eContents().get(1);
-		private final Action cSubstractLeftAction_1_0_1_0 = (Action)cGroup_1_0_1.eContents().get(0);
+		private final Action cSubtractLeftAction_1_0_1_0 = (Action)cGroup_1_0_1.eContents().get(0);
 		private final Keyword cHyphenMinusKeyword_1_0_1_1 = (Keyword)cGroup_1_0_1.eContents().get(1);
 		private final Assignment cRightAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
 		private final RuleCall cRightMultiplicationParserRuleCall_1_1_0 = (RuleCall)cRightAssignment_1_1.eContents().get(0);
 		
 		//Addition returns Expression:
-		//	Multiplication (({Add.left=current} "+" | {Substract.left=current} "-") right=Multiplication)*;
+		//	Multiplication (({Add.left=current} "+" | {Subtract.left=current} "-") right=Multiplication)*;
 		public ParserRule getRule() { return rule; }
 
-		//Multiplication (({Add.left=current} "+" | {Substract.left=current} "-") right=Multiplication)*
+		//Multiplication (({Add.left=current} "+" | {Subtract.left=current} "-") right=Multiplication)*
 		public Group getGroup() { return cGroup; }
 
 		//Multiplication
 		public RuleCall getMultiplicationParserRuleCall_0() { return cMultiplicationParserRuleCall_0; }
 
-		//(({Add.left=current} "+" | {Substract.left=current} "-") right=Multiplication)*
+		//(({Add.left=current} "+" | {Subtract.left=current} "-") right=Multiplication)*
 		public Group getGroup_1() { return cGroup_1; }
 
-		//{Add.left=current} "+" | {Substract.left=current} "-"
+		//{Add.left=current} "+" | {Subtract.left=current} "-"
 		public Alternatives getAlternatives_1_0() { return cAlternatives_1_0; }
 
 		//{Add.left=current} "+"
@@ -534,11 +534,11 @@ public class WebGuiGrammarAccess extends AbstractGrammarElementFinder {
 		//"+"
 		public Keyword getPlusSignKeyword_1_0_0_1() { return cPlusSignKeyword_1_0_0_1; }
 
-		//{Substract.left=current} "-"
+		//{Subtract.left=current} "-"
 		public Group getGroup_1_0_1() { return cGroup_1_0_1; }
 
-		//{Substract.left=current}
-		public Action getSubstractLeftAction_1_0_1_0() { return cSubstractLeftAction_1_0_1_0; }
+		//{Subtract.left=current}
+		public Action getSubtractLeftAction_1_0_1_0() { return cSubtractLeftAction_1_0_1_0; }
 
 		//"-"
 		public Keyword getHyphenMinusKeyword_1_0_1_1() { return cHyphenMinusKeyword_1_0_1_1; }
@@ -837,7 +837,7 @@ public class WebGuiGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Addition returns Expression:
-	//	Multiplication (({Add.left=current} "+" | {Substract.left=current} "-") right=Multiplication)*;
+	//	Multiplication (({Add.left=current} "+" | {Subtract.left=current} "-") right=Multiplication)*;
 	public AdditionElements getAdditionAccess() {
 		return (pAddition != null) ? pAddition : (pAddition = new AdditionElements());
 	}

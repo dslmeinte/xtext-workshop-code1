@@ -617,14 +617,14 @@ public interface WebGuiPackage extends EPackage
   int ADD_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 2;
 
   /**
-   * The meta object id for the '{@link org.xtext.workshop.webGui.impl.SubstractImpl <em>Substract</em>}' class.
+   * The meta object id for the '{@link org.xtext.workshop.webGui.impl.SubtractImpl <em>Subtract</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see org.xtext.workshop.webGui.impl.SubstractImpl
-   * @see org.xtext.workshop.webGui.impl.WebGuiPackageImpl#getSubstract()
+   * @see org.xtext.workshop.webGui.impl.SubtractImpl
+   * @see org.xtext.workshop.webGui.impl.WebGuiPackageImpl#getSubtract()
    * @generated
    */
-  int SUBSTRACT = 17;
+  int SUBTRACT = 17;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -633,7 +633,7 @@ public interface WebGuiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SUBSTRACT__LEFT = EXPRESSION_FEATURE_COUNT + 0;
+  int SUBTRACT__LEFT = EXPRESSION_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Right</b></em>' containment reference.
@@ -642,16 +642,16 @@ public interface WebGuiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SUBSTRACT__RIGHT = EXPRESSION_FEATURE_COUNT + 1;
+  int SUBTRACT__RIGHT = EXPRESSION_FEATURE_COUNT + 1;
 
   /**
-   * The number of structural features of the '<em>Substract</em>' class.
+   * The number of structural features of the '<em>Subtract</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int SUBSTRACT_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 2;
+  int SUBTRACT_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link org.xtext.workshop.webGui.impl.MultiplyImpl <em>Multiply</em>}' class.
@@ -1163,36 +1163,36 @@ public interface WebGuiPackage extends EPackage
   EReference getAdd_Right();
 
   /**
-   * Returns the meta object for class '{@link org.xtext.workshop.webGui.Substract <em>Substract</em>}'.
+   * Returns the meta object for class '{@link org.xtext.workshop.webGui.Subtract <em>Subtract</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Substract</em>'.
-   * @see org.xtext.workshop.webGui.Substract
+   * @return the meta object for class '<em>Subtract</em>'.
+   * @see org.xtext.workshop.webGui.Subtract
    * @generated
    */
-  EClass getSubstract();
+  EClass getSubtract();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.workshop.webGui.Substract#getLeft <em>Left</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.workshop.webGui.Subtract#getLeft <em>Left</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Left</em>'.
-   * @see org.xtext.workshop.webGui.Substract#getLeft()
-   * @see #getSubstract()
+   * @see org.xtext.workshop.webGui.Subtract#getLeft()
+   * @see #getSubtract()
    * @generated
    */
-  EReference getSubstract_Left();
+  EReference getSubtract_Left();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.workshop.webGui.Substract#getRight <em>Right</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.workshop.webGui.Subtract#getRight <em>Right</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Right</em>'.
-   * @see org.xtext.workshop.webGui.Substract#getRight()
-   * @see #getSubstract()
+   * @see org.xtext.workshop.webGui.Subtract#getRight()
+   * @see #getSubtract()
    * @generated
    */
-  EReference getSubstract_Right();
+  EReference getSubtract_Right();
 
   /**
    * Returns the meta object for class '{@link org.xtext.workshop.webGui.Multiply <em>Multiply</em>}'.
@@ -1644,14 +1644,14 @@ public interface WebGuiPackage extends EPackage
     EReference ADD__RIGHT = eINSTANCE.getAdd_Right();
 
     /**
-     * The meta object literal for the '{@link org.xtext.workshop.webGui.impl.SubstractImpl <em>Substract</em>}' class.
+     * The meta object literal for the '{@link org.xtext.workshop.webGui.impl.SubtractImpl <em>Subtract</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.xtext.workshop.webGui.impl.SubstractImpl
-     * @see org.xtext.workshop.webGui.impl.WebGuiPackageImpl#getSubstract()
+     * @see org.xtext.workshop.webGui.impl.SubtractImpl
+     * @see org.xtext.workshop.webGui.impl.WebGuiPackageImpl#getSubtract()
      * @generated
      */
-    EClass SUBSTRACT = eINSTANCE.getSubstract();
+    EClass SUBTRACT = eINSTANCE.getSubtract();
 
     /**
      * The meta object literal for the '<em><b>Left</b></em>' containment reference feature.
@@ -1659,7 +1659,7 @@ public interface WebGuiPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference SUBSTRACT__LEFT = eINSTANCE.getSubstract_Left();
+    EReference SUBTRACT__LEFT = eINSTANCE.getSubtract_Left();
 
     /**
      * The meta object literal for the '<em><b>Right</b></em>' containment reference feature.
@@ -1667,7 +1667,7 @@ public interface WebGuiPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference SUBSTRACT__RIGHT = eINSTANCE.getSubstract_Right();
+    EReference SUBTRACT__RIGHT = eINSTANCE.getSubtract_Right();
 
     /**
      * The meta object literal for the '{@link org.xtext.workshop.webGui.impl.MultiplyImpl <em>Multiply</em>}' class.

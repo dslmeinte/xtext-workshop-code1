@@ -79,7 +79,7 @@ Expression:
     Addition;
 
 Addition returns Expression:
-    Multiplication ( ({Add.left=current} '+' | {Substract.left=current} '-') right=Multiplication)*;
+    Multiplication ( ({Add.left=current} '+' | {Subtract.left=current} '-') right=Multiplication)*;
 
 Multiplication returns Expression:
     Value ( ({Multiply.left=current} '*' | {Divide.left=current} '/') right=Value)*;

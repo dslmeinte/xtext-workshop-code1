@@ -2096,7 +2096,7 @@ protected class Expression_AdditionParserRuleCall extends RuleCallToken {
 		   getEObject().eClass() != grammarAccess.getDomainPathRule().getType().getClassifier() && 
 		   getEObject().eClass() != grammarAccess.getMultiplicationAccess().getMultiplyLeftAction_1_0_0_0().getType().getClassifier() && 
 		   getEObject().eClass() != grammarAccess.getNumberLiteralRule().getType().getClassifier() && 
-		   getEObject().eClass() != grammarAccess.getAdditionAccess().getSubstractLeftAction_1_0_1_0().getType().getClassifier())
+		   getEObject().eClass() != grammarAccess.getAdditionAccess().getSubtractLeftAction_1_0_1_0().getType().getClassifier())
 			return null;
 		if(checkForRecursion(Addition_Group.class, eObjectConsumer)) return null;
 		return eObjectConsumer;
@@ -2116,11 +2116,11 @@ protected class Expression_AdditionParserRuleCall extends RuleCallToken {
 /************ begin Rule Addition ****************
  *
  * Addition returns Expression:
- * 	Multiplication (({Add.left=current} "+" | {Substract.left=current} "-") right=Multiplication)*;
+ * 	Multiplication (({Add.left=current} "+" | {Subtract.left=current} "-") right=Multiplication)*;
  *
  **/
 
-// Multiplication (({Add.left=current} "+" | {Substract.left=current} "-") right=Multiplication)*
+// Multiplication (({Add.left=current} "+" | {Subtract.left=current} "-") right=Multiplication)*
 protected class Addition_Group extends GroupToken {
 	
 	public Addition_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -2148,7 +2148,7 @@ protected class Addition_Group extends GroupToken {
 		   getEObject().eClass() != grammarAccess.getDomainPathRule().getType().getClassifier() && 
 		   getEObject().eClass() != grammarAccess.getMultiplicationAccess().getMultiplyLeftAction_1_0_0_0().getType().getClassifier() && 
 		   getEObject().eClass() != grammarAccess.getNumberLiteralRule().getType().getClassifier() && 
-		   getEObject().eClass() != grammarAccess.getAdditionAccess().getSubstractLeftAction_1_0_1_0().getType().getClassifier())
+		   getEObject().eClass() != grammarAccess.getAdditionAccess().getSubtractLeftAction_1_0_1_0().getType().getClassifier())
 			return null;
 		return eObjectConsumer;
 	}
@@ -2194,7 +2194,7 @@ protected class Addition_MultiplicationParserRuleCall_0 extends RuleCallToken {
 	}	
 }
 
-// (({Add.left=current} "+" | {Substract.left=current} "-") right=Multiplication)*
+// (({Add.left=current} "+" | {Subtract.left=current} "-") right=Multiplication)*
 protected class Addition_Group_1 extends GroupToken {
 	
 	public Addition_Group_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -2217,14 +2217,14 @@ protected class Addition_Group_1 extends GroupToken {
     @Override
 	public IEObjectConsumer tryConsume() {
 		if(getEObject().eClass() != grammarAccess.getAdditionAccess().getAddLeftAction_1_0_0_0().getType().getClassifier() && 
-		   getEObject().eClass() != grammarAccess.getAdditionAccess().getSubstractLeftAction_1_0_1_0().getType().getClassifier())
+		   getEObject().eClass() != grammarAccess.getAdditionAccess().getSubtractLeftAction_1_0_1_0().getType().getClassifier())
 			return null;
 		return eObjectConsumer;
 	}
 
 }
 
-// {Add.left=current} "+" | {Substract.left=current} "-"
+// {Add.left=current} "+" | {Subtract.left=current} "-"
 protected class Addition_Alternatives_1_0 extends AlternativesToken {
 
 	public Addition_Alternatives_1_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -2329,7 +2329,7 @@ protected class Addition_PlusSignKeyword_1_0_0_1 extends KeywordToken  {
 }
 
 
-// {Substract.left=current} "-"
+// {Subtract.left=current} "-"
 protected class Addition_Group_1_0_1 extends GroupToken {
 	
 	public Addition_Group_1_0_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -2351,23 +2351,23 @@ protected class Addition_Group_1_0_1 extends GroupToken {
 
     @Override
 	public IEObjectConsumer tryConsume() {
-		if(getEObject().eClass() != grammarAccess.getAdditionAccess().getSubstractLeftAction_1_0_1_0().getType().getClassifier())
+		if(getEObject().eClass() != grammarAccess.getAdditionAccess().getSubtractLeftAction_1_0_1_0().getType().getClassifier())
 			return null;
 		return eObjectConsumer;
 	}
 
 }
 
-// {Substract.left=current}
-protected class Addition_SubstractLeftAction_1_0_1_0 extends ActionToken  {
+// {Subtract.left=current}
+protected class Addition_SubtractLeftAction_1_0_1_0 extends ActionToken  {
 
-	public Addition_SubstractLeftAction_1_0_1_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+	public Addition_SubtractLeftAction_1_0_1_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
 		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
 	}
 	
 	@Override
 	public Action getGrammarElement() {
-		return grammarAccess.getAdditionAccess().getSubstractLeftAction_1_0_1_0();
+		return grammarAccess.getAdditionAccess().getSubtractLeftAction_1_0_1_0();
 	}
 
     @Override
@@ -2403,7 +2403,7 @@ protected class Addition_HyphenMinusKeyword_1_0_1_1 extends KeywordToken  {
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new Addition_SubstractLeftAction_1_0_1_0(lastRuleCallOrigin, this, 0, inst);
+			case 0: return new Addition_SubtractLeftAction_1_0_1_0(lastRuleCallOrigin, this, 0, inst);
 			default: return null;
 		}	
 	}

@@ -84,7 +84,7 @@ public class WebGuiFactoryImpl extends EFactoryImpl implements WebGuiFactory
       case WebGuiPackage.VALUE: return createValue();
       case WebGuiPackage.NUMBER_LITERAL: return createNumberLiteral();
       case WebGuiPackage.ADD: return createAdd();
-      case WebGuiPackage.SUBSTRACT: return createSubstract();
+      case WebGuiPackage.SUBTRACT: return createSubtract();
       case WebGuiPackage.MULTIPLY: return createMultiply();
       case WebGuiPackage.DIVIDE: return createDivide();
       default:
@@ -284,10 +284,10 @@ public class WebGuiFactoryImpl extends EFactoryImpl implements WebGuiFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public Substract createSubstract()
+  public Subtract createSubtract()
   {
-    SubstractImpl substract = new SubstractImpl();
-    return substract;
+    SubtractImpl subtract = new SubtractImpl();
+    return subtract;
   }
 
   /**

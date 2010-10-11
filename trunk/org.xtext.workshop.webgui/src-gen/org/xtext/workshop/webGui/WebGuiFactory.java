@@ -179,13 +179,13 @@ public interface WebGuiFactory extends EFactory
   Add createAdd();
 
   /**
-   * Returns a new object of class '<em>Substract</em>'.
+   * Returns a new object of class '<em>Subtract</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Substract</em>'.
+   * @return a new object of class '<em>Subtract</em>'.
    * @generated
    */
-  Substract createSubstract();
+  Subtract createSubtract();
 
   /**
    * Returns a new object of class '<em>Multiply</em>'.

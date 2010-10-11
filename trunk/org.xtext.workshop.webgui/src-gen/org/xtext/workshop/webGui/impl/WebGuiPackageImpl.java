@@ -28,7 +28,7 @@ import org.xtext.workshop.webGui.Multiply;
 import org.xtext.workshop.webGui.NumberLiteral;
 import org.xtext.workshop.webGui.Page;
 import org.xtext.workshop.webGui.PageElement;
-import org.xtext.workshop.webGui.Substract;
+import org.xtext.workshop.webGui.Subtract;
 import org.xtext.workshop.webGui.Type;
 import org.xtext.workshop.webGui.Value;
 import org.xtext.workshop.webGui.WebGuiFactory;
@@ -167,7 +167,7 @@ public class WebGuiPackageImpl extends EPackageImpl implements WebGuiPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass substractEClass = null;
+  private EClass subtractEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -661,9 +661,9 @@ public class WebGuiPackageImpl extends EPackageImpl implements WebGuiPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getSubstract()
+  public EClass getSubtract()
   {
-    return substractEClass;
+    return subtractEClass;
   }
 
   /**
@@ -671,9 +671,9 @@ public class WebGuiPackageImpl extends EPackageImpl implements WebGuiPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getSubstract_Left()
+  public EReference getSubtract_Left()
   {
-    return (EReference)substractEClass.getEStructuralFeatures().get(0);
+    return (EReference)subtractEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -681,9 +681,9 @@ public class WebGuiPackageImpl extends EPackageImpl implements WebGuiPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getSubstract_Right()
+  public EReference getSubtract_Right()
   {
-    return (EReference)substractEClass.getEStructuralFeatures().get(1);
+    return (EReference)subtractEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -834,9 +834,9 @@ public class WebGuiPackageImpl extends EPackageImpl implements WebGuiPackage
     createEReference(addEClass, ADD__LEFT);
     createEReference(addEClass, ADD__RIGHT);
 
-    substractEClass = createEClass(SUBSTRACT);
-    createEReference(substractEClass, SUBSTRACT__LEFT);
-    createEReference(substractEClass, SUBSTRACT__RIGHT);
+    subtractEClass = createEClass(SUBTRACT);
+    createEReference(subtractEClass, SUBTRACT__LEFT);
+    createEReference(subtractEClass, SUBTRACT__RIGHT);
 
     multiplyEClass = createEClass(MULTIPLY);
     createEReference(multiplyEClass, MULTIPLY__LEFT);
@@ -884,7 +884,7 @@ public class WebGuiPackageImpl extends EPackageImpl implements WebGuiPackage
     valueEClass.getESuperTypes().add(this.getExpression());
     numberLiteralEClass.getESuperTypes().add(this.getValue());
     addEClass.getESuperTypes().add(this.getExpression());
-    substractEClass.getESuperTypes().add(this.getExpression());
+    subtractEClass.getESuperTypes().add(this.getExpression());
     multiplyEClass.getESuperTypes().add(this.getExpression());
     divideEClass.getESuperTypes().add(this.getExpression());
 
@@ -947,9 +947,9 @@ public class WebGuiPackageImpl extends EPackageImpl implements WebGuiPackage
     initEReference(getAdd_Left(), this.getExpression(), null, "left", null, 0, 1, Add.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getAdd_Right(), this.getExpression(), null, "right", null, 0, 1, Add.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(substractEClass, Substract.class, "Substract", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getSubstract_Left(), this.getExpression(), null, "left", null, 0, 1, Substract.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getSubstract_Right(), this.getExpression(), null, "right", null, 0, 1, Substract.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(subtractEClass, Subtract.class, "Subtract", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getSubtract_Left(), this.getExpression(), null, "left", null, 0, 1, Subtract.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getSubtract_Right(), this.getExpression(), null, "right", null, 0, 1, Subtract.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(multiplyEClass, Multiply.class, "Multiply", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getMultiply_Left(), this.getValue(), null, "left", null, 0, 1, Multiply.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
