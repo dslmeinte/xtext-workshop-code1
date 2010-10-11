@@ -533,34 +533,6 @@ finally {
 
 
 
-// Entry rule entryRuleLiteral
-entryRuleLiteral 
-:
-{ before(grammarAccess.getLiteralRule()); }
-	 ruleLiteral
-{ after(grammarAccess.getLiteralRule()); } 
-	 EOF 
-;
-
-// Rule Literal
-ruleLiteral
-    @init {
-		int stackSize = keepStackSize();
-    }
-	:
-(
-{ before(grammarAccess.getLiteralAccess().getNumberLiteralParserRuleCall()); }
-	ruleNumberLiteral
-{ after(grammarAccess.getLiteralAccess().getNumberLiteralParserRuleCall()); }
-)
-
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-
-
 // Entry rule entryRuleNumberLiteral
 entryRuleNumberLiteral 
 :
@@ -710,9 +682,9 @@ rule__Value__Alternatives
     }
 :
 (
-{ before(grammarAccess.getValueAccess().getLiteralParserRuleCall_0()); }
-	ruleLiteral
-{ after(grammarAccess.getValueAccess().getLiteralParserRuleCall_0()); }
+{ before(grammarAccess.getValueAccess().getNumberLiteralParserRuleCall_0()); }
+	ruleNumberLiteral
+{ after(grammarAccess.getValueAccess().getNumberLiteralParserRuleCall_0()); }
 )
 
     |(

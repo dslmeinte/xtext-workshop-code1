@@ -58,7 +58,7 @@ public class WebGuiFormatter extends AbstractDeclarativeFormatter {
 		// display element:
 		cfg.setLinewrap().after(grammar.getDisplayElementRule());
 		
-		// domain path
+		// domain path:
 		cfg.setNoSpace().before(grammar.getDomainPathTailAccess().getFullStopKeyword_0());
 		cfg.setNoSpace().after(grammar.getDomainPathTailAccess().getFullStopKeyword_0());
 

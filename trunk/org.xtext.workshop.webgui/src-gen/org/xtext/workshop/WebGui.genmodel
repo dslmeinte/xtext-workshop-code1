@@ -55,7 +55,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference WebGui.ecore#//DomainPathTail/tail"/>
     </genClasses>
     <genClasses ecoreClass="WebGui.ecore#//Expression"/>
-    <genClasses ecoreClass="WebGui.ecore#//Literal"/>
+    <genClasses ecoreClass="WebGui.ecore#//Value"/>
     <genClasses ecoreClass="WebGui.ecore#//NumberLiteral">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute WebGui.ecore#//NumberLiteral/value"/>
     </genClasses>

@@ -180,6 +180,7 @@ public class WebGuiSwitch<T>
       {
         DomainPath domainPath = (DomainPath)theEObject;
         T result = caseDomainPath(domainPath);
+        if (result == null) result = caseValue(domainPath);
         if (result == null) result = caseExpression(domainPath);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -198,11 +199,11 @@ public class WebGuiSwitch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case WebGuiPackage.LITERAL:
+      case WebGuiPackage.VALUE:
       {
-        Literal literal = (Literal)theEObject;
-        T result = caseLiteral(literal);
-        if (result == null) result = caseExpression(literal);
+        Value value = (Value)theEObject;
+        T result = caseValue(value);
+        if (result == null) result = caseExpression(value);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -210,7 +211,7 @@ public class WebGuiSwitch<T>
       {
         NumberLiteral numberLiteral = (NumberLiteral)theEObject;
         T result = caseNumberLiteral(numberLiteral);
-        if (result == null) result = caseLiteral(numberLiteral);
+        if (result == null) result = caseValue(numberLiteral);
         if (result == null) result = caseExpression(numberLiteral);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -476,17 +477,17 @@ public class WebGuiSwitch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Literal</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Value</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Literal</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Value</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseLiteral(Literal object)
+  public T caseValue(Value object)
   {
     return null;
   }

@@ -34,12 +34,12 @@ public interface Divide extends Expression
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Left</em>' containment reference.
-   * @see #setLeft(Expression)
+   * @see #setLeft(Value)
    * @see org.xtext.workshop.webGui.WebGuiPackage#getDivide_Left()
    * @model containment="true"
    * @generated
    */
-  Expression getLeft();
+  Value getLeft();
 
   /**
    * Sets the value of the '{@link org.xtext.workshop.webGui.Divide#getLeft <em>Left</em>}' containment reference.
@@ -49,7 +49,7 @@ public interface Divide extends Expression
    * @see #getLeft()
    * @generated
    */
-  void setLeft(Expression value);
+  void setLeft(Value value);
 
   /**
    * Returns the value of the '<em><b>Right</b></em>' containment reference.
@@ -60,12 +60,12 @@ public interface Divide extends Expression
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Right</em>' containment reference.
-   * @see #setRight(Expression)
+   * @see #setRight(Value)
    * @see org.xtext.workshop.webGui.WebGuiPackage#getDivide_Right()
    * @model containment="true"
    * @generated
    */
-  Expression getRight();
+  Value getRight();
 
   /**
    * Sets the value of the '{@link org.xtext.workshop.webGui.Divide#getRight <em>Right</em>}' containment reference.
@@ -75,6 +75,6 @@ public interface Divide extends Expression
    * @see #getRight()
    * @generated
    */
-  void setRight(Expression value);
+  void setRight(Value value);
 
 } // Divide

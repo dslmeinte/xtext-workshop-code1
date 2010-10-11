@@ -32,7 +32,7 @@ import org.xtext.workshop.webGui.WebGuiPackage;
  *
  * @generated
  */
-public class DomainPathImpl extends ExpressionImpl implements DomainPath
+public class DomainPathImpl extends ValueImpl implements DomainPath
 {
   /**
    * The cached value of the '{@link #getFeature() <em>Feature</em>}' reference.

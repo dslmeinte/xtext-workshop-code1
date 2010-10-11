@@ -48,8 +48,7 @@ protected class ThisRootNode extends RootToken {
 			case 14: return new Addition_Group(this, this, 14, inst);
 			case 15: return new Multiplication_Group(this, this, 15, inst);
 			case 16: return new Value_Alternatives(this, this, 16, inst);
-			case 17: return new Literal_NumberLiteralParserRuleCall(this, this, 17, inst);
-			case 18: return new NumberLiteral_ValueAssignment(this, this, 18, inst);
+			case 17: return new NumberLiteral_ValueAssignment(this, this, 17, inst);
 			default: return null;
 		}	
 	}	
@@ -2812,12 +2811,12 @@ protected class Multiplication_RightAssignment_1_1 extends AssignmentToken  {
 
 /************ begin Rule Value ****************
  *
- * Value returns Expression:
- * 	Literal | DomainPath;
+ * Value:
+ * 	NumberLiteral | DomainPath;
  *
  **/
 
-// Literal | DomainPath
+// NumberLiteral | DomainPath
 protected class Value_Alternatives extends AlternativesToken {
 
 	public Value_Alternatives(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -2832,7 +2831,7 @@ protected class Value_Alternatives extends AlternativesToken {
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new Value_LiteralParserRuleCall_0(lastRuleCallOrigin, this, 0, inst);
+			case 0: return new Value_NumberLiteralParserRuleCall_0(lastRuleCallOrigin, this, 0, inst);
 			case 1: return new Value_DomainPathParserRuleCall_1(lastRuleCallOrigin, this, 1, inst);
 			default: return null;
 		}	
@@ -2848,22 +2847,22 @@ protected class Value_Alternatives extends AlternativesToken {
 
 }
 
-// Literal
-protected class Value_LiteralParserRuleCall_0 extends RuleCallToken {
+// NumberLiteral
+protected class Value_NumberLiteralParserRuleCall_0 extends RuleCallToken {
 	
-	public Value_LiteralParserRuleCall_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+	public Value_NumberLiteralParserRuleCall_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
 		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
 	}
 	
 	@Override
 	public RuleCall getGrammarElement() {
-		return grammarAccess.getValueAccess().getLiteralParserRuleCall_0();
+		return grammarAccess.getValueAccess().getNumberLiteralParserRuleCall_0();
 	}
 
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new Literal_NumberLiteralParserRuleCall(this, this, 0, inst);
+			case 0: return new NumberLiteral_ValueAssignment(this, this, 0, inst);
 			default: return null;
 		}	
 	}
@@ -2872,7 +2871,7 @@ protected class Value_LiteralParserRuleCall_0 extends RuleCallToken {
 	public IEObjectConsumer tryConsume() {
 		if(getEObject().eClass() != grammarAccess.getNumberLiteralRule().getType().getClassifier())
 			return null;
-		if(checkForRecursion(Literal_NumberLiteralParserRuleCall.class, eObjectConsumer)) return null;
+		if(checkForRecursion(NumberLiteral_ValueAssignment.class, eObjectConsumer)) return null;
 		return eObjectConsumer;
 	}
 	
@@ -2922,52 +2921,6 @@ protected class Value_DomainPathParserRuleCall_1 extends RuleCallToken {
 
 
 /************ end Rule Value ****************/
-
-
-/************ begin Rule Literal ****************
- *
- * Literal:
- * 	NumberLiteral;
- *
- **/
-
-// NumberLiteral
-protected class Literal_NumberLiteralParserRuleCall extends RuleCallToken {
-	
-	public Literal_NumberLiteralParserRuleCall(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
-		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
-	}
-	
-	@Override
-	public RuleCall getGrammarElement() {
-		return grammarAccess.getLiteralAccess().getNumberLiteralParserRuleCall();
-	}
-
-    @Override
-	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
-		switch(index) {
-			case 0: return new NumberLiteral_ValueAssignment(this, this, 0, inst);
-			default: return null;
-		}	
-	}
-
-    @Override
-	public IEObjectConsumer tryConsume() {
-		if(getEObject().eClass() != grammarAccess.getNumberLiteralRule().getType().getClassifier())
-			return null;
-		if(checkForRecursion(NumberLiteral_ValueAssignment.class, eObjectConsumer)) return null;
-		return eObjectConsumer;
-	}
-	
-    @Override
-	public AbstractToken createFollowerAfterReturn(AbstractToken next,	int actIndex, int index, IEObjectConsumer inst) {
-		switch(index) {
-			default: return lastRuleCallOrigin.createFollowerAfterReturn(next, actIndex , index, inst);
-		}	
-	}	
-}
-
-/************ end Rule Literal ****************/
 
 
 /************ begin Rule NumberLiteral ****************

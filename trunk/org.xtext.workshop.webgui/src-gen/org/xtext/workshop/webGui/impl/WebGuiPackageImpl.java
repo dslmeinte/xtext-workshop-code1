@@ -23,7 +23,6 @@ import org.xtext.workshop.webGui.DomainPathTail;
 import org.xtext.workshop.webGui.Entity;
 import org.xtext.workshop.webGui.Expression;
 import org.xtext.workshop.webGui.Feature;
-import org.xtext.workshop.webGui.Literal;
 import org.xtext.workshop.webGui.Model;
 import org.xtext.workshop.webGui.Multiply;
 import org.xtext.workshop.webGui.NumberLiteral;
@@ -31,6 +30,7 @@ import org.xtext.workshop.webGui.Page;
 import org.xtext.workshop.webGui.PageElement;
 import org.xtext.workshop.webGui.Substract;
 import org.xtext.workshop.webGui.Type;
+import org.xtext.workshop.webGui.Value;
 import org.xtext.workshop.webGui.WebGuiFactory;
 import org.xtext.workshop.webGui.WebGuiPackage;
 import org.xtext.workshop.webGui.WebModel;
@@ -146,7 +146,7 @@ public class WebGuiPackageImpl extends EPackageImpl implements WebGuiPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass literalEClass = null;
+  private EClass valueEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -601,9 +601,9 @@ public class WebGuiPackageImpl extends EPackageImpl implements WebGuiPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getLiteral()
+  public EClass getValue()
   {
-    return literalEClass;
+    return valueEClass;
   }
 
   /**
@@ -825,7 +825,7 @@ public class WebGuiPackageImpl extends EPackageImpl implements WebGuiPackage
 
     expressionEClass = createEClass(EXPRESSION);
 
-    literalEClass = createEClass(LITERAL);
+    valueEClass = createEClass(VALUE);
 
     numberLiteralEClass = createEClass(NUMBER_LITERAL);
     createEAttribute(numberLiteralEClass, NUMBER_LITERAL__VALUE);
@@ -880,9 +880,9 @@ public class WebGuiPackageImpl extends EPackageImpl implements WebGuiPackage
     dataTypeEClass.getESuperTypes().add(this.getType());
     actionElementEClass.getESuperTypes().add(this.getPageElement());
     displayElementEClass.getESuperTypes().add(this.getPageElement());
-    domainPathEClass.getESuperTypes().add(this.getExpression());
-    literalEClass.getESuperTypes().add(this.getExpression());
-    numberLiteralEClass.getESuperTypes().add(this.getLiteral());
+    domainPathEClass.getESuperTypes().add(this.getValue());
+    valueEClass.getESuperTypes().add(this.getExpression());
+    numberLiteralEClass.getESuperTypes().add(this.getValue());
     addEClass.getESuperTypes().add(this.getExpression());
     substractEClass.getESuperTypes().add(this.getExpression());
     multiplyEClass.getESuperTypes().add(this.getExpression());
@@ -938,7 +938,7 @@ public class WebGuiPackageImpl extends EPackageImpl implements WebGuiPackage
 
     initEClass(expressionEClass, Expression.class, "Expression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-    initEClass(literalEClass, Literal.class, "Literal", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEClass(valueEClass, Value.class, "Value", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(numberLiteralEClass, NumberLiteral.class, "NumberLiteral", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getNumberLiteral_Value(), ecorePackage.getEInt(), "value", null, 0, 1, NumberLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -952,12 +952,12 @@ public class WebGuiPackageImpl extends EPackageImpl implements WebGuiPackage
     initEReference(getSubstract_Right(), this.getExpression(), null, "right", null, 0, 1, Substract.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(multiplyEClass, Multiply.class, "Multiply", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getMultiply_Left(), this.getExpression(), null, "left", null, 0, 1, Multiply.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getMultiply_Right(), this.getExpression(), null, "right", null, 0, 1, Multiply.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getMultiply_Left(), this.getValue(), null, "left", null, 0, 1, Multiply.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getMultiply_Right(), this.getValue(), null, "right", null, 0, 1, Multiply.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(divideEClass, Divide.class, "Divide", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getDivide_Left(), this.getExpression(), null, "left", null, 0, 1, Divide.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getDivide_Right(), this.getExpression(), null, "right", null, 0, 1, Divide.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getDivide_Left(), this.getValue(), null, "left", null, 0, 1, Divide.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getDivide_Right(), this.getValue(), null, "right", null, 0, 1, Divide.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Create resource
     createResource(eNS_URI);
