@@ -27,7 +27,7 @@ import org.xtext.workshop.webGui.WebGuiPackage;
  *
  * @generated
  */
-public class NumberLiteralImpl extends LiteralImpl implements NumberLiteral
+public class NumberLiteralImpl extends ValueImpl implements NumberLiteral
 {
   /**
    * The default value of the '{@link #getValue() <em>Value</em>}' attribute.

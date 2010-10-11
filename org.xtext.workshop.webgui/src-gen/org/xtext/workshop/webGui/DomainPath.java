@@ -23,7 +23,7 @@ package org.xtext.workshop.webGui;
  * @model
  * @generated
  */
-public interface DomainPath extends Expression
+public interface DomainPath extends Value
 {
   /**
    * Returns the value of the '<em><b>Feature</b></em>' reference.

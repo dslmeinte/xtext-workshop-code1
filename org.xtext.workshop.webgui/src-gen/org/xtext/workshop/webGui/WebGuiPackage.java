@@ -459,6 +459,25 @@ public interface WebGuiPackage extends EPackage
   int EXPRESSION_FEATURE_COUNT = 0;
 
   /**
+   * The meta object id for the '{@link org.xtext.workshop.webGui.impl.ValueImpl <em>Value</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.workshop.webGui.impl.ValueImpl
+   * @see org.xtext.workshop.webGui.impl.WebGuiPackageImpl#getValue()
+   * @generated
+   */
+  int VALUE = 14;
+
+  /**
+   * The number of structural features of the '<em>Value</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VALUE_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 0;
+
+  /**
    * The meta object id for the '{@link org.xtext.workshop.webGui.impl.DomainPathImpl <em>Domain Path</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -475,7 +494,7 @@ public interface WebGuiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int DOMAIN_PATH__FEATURE = EXPRESSION_FEATURE_COUNT + 0;
+  int DOMAIN_PATH__FEATURE = VALUE_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Tail</b></em>' containment reference.
@@ -484,7 +503,7 @@ public interface WebGuiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int DOMAIN_PATH__TAIL = EXPRESSION_FEATURE_COUNT + 1;
+  int DOMAIN_PATH__TAIL = VALUE_FEATURE_COUNT + 1;
 
   /**
    * The number of structural features of the '<em>Domain Path</em>' class.
@@ -493,7 +512,7 @@ public interface WebGuiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int DOMAIN_PATH_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 2;
+  int DOMAIN_PATH_FEATURE_COUNT = VALUE_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link org.xtext.workshop.webGui.impl.DomainPathTailImpl <em>Domain Path Tail</em>}' class.
@@ -533,25 +552,6 @@ public interface WebGuiPackage extends EPackage
   int DOMAIN_PATH_TAIL_FEATURE_COUNT = 2;
 
   /**
-   * The meta object id for the '{@link org.xtext.workshop.webGui.impl.LiteralImpl <em>Literal</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.workshop.webGui.impl.LiteralImpl
-   * @see org.xtext.workshop.webGui.impl.WebGuiPackageImpl#getLiteral()
-   * @generated
-   */
-  int LITERAL = 14;
-
-  /**
-   * The number of structural features of the '<em>Literal</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LITERAL_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 0;
-
-  /**
    * The meta object id for the '{@link org.xtext.workshop.webGui.impl.NumberLiteralImpl <em>Number Literal</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -568,7 +568,7 @@ public interface WebGuiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int NUMBER_LITERAL__VALUE = LITERAL_FEATURE_COUNT + 0;
+  int NUMBER_LITERAL__VALUE = VALUE_FEATURE_COUNT + 0;
 
   /**
    * The number of structural features of the '<em>Number Literal</em>' class.
@@ -577,7 +577,7 @@ public interface WebGuiPackage extends EPackage
    * @generated
    * @ordered
    */
-  int NUMBER_LITERAL_FEATURE_COUNT = LITERAL_FEATURE_COUNT + 1;
+  int NUMBER_LITERAL_FEATURE_COUNT = VALUE_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link org.xtext.workshop.webGui.impl.AddImpl <em>Add</em>}' class.
@@ -1100,14 +1100,14 @@ public interface WebGuiPackage extends EPackage
   EClass getExpression();
 
   /**
-   * Returns the meta object for class '{@link org.xtext.workshop.webGui.Literal <em>Literal</em>}'.
+   * Returns the meta object for class '{@link org.xtext.workshop.webGui.Value <em>Value</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Literal</em>'.
-   * @see org.xtext.workshop.webGui.Literal
+   * @return the meta object for class '<em>Value</em>'.
+   * @see org.xtext.workshop.webGui.Value
    * @generated
    */
-  EClass getLiteral();
+  EClass getValue();
 
   /**
    * Returns the meta object for class '{@link org.xtext.workshop.webGui.NumberLiteral <em>Number Literal</em>}'.
@@ -1590,14 +1590,14 @@ public interface WebGuiPackage extends EPackage
     EClass EXPRESSION = eINSTANCE.getExpression();
 
     /**
-     * The meta object literal for the '{@link org.xtext.workshop.webGui.impl.LiteralImpl <em>Literal</em>}' class.
+     * The meta object literal for the '{@link org.xtext.workshop.webGui.impl.ValueImpl <em>Value</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.xtext.workshop.webGui.impl.LiteralImpl
-     * @see org.xtext.workshop.webGui.impl.WebGuiPackageImpl#getLiteral()
+     * @see org.xtext.workshop.webGui.impl.ValueImpl
+     * @see org.xtext.workshop.webGui.impl.WebGuiPackageImpl#getValue()
      * @generated
      */
-    EClass LITERAL = eINSTANCE.getLiteral();
+    EClass VALUE = eINSTANCE.getValue();
 
     /**
      * The meta object literal for the '{@link org.xtext.workshop.webGui.impl.NumberLiteralImpl <em>Number Literal</em>}' class.

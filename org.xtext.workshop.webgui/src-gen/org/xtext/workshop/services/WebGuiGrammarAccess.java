@@ -609,33 +609,21 @@ public class WebGuiGrammarAccess extends AbstractGrammarElementFinder {
 	public class ValueElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Value");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final RuleCall cLiteralParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cNumberLiteralParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cDomainPathParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		
-		//Value returns Expression:
-		//	Literal | DomainPath;
+		//Value:
+		//	NumberLiteral | DomainPath;
 		public ParserRule getRule() { return rule; }
 
-		//Literal | DomainPath
+		//NumberLiteral | DomainPath
 		public Alternatives getAlternatives() { return cAlternatives; }
 
-		//Literal
-		public RuleCall getLiteralParserRuleCall_0() { return cLiteralParserRuleCall_0; }
+		//NumberLiteral
+		public RuleCall getNumberLiteralParserRuleCall_0() { return cNumberLiteralParserRuleCall_0; }
 
 		//DomainPath
 		public RuleCall getDomainPathParserRuleCall_1() { return cDomainPathParserRuleCall_1; }
-	}
-
-	public class LiteralElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Literal");
-		private final RuleCall cNumberLiteralParserRuleCall = (RuleCall)rule.eContents().get(1);
-		
-		//Literal:
-		//	NumberLiteral;
-		public ParserRule getRule() { return rule; }
-
-		//NumberLiteral
-		public RuleCall getNumberLiteralParserRuleCall() { return cNumberLiteralParserRuleCall; }
 	}
 
 	public class NumberLiteralElements extends AbstractParserRuleElementFinder {
@@ -672,7 +660,6 @@ public class WebGuiGrammarAccess extends AbstractGrammarElementFinder {
 	private AdditionElements pAddition;
 	private MultiplicationElements pMultiplication;
 	private ValueElements pValue;
-	private LiteralElements pLiteral;
 	private NumberLiteralElements pNumberLiteral;
 	
 	private final GrammarProvider grammarProvider;
@@ -869,24 +856,14 @@ public class WebGuiGrammarAccess extends AbstractGrammarElementFinder {
 		return getMultiplicationAccess().getRule();
 	}
 
-	//Value returns Expression:
-	//	Literal | DomainPath;
+	//Value:
+	//	NumberLiteral | DomainPath;
 	public ValueElements getValueAccess() {
 		return (pValue != null) ? pValue : (pValue = new ValueElements());
 	}
 	
 	public ParserRule getValueRule() {
 		return getValueAccess().getRule();
-	}
-
-	//Literal:
-	//	NumberLiteral;
-	public LiteralElements getLiteralAccess() {
-		return (pLiteral != null) ? pLiteral : (pLiteral = new LiteralElements());
-	}
-	
-	public ParserRule getLiteralRule() {
-		return getLiteralAccess().getRule();
 	}
 
 	//NumberLiteral:

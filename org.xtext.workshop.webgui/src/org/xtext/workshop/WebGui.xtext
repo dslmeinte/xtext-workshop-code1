@@ -84,11 +84,8 @@ Addition returns Expression:
 Multiplication returns Expression:
     Value ( ({Multiply.left=current} '*' | {Divide.left=current} '/') right=Value)*;
 
-Value returns Expression:
-    Literal | DomainPath;
-
-Literal:
-    NumberLiteral;
+Value:
+    NumberLiteral | DomainPath;
 
 NumberLiteral:
     value=INT;

@@ -152,13 +152,13 @@ public interface WebGuiFactory extends EFactory
   Expression createExpression();
 
   /**
-   * Returns a new object of class '<em>Literal</em>'.
+   * Returns a new object of class '<em>Value</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Literal</em>'.
+   * @return a new object of class '<em>Value</em>'.
    * @generated
    */
-  Literal createLiteral();
+  Value createValue();
 
   /**
    * Returns a new object of class '<em>Number Literal</em>'.

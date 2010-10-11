@@ -22,7 +22,7 @@ package org.xtext.workshop.webGui;
  * @model
  * @generated
  */
-public interface NumberLiteral extends Literal
+public interface NumberLiteral extends Value
 {
   /**
    * Returns the value of the '<em><b>Value</b></em>' attribute.

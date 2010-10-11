@@ -81,7 +81,7 @@ public class WebGuiFactoryImpl extends EFactoryImpl implements WebGuiFactory
       case WebGuiPackage.DOMAIN_PATH: return createDomainPath();
       case WebGuiPackage.DOMAIN_PATH_TAIL: return createDomainPathTail();
       case WebGuiPackage.EXPRESSION: return createExpression();
-      case WebGuiPackage.LITERAL: return createLiteral();
+      case WebGuiPackage.VALUE: return createValue();
       case WebGuiPackage.NUMBER_LITERAL: return createNumberLiteral();
       case WebGuiPackage.ADD: return createAdd();
       case WebGuiPackage.SUBSTRACT: return createSubstract();
@@ -251,10 +251,10 @@ public class WebGuiFactoryImpl extends EFactoryImpl implements WebGuiFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public Literal createLiteral()
+  public Value createValue()
   {
-    LiteralImpl literal = new LiteralImpl();
-    return literal;
+    ValueImpl value = new ValueImpl();
+    return value;
   }
 
   /**

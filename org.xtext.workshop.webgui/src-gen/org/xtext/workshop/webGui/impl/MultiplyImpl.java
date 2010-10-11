@@ -13,8 +13,8 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import org.xtext.workshop.webGui.Expression;
 import org.xtext.workshop.webGui.Multiply;
+import org.xtext.workshop.webGui.Value;
 import org.xtext.workshop.webGui.WebGuiPackage;
 
 /**
@@ -41,7 +41,7 @@ public class MultiplyImpl extends ExpressionImpl implements Multiply
    * @generated
    * @ordered
    */
-  protected Expression left;
+  protected Value left;
 
   /**
    * The cached value of the '{@link #getRight() <em>Right</em>}' containment reference.
@@ -51,7 +51,7 @@ public class MultiplyImpl extends ExpressionImpl implements Multiply
    * @generated
    * @ordered
    */
-  protected Expression right;
+  protected Value right;
 
   /**
    * <!-- begin-user-doc -->
@@ -79,7 +79,7 @@ public class MultiplyImpl extends ExpressionImpl implements Multiply
    * <!-- end-user-doc -->
    * @generated
    */
-  public Expression getLeft()
+  public Value getLeft()
   {
     return left;
   }
@@ -89,9 +89,9 @@ public class MultiplyImpl extends ExpressionImpl implements Multiply
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetLeft(Expression newLeft, NotificationChain msgs)
+  public NotificationChain basicSetLeft(Value newLeft, NotificationChain msgs)
   {
-    Expression oldLeft = left;
+    Value oldLeft = left;
     left = newLeft;
     if (eNotificationRequired())
     {
@@ -106,7 +106,7 @@ public class MultiplyImpl extends ExpressionImpl implements Multiply
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setLeft(Expression newLeft)
+  public void setLeft(Value newLeft)
   {
     if (newLeft != left)
     {
@@ -127,7 +127,7 @@ public class MultiplyImpl extends ExpressionImpl implements Multiply
    * <!-- end-user-doc -->
    * @generated
    */
-  public Expression getRight()
+  public Value getRight()
   {
     return right;
   }
@@ -137,9 +137,9 @@ public class MultiplyImpl extends ExpressionImpl implements Multiply
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetRight(Expression newRight, NotificationChain msgs)
+  public NotificationChain basicSetRight(Value newRight, NotificationChain msgs)
   {
-    Expression oldRight = right;
+    Value oldRight = right;
     right = newRight;
     if (eNotificationRequired())
     {
@@ -154,7 +154,7 @@ public class MultiplyImpl extends ExpressionImpl implements Multiply
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setRight(Expression newRight)
+  public void setRight(Value newRight)
   {
     if (newRight != right)
     {
@@ -217,10 +217,10 @@ public class MultiplyImpl extends ExpressionImpl implements Multiply
     switch (featureID)
     {
       case WebGuiPackage.MULTIPLY__LEFT:
-        setLeft((Expression)newValue);
+        setLeft((Value)newValue);
         return;
       case WebGuiPackage.MULTIPLY__RIGHT:
-        setRight((Expression)newValue);
+        setRight((Value)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -237,10 +237,10 @@ public class MultiplyImpl extends ExpressionImpl implements Multiply
     switch (featureID)
     {
       case WebGuiPackage.MULTIPLY__LEFT:
-        setLeft((Expression)null);
+        setLeft((Value)null);
         return;
       case WebGuiPackage.MULTIPLY__RIGHT:
-        setRight((Expression)null);
+        setRight((Value)null);
         return;
     }
     super.eUnset(featureID);

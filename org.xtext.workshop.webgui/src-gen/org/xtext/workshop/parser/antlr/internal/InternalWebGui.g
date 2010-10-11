@@ -1236,11 +1236,11 @@ ruleValue returns [EObject current=null]
     }:
 (
     { 
-        currentNode=createCompositeNode(grammarAccess.getValueAccess().getLiteralParserRuleCall_0(), currentNode); 
+        currentNode=createCompositeNode(grammarAccess.getValueAccess().getNumberLiteralParserRuleCall_0(), currentNode); 
     }
-    this_Literal_0=ruleLiteral
+    this_NumberLiteral_0=ruleNumberLiteral
     { 
-        $current = $this_Literal_0.current; 
+        $current = $this_NumberLiteral_0.current; 
         currentNode = currentNode.getParent();
     }
 
@@ -1254,38 +1254,6 @@ ruleValue returns [EObject current=null]
         currentNode = currentNode.getParent();
     }
 )
-;
-
-
-
-
-
-// Entry rule entryRuleLiteral
-entryRuleLiteral returns [EObject current=null] 
-	:
-	{ currentNode = createCompositeNode(grammarAccess.getLiteralRule(), currentNode); }
-	 iv_ruleLiteral=ruleLiteral 
-	 { $current=$iv_ruleLiteral.current; } 
-	 EOF 
-;
-
-// Rule Literal
-ruleLiteral returns [EObject current=null] 
-    @init { EObject temp=null; setCurrentLookahead(); resetLookahead(); 
-    }
-    @after { resetLookahead(); 
-    	lastConsumedNode = currentNode;
-    }:
-
-    { 
-        currentNode=createCompositeNode(grammarAccess.getLiteralAccess().getNumberLiteralParserRuleCall(), currentNode); 
-    }
-    this_NumberLiteral_0=ruleNumberLiteral
-    { 
-        $current = $this_NumberLiteral_0.current; 
-        currentNode = currentNode.getParent();
-    }
-
 ;
 
 
