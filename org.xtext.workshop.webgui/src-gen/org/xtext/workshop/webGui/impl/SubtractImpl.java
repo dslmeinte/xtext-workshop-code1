@@ -14,24 +14,24 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.xtext.workshop.webGui.Expression;
-import org.xtext.workshop.webGui.Substract;
+import org.xtext.workshop.webGui.Subtract;
 import org.xtext.workshop.webGui.WebGuiPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Substract</b></em>'.
+ * An implementation of the model object '<em><b>Subtract</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.xtext.workshop.webGui.impl.SubstractImpl#getLeft <em>Left</em>}</li>
- *   <li>{@link org.xtext.workshop.webGui.impl.SubstractImpl#getRight <em>Right</em>}</li>
+ *   <li>{@link org.xtext.workshop.webGui.impl.SubtractImpl#getLeft <em>Left</em>}</li>
+ *   <li>{@link org.xtext.workshop.webGui.impl.SubtractImpl#getRight <em>Right</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class SubstractImpl extends ExpressionImpl implements Substract
+public class SubtractImpl extends ExpressionImpl implements Subtract
 {
   /**
    * The cached value of the '{@link #getLeft() <em>Left</em>}' containment reference.
@@ -58,7 +58,7 @@ public class SubstractImpl extends ExpressionImpl implements Substract
    * <!-- end-user-doc -->
    * @generated
    */
-  protected SubstractImpl()
+  protected SubtractImpl()
   {
     super();
   }
@@ -71,7 +71,7 @@ public class SubstractImpl extends ExpressionImpl implements Substract
   @Override
   protected EClass eStaticClass()
   {
-    return WebGuiPackage.Literals.SUBSTRACT;
+    return WebGuiPackage.Literals.SUBTRACT;
   }
 
   /**
@@ -95,7 +95,7 @@ public class SubstractImpl extends ExpressionImpl implements Substract
     left = newLeft;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, WebGuiPackage.SUBSTRACT__LEFT, oldLeft, newLeft);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, WebGuiPackage.SUBTRACT__LEFT, oldLeft, newLeft);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -112,14 +112,14 @@ public class SubstractImpl extends ExpressionImpl implements Substract
     {
       NotificationChain msgs = null;
       if (left != null)
-        msgs = ((InternalEObject)left).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - WebGuiPackage.SUBSTRACT__LEFT, null, msgs);
+        msgs = ((InternalEObject)left).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - WebGuiPackage.SUBTRACT__LEFT, null, msgs);
       if (newLeft != null)
-        msgs = ((InternalEObject)newLeft).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - WebGuiPackage.SUBSTRACT__LEFT, null, msgs);
+        msgs = ((InternalEObject)newLeft).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - WebGuiPackage.SUBTRACT__LEFT, null, msgs);
       msgs = basicSetLeft(newLeft, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, WebGuiPackage.SUBSTRACT__LEFT, newLeft, newLeft));
+      eNotify(new ENotificationImpl(this, Notification.SET, WebGuiPackage.SUBTRACT__LEFT, newLeft, newLeft));
   }
 
   /**
@@ -143,7 +143,7 @@ public class SubstractImpl extends ExpressionImpl implements Substract
     right = newRight;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, WebGuiPackage.SUBSTRACT__RIGHT, oldRight, newRight);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, WebGuiPackage.SUBTRACT__RIGHT, oldRight, newRight);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -160,14 +160,14 @@ public class SubstractImpl extends ExpressionImpl implements Substract
     {
       NotificationChain msgs = null;
       if (right != null)
-        msgs = ((InternalEObject)right).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - WebGuiPackage.SUBSTRACT__RIGHT, null, msgs);
+        msgs = ((InternalEObject)right).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - WebGuiPackage.SUBTRACT__RIGHT, null, msgs);
       if (newRight != null)
-        msgs = ((InternalEObject)newRight).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - WebGuiPackage.SUBSTRACT__RIGHT, null, msgs);
+        msgs = ((InternalEObject)newRight).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - WebGuiPackage.SUBTRACT__RIGHT, null, msgs);
       msgs = basicSetRight(newRight, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, WebGuiPackage.SUBSTRACT__RIGHT, newRight, newRight));
+      eNotify(new ENotificationImpl(this, Notification.SET, WebGuiPackage.SUBTRACT__RIGHT, newRight, newRight));
   }
 
   /**
@@ -180,9 +180,9 @@ public class SubstractImpl extends ExpressionImpl implements Substract
   {
     switch (featureID)
     {
-      case WebGuiPackage.SUBSTRACT__LEFT:
+      case WebGuiPackage.SUBTRACT__LEFT:
         return basicSetLeft(null, msgs);
-      case WebGuiPackage.SUBSTRACT__RIGHT:
+      case WebGuiPackage.SUBTRACT__RIGHT:
         return basicSetRight(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -198,9 +198,9 @@ public class SubstractImpl extends ExpressionImpl implements Substract
   {
     switch (featureID)
     {
-      case WebGuiPackage.SUBSTRACT__LEFT:
+      case WebGuiPackage.SUBTRACT__LEFT:
         return getLeft();
-      case WebGuiPackage.SUBSTRACT__RIGHT:
+      case WebGuiPackage.SUBTRACT__RIGHT:
         return getRight();
     }
     return super.eGet(featureID, resolve, coreType);
@@ -216,10 +216,10 @@ public class SubstractImpl extends ExpressionImpl implements Substract
   {
     switch (featureID)
     {
-      case WebGuiPackage.SUBSTRACT__LEFT:
+      case WebGuiPackage.SUBTRACT__LEFT:
         setLeft((Expression)newValue);
         return;
-      case WebGuiPackage.SUBSTRACT__RIGHT:
+      case WebGuiPackage.SUBTRACT__RIGHT:
         setRight((Expression)newValue);
         return;
     }
@@ -236,10 +236,10 @@ public class SubstractImpl extends ExpressionImpl implements Substract
   {
     switch (featureID)
     {
-      case WebGuiPackage.SUBSTRACT__LEFT:
+      case WebGuiPackage.SUBTRACT__LEFT:
         setLeft((Expression)null);
         return;
-      case WebGuiPackage.SUBSTRACT__RIGHT:
+      case WebGuiPackage.SUBTRACT__RIGHT:
         setRight((Expression)null);
         return;
     }
@@ -256,12 +256,12 @@ public class SubstractImpl extends ExpressionImpl implements Substract
   {
     switch (featureID)
     {
-      case WebGuiPackage.SUBSTRACT__LEFT:
+      case WebGuiPackage.SUBTRACT__LEFT:
         return left != null;
-      case WebGuiPackage.SUBSTRACT__RIGHT:
+      case WebGuiPackage.SUBTRACT__RIGHT:
         return right != null;
     }
     return super.eIsSet(featureID);
   }
 
-} //SubstractImpl
+} //SubtractImpl

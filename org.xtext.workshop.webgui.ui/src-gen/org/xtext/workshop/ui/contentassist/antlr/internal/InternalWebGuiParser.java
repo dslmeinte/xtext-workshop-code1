@@ -5799,13 +5799,13 @@ public class InternalWebGuiParser extends AbstractInternalContentAssistParser {
             // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2249:1: ( () )
             // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2250:1: ()
             {
-             before(grammarAccess.getAdditionAccess().getSubstractLeftAction_1_0_1_0()); 
+             before(grammarAccess.getAdditionAccess().getSubtractLeftAction_1_0_1_0()); 
             // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2251:1: ()
             // ../org.xtext.workshop.webgui.ui/src-gen/org/xtext/workshop/ui/contentassist/antlr/internal/InternalWebGui.g:2253:1: 
             {
             }
 
-             after(grammarAccess.getAdditionAccess().getSubstractLeftAction_1_0_1_0()); 
+             after(grammarAccess.getAdditionAccess().getSubtractLeftAction_1_0_1_0()); 
 
             }
 

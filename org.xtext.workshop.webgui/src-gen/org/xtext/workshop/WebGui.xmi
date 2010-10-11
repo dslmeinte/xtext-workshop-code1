@@ -234,7 +234,7 @@
             <elements xsi:type="xtext:Group">
               <elements xsi:type="xtext:Action" feature="left" operator="=">
                 <type metamodel="/0/@metamodelDeclarations.0">
-                  <classifier xsi:type="ecore:EClass" href="http://www.xtext.org/workshop/WebGui#//Substract"/>
+                  <classifier xsi:type="ecore:EClass" href="http://www.xtext.org/workshop/WebGui#//Subtract"/>
                 </type>
               </elements>
               <elements xsi:type="xtext:Keyword" value="-"/>

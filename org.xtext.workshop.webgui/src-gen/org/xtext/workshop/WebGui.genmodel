@@ -63,9 +63,9 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference WebGui.ecore#//Add/left"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference WebGui.ecore#//Add/right"/>
     </genClasses>
-    <genClasses ecoreClass="WebGui.ecore#//Substract">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference WebGui.ecore#//Substract/left"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference WebGui.ecore#//Substract/right"/>
+    <genClasses ecoreClass="WebGui.ecore#//Subtract">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference WebGui.ecore#//Subtract/left"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference WebGui.ecore#//Subtract/right"/>
     </genClasses>
     <genClasses ecoreClass="WebGui.ecore#//Multiply">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference WebGui.ecore#//Multiply/left"/>

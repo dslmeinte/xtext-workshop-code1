@@ -1072,7 +1072,7 @@ ruleAddition returns [EObject current=null]
 )
     |((
     { 
-        temp=factory.create(grammarAccess.getAdditionAccess().getSubstractLeftAction_1_0_1_0().getType().getClassifier());
+        temp=factory.create(grammarAccess.getAdditionAccess().getSubtractLeftAction_1_0_1_0().getType().getClassifier());
         try {
         	factory.set(temp, "left", $current, null /*ParserRule*/, currentNode);
         } catch(ValueConverterException vce) {
@@ -1080,7 +1080,7 @@ ruleAddition returns [EObject current=null]
         }
         $current = temp; 
         temp = null;
-        CompositeNode newNode = createCompositeNode(grammarAccess.getAdditionAccess().getSubstractLeftAction_1_0_1_0(), currentNode.getParent());
+        CompositeNode newNode = createCompositeNode(grammarAccess.getAdditionAccess().getSubtractLeftAction_1_0_1_0(), currentNode.getParent());
     newNode.getChildren().add(currentNode);
     moveLookaheadInfo(currentNode, newNode);
     currentNode = newNode; 
