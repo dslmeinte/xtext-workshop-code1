@@ -69,11 +69,11 @@ DisplayElement:	// ~ display field
 
 DomainPath:
     feature=[Feature]  (tail=DomainPathTail)?;
-    // scope(feature)=features of Entity reference by container or empty
+    // scope(feature)=features of Entity referenced by containing Page
 
 DomainPathTail:
     '.' feature=[Feature] (tail=DomainPathTail)?;
-    // scope(feature)=features of Entity reference by container or empty
+    // scope(feature)=features of Entity referenced by container or empty
 
 Expression:
     Addition;
