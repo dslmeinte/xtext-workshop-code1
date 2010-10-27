@@ -454,7 +454,7 @@ public class WebGuiGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cTailAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cTailDomainPathTailParserRuleCall_2_0 = (RuleCall)cTailAssignment_2.eContents().get(0);
 		
-		//// scope(feature)=features of Entity reference by container or empty
+		//// scope(feature)=features of Entity referenced by containing Page
 		//DomainPathTail:
 		//	"." feature=[Feature] tail=DomainPathTail?;
 		public ParserRule getRule() { return rule; }
@@ -485,8 +485,12 @@ public class WebGuiGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Expression");
 		private final RuleCall cAdditionParserRuleCall = (RuleCall)rule.eContents().get(1);
 		
-		//// scope(feature)=features of Entity reference by container or empty
-		//Expression:
+		//// scope(feature)=features of Entity referenced by container or empty
+		/// *
+		// * +-------------+
+		// * | Expressions |
+		// * +-------------+
+		// * /Expression:
 		//	Addition;
 		public ParserRule getRule() { return rule; }
 
@@ -814,7 +818,7 @@ public class WebGuiGrammarAccess extends AbstractGrammarElementFinder {
 		return getDomainPathAccess().getRule();
 	}
 
-	//// scope(feature)=features of Entity reference by container or empty
+	//// scope(feature)=features of Entity referenced by containing Page
 	//DomainPathTail:
 	//	"." feature=[Feature] tail=DomainPathTail?;
 	public DomainPathTailElements getDomainPathTailAccess() {
@@ -825,8 +829,12 @@ public class WebGuiGrammarAccess extends AbstractGrammarElementFinder {
 		return getDomainPathTailAccess().getRule();
 	}
 
-	//// scope(feature)=features of Entity reference by container or empty
-	//Expression:
+	//// scope(feature)=features of Entity referenced by container or empty
+	/// *
+	// * +-------------+
+	// * | Expressions |
+	// * +-------------+
+	// * /Expression:
 	//	Addition;
 	public ExpressionElements getExpressionAccess() {
 		return (pExpression != null) ? pExpression : (pExpression = new ExpressionElements());
