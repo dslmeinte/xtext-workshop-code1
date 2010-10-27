@@ -1917,7 +1917,7 @@ protected class DomainPath_TailAssignment_1 extends AssignmentToken  {
 
 /************ begin Rule DomainPathTail ****************
  *
- * // scope(feature)=features of Entity reference by container or empty
+ * // scope(feature)=features of Entity referenced by containing Page
  * DomainPathTail:
  * 	"." feature=[Feature] tail=DomainPathTail?;
  *
@@ -2063,8 +2063,12 @@ protected class DomainPathTail_TailAssignment_2 extends AssignmentToken  {
 
 /************ begin Rule Expression ****************
  *
- * // scope(feature)=features of Entity reference by container or empty
- * Expression:
+ * // scope(feature)=features of Entity referenced by container or empty
+ * / *
+ *  * +-------------+
+ *  * | Expressions |
+ *  * +-------------+
+ *  * /Expression:
  * 	Addition;
  *
  **/

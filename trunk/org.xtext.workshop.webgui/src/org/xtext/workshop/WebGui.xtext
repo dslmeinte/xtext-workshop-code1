@@ -75,6 +75,13 @@ DomainPathTail:
     '.' feature=[Feature] (tail=DomainPathTail)?;
     // scope(feature)=features of Entity referenced by container or empty
 
+
+/*
+ * +-------------+
+ * | Expressions |
+ * +-------------+
+ */
+
 Expression:
     Addition;
 
