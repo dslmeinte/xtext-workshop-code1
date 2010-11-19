@@ -17,11 +17,20 @@ public abstract class BinaryOperation implements Expression {
 	public void setLeft(Expression left) {
 		this.left = left;
 	}
+	public BinaryOperation left(Expression left) {
+		setLeft(left);
+		return this;
+	}
+
 	public Expression getRight() {
 		return right;
 	}
 	public void setRight(Expression right) {
 		this.right = right;
+	}
+	public BinaryOperation right(Expression right) {
+		setRight(right);
+		return this;
 	}
 
 	@Override
