@@ -120,23 +120,21 @@ public class Parser {
 		return current;
 	}
 
+	/**
+	 * Handles an additive subgroup or returns {@code null} in case of a
+	 * non-match.
+	 */
 	protected BinaryOperation handleAdditiveSubgroup(KeywordToken nextToken, Expression current) {
 		switch(nextToken.getKeyword()) {
 			case plus : {
-				// {Addition.left=current} '+' right=Multiplicative
 				tokenStream.next();		// (consume peeked token)
-				BinaryOperation addition = new Addition();
-				addition.setLeft(current);
-				addition.setRight(ruleMultiplicative());
-				return addition;
+				// {Addition.left=current} '+' right=Multiplicative
+				return new Addition().left(current).right(ruleMultiplicative());
 			}
 			case minus : {
-				// {Subtraction.left=current} '-' right=Multiplicative
 				tokenStream.next();		// (consume peeked token)
-				BinaryOperation subtraction = new Subtraction();
-				subtraction.setLeft(current);
-				subtraction.setRight(ruleMultiplicative());
-				return subtraction;
+				// {Subtraction.left=current} '-' right=Multiplicative
+				return new Subtraction().left(current).right(ruleMultiplicative());
 			}
 			default : {
 				return null;
@@ -160,7 +158,7 @@ public class Parser {
 
 			Token nextToken = tokenStream.peek();
 			if( nextToken instanceof KeywordToken ) {
-				BinaryOperation operation = handleMultiplicativeGroup((KeywordToken) nextToken, current);
+				BinaryOperation operation = handleMultiplicativeSubgroup((KeywordToken) nextToken, current);
 				if( operation == null ) {
 					break;	// no match of optional group
 				} else {
@@ -175,23 +173,21 @@ public class Parser {
 		return current;
 	}
 
-	protected BinaryOperation handleMultiplicativeGroup (KeywordToken nextToken, Expression current) {
+	/**
+	 * Handles a multiplicative subgroup or returns {@code null} in case of a
+	 * non-match.
+	 */
+	protected BinaryOperation handleMultiplicativeSubgroup (KeywordToken nextToken, Expression current) {
 		switch(nextToken.getKeyword()) {
 			case times : {
-				// {Multiplication.left=current} '*' right=Primary
 				tokenStream.next();		// (consume peeked token)
-				BinaryOperation multiplication = new Multiplication();
-				multiplication.setLeft(current);
-				multiplication.setRight(rulePrimary());
-				return multiplication;
+				// {Multiplication.left=current} '*' right=Primary
+				return new Multiplication().left(current).right(rulePrimary());
 			}
 			case divide : {
-				// {Division.left=current} '*' right=Primary
 				tokenStream.next();		// (consume peeked token)
-				BinaryOperation division = new Division();
-				division.setLeft(current);
-				division.setRight(rulePrimary());
-				return division;
+				// {Division.left=current} '*' right=Primary
+				return new Division().left(current).right(rulePrimary());
 			}
 			default : {
 				return null;
