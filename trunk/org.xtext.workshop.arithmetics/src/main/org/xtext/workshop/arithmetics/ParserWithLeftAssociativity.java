@@ -64,9 +64,9 @@ import org.xtext.workshop.arithmetics.metamodel.Subtraction;
  * 
  * @author Meinte Boersma
  */
-public class Parser {
+public class ParserWithLeftAssociativity {
 
-	private TokenStream tokenStream;
+	protected TokenStream tokenStream;
 
 	public Expression parse(TokenStream tokenStream) {
 		this.tokenStream = tokenStream;
@@ -86,7 +86,9 @@ public class Parser {
 	 * </pre>
 	 */
 	public Expression ruleExpression() {
-		return ruleAdditive();
+		Expression expr = ruleAdditive();
+		// TODO  report error if not every token was consumed in parsing?
+		return expr;
 	}
 
 	/**
@@ -102,43 +104,38 @@ public class Parser {
 
 		// ( ... )*
 		while( tokenStream.hasNext() ) {
-
-			Token nextToken = tokenStream.peek();
-			if( nextToken instanceof KeywordToken ) {
-				BinaryOperation operation = handleAdditiveSubgroup((KeywordToken) nextToken, current);
-				if( operation == null ) {
-					break;	// no match of optional group
-				} else {
-					current = operation;
-				}
-			} else {
+			// ( ... )
+			BinaryOperation operation = ruleAdditiveSubgroup(current);
+			if( operation == null ) {
 				break;	// no match of optional group
+			} else {
+				current = operation;
 			}
-
 		}
 
 		return current;
 	}
 
-	/**
-	 * Handles an additive subgroup or returns {@code null} in case of a
-	 * non-match.
-	 */
-	protected BinaryOperation handleAdditiveSubgroup(KeywordToken nextToken, Expression current) {
-		switch(nextToken.getKeyword()) {
-			case plus : {
-				tokenStream.next();		// (consume peeked token)
-				// {Addition.left=current} '+' right=Multiplicative
-				return new Addition().left(current).right(ruleMultiplicative());
+	protected BinaryOperation ruleAdditiveSubgroup(Expression current) {
+		Token nextToken = tokenStream.peek();
+		if( nextToken instanceof KeywordToken ) {
+			switch(((KeywordToken) nextToken).getKeyword()) {
+				case plus : {
+					tokenStream.next();		// (consume peeked token)
+					// {Addition.left=current} '+' right=Multiplicative
+					return new Addition().left(current).right(ruleMultiplicative());
+				}
+				case minus : {
+					tokenStream.next();		// (consume peeked token)
+					// {Subtraction.left=current} '-' right=Multiplicative
+					return new Subtraction().left(current).right(ruleMultiplicative());
+				}
+				default : {
+					return null;	// no match of optional group
+				}
 			}
-			case minus : {
-				tokenStream.next();		// (consume peeked token)
-				// {Subtraction.left=current} '-' right=Multiplicative
-				return new Subtraction().left(current).right(ruleMultiplicative());
-			}
-			default : {
-				return null;
-			}
+		} else {
+			return null;	// no match of optional group
 		}
 	}
 
@@ -155,19 +152,13 @@ public class Parser {
 
 		// ( ... )*
 		while( tokenStream.hasNext() ) {
-
-			Token nextToken = tokenStream.peek();
-			if( nextToken instanceof KeywordToken ) {
-				BinaryOperation operation = handleMultiplicativeSubgroup((KeywordToken) nextToken, current);
-				if( operation == null ) {
-					break;	// no match of optional group
-				} else {
-					current = operation;
-				}
-			} else {
+			// ( ... )
+			BinaryOperation operation = ruleMultiplicativeSubgroup(current);
+			if( operation == null ) {
 				break;	// no match of optional group
+			} else {
+				current = operation;
 			}
-
 		}
 
 		return current;
@@ -177,21 +168,26 @@ public class Parser {
 	 * Handles a multiplicative subgroup or returns {@code null} in case of a
 	 * non-match.
 	 */
-	protected BinaryOperation handleMultiplicativeSubgroup (KeywordToken nextToken, Expression current) {
-		switch(nextToken.getKeyword()) {
-			case times : {
-				tokenStream.next();		// (consume peeked token)
-				// {Multiplication.left=current} '*' right=Primary
-				return new Multiplication().left(current).right(rulePrimary());
+	protected BinaryOperation ruleMultiplicativeSubgroup(Expression current) {
+		Token nextToken = tokenStream.peek();
+		if( nextToken instanceof KeywordToken ) {
+			switch(((KeywordToken) nextToken).getKeyword()) {
+				case times : {
+					tokenStream.next();		// (consume peeked token)
+					// {Multiplication.left=current} '*' right=Primary
+					return new Multiplication().left(current).right(rulePrimary());
+				}
+				case divide : {
+					tokenStream.next();		// (consume peeked token)
+					// {Division.left=current} '/' right=Primary
+					return new Division().left(current).right(rulePrimary());
+				}
+				default : {
+					return null;	// no match of optional group
+				}
 			}
-			case divide : {
-				tokenStream.next();		// (consume peeked token)
-				// {Division.left=current} '*' right=Primary
-				return new Division().left(current).right(rulePrimary());
-			}
-			default : {
-				return null;
-			}
+		} else {
+			return null;	// no match of optional group
 		}
 	}
 
