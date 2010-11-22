@@ -294,4 +294,8 @@ public class ParserWithLeftAssociativity {
 		return null;
 	}
 
+	public boolean isNoTokenLeft() {
+		return !tokenStream.hasNext();
+	}
+
 }

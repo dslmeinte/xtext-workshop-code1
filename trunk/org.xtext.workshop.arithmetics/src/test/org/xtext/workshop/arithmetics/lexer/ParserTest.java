@@ -43,7 +43,7 @@ public class ParserTest {
 		TokenStream tokenStream = lexer.lexe("5*7/denom");
 		Expression expr = nonAssocParser.parse(tokenStream);
 		Assert.assertEquals("(5*7)", expr.toString());
-		Assert.assertEquals(true, tokenStream.hasNext());
+		Assert.assertFalse(nonAssocParser.isNoTokenLeft());
 		Token nextToken = tokenStream.next();
 		Assert.assertTrue(nextToken instanceof KeywordToken);
 		Assert.assertEquals("/", ((KeywordToken) nextToken).getKeyword().getWord());
