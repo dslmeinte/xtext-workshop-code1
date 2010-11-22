@@ -55,12 +55,10 @@ import org.xtext.workshop.arithmetics.metamodel.Subtraction;
  * </pre>
  * 
  * Note that the Identifier rule as implemented below actually corresponds to
- * <pre>Identifier: identifier=ID;</pre>
- * and that the cross-reference is not resolved.
- * This is simply a shortcut which declutters the exposé without detracting
- * from the lexer/parser side.
- * 
- * TODO  add _aspects_ to provide a readable stack representation without cluttering this code
+ * <pre>Identifier: identifier=ID2;</pre>
+ * with ID2 being a terminal rule matching {@code /[A-Za-z]+/}.
+ * (This is simply a shortcut which declutters the exposé without detracting
+ *  from the lexer/parser side.)
  * 
  * @author Meinte Boersma
  */
@@ -239,12 +237,10 @@ public class ParserWithLeftAssociativity {
 
 	private void unexpectedEof(Token previous, String expected) {
 		parseErrors.add(ParseError.errorEOFAfter(previous.getLocation(), expected));
-//		System.err.printf( "parse error after %s: expected '%s' but encountered EOF\n", previous.getLocation().toString(), expected );
 	}
 
 	private void error(Token actual, String expected) {
 		parseErrors.add(ParseError.errorAt(actual.getLocation(), expected, actual.toString()));
-//		System.err.printf( "parse error at %s: expected '%s' but encountered '%s'\n", actual.getLocation(), expected, actual.toString() );
 	}
 
 	/**
